@@ -7,12 +7,15 @@ import express, { Request, Response, NextFunction } from "express";
 import { closeRabbitMQ } from "./queue";
 import { closeRedis } from "./cache";
 import compression from "compression";
+import helmet from "helmet";
+import cors from "cors";
 import path from "path";
 import fs from "fs";
 import explorerRouter from "./routes/explorer";
 import biaRouter from "./routes/bia";
 import authRouter from "./routes/auth";
 import oidcRouter from "./routes/oidc";
+import azureRouter from "./routes/azure";
 import adminRouter from "./routes/admin";
 import connectorsRouter, { warmManifestCache } from "./routes/connectors";
 import workerApiRouter from "./routes/worker_api";
@@ -201,6 +204,18 @@ const PORT = Number(process.env.PORT) || 9292;
 const app = express();
 app.disable("x-powered-by");
 
+// ── CORS (configurable per environment) ──────────────────────────────────────
+// CORS_ORIGIN não definida → mesma origem (comportamento padrão do browser)
+const _corsOrigin = process.env.CORS_ORIGIN ?? false;
+if (_corsOrigin) {
+  app.use(cors({
+    origin: _corsOrigin,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-API-Key"],
+  }));
+}
+
 // ── Security headers (OWASP Secure Headers Project) ────────────────────────
 app.use((req: Request, res: Response, next: NextFunction) => {
   const secure = req.secure || req.headers["x-forwarded-proto"] === "https";
@@ -287,7 +302,8 @@ app.use(
 
 // Authentication routes (public login; the others check req.user)
 app.use("/api/auth", authRouter);
-app.use("/api/auth", oidcRouter); // OAuth/OIDC (public login + callback)
+app.use("/api/auth", oidcRouter);  // OAuth/OIDC (public login + callback)
+app.use("/api/auth", azureRouter); // Azure AD / Entra ID (public; AZURE_TENANT_ID required)
 
 // Remote workers + XOR agents API: authenticated by TOKEN (no session) → before the gate
 app.use("/api", workerApiRouter);

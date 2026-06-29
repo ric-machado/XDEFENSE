@@ -24,6 +24,12 @@ x-restart: &default-restart
 x-backend-env: &backend-env
   env_file: .env
 
+x-security: &default-security
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - ALL
+
 networks:
   frontend:
     name: xdefense-frontend
@@ -76,7 +82,7 @@ services:
       dockerfile: Dockerfile
     image: xdefense-backend:latest
     container_name: xdefense-backend
-    <<: [*default-restart, *backend-env]
+    <<: [*default-restart, *backend-env, *default-security]
     init: true
     depends_on:
       postgres:
@@ -165,7 +171,7 @@ services:
   redis:
     image: redis:7.4-alpine
     container_name: xdefense-redis
-    <<: *default-restart
+    <<: [*default-restart, *default-security]
     command: >
       redis-server
       --requirepass ${REDIS_PASSWORD}
@@ -188,7 +194,7 @@ services:
   rabbitmq:
     image: rabbitmq:3.13-management-alpine
     container_name: xdefense-rabbitmq
-    <<: *default-restart
+    <<: [*default-restart, *default-security]
     environment:
       RABBITMQ_DEFAULT_USER: xdefense
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
@@ -212,7 +218,7 @@ services:
       dockerfile: Dockerfile.taxii
     image: xdefense-taxii:latest
     container_name: xdefense-taxii
-    <<: [*default-restart, *backend-env]
+    <<: [*default-restart, *backend-env, *default-security]
     depends_on:
       backend:
         condition: service_healthy
@@ -244,12 +250,12 @@ services:
       dockerfile: Dockerfile.connectors
     image: xdefense-connectors:latest
     container_name: xdefense-connector-runner
-    <<: [*default-restart, *backend-env]
+    <<: [*default-restart, *backend-env, *default-security]
     depends_on:
       backend:
         condition: service_healthy
     environment:
-      XORCISM_DB_DIR: /data
+      DB_DIR: /data
       WORKER_MODE: connector
     volumes:
       - xdefense-data:/data
@@ -276,12 +282,12 @@ services:
       dockerfile: Dockerfile.connectors
     image: xdefense-connectors:latest
     container_name: xdefense-python-worker
-    <<: [*default-restart, *backend-env]
+    <<: [*default-restart, *backend-env, *default-security]
     depends_on:
       backend:
         condition: service_healthy
     environment:
-      XORCISM_DB_DIR: /data
+      DB_DIR: /data
       WORKER_MODE: importer
     volumes:
       - xdefense-data:/data
@@ -301,7 +307,7 @@ services:
       dockerfile: Dockerfile.scheduler
     image: xdefense-scheduler:latest
     container_name: xdefense-scheduler
-    <<: [*default-restart, *backend-env]
+    <<: [*default-restart, *backend-env, *default-security]
     depends_on:
       backend:
         condition: service_healthy
