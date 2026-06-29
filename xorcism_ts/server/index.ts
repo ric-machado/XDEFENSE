@@ -4,6 +4,7 @@
 
 import "express-async-errors";
 import express, { Request, Response, NextFunction } from "express";
+import { closeRabbitMQ } from "./queue";
 import compression from "compression";
 import path from "path";
 import fs from "fs";
@@ -990,7 +991,14 @@ warmManifestCache(); // pre-parse the 1200+ connector manifests so the first /co
 purgeExpiredSessions();
 setInterval(purgeExpiredSessions, 60 * 60 * 1000).unref();
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`\n  XORCISM TypeScript Server (auth XID activée)`);
   console.log(`  http://localhost:${PORT}/login\n`);
+});
+
+process.on("SIGTERM", async () => {
+  console.log("[shutdown] SIGTERM received — graceful shutdown...");
+  server.close();
+  await closeRabbitMQ();
+  process.exit(0);
 });

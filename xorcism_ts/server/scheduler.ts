@@ -38,7 +38,7 @@ function runCveImport(s: Schedule): void {
   const args = [script];
   if (p.recentOnly !== false) args.push("--recent-only");
   if (process.env.NVD_API_KEY) args.push("--api-key", process.env.NVD_API_KEY);
-  const env = { ...process.env, XORCISM_DB_DIR: process.env.DB_DIR || "C:/Users/jerom/XORCISM_databases" };
+  const env = { ...process.env, DB_DIR: process.env.DB_DIR || "/data" };
   cveImportRunning = true;
   const t0 = Date.now();
   console.log(`[scheduler] NVD CVE import starting (${py} import_nvd_cve.py ${args.slice(1).join(" ")})`);
