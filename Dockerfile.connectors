@@ -29,11 +29,14 @@ RUN pip install --no-cache-dir -r requirements.txt && \
 # Código fonte
 COPY xorcism_python/ ./xorcism_python/
 COPY connectors/ ./connectors/
+COPY tools/ ./tools/
+COPY databases/ ./databases/
 
 # Volume de dados (SQLite em Fase 1; PostgreSQL a partir da Fase 5)
 VOLUME /data
 
-ENV XORCISM_DB_DIR=/data \
+ENV XDEFENSE_DB_ENGINE=sqlite \
+    DB_DIR=/data \
     WORKER_MODE=connector \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app

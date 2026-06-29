@@ -1,8 +1,23 @@
 # syntax=docker/dockerfile:1
 # XDEFENSE — Scheduler
-# Roda tarefas periódicas independentes do processo Node.js principal.
-# Em Fase 1 usa shell cron. Na Fase 7 será substituído por RabbitMQ SchedulerWorker.
+# Roda tarefas periódicas (connector schedule, importers) independentemente do
+# processo Node.js principal. Em Fase 7 será substituído por RabbitMQ SchedulerWorker.
 
+# ── Build stage ─────────────────────────────────────────────────────────────────
+FROM node:20-bookworm AS builder
+
+RUN apt-get update && apt-get install -y --no-install-recommends python3 make g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app/xorcism_ts
+
+COPY xorcism_ts/package.json xorcism_ts/package-lock.json ./
+RUN npm ci
+
+COPY xorcism_ts/ ./
+RUN npm run build && npm prune --omit=dev
+
+# ── Runtime stage ────────────────────────────────────────────────────────────────
 FROM node:20-bookworm-slim AS runtime
 
 LABEL org.opencontainers.image.title="XDEFENSE Scheduler" \
@@ -12,13 +27,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         wget \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /app/xorcism_ts
 
-# Usa o build do backend principal
-COPY --from=xdefense-backend:latest /app/xorcism_ts/dist ./dist
-COPY --from=xdefense-backend:latest /app/xorcism_ts/node_modules ./node_modules
-COPY --from=xdefense-backend:latest /app/xorcism_ts/package.json ./package.json
-COPY --from=xdefense-backend:latest /app/databases /app/databases
+COPY --from=builder /app/xorcism_ts/node_modules ./node_modules
+COPY --from=builder /app/xorcism_ts/dist ./dist
+COPY --from=builder /app/xorcism_ts/package.json ./package.json
+COPY databases /app/databases
+COPY connectors /app/connectors
 
 VOLUME /data
 

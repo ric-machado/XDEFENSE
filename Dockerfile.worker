@@ -1,0 +1,49 @@
+# syntax=docker/dockerfile:1
+# XDEFENSE — Python Import Worker
+# Executa importers de dados (NVD, ATT&CK, OVAL, SIGMA, CISA KEV, etc.)
+# sob demanda ou via RabbitMQ (Fase 7).
+# Não instala ferramentas de segurança externas (nmap, etc.) — apenas Python.
+
+FROM python:3.11-slim AS runtime
+
+LABEL org.opencontainers.image.title="XDEFENSE Import Worker" \
+      org.opencontainers.image.description="Data importers for NVD, ATT&CK, OVAL, Sigma, KEV and XDEFENSE intelligence feeds"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget \
+        ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Dependências Python
+COPY xorcism_python/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir \
+        pika>=1.3 \
+        redis>=5.0
+
+# Código fonte
+COPY xorcism_python/ ./xorcism_python/
+COPY tools/ ./tools/
+COPY databases/ ./databases/
+
+# Volume de dados (SQLite legado → /data; PostgreSQL via XDEFENSE_DB_ENGINE=postgres)
+VOLUME /data
+
+ENV XDEFENSE_DB_ENGINE=sqlite \
+    DB_DIR=/data \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Usuário não-root
+RUN useradd --no-create-home --shell /bin/false worker && \
+    mkdir -p /data && chown worker:worker /data /app
+USER worker
+
+HEALTHCHECK --interval=60s --timeout=10s --start-period=15s --retries=3 \
+  CMD python3 -c "import sys; sys.exit(0)"
+
+# Modo padrão: aguarda tarefas via env IMPORT_TARGET (ex: "attack", "nvd", "sigma")
+# Em Fase 7 será substituído por consumidor RabbitMQ
+CMD ["python3", "-c", "import os,sys; t=os.getenv('IMPORT_TARGET',''); print(f'[worker] idle — defina IMPORT_TARGET para executar um importer'); sys.exit(0)"]
