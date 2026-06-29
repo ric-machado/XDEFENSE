@@ -1,0 +1,97 @@
+{
+  "__inputs": [],
+  "__requires": [
+    { "type": "grafana", "id": "grafana", "name": "Grafana", "version": "11.0.0" },
+    { "type": "datasource", "id": "prometheus", "name": "Prometheus", "version": "1.0.0" }
+  ],
+  "annotations": { "list": [] },
+  "description": "XDEFENSE RabbitMQ — filas, consumers, throughput",
+  "editable": true,
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Mensagens em Fila",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rabbitmq_queue_messages{vhost=\"xdefense\"}",
+          "legendFormat": "{{queue}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 2,
+      "title": "Consumers por Fila",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rabbitmq_queue_consumers{vhost=\"xdefense\"}",
+          "legendFormat": "{{queue}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 3,
+      "title": "Throughput — Mensagens Publicadas (5m rate)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(rabbitmq_queue_messages_published_total{vhost=\"xdefense\"}[5m])",
+          "legendFormat": "published {{queue}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "msgps" } }
+    },
+    {
+      "id": 4,
+      "title": "Throughput — Mensagens Entregues (5m rate)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(rabbitmq_queue_messages_delivered_total{vhost=\"xdefense\"}[5m])",
+          "legendFormat": "delivered {{queue}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "msgps" } }
+    },
+    {
+      "id": 5,
+      "title": "Conexões Abertas",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 16 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "rabbitmq_connections", "legendFormat": "Connections" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 6,
+      "title": "Canais Abertos",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 6, "x": 6, "y": 16 },
+      "datasource": "Prometheus",
+      "targets": [
+        { "expr": "rabbitmq_channels", "legendFormat": "Channels" }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["xdefense", "rabbitmq"],
+  "title": "XDEFENSE — RabbitMQ",
+  "uid": "xdefense-rabbitmq",
+  "version": 1
+}

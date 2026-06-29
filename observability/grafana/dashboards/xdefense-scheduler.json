@@ -1,0 +1,77 @@
+{
+  "__inputs": [],
+  "__requires": [
+    { "type": "grafana", "id": "grafana", "name": "Grafana", "version": "11.0.0" },
+    { "type": "datasource", "id": "prometheus", "name": "Prometheus", "version": "1.0.0" }
+  ],
+  "annotations": { "list": [] },
+  "description": "XDEFENSE Scheduler — execuções, latência, erros por tarefa",
+  "editable": true,
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Execuções por Tarefa (5m rate)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(xdefense_scheduler_runs_total{app=\"xdefense\"}[5m])",
+          "legendFormat": "{{task}} / {{result}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 2,
+      "title": "Duração das Tarefas (p95)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(xdefense_scheduler_run_duration_seconds_bucket{app=\"xdefense\"}[5m])) by (le, task))",
+          "legendFormat": "p95 {{task}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "s" } }
+    },
+    {
+      "id": 3,
+      "title": "Execuções com Erro",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 8, "x": 0, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "sum(increase(xdefense_scheduler_runs_total{app=\"xdefense\",result=\"error\"}[24h]))",
+          "legendFormat": "Erros (24h)"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "short", "thresholds": { "steps": [{"color":"green","value":0},{"color":"yellow","value":5},{"color":"red","value":20}] } }
+      }
+    },
+    {
+      "id": 4,
+      "title": "Risk Score Calculation Duration (p95)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 16, "x": 8, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum(rate(xdefense_risk_score_calculation_duration_seconds_bucket{app=\"xdefense\"}[5m])) by (le, scope))",
+          "legendFormat": "p95 {{scope}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "s" } }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["xdefense", "scheduler"],
+  "title": "XDEFENSE — Scheduler",
+  "uid": "xdefense-scheduler",
+  "version": 1
+}

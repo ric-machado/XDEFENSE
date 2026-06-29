@@ -6,6 +6,7 @@ import "express-async-errors";
 import express, { Request, Response, NextFunction } from "express";
 import { closeRabbitMQ } from "./queue";
 import { closeRedis } from "./cache";
+import { metricsHandler, httpMetricsMiddleware } from "./metrics";
 import compression from "compression";
 import helmet from "helmet";
 import cors from "cors";
@@ -264,6 +265,7 @@ app.use(compression());
 const keepRaw = (req: Request, _res: Response, buf: Buffer): void => { (req as Request & { rawBody?: Buffer }).rawBody = buf; };
 app.use(express.json({ limit: "25mb", verify: keepRaw })); // large JSON imports
 app.use(express.urlencoded({ extended: true, limit: "25mb", verify: keepRaw }));
+app.use(httpMetricsMiddleware); // Prometheus HTTP instrumentation
 app.use(antibot); // anti-bot / anti-scraping (rate + UA + bursts)
 app.use(loadUser); // populates req.user from the session cookie
 
@@ -299,6 +301,9 @@ app.use(
   "/vendor/xlsx.full.min.js",
   express.static(path.join(__dirname, "../../node_modules/xlsx/dist/xlsx.full.min.js"))
 );
+
+// Prometheus metrics endpoint (scraped by Prometheus; no auth required — restrict at network level)
+app.get("/api/metrics", metricsHandler);
 
 // Authentication routes (public login; the others check req.user)
 app.use("/api/auth", authRouter);
