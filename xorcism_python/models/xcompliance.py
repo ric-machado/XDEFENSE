@@ -29,7 +29,6 @@ class ComplianceBase(DeclarativeBase):
 
 class AUDIT(ComplianceBase):
     __tablename__ = 'AUDIT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     AuditID = Column(Integer, primary_key=True)
     AuditGUID = Column(Text)
@@ -50,7 +49,6 @@ class AUDIT(ComplianceBase):
 
 class AUDITFINDING(ComplianceBase):
     __tablename__ = 'AUDITFINDING'
-    __bind_key__ = 'XCOMPLIANCE'
 
     AuditFindingID = Column(Integer, primary_key=True)
     AuditFindingGUID = Column(Text)
@@ -67,7 +65,6 @@ class AUDITFINDING(ComplianceBase):
 
 class AUDITREPORT(ComplianceBase):
     __tablename__ = 'AUDITREPORT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     AuditReportID = Column(Integer, primary_key=True)
     AuditReportGUID = Column(Text)
@@ -85,7 +82,6 @@ class AUDITREPORT(ComplianceBase):
 
 class EVIDENCE(ComplianceBase):
     __tablename__ = 'EVIDENCE'
-    __bind_key__ = 'XCOMPLIANCE'
 
     EvidenceID = Column(Integer, primary_key=True)
     EvidenceName = Column(Text)
@@ -104,7 +100,6 @@ class EVIDENCE(ComplianceBase):
 
 class AUDITEVIDENCE(ComplianceBase):
     __tablename__ = 'AUDITEVIDENCE'
-    __bind_key__ = 'XCOMPLIANCE'
 
     AuditEvidenceID = Column(Integer, primary_key=True)
     AuditEvidenceGUID = Column(Text)
@@ -120,7 +115,6 @@ class AUDITEVIDENCE(ComplianceBase):
 
 class DOCUMENT(ComplianceBase):
     __tablename__ = 'DOCUMENT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     DocumentID = Column(Integer, primary_key=True)
     DocumentGUID = Column(Text)
@@ -140,7 +134,6 @@ class DOCUMENT(ComplianceBase):
 
 class AUDITDOCUMENT(ComplianceBase):
     __tablename__ = 'AUDITDOCUMENT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     AuditDocumentID = Column(Integer, primary_key=True)
     AuditID = Column(Integer)           # AUDIT reference
@@ -156,7 +149,6 @@ class AUDITDOCUMENT(ComplianceBase):
 
 class DOCUMENTPERSON(ComplianceBase):
     __tablename__ = 'DOCUMENTPERSON'
-    __bind_key__ = 'XCOMPLIANCE'
 
     DocumentPersonID = Column(Integer, primary_key=True)
     DocumentID = Column(Integer)        # DOCUMENT reference
@@ -176,7 +168,6 @@ class DOCUMENTPERSON(ComplianceBase):
 
 class FOLDER(ComplianceBase):
     __tablename__ = 'FOLDER'
-    __bind_key__ = 'XCOMPLIANCE'
 
     FolderID = Column(Integer, primary_key=True)
     FolderGUID = Column(Text)
@@ -193,7 +184,6 @@ class FOLDER(ComplianceBase):
 
 class PERIMETER(ComplianceBase):
     __tablename__ = 'PERIMETER'
-    __bind_key__ = 'XCOMPLIANCE'
 
     PerimeterID = Column(Integer, primary_key=True)
     PerimeterGUID = Column(Text)
@@ -212,7 +202,6 @@ class PERIMETER(ComplianceBase):
 
 class FRAMEWORK(ComplianceBase):
     __tablename__ = 'FRAMEWORK'
-    __bind_key__ = 'XCOMPLIANCE'
 
     FrameworkID = Column(Integer, primary_key=True)
     FrameworkGUID = Column(Text)
@@ -232,7 +221,6 @@ class FRAMEWORK(ComplianceBase):
 
 class REQUIREMENTNODE(ComplianceBase):
     __tablename__ = 'REQUIREMENTNODE'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RequirementNodeID = Column(Integer, primary_key=True)
     RequirementNodeGUID = Column(Text)
@@ -255,7 +243,6 @@ class REQUIREMENTNODE(ComplianceBase):
 
 class REFERENCECONTROL(ComplianceBase):
     __tablename__ = 'REFERENCECONTROL'
-    __bind_key__ = 'XCOMPLIANCE'
 
     ReferenceControlID = Column(Integer, primary_key=True)
     ReferenceControlGUID = Column(Text)
@@ -275,7 +262,6 @@ class REFERENCECONTROL(ComplianceBase):
 
 class APPLIEDCONTROL(ComplianceBase):
     __tablename__ = 'APPLIEDCONTROL'
-    __bind_key__ = 'XCOMPLIANCE'
 
     AppliedControlID = Column(Integer, primary_key=True)
     AppliedControlGUID = Column(Text)
@@ -302,7 +288,6 @@ class APPLIEDCONTROL(ComplianceBase):
 
 class COMPLIANCEASSESSMENT(ComplianceBase):
     __tablename__ = 'COMPLIANCEASSESSMENT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     ComplianceAssessmentID = Column(Integer, primary_key=True)
     ComplianceAssessmentGUID = Column(Text)
@@ -325,7 +310,6 @@ class COMPLIANCEASSESSMENT(ComplianceBase):
 
 class REQUIREMENTASSESSMENT(ComplianceBase):
     __tablename__ = 'REQUIREMENTASSESSMENT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RequirementAssessmentID = Column(Integer, primary_key=True)
     RequirementAssessmentGUID = Column(Text)
@@ -346,7 +330,6 @@ class REQUIREMENTASSESSMENT(ComplianceBase):
 
 class REQUIREMENTASSESSMENTCONTROL(ComplianceBase):
     __tablename__ = 'REQUIREMENTASSESSMENTCONTROL'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RequirementAssessmentControlID = Column(Integer, primary_key=True)
     RequirementAssessmentID = Column(Integer)
@@ -361,7 +344,6 @@ class REQUIREMENTASSESSMENTCONTROL(ComplianceBase):
 
 class REQUIREMENTASSESSMENTEVIDENCE(ComplianceBase):
     __tablename__ = 'REQUIREMENTASSESSMENTEVIDENCE'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RequirementAssessmentEvidenceID = Column(Integer, primary_key=True)
     RequirementAssessmentID = Column(Integer)
@@ -376,7 +358,6 @@ class REQUIREMENTASSESSMENTEVIDENCE(ComplianceBase):
 
 class RISKMATRIX(ComplianceBase):
     __tablename__ = 'RISKMATRIX'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskMatrixID = Column(Integer, primary_key=True)
     RiskMatrixGUID = Column(Text)
@@ -394,7 +375,6 @@ class RISKMATRIX(ComplianceBase):
 
 class RISKASSESSMENT(ComplianceBase):
     __tablename__ = 'RISKASSESSMENT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskAssessmentID = Column(Integer, primary_key=True)
     RiskAssessmentGUID = Column(Text)
@@ -415,7 +395,6 @@ class RISKASSESSMENT(ComplianceBase):
 
 class RISKSCENARIO(ComplianceBase):
     __tablename__ = 'RISKSCENARIO'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskScenarioID = Column(Integer, primary_key=True)
     RiskScenarioGUID = Column(Text)
@@ -445,7 +424,6 @@ class RISKSCENARIO(ComplianceBase):
 
 class RISKSCENARIOCONTROL(ComplianceBase):
     __tablename__ = 'RISKSCENARIOCONTROL'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskScenarioControlID = Column(Integer, primary_key=True)
     RiskScenarioID = Column(Integer)
@@ -460,7 +438,6 @@ class RISKSCENARIOCONTROL(ComplianceBase):
 
 class RISKSCENARIOASSET(ComplianceBase):
     __tablename__ = 'RISKSCENARIOASSET'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskScenarioAssetID = Column(Integer, primary_key=True)
     RiskScenarioID = Column(Integer)
@@ -475,7 +452,6 @@ class RISKSCENARIOASSET(ComplianceBase):
 
 class RISKACCEPTANCE(ComplianceBase):
     __tablename__ = 'RISKACCEPTANCE'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskAcceptanceID = Column(Integer, primary_key=True)
     RiskAcceptanceGUID = Column(Text)
@@ -497,7 +473,6 @@ class RISKACCEPTANCE(ComplianceBase):
 
 class SECURITYEXCEPTION(ComplianceBase):
     __tablename__ = 'SECURITYEXCEPTION'
-    __bind_key__ = 'XCOMPLIANCE'
 
     SecurityExceptionID = Column(Integer, primary_key=True)
     SecurityExceptionGUID = Column(Text)
@@ -518,7 +493,6 @@ class SECURITYEXCEPTION(ComplianceBase):
 
 class GRCTHREAT(ComplianceBase):
     __tablename__ = 'GRCTHREAT'
-    __bind_key__ = 'XCOMPLIANCE'
 
     ThreatID = Column(Integer, primary_key=True)
     ThreatGUID = Column(Text)
@@ -538,7 +512,6 @@ class GRCTHREAT(ComplianceBase):
 
 class RISKREGISTER(ComplianceBase):
     __tablename__ = 'RISKREGISTER'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskRegisterID = Column(Integer, primary_key=True)
     RiskRegisterGUID = Column(Text)
@@ -556,7 +529,6 @@ class RISKREGISTER(ComplianceBase):
 
 class RISKREGISTERENTRY(ComplianceBase):
     __tablename__ = 'RISKREGISTERENTRY'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskRegisterEntryID = Column(Integer, primary_key=True)
     RiskRegisterEntryGUID = Column(Text)
@@ -596,7 +568,6 @@ class RISKREGISTERENTRY(ComplianceBase):
 
 class RISKREGISTERENTRYASSET(ComplianceBase):
     __tablename__ = 'RISKREGISTERENTRYASSET'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskRegisterEntryAssetID = Column(Integer, primary_key=True)
     RiskRegisterEntryID = Column(Integer)
@@ -610,7 +581,6 @@ class RISKREGISTERENTRYASSET(ComplianceBase):
 
 class RISKREGISTERENTRYCONTROL(ComplianceBase):
     __tablename__ = 'RISKREGISTERENTRYCONTROL'
-    __bind_key__ = 'XCOMPLIANCE'
 
     RiskRegisterEntryControlID = Column(Integer, primary_key=True)
     RiskRegisterEntryID = Column(Integer)

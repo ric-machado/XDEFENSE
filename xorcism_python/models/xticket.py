@@ -21,7 +21,6 @@ class TicketBase(DeclarativeBase):
 
 class TICKET(TicketBase):
     __tablename__ = 'TICKET'
-    __bind_key__ = 'XTICKET'
 
     TicketID = Column(Integer, primary_key=True)
     TicketGUID = Column(Text)
@@ -50,7 +49,6 @@ class TICKET(TicketBase):
 
 class TICKETCOMMENT(TicketBase):
     __tablename__ = 'TICKETCOMMENT'
-    __bind_key__ = 'XTICKET'
 
     TicketCommentID = Column(Integer, primary_key=True)
     TicketCommentGUID = Column(Text)
@@ -66,7 +64,6 @@ class TICKETCOMMENT(TicketBase):
 
 class TICKETCATEGORY(TicketBase):
     __tablename__ = 'TICKETCATEGORY'
-    __bind_key__ = 'XTICKET'
 
     TicketCategoryID = Column(Integer, primary_key=True)
     TicketCategoryName = Column(Text)
@@ -79,7 +76,6 @@ class TICKETCATEGORY(TicketBase):
 
 class TICKETATTACHMENT(TicketBase):
     __tablename__ = 'TICKETATTACHMENT'
-    __bind_key__ = 'XTICKET'
 
     TicketAttachmentID = Column(Integer, primary_key=True)
     TicketID = Column(Integer)

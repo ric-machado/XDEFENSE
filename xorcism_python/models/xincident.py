@@ -8,7 +8,6 @@ from .base import Base
 
 class INCIDENT(Base):
     __tablename__ = 'INCIDENT'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentID = Column(Integer, primary_key=True)
     IncidentName = Column(Text)
@@ -50,7 +49,6 @@ class INCIDENT(Base):
 
 class INCIDENTCATEGORY(Base):
     __tablename__ = 'INCIDENTCATEGORY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentCategoryID = Column(Integer, primary_key=True)
     IncidentCategoryGUID = Column(Text)
@@ -70,7 +68,6 @@ class INCIDENTCATEGORY(Base):
 
 class INCIDENTCATEGORYDESCRIPTION(Base):
     __tablename__ = 'INCIDENTCATEGORYDESCRIPTION'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentCategoryDescriptionID = Column(Integer, primary_key=True)
     IncidentCategoryID = Column(Integer, nullable=False)
@@ -90,7 +87,6 @@ class INCIDENTCATEGORYDESCRIPTION(Base):
 
 class INCIDENTCATEGORYRACIMATRIX(Base):
     __tablename__ = 'INCIDENTCATEGORYRACIMATRIX'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentCategoryRACIMatrixID = Column(Integer, primary_key=True)
 
@@ -99,7 +95,6 @@ class INCIDENTCATEGORYRACIMATRIX(Base):
 
 class INCIDENTCOMPROMISE(Base):
     __tablename__ = 'INCIDENTCOMPROMISE'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentCompromiseID = Column(Integer, primary_key=True)
     IncidentCompromiseGUID = Column(Text)
@@ -118,7 +113,6 @@ class INCIDENTCOMPROMISE(Base):
 
 class INCIDENTDISCOVERYMETHOD(Base):
     __tablename__ = 'INCIDENTDISCOVERYMETHOD'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentDiscoveryMethodID = Column(Integer, primary_key=True)
     DiscoveryMethodID = Column(Integer)
@@ -136,7 +130,6 @@ class INCIDENTDISCOVERYMETHOD(Base):
 
 class INCIDENTEFFECT(Base):
     __tablename__ = 'INCIDENTEFFECT'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentEffectID = Column(Integer, primary_key=True)
     IncidentEffectGUID = Column(Text)
@@ -156,7 +149,6 @@ class INCIDENTEFFECT(Base):
 
 class INCIDENTFORASSET(Base):
     __tablename__ = 'INCIDENTFORASSET'
-    __bind_key__  = 'XINCIDENT'
 
     AssetIncidentID = Column(Integer, primary_key=True)
     AssetIncidentGUID = Column(Text)
@@ -183,7 +175,6 @@ class INCIDENTFORASSET(Base):
 
 class INCIDENTFORINCIDENT(Base):
     __tablename__ = 'INCIDENTFORINCIDENT'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentRefID = Column(Integer, primary_key=True)
     relationshiptype = Column(Text)
@@ -197,7 +188,6 @@ class INCIDENTFORINCIDENT(Base):
 
 class INCIDENTFORPERSON(Base):
     __tablename__ = 'INCIDENTFORPERSON'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -211,7 +201,6 @@ class INCIDENTFORPERSON(Base):
 
 class INCIDENTFORTHREATCAMPAIGN(Base):
     __tablename__ = 'INCIDENTFORTHREATCAMPAIGN'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentID = Column(Integer, primary_key=True)
     CampaignID = Column(Integer, nullable=False)
@@ -221,7 +210,6 @@ class INCIDENTFORTHREATCAMPAIGN(Base):
 
 class INCIDENTID(Base):
     __tablename__ = 'INCIDENTID'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentIDID = Column(Integer, primary_key=True)
     name = Column(Text, nullable=False)
@@ -236,7 +224,6 @@ class INCIDENTID(Base):
 
 class INCIDENTIMPACT(Base):
     __tablename__ = 'INCIDENTIMPACT'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactID = Column(Integer, primary_key=True)
     IncidentID = Column(Integer, nullable=False)
@@ -261,7 +248,6 @@ class INCIDENTIMPACT(Base):
 
 class INCIDENTIMPACTAVAILABILITYLOSSDURATION(Base):
     __tablename__ = 'INCIDENTIMPACTAVAILABILITYLOSSDURATION'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactAvailabilityLossDurationID = Column(Integer, primary_key=True)
     LossDuration = Column(Text, nullable=False)
@@ -273,7 +259,6 @@ class INCIDENTIMPACTAVAILABILITYLOSSDURATION(Base):
 
 class INCIDENTIMPACTAVAILABILITYVARIETY(Base):
     __tablename__ = 'INCIDENTIMPACTAVAILABILITYVARIETY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactAvailabilityVarietyID = Column(Integer, primary_key=True)
     IncidentImpactAvailabilityVarietyName = Column(Text)
@@ -284,7 +269,6 @@ class INCIDENTIMPACTAVAILABILITYVARIETY(Base):
 
 class INCIDENTIMPACTCONFIDENTIALITYSTATE(Base):
     __tablename__ = 'INCIDENTIMPACTCONFIDENTIALITYSTATE'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactConfidentialityStateID = Column(Integer, primary_key=True)
     IncidentImpactConfidentialityStateName = Column(Text, nullable=False)
@@ -295,7 +279,6 @@ class INCIDENTIMPACTCONFIDENTIALITYSTATE(Base):
 
 class INCIDENTIMPACTCONFIDENTIALITYVARIETY(Base):
     __tablename__ = 'INCIDENTIMPACTCONFIDENTIALITYVARIETY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactConfidentialityVarietyID = Column(Integer, primary_key=True)
     IncidentImpactConfidentialityVarietyName = Column(Text, nullable=False)
@@ -306,7 +289,6 @@ class INCIDENTIMPACTCONFIDENTIALITYVARIETY(Base):
 
 class INCIDENTIMPACTINTEGRITYVARIETY(Base):
     __tablename__ = 'INCIDENTIMPACTINTEGRITYVARIETY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactIntegrityVarietyID = Column(Integer, primary_key=True)
     IncidentImpactIntegrityVarietyName = Column(Text, nullable=False)
@@ -317,7 +299,6 @@ class INCIDENTIMPACTINTEGRITYVARIETY(Base):
 
 class INCIDENTIMPACTLOSSPROPERTY(Base):
     __tablename__ = 'INCIDENTIMPACTLOSSPROPERTY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactLossPropertyID = Column(Integer, primary_key=True)
     IncidentImpactLossPropertyName = Column(Text, nullable=False)
@@ -328,7 +309,6 @@ class INCIDENTIMPACTLOSSPROPERTY(Base):
 
 class INCIDENTIMPACTLOSSRATING(Base):
     __tablename__ = 'INCIDENTIMPACTLOSSRATING'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactLossRatingID = Column(Integer, primary_key=True)
     IncidentImpactLossRatingName = Column(Text, nullable=False)
@@ -339,7 +319,6 @@ class INCIDENTIMPACTLOSSRATING(Base):
 
 class INCIDENTIMPACTLOSSVARIETY(Base):
     __tablename__ = 'INCIDENTIMPACTLOSSVARIETY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactLossVarietyID = Column(Integer, primary_key=True)
     IncidentImpactLossVarietyName = Column(Text, nullable=False)
@@ -351,7 +330,6 @@ class INCIDENTIMPACTLOSSVARIETY(Base):
 
 class INCIDENTIMPACTRATING(Base):
     __tablename__ = 'INCIDENTIMPACTRATING'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentImpactRatingID = Column(Integer, primary_key=True)
     IncidentImpactRatingName = Column(Text, nullable=False)
@@ -362,7 +340,6 @@ class INCIDENTIMPACTRATING(Base):
 
 class INCIDENTINQUIRY(Base):
     __tablename__ = 'INCIDENTINQUIRY'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentIQID = Column(Integer, primary_key=True)
     IncidentInquiryIntentID = Column(Integer)
@@ -380,7 +357,6 @@ class INCIDENTINQUIRY(Base):
 
 class INCIDENTINQUIRYINTENT(Base):
     __tablename__ = 'INCIDENTINQUIRYINTENT'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentInquiryIntentID = Column(Integer, primary_key=True)
     PackageIntent = Column(Text, nullable=False)
@@ -392,7 +368,6 @@ class INCIDENTINQUIRYINTENT(Base):
 
 class INCIDENTIOC(Base):
     __tablename__ = 'INCIDENTIOC'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentIOCID = Column(Integer, primary_key=True)
     IncidentID = Column(Integer, nullable=False)
@@ -406,7 +381,6 @@ class INCIDENTIOC(Base):
 
 class INCIDENTIOCFORTHREATCAMPAIGN(Base):
     __tablename__ = 'INCIDENTIOCFORTHREATCAMPAIGN'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentIOCID = Column(Integer, primary_key=True)
     ThreatCampaignID = Column(Integer, nullable=False)
@@ -416,7 +390,6 @@ class INCIDENTIOCFORTHREATCAMPAIGN(Base):
 
 class INCIDENTIOCTYPE(Base):
     __tablename__ = 'INCIDENTIOCTYPE'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentIOCTypeID = Column(Integer, primary_key=True)
     IndicatorTypeName = Column(Text, nullable=False)
@@ -428,7 +401,6 @@ class INCIDENTIOCTYPE(Base):
 
 class INCIDENTIOCTYPEFORINDICATOR(Base):
     __tablename__ = 'INCIDENTIOCTYPEFORINDICATOR'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentIOCTypeID = Column(Integer, primary_key=True)
     IndicatorID = Column(Integer, nullable=False)
@@ -438,7 +410,6 @@ class INCIDENTIOCTYPEFORINDICATOR(Base):
 
 class INCIDENTREGISTRYHANDLE(Base):
     __tablename__ = 'INCIDENTREGISTRYHANDLE'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentRegistryHandleID = Column(Integer, primary_key=True)
     registry = Column(Text, nullable=False)
@@ -448,7 +419,6 @@ class INCIDENTREGISTRYHANDLE(Base):
 
 class INCIDENTSTATUS(Base):
     __tablename__ = 'INCIDENTSTATUS'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentStatusID = Column(Integer, primary_key=True)
     IncidentStatusGUID = Column(Text)
@@ -467,7 +437,6 @@ class INCIDENTSTATUS(Base):
 
 class INCIDENTTIMELINE(Base):
     __tablename__ = 'INCIDENTTIMELINE'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentTimelineID = Column(Integer, primary_key=True)
     IncidentID = Column(Integer, nullable=False)
@@ -487,7 +456,6 @@ class INCIDENTTIMELINE(Base):
 
 class INCIDENTTIMELINEUNIT(Base):
     __tablename__ = 'INCIDENTTIMELINEUNIT'
-    __bind_key__  = 'XINCIDENT'
 
     IncidentTimelineUnitID = Column(Integer, primary_key=True)
     TimeUnit = Column(Text, nullable=False)

@@ -8,7 +8,6 @@ from .base import Base
 
 class THREAT(Base):
     __tablename__ = 'THREAT'
-    __bind_key__  = 'XTHREAT'
 
     ThreatID = Column(Integer, primary_key=True)
     ThreatGUID = Column(Text)
@@ -29,7 +28,6 @@ class THREAT(Base):
 
 class THREATACTION(Base):
     __tablename__ = 'THREATACTION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionID = Column(Integer, primary_key=True)
     ThreatActionCategoryID = Column(Integer, nullable=False)
@@ -54,7 +52,6 @@ class THREATACTION(Base):
 
 class THREATACTIONCATEGORY(Base):
     __tablename__ = 'THREATACTIONCATEGORY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionCategoryID = Column(Integer, primary_key=True)
     ThreatActionCategoryName = Column(Text, nullable=False)
@@ -70,7 +67,6 @@ class THREATACTIONCATEGORY(Base):
 
 class THREATACTIONFORINCIDENT(Base):
     __tablename__ = 'THREATACTIONFORINCIDENT'
-    __bind_key__  = 'XTHREAT'
 
     IncidentThreatActionID = Column(Integer, primary_key=True)
     ThreatActionID = Column(Integer, nullable=False)
@@ -88,7 +84,6 @@ class THREATACTIONFORINCIDENT(Base):
 
 class THREATACTIONLOCATION(Base):
     __tablename__ = 'THREATACTIONLOCATION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionLocationID = Column(Integer, primary_key=True)
     ThreatActionLocationName = Column(Text, nullable=False)
@@ -105,7 +100,6 @@ class THREATACTIONLOCATION(Base):
 
 class THREATACTIONLOCATIONFORTHREATACTIONCATEGORY(Base):
     __tablename__ = 'THREATACTIONLOCATIONFORTHREATACTIONCATEGORY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionCategoryLocationID = Column(Integer, primary_key=True)
     ThreatActionCategoryID = Column(Integer, nullable=False)
@@ -116,7 +110,6 @@ class THREATACTIONLOCATIONFORTHREATACTIONCATEGORY(Base):
 
 class THREATACTIONTARGET(Base):
     __tablename__ = 'THREATACTIONTARGET'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionTargetID = Column(Integer, primary_key=True)
     ThreatActionCategoryID = Column(Integer, nullable=False)
@@ -133,7 +126,6 @@ class THREATACTIONTARGET(Base):
 
 class THREATACTIONVARIETY(Base):
     __tablename__ = 'THREATACTIONVARIETY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionVarietyID = Column(Integer, primary_key=True)
     ThreatActionCategoryID = Column(Integer, nullable=False)
@@ -153,7 +145,6 @@ class THREATACTIONVARIETY(Base):
 
 class THREATACTIONVARIETYFORTHREATACTORTTP(Base):
     __tablename__ = 'THREATACTIONVARIETYFORTHREATACTORTTP'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPActionVarietyID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -170,7 +161,6 @@ class THREATACTIONVARIETYFORTHREATACTORTTP(Base):
 
 class THREATACTIONVECTOR(Base):
     __tablename__ = 'THREATACTIONVECTOR'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActionVectorID = Column(Integer, primary_key=True)
     ThreatActionCategoryID = Column(Integer, nullable=False)
@@ -187,7 +177,6 @@ class THREATACTIONVECTOR(Base):
 
 class THREATACTOR(Base):
     __tablename__ = 'THREATACTOR'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorID = Column(Integer, primary_key=True)
     ThreatActorGUID = Column(Text)
@@ -219,7 +208,6 @@ class THREATACTOR(Base):
 
 class THREATACTORADDRESS(Base):
     __tablename__ = 'THREATACTORADDRESS'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorAddressID = Column(Integer, primary_key=True)
     ThreatActorID = Column(Integer)
@@ -245,7 +233,6 @@ class THREATACTORADDRESS(Base):
 
 class THREATACTORCHANGERECORD(Base):
     __tablename__ = 'THREATACTORCHANGERECORD'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorChangeRecordID = Column(Integer, primary_key=True)
 
@@ -254,7 +241,6 @@ class THREATACTORCHANGERECORD(Base):
 
 class THREATACTOREMAILADDRESS(Base):
     __tablename__ = 'THREATACTOREMAILADDRESS'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorEmailAddressID = Column(Integer, primary_key=True)
 
@@ -263,7 +249,6 @@ class THREATACTOREMAILADDRESS(Base):
 
 class THREATACTORFORINCIDENT(Base):
     __tablename__ = 'THREATACTORFORINCIDENT'
-    __bind_key__  = 'XTHREAT'
 
     IncidentThreatActorID = Column(Integer, primary_key=True)
     IncidentID = Column(Integer, nullable=False)
@@ -286,7 +271,6 @@ class THREATACTORFORINCIDENT(Base):
 
 class THREATACTORFORTHREATCAMPAIGN(Base):
     __tablename__ = 'THREATACTORFORTHREATCAMPAIGN'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignActorID = Column(Integer, primary_key=True)
     ThreatCampaignID = Column(Integer, nullable=False)
@@ -307,7 +291,6 @@ class THREATACTORFORTHREATCAMPAIGN(Base):
 
 class THREATACTORGROUP(Base):
     __tablename__ = 'THREATACTORGROUP'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorGroupID = Column(Integer, primary_key=True)
     ThreatActorGroupGUID = Column(Text)
@@ -327,7 +310,6 @@ class THREATACTORGROUP(Base):
 
 class THREATACTORGROUPTACTIC(Base):
     __tablename__ = 'THREATACTORGROUPTACTIC'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorGroupTacticID = Column(Integer, primary_key=True)
     ThreatActorGroupID = Column(Integer, nullable=False)
@@ -346,7 +328,6 @@ class THREATACTORGROUPTACTIC(Base):
 
 class THREATACTORINFRASTRUCTURE(Base):
     __tablename__ = 'THREATACTORINFRASTRUCTURE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorInfrastructureID = Column(Integer, primary_key=True)
     AttackerInfrastructureGUID = Column(Text)
@@ -365,7 +346,6 @@ class THREATACTORINFRASTRUCTURE(Base):
 
 class THREATACTORINFRASTRUCTUREFORTHREATACTOR(Base):
     __tablename__ = 'THREATACTORINFRASTRUCTUREFORTHREATACTOR'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorThreatActorInfrastructureID = Column(Integer, primary_key=True)
     ThreatActorID = Column(Integer, nullable=False)
@@ -384,7 +364,6 @@ class THREATACTORINFRASTRUCTUREFORTHREATACTOR(Base):
 
 class THREATACTORINFRASTRUCTUREFORTHREATACTORTTP(Base):
     __tablename__ = 'THREATACTORINFRASTRUCTUREFORTHREATACTORTTP'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPInfrastructureID = Column(Integer, primary_key=True)
     ThreatActorInfrastructureID = Column(Integer, nullable=False)
@@ -402,7 +381,6 @@ class THREATACTORINFRASTRUCTUREFORTHREATACTORTTP(Base):
 
 class THREATACTORPAOS(Base):
     __tablename__ = 'THREATACTORPAOS'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorPAOSID = Column(Integer, primary_key=True)
     PlanningAndOperationalSupport = Column(Text, nullable=False)
@@ -420,7 +398,6 @@ class THREATACTORPAOS(Base):
 
 class THREATACTORROLE(Base):
     __tablename__ = 'THREATACTORROLE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorRoleID = Column(Integer, primary_key=True)
     role = Column(Text, nullable=False)
@@ -437,7 +414,6 @@ class THREATACTORROLE(Base):
 
 class THREATACTORSKILLFORATTACKPATTERN(Base):
     __tablename__ = 'THREATACTORSKILLFORATTACKPATTERN'
-    __bind_key__  = 'XTHREAT'
 
     AttackPatternRequiredSkillID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer, nullable=False)
@@ -458,7 +434,6 @@ class THREATACTORSKILLFORATTACKPATTERN(Base):
 
 class THREATACTORSOPHISTICATION(Base):
     __tablename__ = 'THREATACTORSOPHISTICATION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorSophisticationID = Column(Integer, primary_key=True)
     ThreatActorSophisticationGUID = Column(Text)
@@ -477,7 +452,6 @@ class THREATACTORSOPHISTICATION(Base):
 
 class THREATACTORTACTIC(Base):
     __tablename__ = 'THREATACTORTACTIC'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTacticID = Column(Integer, primary_key=True)
     TacticID = Column(Integer)
@@ -487,7 +461,6 @@ class THREATACTORTACTIC(Base):
 
 class THREATACTORTAG(Base):
     __tablename__ = 'THREATACTORTAG'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTagID = Column(Integer, primary_key=True)
 
@@ -496,7 +469,6 @@ class THREATACTORTAG(Base):
 
 class THREATACTORTTP(Base):
     __tablename__ = 'THREATACTORTTP'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPID = Column(Integer, primary_key=True)
     TTPTitle = Column(Text, nullable=False)
@@ -514,7 +486,6 @@ class THREATACTORTTP(Base):
 
 class THREATACTORTTPFORINCIDENT(Base):
     __tablename__ = 'THREATACTORTTPFORINCIDENT'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPIncidentID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -532,7 +503,6 @@ class THREATACTORTTPFORINCIDENT(Base):
 
 class THREATACTORTTPFORINDICATOR(Base):
     __tablename__ = 'THREATACTORTTPFORINDICATOR'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPIndicatorID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -550,7 +520,6 @@ class THREATACTORTTPFORINDICATOR(Base):
 
 class THREATACTORTTPFORTHREATACTORTTP(Base):
     __tablename__ = 'THREATACTORTTPFORTHREATACTORTTP'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPMappingID = Column(Integer, primary_key=True)
     ThreatActorTTPRefID = Column(Integer, nullable=False)
@@ -569,7 +538,6 @@ class THREATACTORTTPFORTHREATACTORTTP(Base):
 
 class THREATACTORVARIETY(Base):
     __tablename__ = 'THREATACTORVARIETY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorVarietyID = Column(Integer, primary_key=True)
     ThreatActorTypeGUID = Column(Text)
@@ -590,7 +558,6 @@ class THREATACTORVARIETY(Base):
 
 class THREATAGENT(Base):
     __tablename__ = 'THREATAGENT'
-    __bind_key__  = 'XTHREAT'
 
     ThreatAgentID = Column(Integer, primary_key=True)
     ThreatAgentGUID = Column(Text)
@@ -616,7 +583,6 @@ class THREATAGENT(Base):
 class RELATIONSHIP(Base):
     """Relationship between threat objects (aligned with STIX 2.1 Relationship SRO)."""
     __tablename__ = 'RELATIONSHIP'
-    __bind_key__  = 'XTHREAT'
 
     RelationshipID = Column(Integer, primary_key=True)
     RelationshipGUID = Column(Text)        # STIX id "relationship--…"
@@ -635,7 +601,6 @@ class RELATIONSHIP(Base):
 
 class THREATEVENT(Base):
     __tablename__ = 'THREATEVENT'
-    __bind_key__  = 'XTHREAT'
 
     ThreatEventID = Column(Integer, primary_key=True)
     ReferentialID = Column(Text)
@@ -650,7 +615,6 @@ class THREATEVENT(Base):
 
 class THREATAGENTCATEGORY(Base):
     __tablename__ = 'THREATAGENTCATEGORY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatAgentCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -661,7 +625,6 @@ class THREATAGENTCATEGORY(Base):
 
 class THREATAGENTCHANGERECORD(Base):
     __tablename__ = 'THREATAGENTCHANGERECORD'
-    __bind_key__  = 'XTHREAT'
 
     ThreatAgentChangeRecordID = Column(Integer, primary_key=True)
 
@@ -670,7 +633,6 @@ class THREATAGENTCHANGERECORD(Base):
 
 class THREATAGENTFOROWASPTOP10(Base):
     __tablename__ = 'THREATAGENTFOROWASPTOP10'
-    __bind_key__  = 'XTHREAT'
 
     OWASPTOP10ThreatAgentID = Column(Integer, primary_key=True)
     OWASPTOP10ID = Column(Integer, nullable=False)
@@ -691,7 +653,6 @@ class THREATAGENTFOROWASPTOP10(Base):
 
 class THREATAGENTTAG(Base):
     __tablename__ = 'THREATAGENTTAG'
-    __bind_key__  = 'XTHREAT'
 
     ThreatAgentTagID = Column(Integer, primary_key=True)
     ThreatAgentID = Column(Integer)
@@ -709,7 +670,6 @@ class THREATAGENTTAG(Base):
 
 class THREATCAMPAIGN(Base):
     __tablename__ = 'THREATCAMPAIGN'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignID = Column(Integer, primary_key=True)
     ThreatCampaignGUID = Column(Text)
@@ -735,7 +695,6 @@ class THREATCAMPAIGN(Base):
 
 class THREATCAMPAIGNCHANGERECORD(Base):
     __tablename__ = 'THREATCAMPAIGNCHANGERECORD'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignChangeRecordID = Column(Integer, primary_key=True)
 
@@ -744,7 +703,6 @@ class THREATCAMPAIGNCHANGERECORD(Base):
 
 class THREATCAMPAIGNDESCRIPTION(Base):
     __tablename__ = 'THREATCAMPAIGNDESCRIPTION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignDescriptionID = Column(Integer, primary_key=True)
     ThreatCampaignID = Column(Integer, nullable=False)
@@ -768,7 +726,6 @@ class THREATCAMPAIGNDESCRIPTION(Base):
 
 class THREATCAMPAIGNFORTHREATCAMPAIGN(Base):
     __tablename__ = 'THREATCAMPAIGNFORTHREATCAMPAIGN'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignMappingID = Column(Integer, primary_key=True)
     ThreatCampaignRefID = Column(Integer, nullable=False)
@@ -791,7 +748,6 @@ class THREATCAMPAIGNFORTHREATCAMPAIGN(Base):
 
 class THREATCAMPAIGNMETHODOLOGY(Base):
     __tablename__ = 'THREATCAMPAIGNMETHODOLOGY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignMethodologyID = Column(Integer, primary_key=True)
 
@@ -800,7 +756,6 @@ class THREATCAMPAIGNMETHODOLOGY(Base):
 
 class THREATCAMPAIGNNAME(Base):
     __tablename__ = 'THREATCAMPAIGNNAME'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignNameID = Column(Integer, primary_key=True)
     ThreatCampaignGUID = Column(Text)
@@ -821,7 +776,6 @@ class THREATCAMPAIGNNAME(Base):
 
 class THREATCAMPAIGNNAMEFORTHREATCAMPAIGN(Base):
     __tablename__ = 'THREATCAMPAIGNNAMEFORTHREATCAMPAIGN'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignThreatCampaignNameID = Column(Integer, primary_key=True)
     ThreatCampaignID = Column(Integer, nullable=False)
@@ -839,7 +793,6 @@ class THREATCAMPAIGNNAMEFORTHREATCAMPAIGN(Base):
 
 class THREATCAMPAIGNREFERENCE(Base):
     __tablename__ = 'THREATCAMPAIGNREFERENCE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignReferenceID = Column(Integer, primary_key=True)
     ThreatCampaignID = Column(Integer)
@@ -859,7 +812,6 @@ class THREATCAMPAIGNREFERENCE(Base):
 
 class THREATCAMPAIGNSOURCE(Base):
     __tablename__ = 'THREATCAMPAIGNSOURCE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignSourceID = Column(Integer, primary_key=True)
 
@@ -868,7 +820,6 @@ class THREATCAMPAIGNSOURCE(Base):
 
 class THREATCAMPAIGNSTATUS(Base):
     __tablename__ = 'THREATCAMPAIGNSTATUS'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignStatusID = Column(Integer, primary_key=True)
     CampaignStatus = Column(Text, nullable=False)
@@ -886,7 +837,6 @@ class THREATCAMPAIGNSTATUS(Base):
 
 class THREATCAMPAIGNTAG(Base):
     __tablename__ = 'THREATCAMPAIGNTAG'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignTagID = Column(Integer, primary_key=True)
     ThreatCampaignID = Column(Integer, nullable=False)
@@ -905,7 +855,6 @@ class THREATCAMPAIGNTAG(Base):
 
 class THREATCAMPAIGNTECHNIQUE(Base):
     __tablename__ = 'THREATCAMPAIGNTECHNIQUE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignTechniqueID = Column(Integer, primary_key=True)
 
@@ -914,7 +863,6 @@ class THREATCAMPAIGNTECHNIQUE(Base):
 
 class THREATCAMPAIGNTOOL(Base):
     __tablename__ = 'THREATCAMPAIGNTOOL'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignToolID = Column(Integer, primary_key=True)
 
@@ -923,7 +871,6 @@ class THREATCAMPAIGNTOOL(Base):
 
 class THREATCAMPAIGNTYPE(Base):
     __tablename__ = 'THREATCAMPAIGNTYPE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignTypeID = Column(Integer, primary_key=True)
     CampaignTypeTitle = Column(Text, nullable=False)
@@ -939,7 +886,6 @@ class THREATCAMPAIGNTYPE(Base):
 
 class THREATCATEGORY(Base):
     __tablename__ = 'THREATCATEGORY'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCategoryID = Column(Integer, primary_key=True)
     ThreatCategoryGUID = Column(Text)
@@ -961,7 +907,6 @@ class THREATCATEGORY(Base):
 
 class THREATCATEGORYDESCRIPTION(Base):
     __tablename__ = 'THREATCATEGORYDESCRIPTION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCategoryDescriptionID = Column(Integer, primary_key=True)
     ThreatCategoryID = Column(Integer, nullable=False)
@@ -979,7 +924,6 @@ class THREATCATEGORYDESCRIPTION(Base):
 
 class THREATCATEGORYREFERENCE(Base):
     __tablename__ = 'THREATCATEGORYREFERENCE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCategoryReferenceID = Column(Integer, primary_key=True)
     ThreatCategoryID = Column(Integer, nullable=False)
@@ -1001,7 +945,6 @@ class THREATCATEGORYREFERENCE(Base):
 
 class THREATCATEGORYTAG(Base):
     __tablename__ = 'THREATCATEGORYTAG'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCategoryTagID = Column(Integer, primary_key=True)
     ThreatCategoryID = Column(Integer, nullable=False)
@@ -1019,7 +962,6 @@ class THREATCATEGORYTAG(Base):
 
 class THREATINTENDEDEFFECT(Base):
     __tablename__ = 'THREATINTENDEDEFFECT'
-    __bind_key__  = 'XTHREAT'
 
     ThreatIntendedEffectID = Column(Integer, primary_key=True)
     ThreatIntendedEffectGUID = Column(Text)
@@ -1038,7 +980,6 @@ class THREATINTENDEDEFFECT(Base):
 
 class THREATINTENDEDEFFECTFORINCIDENT(Base):
     __tablename__ = 'THREATINTENDEDEFFECTFORINCIDENT'
-    __bind_key__  = 'XTHREAT'
 
     IncidentThreatIntendedEffectID = Column(Integer, primary_key=True)
     ThreatIntendedEffectID = Column(Integer, nullable=False)
@@ -1058,7 +999,6 @@ class THREATINTENDEDEFFECTFORINCIDENT(Base):
 
 class THREATINTENDEDEFFECTFORTHREATACTORTTP(Base):
     __tablename__ = 'THREATINTENDEDEFFECTFORTHREATACTORTTP'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorTTPIntendedEffectID = Column(Integer, primary_key=True)
     ThreatIntendedEffectID = Column(Integer, nullable=False)
@@ -1078,7 +1018,6 @@ class THREATINTENDEDEFFECTFORTHREATACTORTTP(Base):
 
 class THREATINTENDEDEFFECTFORTHREATCAMPAIGN(Base):
     __tablename__ = 'THREATINTENDEDEFFECTFORTHREATCAMPAIGN'
-    __bind_key__  = 'XTHREAT'
 
     ThreatCampaignIntendedEffectID = Column(Integer, primary_key=True)
     ThreatIntendedEffectID = Column(Integer, nullable=False)
@@ -1095,7 +1034,6 @@ class THREATINTENDEDEFFECTFORTHREATCAMPAIGN(Base):
 
 class THREATMOTIVE(Base):
     __tablename__ = 'THREATMOTIVE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatMotiveID = Column(Integer, primary_key=True)
     ThreatMotiveGUID = Column(Text)
@@ -1114,7 +1052,6 @@ class THREATMOTIVE(Base):
 
 class THREATMOTIVEDESCRIPTION(Base):
     __tablename__ = 'THREATMOTIVEDESCRIPTION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatMotiveDescriptionID = Column(Integer, primary_key=True)
 
@@ -1123,7 +1060,6 @@ class THREATMOTIVEDESCRIPTION(Base):
 
 class THREATMOTIVEFORTHREATACTOR(Base):
     __tablename__ = 'THREATMOTIVEFORTHREATACTOR'
-    __bind_key__  = 'XTHREAT'
 
     ThreatActorMotiveID = Column(Integer, primary_key=True)
     ThreatMotiveID = Column(Integer, nullable=False)
@@ -1140,7 +1076,6 @@ class THREATMOTIVEFORTHREATACTOR(Base):
 
 class THREATMOTIVETAG(Base):
     __tablename__ = 'THREATMOTIVETAG'
-    __bind_key__  = 'XTHREAT'
 
     ThreatMotiveTagID = Column(Integer, primary_key=True)
 
@@ -1149,7 +1084,6 @@ class THREATMOTIVETAG(Base):
 
 class THREATTYPE(Base):
     __tablename__ = 'THREATTYPE'
-    __bind_key__  = 'XTHREAT'
 
     ThreatTypeID = Column(Integer, primary_key=True)
     ThreatTypeGUID = Column(Text)
@@ -1168,7 +1102,6 @@ class THREATTYPE(Base):
 
 class THREATTYPEDESCRIPTION(Base):
     __tablename__ = 'THREATTYPEDESCRIPTION'
-    __bind_key__  = 'XTHREAT'
 
     ThreatTypeDescriptionID = Column(Integer, primary_key=True)
     ThreatTypeID = Column(Integer, nullable=False)

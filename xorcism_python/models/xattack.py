@@ -8,7 +8,6 @@ from .base import Base
 
 class ATTACKCATEGORY(Base):
     __tablename__ = 'ATTACKCATEGORY'
-    __bind_key__  = 'XATTACK'
 
     AttackCategoryID = Column(Integer, primary_key=True)
     AttackCategoryGUID = Column(Text)
@@ -31,7 +30,6 @@ class ATTACKCATEGORY(Base):
 
 class ATTACKCATEGORYREFERENCE(Base):
     __tablename__ = 'ATTACKCATEGORYREFERENCE'
-    __bind_key__  = 'XATTACK'
 
     AttackCategoryReferenceID = Column(Integer, primary_key=True)
 
@@ -40,7 +38,6 @@ class ATTACKCATEGORYREFERENCE(Base):
 
 class ATTACKCONSEQUENCE(Base):
     __tablename__ = 'ATTACKCONSEQUENCE'
-    __bind_key__  = 'XATTACK'
 
     AttackConsequenceID = Column(Integer, primary_key=True)
     Consequence = Column(Text)
@@ -57,7 +54,6 @@ class ATTACKCONSEQUENCE(Base):
 
 class ATTACKCONSEQUENCETAG(Base):
     __tablename__ = 'ATTACKCONSEQUENCETAG'
-    __bind_key__  = 'XATTACK'
 
     AttackConsequenceTagID = Column(Integer, primary_key=True)
     AttackConsequenceID = Column(Integer)
@@ -68,7 +64,6 @@ class ATTACKCONSEQUENCETAG(Base):
 
 class ATTACKEXAMPLE(Base):
     __tablename__ = 'ATTACKEXAMPLE'
-    __bind_key__  = 'XATTACK'
 
     AttackExampleID = Column(Integer, primary_key=True)
     AttackExampleGUID = Column(Text)
@@ -87,7 +82,6 @@ class ATTACKEXAMPLE(Base):
 
 class ATTACKEXAMPLEFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKEXAMPLEFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackExampleForAttackPatternID = Column(Integer, primary_key=True)
     AttackExampleID = Column(Integer, nullable=False)
@@ -108,7 +102,6 @@ class ATTACKEXAMPLEFORATTACKPATTERN(Base):
 
 class ATTACKEXECUTIONFLOW(Base):
     __tablename__ = 'ATTACKEXECUTIONFLOW'
-    __bind_key__  = 'XATTACK'
 
     AttackExecutionFlowID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -123,7 +116,6 @@ class ATTACKEXECUTIONFLOW(Base):
 
 class ATTACKEXECUTIONFLOWPHASE(Base):
     __tablename__ = 'ATTACKEXECUTIONFLOWPHASE'
-    __bind_key__  = 'XATTACK'
 
     AttackExecutionFlowPhaseID = Column(Integer, primary_key=True)
     AttackExecutionFlowID = Column(Integer)
@@ -144,7 +136,6 @@ class ATTACKEXECUTIONFLOWPHASE(Base):
 
 class ATTACKMETHOD(Base):
     __tablename__ = 'ATTACKMETHOD'
-    __bind_key__  = 'XATTACK'
 
     AttackMethodID = Column(Integer, primary_key=True)
     AttackMethodGUID = Column(Text)
@@ -167,7 +158,6 @@ class ATTACKMETHOD(Base):
 
 class ATTACKMETHODDESCRIPTION(Base):
     __tablename__ = 'ATTACKMETHODDESCRIPTION'
-    __bind_key__  = 'XATTACK'
 
     AttackMethodDescriptionID = Column(Integer, primary_key=True)
 
@@ -176,7 +166,6 @@ class ATTACKMETHODDESCRIPTION(Base):
 
 class ATTACKMETHODFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKMETHODFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternMethodID = Column(Integer, primary_key=True)
     AttackMethodID = Column(Integer, nullable=False)
@@ -193,7 +182,6 @@ class ATTACKMETHODFORATTACKPATTERN(Base):
 
 class ATTACKMETHODREFERENCE(Base):
     __tablename__ = 'ATTACKMETHODREFERENCE'
-    __bind_key__  = 'XATTACK'
 
     AttackMethodReferenceID = Column(Integer, primary_key=True)
     AttackMethodID = Column(Integer)
@@ -210,7 +198,6 @@ class ATTACKMETHODREFERENCE(Base):
 
 class ATTACKMETHODTAG(Base):
     __tablename__ = 'ATTACKMETHODTAG'
-    __bind_key__  = 'XATTACK'
 
     AttackMethodTagID = Column(Integer, primary_key=True)
     AttackMethodID = Column(Integer)
@@ -227,7 +214,6 @@ class ATTACKMETHODTAG(Base):
 
 class ATTACKMOTIVATION(Base):
     __tablename__ = 'ATTACKMOTIVATION'
-    __bind_key__  = 'XATTACK'
 
     AttackMotivationID = Column(Integer, nullable=False, primary_key=True)
     AttackMotivationName = Column(Text)
@@ -239,7 +225,6 @@ class ATTACKMOTIVATION(Base):
 
 class ATTACKPATTERN(Base):
     __tablename__ = 'ATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternID = Column(Integer, primary_key=True)
     AttackPatternGUID = Column(Text)
@@ -271,7 +256,6 @@ class ATTACKPATTERN(Base):
 
 class ATTACKPATTERNATTACKCONSEQUENCE(Base):
     __tablename__ = 'ATTACKPATTERNATTACKCONSEQUENCE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternAttackConsequenceID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -292,7 +276,6 @@ class ATTACKPATTERNATTACKCONSEQUENCE(Base):
 
 class ATTACKPATTERNATTACKCONSEQUENCESCOPE(Base):
     __tablename__ = 'ATTACKPATTERNATTACKCONSEQUENCESCOPE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternAttackConsequenceScopeID = Column(Integer, primary_key=True)
     AttackPatternAttackConsequenceID = Column(Integer)
@@ -309,7 +292,6 @@ class ATTACKPATTERNATTACKCONSEQUENCESCOPE(Base):
 
 class ATTACKPATTERNATTACKTECHNICALIMPACT(Base):
     __tablename__ = 'ATTACKPATTERNATTACKTECHNICALIMPACT'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternAttackTechnicalImpactID = Column(Integer, primary_key=True)
     AttackPatternAttackConsequenceID = Column(Integer)
@@ -327,7 +309,6 @@ class ATTACKPATTERNATTACKTECHNICALIMPACT(Base):
 
 class ATTACKPATTERNCWE(Base):
     __tablename__ = 'ATTACKPATTERNCWE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternCWEID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -345,7 +326,6 @@ class ATTACKPATTERNCWE(Base):
 
 class ATTACKPATTERNFORTHREATACTORTTP(Base):
     __tablename__ = 'ATTACKPATTERNFORTHREATACTORTTP'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternForThreatActorTTPID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer, nullable=False)
@@ -359,7 +339,6 @@ class ATTACKPATTERNFORTHREATACTORTTP(Base):
 
 class ATTACKPATTERNINDICATORWARNING(Base):
     __tablename__ = 'ATTACKPATTERNINDICATORWARNING'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternIndicatorWarningID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -375,7 +354,6 @@ class ATTACKPATTERNINDICATORWARNING(Base):
 
 class ATTACKPATTERNMITIGATION(Base):
     __tablename__ = 'ATTACKPATTERNMITIGATION'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternMitigationID = Column(Integer, primary_key=True)
     AttackPatternMitigationGUID = Column(Text)
@@ -396,7 +374,6 @@ class ATTACKPATTERNMITIGATION(Base):
 
 class ATTACKPATTERNNOTE(Base):
     __tablename__ = 'ATTACKPATTERNNOTE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternNoteID = Column(Integer, primary_key=True)
     NoteText = Column(Text)
@@ -412,7 +389,6 @@ class ATTACKPATTERNNOTE(Base):
 
 class ATTACKPATTERNNOTES(Base):
     __tablename__ = 'ATTACKPATTERNNOTES'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternNotesID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -430,7 +406,6 @@ class ATTACKPATTERNNOTES(Base):
 
 class ATTACKPATTERNOBFUSCATIONTECHNIQUE(Base):
     __tablename__ = 'ATTACKPATTERNOBFUSCATIONTECHNIQUE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternObfuscationTechniqueID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer, nullable=False)
@@ -449,7 +424,6 @@ class ATTACKPATTERNOBFUSCATIONTECHNIQUE(Base):
 
 class ATTACKPATTERNPROBINGTECHNIQUE(Base):
     __tablename__ = 'ATTACKPATTERNPROBINGTECHNIQUE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternProbingTechniqueID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -470,7 +444,6 @@ class ATTACKPATTERNPROBINGTECHNIQUE(Base):
 
 class ATTACKPATTERNREFERENCE(Base):
     __tablename__ = 'ATTACKPATTERNREFERENCE'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternReferenceID = Column(Integer, primary_key=True)
     AttackPatternReferenceGUID = Column(Text)
@@ -494,7 +467,6 @@ class ATTACKPATTERNREFERENCE(Base):
 
 class ATTACKPATTERNRELATIONSHIP(Base):
     __tablename__ = 'ATTACKPATTERNRELATIONSHIP'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternRelationshipID = Column(Integer, primary_key=True)
     AttackPatternRefID = Column(Integer)
@@ -516,7 +488,6 @@ class ATTACKPATTERNRELATIONSHIP(Base):
 
 class ATTACKPATTERNSECURITYCONTROL(Base):
     __tablename__ = 'ATTACKPATTERNSECURITYCONTROL'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternSecurityControlID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -534,7 +505,6 @@ class ATTACKPATTERNSECURITYCONTROL(Base):
 
 class ATTACKPATTERNTAG(Base):
     __tablename__ = 'ATTACKPATTERNTAG'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternTagID = Column(Integer, primary_key=True)
     AttackPatternTagGUID = Column(Text)
@@ -555,7 +525,6 @@ class ATTACKPATTERNTAG(Base):
 
 class ATTACKPATTERNVIEW(Base):
     __tablename__ = 'ATTACKPATTERNVIEW'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternViewID = Column(Integer, primary_key=True)
     AttackPatternViewGUID = Column(Text)
@@ -578,7 +547,6 @@ class ATTACKPATTERNVIEW(Base):
 
 class ATTACKPATTERNVIEWRELATIONSHIP(Base):
     __tablename__ = 'ATTACKPATTERNVIEWRELATIONSHIP'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternViewRelationshipID = Column(Integer, primary_key=True)
     AttackPatternViewID = Column(Integer)
@@ -600,7 +568,6 @@ class ATTACKPATTERNVIEWRELATIONSHIP(Base):
 
 class ATTACKPAYLOAD(Base):
     __tablename__ = 'ATTACKPAYLOAD'
-    __bind_key__  = 'XATTACK'
 
     AttackPayloadID = Column(Integer, primary_key=True)
     AttackPayloadGUID = Column(Text)
@@ -619,7 +586,6 @@ class ATTACKPAYLOAD(Base):
 
 class ATTACKPAYLOADENCODER(Base):
     __tablename__ = 'ATTACKPAYLOADENCODER'
-    __bind_key__  = 'XATTACK'
 
     AttackPayloadEncoderID = Column(Integer, primary_key=True)
     AttackPayloadEncoderName = Column(Text)
@@ -636,7 +602,6 @@ class ATTACKPAYLOADENCODER(Base):
 
 class ATTACKPAYLOADFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKPAYLOADFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternPayloadID = Column(Integer, primary_key=True)
     AttackPatternPayloadGUID = Column(Text)
@@ -657,7 +622,6 @@ class ATTACKPAYLOADFORATTACKPATTERN(Base):
 
 class ATTACKPAYLOADIMPACT(Base):
     __tablename__ = 'ATTACKPAYLOADIMPACT'
-    __bind_key__  = 'XATTACK'
 
     AttackPayloadImpactID = Column(Integer, primary_key=True)
     PayloadActivationImpactDescription = Column(Text, nullable=False)
@@ -673,7 +637,6 @@ class ATTACKPAYLOADIMPACT(Base):
 
 class ATTACKPAYLOADIMPACTFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKPAYLOADIMPACTFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternPayloadImpactID = Column(Integer, primary_key=True)
     AttackPayloadImpactID = Column(Integer, nullable=False)
@@ -691,7 +654,6 @@ class ATTACKPAYLOADIMPACTFORATTACKPATTERN(Base):
 
 class ATTACKPHASE(Base):
     __tablename__ = 'ATTACKPHASE'
-    __bind_key__  = 'XATTACK'
 
     AttackPhaseID = Column(Integer, primary_key=True)
     AttackPhaseGUID = Column(Text)
@@ -711,7 +673,6 @@ class ATTACKPHASE(Base):
 
 class ATTACKPHASEFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKPHASEFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternAttackPhaseID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -734,7 +695,6 @@ class ATTACKPHASEFORATTACKPATTERN(Base):
 
 class ATTACKPREREQUISITE(Base):
     __tablename__ = 'ATTACKPREREQUISITE'
-    __bind_key__  = 'XATTACK'
 
     AttackPrerequisiteID = Column(Integer, primary_key=True)
     AttackPrerequisiteGUID = Column(Text)
@@ -751,7 +711,6 @@ class ATTACKPREREQUISITE(Base):
 
 class ATTACKPREREQUISITEFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKPREREQUISITEFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternAttackPrerequisiteID = Column(Integer, primary_key=True)
     AttackPrerequisiteID = Column(Integer, nullable=False)
@@ -769,7 +728,6 @@ class ATTACKPREREQUISITEFORATTACKPATTERN(Base):
 
 class ATTACKPURPOSE(Base):
     __tablename__ = 'ATTACKPURPOSE'
-    __bind_key__  = 'XATTACK'
 
     AttackPurposeID = Column(Integer, primary_key=True)
     AttackPurposeGUID = Column(Text)
@@ -785,7 +743,6 @@ class ATTACKPURPOSE(Base):
 
 class ATTACKPURPOSEFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKPURPOSEFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternPurposeID = Column(Integer, primary_key=True)
     AttackPurposeID = Column(Integer, nullable=False)
@@ -802,7 +759,6 @@ class ATTACKPURPOSEFORATTACKPATTERN(Base):
 
 class ATTACKRESOURCE(Base):
     __tablename__ = 'ATTACKRESOURCE'
-    __bind_key__  = 'XATTACK'
 
     AttackResourceID = Column(Integer, primary_key=True)
     AttackResourceText = Column(Text, nullable=False)
@@ -816,7 +772,6 @@ class ATTACKRESOURCE(Base):
 
 class ATTACKRESOURCEFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKRESOURCEFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternAttackResourceRequiredID = Column(Integer, primary_key=True)
     AttackResourceID = Column(Integer, nullable=False)
@@ -834,7 +789,6 @@ class ATTACKRESOURCEFORATTACKPATTERN(Base):
 
 class ATTACKRESOURCELEVEL(Base):
     __tablename__ = 'ATTACKRESOURCELEVEL'
-    __bind_key__  = 'XATTACK'
 
     AttackResourceLevelID = Column(Integer, nullable=False, primary_key=True)
     AttackResourceLevelName = Column(Text)
@@ -846,7 +800,6 @@ class ATTACKRESOURCELEVEL(Base):
 
 class ATTACKRESOURCETAG(Base):
     __tablename__ = 'ATTACKRESOURCETAG'
-    __bind_key__  = 'XATTACK'
 
     AttackResourceTagID = Column(Integer, primary_key=True)
     AttackResourceID = Column(Integer)
@@ -863,7 +816,6 @@ class ATTACKRESOURCETAG(Base):
 
 class ATTACKSCENARIO(Base):
     __tablename__ = 'ATTACKSCENARIO'
-    __bind_key__  = 'XATTACK'
 
     AttackScenarioID = Column(Integer, primary_key=True)
     ScenarioID = Column(Integer, nullable=False)
@@ -874,7 +826,6 @@ class ATTACKSCENARIO(Base):
 
 class ATTACKSCOPE(Base):
     __tablename__ = 'ATTACKSCOPE'
-    __bind_key__  = 'XATTACK'
 
     AttackScopeID = Column(Integer, primary_key=True)
     AttackScopeGUID = Column(Text)
@@ -891,7 +842,6 @@ class ATTACKSCOPE(Base):
 
 class ATTACKSTEP(Base):
     __tablename__ = 'ATTACKSTEP'
-    __bind_key__  = 'XATTACK'
 
     AttackStepID = Column(Integer, primary_key=True)
     AttackStepGUID = Column(Text)
@@ -912,7 +862,6 @@ class ATTACKSTEP(Base):
 
 class ATTACKSTEPINDICATOR(Base):
     __tablename__ = 'ATTACKSTEPINDICATOR'
-    __bind_key__  = 'XATTACK'
 
     AttackStepIndicatorID = Column(Integer, primary_key=True)
     AttackStepIndicatorGUID = Column(Text)
@@ -935,7 +884,6 @@ class ATTACKSTEPINDICATOR(Base):
 
 class ATTACKSTEPINDICATORENVIRONMENT(Base):
     __tablename__ = 'ATTACKSTEPINDICATORENVIRONMENT'
-    __bind_key__  = 'XATTACK'
 
     AttackStepIndicatorEnvironmentID = Column(Integer, primary_key=True)
     AttackStepIndicatorID = Column(Integer, nullable=False)
@@ -952,7 +900,6 @@ class ATTACKSTEPINDICATORENVIRONMENT(Base):
 
 class ATTACKSTEPINDICATORTAG(Base):
     __tablename__ = 'ATTACKSTEPINDICATORTAG'
-    __bind_key__  = 'XATTACK'
 
     AttackStepIndicatorTagID = Column(Integer, primary_key=True)
     AttackStepIndicatorID = Column(Integer)
@@ -969,7 +916,6 @@ class ATTACKSTEPINDICATORTAG(Base):
 
 class ATTACKSTEPOUTCOME(Base):
     __tablename__ = 'ATTACKSTEPOUTCOME'
-    __bind_key__  = 'XATTACK'
 
     AttackStepOutcomeID = Column(Integer, primary_key=True)
     AttackStepID = Column(Integer)
@@ -988,7 +934,6 @@ class ATTACKSTEPOUTCOME(Base):
 
 class ATTACKSTEPOUTCOMETAG(Base):
     __tablename__ = 'ATTACKSTEPOUTCOMETAG'
-    __bind_key__  = 'XATTACK'
 
     AttackStepOutcomeTagID = Column(Integer, primary_key=True)
     AttackStepOutcomeID = Column(Integer)
@@ -1005,7 +950,6 @@ class ATTACKSTEPOUTCOMETAG(Base):
 
 class ATTACKSTEPSECURITYCONTROL(Base):
     __tablename__ = 'ATTACKSTEPSECURITYCONTROL'
-    __bind_key__  = 'XATTACK'
 
     AttackStepSecurityControlID = Column(Integer, primary_key=True)
     AttackStepID = Column(Integer)
@@ -1025,7 +969,6 @@ class ATTACKSTEPSECURITYCONTROL(Base):
 
 class ATTACKSTEPTAG(Base):
     __tablename__ = 'ATTACKSTEPTAG'
-    __bind_key__  = 'XATTACK'
 
     AttackStepTagID = Column(Integer, primary_key=True)
     AttackStepID = Column(Integer)
@@ -1042,7 +985,6 @@ class ATTACKSTEPTAG(Base):
 
 class ATTACKSTEPTECHNIQUE(Base):
     __tablename__ = 'ATTACKSTEPTECHNIQUE'
-    __bind_key__  = 'XATTACK'
 
     AttackStepTechniqueID = Column(Integer, primary_key=True)
     AttackStepTechniqueGUID = Column(Text)
@@ -1062,7 +1004,6 @@ class ATTACKSTEPTECHNIQUE(Base):
 
 class ATTACKSTEPTECHNIQUEENVIRONMENT(Base):
     __tablename__ = 'ATTACKSTEPTECHNIQUEENVIRONMENT'
-    __bind_key__  = 'XATTACK'
 
     AttackStepTechniqueEnvironmentID = Column(Integer, primary_key=True)
     AttackStepTechniqueID = Column(Integer)
@@ -1079,7 +1020,6 @@ class ATTACKSTEPTECHNIQUEENVIRONMENT(Base):
 
 class ATTACKSTEPTECHNIQUELEVERAGEDPATTERN(Base):
     __tablename__ = 'ATTACKSTEPTECHNIQUELEVERAGEDPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackStepTechniqueLeveragedPatternID = Column(Integer, primary_key=True)
     AttackStepTechniqueID = Column(Integer)
@@ -1099,7 +1039,6 @@ class ATTACKSTEPTECHNIQUELEVERAGEDPATTERN(Base):
 
 class ATTACKSURFACE(Base):
     __tablename__ = 'ATTACKSURFACE'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceID = Column(Integer, primary_key=True)
     AttackSurfaceGUID = Column(Text)
@@ -1120,7 +1059,6 @@ class ATTACKSURFACE(Base):
 
 class ATTACKSURFACECHANGERECORD(Base):
     __tablename__ = 'ATTACKSURFACECHANGERECORD'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceChangeRecordID = Column(Integer, primary_key=True)
 
@@ -1129,7 +1067,6 @@ class ATTACKSURFACECHANGERECORD(Base):
 
 class ATTACKSURFACEFORATTACKPATTERN(Base):
     __tablename__ = 'ATTACKSURFACEFORATTACKPATTERN'
-    __bind_key__  = 'XATTACK'
 
     AttackPatternSurfaceID = Column(Integer, primary_key=True)
     AttackSurfaceID = Column(Integer, nullable=False)
@@ -1146,7 +1083,6 @@ class ATTACKSURFACEFORATTACKPATTERN(Base):
 
 class ATTACKSURFACEINTERACTIONPOINTS(Base):
     __tablename__ = 'ATTACKSURFACEINTERACTIONPOINTS'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceInteractionPointsID = Column(Integer, primary_key=True)
 
@@ -1155,7 +1091,6 @@ class ATTACKSURFACEINTERACTIONPOINTS(Base):
 
 class ATTACKSURFACELOCALITY(Base):
     __tablename__ = 'ATTACKSURFACELOCALITY'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceLocalityID = Column(Integer, primary_key=True)
     AttackSurfaceLocalityName = Column(Text, nullable=False)
@@ -1171,7 +1106,6 @@ class ATTACKSURFACELOCALITY(Base):
 
 class ATTACKSURFACELOCALITYFORATTACKSURFACE(Base):
     __tablename__ = 'ATTACKSURFACELOCALITYFORATTACKSURFACE'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceLocalitiesID = Column(Integer, primary_key=True)
     AttackSurfaceLocalityID = Column(Integer, nullable=False)
@@ -1188,7 +1122,6 @@ class ATTACKSURFACELOCALITYFORATTACKSURFACE(Base):
 
 class ATTACKSURFACESERVICE(Base):
     __tablename__ = 'ATTACKSURFACESERVICE'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceServiceID = Column(Integer, primary_key=True)
     AttackSurfaceID = Column(Integer, nullable=False)
@@ -1207,7 +1140,6 @@ class ATTACKSURFACESERVICE(Base):
 
 class ATTACKSURFACESERVICEPROTOCOL(Base):
     __tablename__ = 'ATTACKSURFACESERVICEPROTOCOL'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceServiceProtocolID = Column(Integer, primary_key=True)
     AttackSurfaceServiceID = Column(Integer, nullable=False)
@@ -1225,7 +1157,6 @@ class ATTACKSURFACESERVICEPROTOCOL(Base):
 
 class ATTACKSURFACETYPE(Base):
     __tablename__ = 'ATTACKSURFACETYPE'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceTypeID = Column(Integer, primary_key=True)
     AttackSurfaceTypeName = Column(Text, nullable=False)
@@ -1241,7 +1172,6 @@ class ATTACKSURFACETYPE(Base):
 
 class ATTACKSURFACETYPEFORATTACKSURFACE(Base):
     __tablename__ = 'ATTACKSURFACETYPEFORATTACKSURFACE'
-    __bind_key__  = 'XATTACK'
 
     AttackSurfaceTypesID = Column(Integer, primary_key=True)
     AttackSurfaceTypeID = Column(Integer, nullable=False)
@@ -1255,7 +1185,6 @@ class ATTACKSURFACETYPEFORATTACKSURFACE(Base):
 
 class ATTACKTECHNICALIMPACT(Base):
     __tablename__ = 'ATTACKTECHNICALIMPACT'
-    __bind_key__  = 'XATTACK'
 
     AttackTechnicalImpactID = Column(Integer, primary_key=True)
     AttackTechnicalImpactGUID = Column(Text)
@@ -1274,7 +1203,6 @@ class ATTACKTECHNICALIMPACT(Base):
 
 class ATTACKTECHNIQUE(Base):
     __tablename__ = 'ATTACKTECHNIQUE'
-    __bind_key__  = 'XATTACK'
 
     AttackTechniqueID = Column(Integer, primary_key=True)
     AttackTechniqueGUID = Column(Text)
@@ -1294,7 +1222,6 @@ class ATTACKTECHNIQUE(Base):
 
 class ATTACKTECHNIQUEINDICATOR(Base):
     __tablename__ = 'ATTACKTECHNIQUEINDICATOR'
-    __bind_key__  = 'XATTACK'
 
     AttackTechniqueIndicatorID = Column(Integer, primary_key=True)
     AttackTechniqueID = Column(Integer)
@@ -1306,7 +1233,6 @@ class ATTACKTECHNIQUEINDICATOR(Base):
 
 class ATTACKTECHNIQUEREFERENCE(Base):
     __tablename__ = 'ATTACKTECHNIQUEREFERENCE'
-    __bind_key__  = 'XATTACK'
 
     AttackTechniqueReferenceID = Column(Integer, primary_key=True)
     AttackTechniqueID = Column(Integer)
@@ -1323,7 +1249,6 @@ class ATTACKTECHNIQUEREFERENCE(Base):
 
 class ATTACKTECHNIQUETAG(Base):
     __tablename__ = 'ATTACKTECHNIQUETAG'
-    __bind_key__  = 'XATTACK'
 
     AttackTechniqueTagID = Column(Integer, primary_key=True)
     AttackTechniqueID = Column(Integer)
@@ -1342,7 +1267,6 @@ class ATTACKTECHNIQUETAG(Base):
 
 class ATTACKTECHNIQUETOOL(Base):
     __tablename__ = 'ATTACKTECHNIQUETOOL'
-    __bind_key__  = 'XATTACK'
 
     AttackTechniqueToolID = Column(Integer, primary_key=True)
     AttackTechniqueID = Column(Integer)
@@ -1363,7 +1287,6 @@ class ATTACKTECHNIQUETOOL(Base):
 
 class ATTACKTOOL(Base):
     __tablename__ = 'ATTACKTOOL'
-    __bind_key__  = 'XATTACK'
 
     AttackToolID = Column(Integer, primary_key=True)
     AttackTooldGUID = Column(Text)
@@ -1388,7 +1311,6 @@ class ATTACKTOOL(Base):
 
 class ATTACKTOOLAUTHENTICATIONTYPE(Base):
     __tablename__ = 'ATTACKTOOLAUTHENTICATIONTYPE'
-    __bind_key__  = 'XATTACK'
 
     AttackToolAuthenticationTypeID = Column(Integer, primary_key=True)
     AttackToolID = Column(Integer)
@@ -1406,7 +1328,6 @@ class ATTACKTOOLAUTHENTICATIONTYPE(Base):
 
 class ATTACKTOOLDESCRIPTION(Base):
     __tablename__ = 'ATTACKTOOLDESCRIPTION'
-    __bind_key__  = 'XATTACK'
 
     AttackToolDescriptionID = Column(Integer, primary_key=True)
 
@@ -1415,7 +1336,6 @@ class ATTACKTOOLDESCRIPTION(Base):
 
 class ATTACKTOOLFORTHREATACTORTTP(Base):
     __tablename__ = 'ATTACKTOOLFORTHREATACTORTTP'
-    __bind_key__  = 'XATTACK'
 
     ThreatActorTTPAttackToolID = Column(Integer, primary_key=True)
     AttackToolID = Column(Integer, nullable=False)
@@ -1433,7 +1353,6 @@ class ATTACKTOOLFORTHREATACTORTTP(Base):
 
 class ATTACKTOOLMODULE(Base):
     __tablename__ = 'ATTACKTOOLMODULE'
-    __bind_key__  = 'XATTACK'
 
     AttackToolModuleID = Column(Integer, primary_key=True)
     AttackToolModuleName = Column(Text)
@@ -1451,7 +1370,6 @@ class ATTACKTOOLMODULE(Base):
 
 class ATTACKTOOLMODULEAUTHENTICATIONTYPE(Base):
     __tablename__ = 'ATTACKTOOLMODULEAUTHENTICATIONTYPE'
-    __bind_key__  = 'XATTACK'
 
     AttackToolModuleAuthenticationTypeID = Column(Integer, primary_key=True)
     AttackToolModuleID = Column(Integer)
@@ -1468,7 +1386,6 @@ class ATTACKTOOLMODULEAUTHENTICATIONTYPE(Base):
 
 class ATTACKTOOLTAG(Base):
     __tablename__ = 'ATTACKTOOLTAG'
-    __bind_key__  = 'XATTACK'
 
     AttackToolTagID = Column(Integer, primary_key=True)
 
@@ -1477,7 +1394,6 @@ class ATTACKTOOLTAG(Base):
 
 class ATTACKTOOLTYPE(Base):
     __tablename__ = 'ATTACKTOOLTYPE'
-    __bind_key__  = 'XATTACK'
 
     AttackToolTypeID = Column(Integer, primary_key=True)
     AttackToolTypeGUID = Column(Text)
@@ -1496,7 +1412,6 @@ class ATTACKTOOLTYPE(Base):
 
 class ATTACKVECTOR(Base):
     __tablename__ = 'ATTACKVECTOR'
-    __bind_key__  = 'XATTACK'
 
     AttackVectorID = Column(Integer, primary_key=True)
     AttackVectorName = Column(Text)
