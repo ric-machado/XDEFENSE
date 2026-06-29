@@ -18,10 +18,10 @@ import { TOOL_SEED } from "./data/toolsSeed";
 import { CSF_LEVELS, CSF_SUBCATEGORIES } from "./data/csfCatalog";
 import * as vault from "./vault";
 
-// Location of the SQLite databases. OUTSIDE OneDrive: OneDrive replaces the files
-// under open handles (stale reads, corrupted WAL, invisible permissions/updates).
-// Overridable via the DB_DIR environment variable.
-const DB_DIR = process.env.DB_DIR ?? "C:/Users/jerom/XORCISM_databases";
+// Location of the SQLite databases. Overridable via the DB_DIR environment variable.
+// Docker: set DB_DIR=/data in the container environment.
+// Development (Windows): set DB_DIR to a path outside OneDrive to avoid WAL corruption.
+const DB_DIR = process.env.DB_DIR ?? "/data";
 
 const DB_NAMES = [
   "XORCISM",
