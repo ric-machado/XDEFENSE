@@ -5,6 +5,7 @@
 import "express-async-errors";
 import express, { Request, Response, NextFunction } from "express";
 import { closeRabbitMQ } from "./queue";
+import { closeRedis } from "./cache";
 import compression from "compression";
 import path from "path";
 import fs from "fs";
@@ -999,6 +1000,6 @@ const server = app.listen(PORT, () => {
 process.on("SIGTERM", async () => {
   console.log("[shutdown] SIGTERM received — graceful shutdown...");
   server.close();
-  await closeRabbitMQ();
+  await Promise.all([closeRabbitMQ(), closeRedis()]);
   process.exit(0);
 });
