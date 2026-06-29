@@ -1,0 +1,212 @@
+#!/usr/bin/env bash
+# XDEFENSE CLI — wrapper de operações administrativas
+# Uso: ./scripts/xdefense <comando> [opções]
+
+set -euo pipefail
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$ROOT_DIR"
+
+RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
+BLUE='\033[0;34m'; BOLD='\033[1m'; NC='\033[0m'
+
+info()  { echo -e "${BLUE}[xdefense]${NC} $*"; }
+ok()    { echo -e "${GREEN}[xdefense]${NC} $*"; }
+warn()  { echo -e "${YELLOW}[xdefense]${NC} $*"; }
+err()   { echo -e "${RED}[xdefense]${NC} $*" >&2; exit 1; }
+
+COMMAND="${1:-help}"
+shift || true
+
+usage() {
+    cat <<'USAGE'
+XDEFENSE CLI — plataforma enterprise de cibersegurança
+
+Uso:
+  xdefense <comando> [opções]
+
+Comandos de instalação:
+  setup              Instala e configura a plataforma completa
+  upgrade            Atualiza imagens e reinicia a stack
+
+Diagnóstico:
+  doctor             Valida health checks e conectividade
+  status             Exibe status de todos os containers
+
+Operações de banco:
+  migrate            Migra dados do SQLite para o PostgreSQL
+  backup             Dispara backup manual do PostgreSQL
+  restore --file X   Restaura backup do arquivo especificado
+  shell-db           Abre psql interativo no PostgreSQL
+
+Operações de importação:
+  import attack      Importa MITRE ATT&CK
+  import sigma       Importa regras Sigma
+  import cve         Importa NVD CVE feed
+  import kev         Importa CISA KEV
+  import d3fend      Importa MITRE D3FEND
+
+Workers (manual):
+  worker             Inicia worker de connectors
+  scheduler          Inicia scheduler
+
+Logs:
+  logs [serviço]     Acompanha logs (todos ou de um serviço específico)
+
+USAGE
+}
+
+case "$COMMAND" in
+
+    # ── Instalação ────────────────────────────────────────────────────────────
+    setup)
+        exec "$SCRIPT_DIR/setup.sh" "$@"
+        ;;
+
+    upgrade)
+        info "Atualizando imagens Docker..."
+        docker compose pull
+        docker compose build --no-cache
+        docker compose up -d
+        ok "Stack atualizada."
+        ;;
+
+    # ── Diagnóstico ───────────────────────────────────────────────────────────
+    doctor)
+        info "Verificando health checks..."
+        FAIL=0
+
+        check_healthy() {
+            local svc="$1"
+            local status
+            status=$(docker compose ps --format json "$svc" 2>/dev/null | \
+                python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('Health','unknown'))" 2>/dev/null || echo "error")
+            if [[ "$status" == "healthy" ]]; then
+                ok "  $svc → healthy"
+            else
+                warn "  $svc → $status"
+                FAIL=$((FAIL + 1))
+            fi
+        }
+
+        check_url() {
+            local url="$1" desc="$2"
+            local code
+            code=$(curl -sk -o /dev/null -w "%{http_code}" "$url" 2>/dev/null || echo "000")
+            if [[ "$code" -ge 200 && "$code" -lt 500 ]]; then
+                ok "  $desc → HTTP $code"
+            else
+                warn "  $desc → HTTP $code"
+                FAIL=$((FAIL + 1))
+            fi
+        }
+
+        for svc in postgres redis rabbitmq backend nginx; do
+            check_healthy "$svc"
+        done
+
+        check_url "https://localhost/health"  "nginx /health"
+        check_url "https://localhost/login"   "backend /login"
+        check_url "https://localhost/taxii2/" "taxii discovery"
+
+        PG_OK=$(docker compose exec -T postgres pg_isready -U postgres -d xdefense 2>/dev/null && echo yes || echo no)
+        [[ "$PG_OK" == "yes" ]] && ok "  postgres → pg_isready OK" || { warn "  postgres → pg_isready FAIL"; FAIL=$((FAIL+1)); }
+
+        if [[ $FAIL -eq 0 ]]; then
+            ok "Todos os checks passaram."
+        else
+            warn "$FAIL check(s) com problema."
+            exit 1
+        fi
+        ;;
+
+    status)
+        docker compose ps
+        ;;
+
+    # ── Banco de dados ────────────────────────────────────────────────────────
+    migrate)
+        info "Iniciando migração SQLite → PostgreSQL..."
+        [[ -f .env ]] && { set -o allexport; source .env; set +o allexport; }
+        docker compose exec -T python-worker \
+            python3 /app/tools/xdefense_migrate.py "$@"
+        ;;
+
+    backup)
+        info "Disparando backup manual..."
+        [[ -f .env ]] && { set -o allexport; source .env; set +o allexport; }
+        docker compose exec -T backup /usr/local/bin/backup.sh
+        ok "Backup concluído."
+        ;;
+
+    restore)
+        exec "$SCRIPT_DIR/restore.sh" "$@"
+        ;;
+
+    shell-db)
+        info "Abrindo psql no PostgreSQL..."
+        [[ -f .env ]] && { set -o allexport; source .env; set +o allexport; }
+        docker compose exec postgres psql -U postgres -d xdefense
+        ;;
+
+    # ── Importações ───────────────────────────────────────────────────────────
+    import)
+        IMPORTER="${1:-}"
+        shift || true
+        case "$IMPORTER" in
+            attack)
+                info "Importando MITRE ATT&CK..."
+                docker compose exec -T python-worker \
+                    python3 /app/importers/mitre_attack_importer.py "$@"
+                ;;
+            sigma)
+                info "Importando regras Sigma..."
+                docker compose exec -T python-worker \
+                    python3 /app/importers/sigma_importer.py "$@"
+                ;;
+            cve)
+                info "Importando NVD CVE feed..."
+                docker compose exec -T python-worker \
+                    python3 /app/importers/nvd_cve_importer.py "$@"
+                ;;
+            kev)
+                info "Importando CISA KEV..."
+                docker compose exec -T python-worker \
+                    python3 /app/importers/kev_importer.py "$@"
+                ;;
+            d3fend)
+                info "Importando MITRE D3FEND..."
+                docker compose exec -T python-worker \
+                    python3 /app/importers/d3fend_importer.py "$@"
+                ;;
+            *)
+                err "Importer desconhecido: '$IMPORTER'. Use: attack, sigma, cve, kev, d3fend"
+                ;;
+        esac
+        ;;
+
+    # ── Workers manuais ───────────────────────────────────────────────────────
+    worker)
+        info "Iniciando worker de connectors..."
+        docker compose run --rm connector-runner "$@"
+        ;;
+
+    scheduler)
+        info "Iniciando scheduler..."
+        docker compose run --rm scheduler "$@"
+        ;;
+
+    # ── Logs ─────────────────────────────────────────────────────────────────
+    logs)
+        docker compose logs -f --tail=100 "$@"
+        ;;
+
+    # ── Help ──────────────────────────────────────────────────────────────────
+    help|--help|-h)
+        usage
+        ;;
+
+    *)
+        err "Comando desconhecido: '$COMMAND'. Use 'xdefense help' para ver as opções."
+        ;;
+esac

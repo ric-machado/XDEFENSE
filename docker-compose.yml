@@ -341,7 +341,10 @@ services:
 
   # ── Backup — pg_dump automático diário ───────────────────────────────────────
   backup:
-    image: postgres:16-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.backup
+    image: xdefense-backup:latest
     container_name: xdefense-backup
     <<: *default-restart
     depends_on:
@@ -355,11 +358,8 @@ services:
     volumes:
       - backup-data:/backups
       - xdefense-data:/data:ro
-      - ./scripts/backup.sh:/usr/local/bin/backup.sh:ro
     networks:
       - backend
-    command: >
-      sh -c "echo '${BACKUP_SCHEDULE:-0 2 * * *} /usr/local/bin/backup.sh' | crontab - && crond -f -l 2"
     logging: *default-logging
 
   # ── Prometheus — Coleta de Métricas ──────────────────────────────────────────
