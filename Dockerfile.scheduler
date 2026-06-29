@@ -1,0 +1,36 @@
+# syntax=docker/dockerfile:1
+# XDEFENSE — Scheduler
+# Roda tarefas periódicas independentes do processo Node.js principal.
+# Em Fase 1 usa shell cron. Na Fase 7 será substituído por RabbitMQ SchedulerWorker.
+
+FROM node:20-bookworm-slim AS runtime
+
+LABEL org.opencontainers.image.title="XDEFENSE Scheduler" \
+      org.opencontainers.image.description="Periodic task scheduler for XDEFENSE platform"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Usa o build do backend principal
+COPY --from=xdefense-backend:latest /app/xorcism_ts/dist ./dist
+COPY --from=xdefense-backend:latest /app/xorcism_ts/node_modules ./node_modules
+COPY --from=xdefense-backend:latest /app/xorcism_ts/package.json ./package.json
+COPY --from=xdefense-backend:latest /app/databases /app/databases
+
+VOLUME /data
+
+ENV NODE_ENV=production \
+    DB_DIR=/data \
+    SCHEDULER_ONLY=true
+
+RUN useradd --no-create-home --shell /bin/false scheduler && \
+    mkdir -p /data && chown scheduler:scheduler /data /app
+USER scheduler
+
+HEALTHCHECK --interval=60s --timeout=10s --start-period=30s --retries=3 \
+  CMD node -e "process.exit(0)"
+
+CMD ["node", "dist/server/scheduler.js"]

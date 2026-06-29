@@ -1,0 +1,49 @@
+# syntax=docker/dockerfile:1
+# XDEFENSE — Connector Runner & Python Workers
+# Processa jobs de segurança (nmap, nuclei, etc.) e importers (NVD, ATT&CK, etc.)
+# O modo de operação é controlado pela variável WORKER_MODE:
+#   connector  → executa connectors/runner.py (job queue loop)
+#   importer   → executar importers sob demanda
+
+FROM python:3.11-slim AS runtime
+
+LABEL org.opencontainers.image.title="XDEFENSE Connector Runner" \
+      org.opencontainers.image.description="Security tool connector runner and data importers"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget curl nmap netcat-traditional iputils-ping \
+        git ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Dependências Python
+COPY xorcism_python/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir \
+        psycopg2-binary>=2.9 \
+        pika>=1.3 \
+        redis>=5.0 \
+        gunicorn>=22.0
+
+# Código fonte
+COPY xorcism_python/ ./xorcism_python/
+COPY connectors/ ./connectors/
+
+# Volume de dados (SQLite em Fase 1; PostgreSQL a partir da Fase 5)
+VOLUME /data
+
+ENV XORCISM_DB_DIR=/data \
+    WORKER_MODE=connector \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app
+
+# Usuário não-root
+RUN useradd --no-create-home --shell /bin/false worker && \
+    mkdir -p /data && chown worker:worker /data /app
+USER worker
+
+HEALTHCHECK --interval=60s --timeout=10s --start-period=15s --retries=3 \
+  CMD python3 -c "import sys; sys.exit(0)"
+
+CMD ["sh", "-c", "if [ \"$WORKER_MODE\" = 'connector' ]; then python3 connectors/runner.py; else python3 -m xorcism_python.importers; fi"]

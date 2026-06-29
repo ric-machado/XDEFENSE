@@ -1,22 +1,43 @@
-# Contexte de build minimal — n'envoyez pas les artefacts lourds/secrets.
+# XDEFENSE — build context mínimo (sem artefatos pesados ou segredos)
 **/node_modules
 **/dist
 xorcism_ts/dist
 tools/nodejs
 nvd_cache
+
+# Bancos de dados (volumes, não copiados para a imagem)
 **/*.db
+**/*.db-wal
+**/*.db-shm
 **/*.sqlite
 **/*.sqlite3
+
+# Logs e temporários
 logs
+*.log
+*.zip
+
+# Segredos (nunca na imagem)
+.env
+nginx/ssl/
+
+# Sites e backups externos
 website
 website_backup
 Infomaniak
-agent/dist
-**/__pycache__
-**/*.pyc
-.git
-.gitignore
-*.log
-*.zip
 deploy_newsletter
 docs/*.pdf
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/.pytest_cache
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Agente compilado
+agent/dist

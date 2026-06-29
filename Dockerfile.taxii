@@ -1,0 +1,48 @@
+# syntax=docker/dockerfile:1
+# XDEFENSE — TAXII 2.1 Server (Python/Flask)
+# Serve coleções STIX 2.1 para feeds de CTI externos.
+
+FROM python:3.11-slim AS runtime
+
+LABEL org.opencontainers.image.title="XDEFENSE TAXII Server" \
+      org.opencontainers.image.description="STIX/TAXII 2.1 server for threat intelligence sharing"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Dependências do TAXII server
+RUN pip install --no-cache-dir \
+    flask>=3.0 \
+    gunicorn>=22.0 \
+    sqlalchemy>=2.0 \
+    psycopg2-binary>=2.9 \
+    python-dateutil>=2.8
+
+# Código fonte
+COPY taxii/ ./taxii/
+COPY xorcism_python/config.py ./xorcism_python/config.py
+
+# Volume de dados legado (SQLite taxii.db enquanto não migrado)
+VOLUME /data
+
+ENV TAXII_HOST=0.0.0.0 \
+    TAXII_PORT=5000 \
+    TAXII_DB=/data/taxii.db \
+    TAXII_AUTH=0 \
+    TAXII_BACKEND=sqlite \
+    PYTHONUNBUFFERED=1
+
+# Usuário não-root
+RUN useradd --no-create-home --shell /bin/false taxii && \
+    mkdir -p /data && chown taxii:taxii /data /app
+USER taxii
+
+EXPOSE 5000
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
+  CMD wget -qO- http://127.0.0.1:${TAXII_PORT}/taxii2/ || exit 1
+
+CMD ["python3", "taxii/taxii_server.py"]
