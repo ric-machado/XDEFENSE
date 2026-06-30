@@ -3,6 +3,7 @@
  * Inicializa o banco e executa o loop de agendamento sem subir o servidor HTTP.
  */
 
+import "./database/adapter"; // emite o aviso de boot se XDEFENSE_DB_ENGINE=postgres (ver adapter.ts)
 import { ensureSchemaDbs, seedData } from "./db";
 import { startScheduler } from "./scheduler";
 

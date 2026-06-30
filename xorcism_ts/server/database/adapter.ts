@@ -17,6 +17,17 @@ import { getPostgresAdapter } from "./postgres";
 
 const ENGINE = (process.env.XDEFENSE_DB_ENGINE ?? "sqlite").toLowerCase();
 
+if (ENGINE === "postgres") {
+  // eslint-disable-next-line no-console
+  console.warn(
+    "[db] XDEFENSE_DB_ENGINE=postgres: apenas código novo que chama getDbAdapter() " +
+      "diretamente usará PostgreSQL. As ~989 chamadas legadas via getDb().prepare() em " +
+      "db.ts continuam síncronas sobre SQLite/libSQL, ignorando esta variável (Stage 2 / " +
+      "Route C pendente — ver docs/DATABASE_BACKENDS_STAGE2.md). O lado Python pode estar " +
+      "gravando em PostgreSQL enquanto a interface web exibe dados de SQLite."
+  );
+}
+
 // ── Importação lazy do getDb legado (evita circular em módulos que importam db.ts) ──
 
 let _getDbFn: ((name: string) => import("better-sqlite3").Database) | null = null;

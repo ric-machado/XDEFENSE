@@ -7,6 +7,7 @@ import express, { Request, Response, NextFunction } from "express";
 import { closeRabbitMQ } from "./queue";
 import { closeRedis } from "./cache";
 import { metricsHandler, httpMetricsMiddleware } from "./metrics";
+import "./database/adapter"; // emite o aviso de boot se XDEFENSE_DB_ENGINE=postgres (ver adapter.ts)
 import compression from "compression";
 import helmet from "helmet";
 import cors from "cors";

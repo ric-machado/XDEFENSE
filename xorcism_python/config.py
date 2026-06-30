@@ -1,8 +1,11 @@
 """
 XDEFENSE Configuration
 """
+import logging
 import os
 import urllib.parse
+
+_log = logging.getLogger("xdefense.config")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -13,6 +16,16 @@ DB_DIR = os.getenv("DB_DIR", "/data")
 # sqlite   — arquivos individuais em DB_DIR (padrão)
 # postgres — banco único xdefense com 13 schemas via PostgreSQL
 DB_ENGINE = os.getenv("XDEFENSE_DB_ENGINE", "sqlite").strip().lower()
+
+if DB_ENGINE in ("postgres", "postgresql"):
+    _log.warning(
+        "XDEFENSE_DB_ENGINE=%s: o lado Python (importers/connectors/TAXII) vai gravar "
+        "em PostgreSQL, mas o servidor Node (xorcism_ts) ainda le/grava SQLite/libSQL "
+        "independentemente desta variavel (Stage 2 / Route C pendente — ver "
+        "docs/DATABASE_BACKENDS_STAGE2.md). Os dados gravados pelo Python NAO aparecerao "
+        "na interface web ate essa migracao ser concluida.",
+        DB_ENGINE,
+    )
 
 # ── 13 schemas lógicos do XDEFENSE ───────────────────────────────────────────
 LOGICAL_SCHEMAS = [
