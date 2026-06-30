@@ -14,7 +14,7 @@
 #   7. Aguarda health checks
 #   8. Sobe serviços restantes
 #   9. Aguarda backend ficar pronto
-#  10. Cria usuário administrador
+#  10. Recupera credenciais do administrador (criado automaticamente no 1º boot)
 #  11. Exibe credenciais no terminal
 
 set -euo pipefail
@@ -59,8 +59,6 @@ if [[ -f .env && "$RESET_MODE" == false ]]; then
     warn ".env já existe. Use --reset para regenerar. Continuando com .env existente."
     # Carrega variáveis existentes
     set -o allexport; source .env; set +o allexport
-    # Garante ADMIN_PASSWORD para exibição ao final
-    ADMIN_PASSWORD="${ADMIN_PASSWORD:-$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9' | head -c 20)}"
 else
     gen_pass() { openssl rand -base64 48 | tr -dc 'a-zA-Z0-9!@#%^*' | head -c "${1:-32}"; }
     gen_hex()  { openssl rand -hex "${1:-32}"; }
@@ -73,7 +71,6 @@ else
     VAULT_KEY=$(gen_hex 32)
     TAXII_PASSWORD=$(gen_pass 24)
     GRAFANA_PASSWORD=$(gen_pass 24)
-    ADMIN_PASSWORD=$(gen_pass 20)
 
     info "Credenciais geradas com sucesso."
 fi
@@ -123,9 +120,6 @@ TAXII_DB=/data/taxii.db
 
 # Grafana
 GRAFANA_PASSWORD=${GRAFANA_PASSWORD}
-
-# Admin (para referência — altere após o primeiro login)
-ADMIN_PASSWORD=${ADMIN_PASSWORD}
 
 # Integrações externas (opcionais)
 NVD_API_KEY=
@@ -215,28 +209,24 @@ docker compose up -d
 step "Aguardando o backend XDEFENSE"
 wait_healthy backend 120
 
-# ── 10. Criar usuário administrador ──────────────────────────────────────────
-step "Criando usuário administrador"
+# ── 10. Recuperar usuário administrador (criado automaticamente no 1º boot) ──
+step "Recuperando credenciais do administrador"
 
-REGISTER_ENABLED=$(docker compose exec -T backend \
-    node -e "console.log(process.env.XORCISM_ALLOW_REGISTER||'0')" 2>/dev/null || echo "0")
+# O backend cria o super-admin sozinho no primeiro boot (server/auth.ts:seedAdmin),
+# com role Admin real e senha aleatória — grava uma cópia única em /data dentro
+# do container para automação. Lemos e removemos o arquivo (mostrado uma vez só).
+ADMIN_CREDS_JSON=$(docker compose exec -T backend \
+    cat /data/.bootstrap_admin_password 2>/dev/null || echo "")
 
-# Habilita registro temporariamente para criar o admin
-docker compose exec -T backend \
-    node -e "process.env.XORCISM_ALLOW_REGISTER='1'" &>/dev/null || true
-
-ADMIN_RESULT=$(curl -sk -X POST https://localhost/api/auth/register \
-    -H "Content-Type: application/json" \
-    -d "{\"username\":\"admin\",\"password\":\"${ADMIN_PASSWORD}\",\"email\":\"admin@xdefense.local\"}" \
-    -w "\n%{http_code}" 2>/dev/null || echo "000")
-
-HTTP_CODE=$(echo "$ADMIN_RESULT" | tail -1)
-if [[ "$HTTP_CODE" == "200" || "$HTTP_CODE" == "201" ]]; then
-    success "Usuário admin criado com sucesso."
-elif [[ "$HTTP_CODE" == "409" ]]; then
-    warn "Usuário admin já existia."
+if [[ -n "$ADMIN_CREDS_JSON" ]]; then
+    ADMIN_EMAIL=$(echo "$ADMIN_CREDS_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin)['email'])" 2>/dev/null || echo "admin@xorcism.local")
+    ADMIN_PASSWORD=$(echo "$ADMIN_CREDS_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin)['password'])" 2>/dev/null || echo "")
+    docker compose exec -T backend rm -f /data/.bootstrap_admin_password &>/dev/null || true
+    success "Usuário admin recuperado (criado automaticamente no 1º boot)."
 else
-    warn "Não foi possível criar o admin via API (HTTP $HTTP_CODE). Crie manualmente."
+    ADMIN_EMAIL="admin@xorcism.local"
+    ADMIN_PASSWORD="(verifique: docker compose logs backend | grep -A2 'COMPTE ADMIN')"
+    warn "Não foi possível ler a credencial de bootstrap. Veja: docker compose logs backend"
 fi
 
 # ── 11. Validações ────────────────────────────────────────────────────────────
@@ -278,7 +268,7 @@ echo -e "${BOLD}${GREEN}║          XDEFENSE instalado com sucesso!            
 echo -e "${BOLD}${GREEN}╚══════════════════════════════════════════════════════════╝${NC}"
 echo ""
 echo -e "  ${BOLD}URL:${NC}         https://localhost"
-echo -e "  ${BOLD}Usuário:${NC}     admin"
+echo -e "  ${BOLD}Usuário:${NC}     ${ADMIN_EMAIL}"
 echo -e "  ${BOLD}Senha:${NC}       ${YELLOW}${ADMIN_PASSWORD}${NC}"
 echo ""
 echo -e "  ${BOLD}Grafana:${NC}     https://localhost/grafana  (admin / ${GRAFANA_PASSWORD})"

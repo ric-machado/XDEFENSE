@@ -4,6 +4,8 @@
  */
 
 import crypto from "crypto";
+import fs from "fs";
+import path from "path";
 import { Request, Response, NextFunction } from "express";
 import * as xid from "./xid";
 import { tr } from "./i18n";
@@ -454,6 +456,19 @@ export function seedAdmin(): void {
   });
   xid.assignRole(uid, adminRoleId);
   xid.addAudit({ userId: uid, action: "seed_admin", detail: "Super-admin initial créé", tenantId: systemTenant });
+
+  // Disponibiliza a senha temporária para automação (ex: setup.sh), além do log.
+  // Arquivo lido e removido por quem orquestra o primeiro boot; nunca persiste depois disso.
+  try {
+    const credFile = path.join(process.env.DB_DIR ?? "/data", ".bootstrap_admin_password");
+    fs.writeFileSync(
+      credFile,
+      JSON.stringify({ email: "admin@xorcism.local", password: tempPw }),
+      { mode: 0o600 }
+    );
+  } catch (e) {
+    console.warn("[seedAdmin] não foi possível escrever credencial de bootstrap:", (e as Error).message);
+  }
 
   console.log("\n  ============================================================");
   console.log("  COMPTE ADMIN INITIAL CRÉÉ");
