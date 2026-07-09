@@ -8,7 +8,6 @@ from .base import Base
 
 class WINDOWSCOMPUTERACCOUNT(Base):
     __tablename__ = 'WINDOWSCOMPUTERACCOUNT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsComputerAccountID = Column(Integer, primary_key=True)
     AccountID = Column(Integer)
@@ -24,7 +23,6 @@ class WINDOWSCOMPUTERACCOUNT(Base):
 
 class WINDOWSCRITICALSECTION(Base):
     __tablename__ = 'WINDOWSCRITICALSECTION'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsCriticalSectionID = Column(Integer, primary_key=True)
 
@@ -33,7 +31,6 @@ class WINDOWSCRITICALSECTION(Base):
 
 class WINDOWSDRIVER(Base):
     __tablename__ = 'WINDOWSDRIVER'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsDriverID = Column(Integer, primary_key=True)
 
@@ -42,7 +39,6 @@ class WINDOWSDRIVER(Base):
 
 class WINDOWSDRIVETYPE(Base):
     __tablename__ = 'WINDOWSDRIVETYPE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsDriveTypeID = Column(Integer, primary_key=True)
     WindowsDriveTypeName = Column(Text, nullable=False)
@@ -55,7 +51,6 @@ class WINDOWSDRIVETYPE(Base):
 
 class WINDOWSEVENT(Base):
     __tablename__ = 'WINDOWSEVENT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsEventID = Column(Integer, primary_key=True)
 
@@ -64,7 +59,6 @@ class WINDOWSEVENT(Base):
 
 class WINDOWSEVENTLOG(Base):
     __tablename__ = 'WINDOWSEVENTLOG'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsEventLogID = Column(Integer, primary_key=True)
 
@@ -73,7 +67,6 @@ class WINDOWSEVENTLOG(Base):
 
 class WINDOWSEXECUTABLEFILE(Base):
     __tablename__ = 'WINDOWSEXECUTABLEFILE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsExecutableFileID = Column(Integer, primary_key=True)
 
@@ -82,7 +75,6 @@ class WINDOWSEXECUTABLEFILE(Base):
 
 class WINDOWSFILE(Base):
     __tablename__ = 'WINDOWSFILE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsFileID = Column(Integer, primary_key=True)
     WindowsFileGUID = Column(Text)
@@ -99,7 +91,6 @@ class WINDOWSFILE(Base):
 
 class WINDOWSGROUP(Base):
     __tablename__ = 'WINDOWSGROUP'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsGroupID = Column(Integer, primary_key=True)
     WindowsGroupName = Column(Text)
@@ -113,7 +104,6 @@ class WINDOWSGROUP(Base):
 
 class WINDOWSGROUPFORWINDOWSUSERACCOUNT(Base):
     __tablename__ = 'WINDOWSGROUPFORWINDOWSUSERACCOUNT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsGroupWindowsUserAccountID = Column(Integer, primary_key=True)
     WindowsGroupID = Column(Integer, nullable=False)
@@ -128,7 +118,6 @@ class WINDOWSGROUPFORWINDOWSUSERACCOUNT(Base):
 
 class WINDOWSHANDLE(Base):
     __tablename__ = 'WINDOWSHANDLE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsHandleID = Column(Integer, primary_key=True)
     WindowsHandleObjectID = Column(Integer)
@@ -149,7 +138,6 @@ class WINDOWSHANDLE(Base):
 
 class WINDOWSHANDLELIST(Base):
     __tablename__ = 'WINDOWSHANDLELIST'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsHandleListID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -164,7 +152,6 @@ class WINDOWSHANDLELIST(Base):
 
 class WINDOWSHANDLELISTHANDLES(Base):
     __tablename__ = 'WINDOWSHANDLELISTHANDLES'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsHandleListHandlesID = Column(Integer, primary_key=True)
     WindowsHandleListID = Column(Integer, nullable=False)
@@ -181,7 +168,6 @@ class WINDOWSHANDLELISTHANDLES(Base):
 
 class WINDOWSHANDLETYPE(Base):
     __tablename__ = 'WINDOWSHANDLETYPE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsHandleTypeID = Column(Integer, primary_key=True)
     HandleTypeID = Column(Integer)
@@ -196,7 +182,6 @@ class WINDOWSHANDLETYPE(Base):
 
 class WINDOWSKERNELHOOK(Base):
     __tablename__ = 'WINDOWSKERNELHOOK'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsKernelHookID = Column(Integer, primary_key=True)
     Digital_Signature_Hooking = Column(Text)
@@ -224,7 +209,6 @@ class WINDOWSKERNELHOOK(Base):
 
 class WINDOWSKERNELOBJECT(Base):
     __tablename__ = 'WINDOWSKERNELOBJECT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsKernelObjectID = Column(Integer, primary_key=True)
     IDTEntryListID = Column(Integer)
@@ -242,7 +226,6 @@ class WINDOWSKERNELOBJECT(Base):
 
 class WINDOWSMAILSLOT(Base):
     __tablename__ = 'WINDOWSMAILSLOT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsMailslotID = Column(Integer, primary_key=True)
 
@@ -251,7 +234,6 @@ class WINDOWSMAILSLOT(Base):
 
 class WINDOWSMEMORYPAGEREGION(Base):
     __tablename__ = 'WINDOWSMEMORYPAGEREGION'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsMemoryPageRegionID = Column(Integer, primary_key=True)
 
@@ -260,7 +242,6 @@ class WINDOWSMEMORYPAGEREGION(Base):
 
 class WINDOWSMUTEX(Base):
     __tablename__ = 'WINDOWSMUTEX'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsMutexID = Column(Integer, primary_key=True)
     WindowsHandleID = Column(Integer)
@@ -279,7 +260,6 @@ class WINDOWSMUTEX(Base):
 
 class WINDOWSMUTEXHANDLE(Base):
     __tablename__ = 'WINDOWSMUTEXHANDLE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsMutexHandleID = Column(Integer, primary_key=True)
     WindowsMutexID = Column(Integer, nullable=False)
@@ -293,7 +273,6 @@ class WINDOWSMUTEXHANDLE(Base):
 
 class WINDOWSMUTEXSECURITYATTRIBUTE(Base):
     __tablename__ = 'WINDOWSMUTEXSECURITYATTRIBUTE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsMutexSecurityAttributeID = Column(Integer, primary_key=True)
     WindowsMutexID = Column(Integer, nullable=False)
@@ -307,7 +286,6 @@ class WINDOWSMUTEXSECURITYATTRIBUTE(Base):
 
 class WINDOWSNETWORKROUTEENTRY(Base):
     __tablename__ = 'WINDOWSNETWORKROUTEENTRY'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsNetworkRouteEntryID = Column(Integer, primary_key=True)
 
@@ -316,7 +294,6 @@ class WINDOWSNETWORKROUTEENTRY(Base):
 
 class WINDOWSNETWORKSHARE(Base):
     __tablename__ = 'WINDOWSNETWORKSHARE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsNetworkShareID = Column(Integer, primary_key=True)
 
@@ -325,7 +302,6 @@ class WINDOWSNETWORKSHARE(Base):
 
 class WINDOWSPIPEOBJECT(Base):
     __tablename__ = 'WINDOWSPIPEOBJECT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsPipeObjectID = Column(Integer, primary_key=True)
     PipeObjectID = Column(Integer)
@@ -335,7 +311,6 @@ class WINDOWSPIPEOBJECT(Base):
 
 class WINDOWSPREFETCHACCESSEDFILELIST(Base):
     __tablename__ = 'WINDOWSPREFETCHACCESSEDFILELIST'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsPrefetchObjectAccessedFileListID = Column(Integer, primary_key=True)
     WindowsPrefetchObjectID = Column(Integer, nullable=False)
@@ -347,7 +322,6 @@ class WINDOWSPREFETCHACCESSEDFILELIST(Base):
 
 class WINDOWSPREFETCHCHANGERECORD(Base):
     __tablename__ = 'WINDOWSPREFETCHCHANGERECORD'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsPrefetchChangeRecordID = Column(Integer, primary_key=True)
 
@@ -356,7 +330,6 @@ class WINDOWSPREFETCHCHANGERECORD(Base):
 
 class WINDOWSPREFETCHOBJECT(Base):
     __tablename__ = 'WINDOWSPREFETCHOBJECT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsPrefetchObjectID = Column(Integer, primary_key=True)
     Application_File_Name = Column(Text)
@@ -379,7 +352,6 @@ class WINDOWSPREFETCHOBJECT(Base):
 
 class WINDOWSPRIVILEGE(Base):
     __tablename__ = 'WINDOWSPRIVILEGE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsPrivilegeID = Column(Integer, primary_key=True)
     PrivilegeID = Column(Integer)
@@ -396,7 +368,6 @@ class WINDOWSPRIVILEGE(Base):
 
 class WINDOWSPROCESS(Base):
     __tablename__ = 'WINDOWSPROCESS'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsProcessID = Column(Integer, primary_key=True)
     ProcessID = Column(Integer)
@@ -414,7 +385,6 @@ class WINDOWSPROCESS(Base):
 
 class WINDOWSPROCESSTOKEN(Base):
     __tablename__ = 'WINDOWSPROCESSTOKEN'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsProcessTokenID = Column(Integer, primary_key=True)
     WindowsProcessID = Column(Integer, nullable=False)
@@ -432,7 +402,6 @@ class WINDOWSPROCESSTOKEN(Base):
 
 class WINDOWSREGISTRYKEYOBJECT(Base):
     __tablename__ = 'WINDOWSREGISTRYKEYOBJECT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsRegistryKeyObjectID = Column(Integer, primary_key=True)
     Hive = Column(Text)
@@ -466,7 +435,6 @@ class WINDOWSREGISTRYKEYOBJECT(Base):
 
 class WINDOWSSEMAPHORE(Base):
     __tablename__ = 'WINDOWSSEMAPHORE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsSemaphoreID = Column(Integer, primary_key=True)
     SemaphoreID = Column(Integer)
@@ -476,7 +444,6 @@ class WINDOWSSEMAPHORE(Base):
 
 class WINDOWSSERVICE(Base):
     __tablename__ = 'WINDOWSSERVICE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsServiceID = Column(Integer, primary_key=True)
 
@@ -485,7 +452,6 @@ class WINDOWSSERVICE(Base):
 
 class WINDOWSSYSTEM(Base):
     __tablename__ = 'WINDOWSSYSTEM'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsSystemID = Column(Integer, primary_key=True)
     SystemID = Column(Integer)
@@ -495,7 +461,6 @@ class WINDOWSSYSTEM(Base):
 
 class WINDOWSSYSTEMRESTORE(Base):
     __tablename__ = 'WINDOWSSYSTEMRESTORE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsSystemRestoreID = Column(Integer, primary_key=True)
     Restore_Point_Description = Column(Text)
@@ -528,7 +493,6 @@ class WINDOWSSYSTEMRESTORE(Base):
 
 class WINDOWSTASK(Base):
     __tablename__ = 'WINDOWSTASK'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsTaskID = Column(Integer, primary_key=True)
     TaskID = Column(Integer)
@@ -568,7 +532,6 @@ class WINDOWSTASK(Base):
 
 class WINDOWSTHREAD(Base):
     __tablename__ = 'WINDOWSTHREAD'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsThreadID = Column(Integer, primary_key=True)
     Thread_ID = Column(Integer)
@@ -596,7 +559,6 @@ class WINDOWSTHREAD(Base):
 
 class WINDOWSUSERACCOUNT(Base):
     __tablename__ = 'WINDOWSUSERACCOUNT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsUserAccountID = Column(Integer, primary_key=True)
     WindowsUserAccountGUID = Column(Text)
@@ -621,7 +583,6 @@ class WINDOWSUSERACCOUNT(Base):
 
 class WINDOWSUSERACCOUNTCHANGERECORD(Base):
     __tablename__ = 'WINDOWSUSERACCOUNTCHANGERECORD'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsUserAccountChangeRecordID = Column(Integer, primary_key=True)
 
@@ -630,7 +591,6 @@ class WINDOWSUSERACCOUNTCHANGERECORD(Base):
 
 class WINDOWSUSERACCOUNTPRIVILEGE(Base):
     __tablename__ = 'WINDOWSUSERACCOUNTPRIVILEGE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsUserAccountPrivilegeID = Column(Integer, primary_key=True)
     WindowsUserAccountID = Column(Integer, nullable=False)
@@ -647,7 +607,6 @@ class WINDOWSUSERACCOUNTPRIVILEGE(Base):
 
 class WINDOWSVOLUME(Base):
     __tablename__ = 'WINDOWSVOLUME'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsVolumeID = Column(Integer, primary_key=True)
     WindowsVolumeGUID = Column(Text)
@@ -664,7 +623,6 @@ class WINDOWSVOLUME(Base):
 
 class WINDOWSVOLUMEATTRIBUTE(Base):
     __tablename__ = 'WINDOWSVOLUMEATTRIBUTE'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsVolumeAttributeID = Column(Integer, primary_key=True)
     AttributeID = Column(Integer)
@@ -674,7 +632,6 @@ class WINDOWSVOLUMEATTRIBUTE(Base):
 
 class WINDOWSVOLUMEATTRIBUTEENUM(Base):
     __tablename__ = 'WINDOWSVOLUMEATTRIBUTEENUM'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsVolumeAttributeEnumID = Column(Integer, primary_key=True)
     WindowsVolumeAttributeEnumValue = Column(Text, nullable=False)
@@ -691,7 +648,6 @@ class WINDOWSVOLUMEATTRIBUTEENUM(Base):
 
 class WINDOWSVOLUMEATTRIBUTESLIST(Base):
     __tablename__ = 'WINDOWSVOLUMEATTRIBUTESLIST'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsVolumeAttributesListID = Column(Integer, primary_key=True)
     WindowsVolumeID = Column(Integer, nullable=False)
@@ -707,7 +663,6 @@ class WINDOWSVOLUMEATTRIBUTESLIST(Base):
 
 class WINDOWSVOLUMEENCRYPTION(Base):
     __tablename__ = 'WINDOWSVOLUMEENCRYPTION'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsVolumeEncryptionID = Column(Integer, primary_key=True)
     WindowsVolumeID = Column(Integer, nullable=False)
@@ -724,7 +679,6 @@ class WINDOWSVOLUMEENCRYPTION(Base):
 
 class WINDOWSWAITABLETIMER(Base):
     __tablename__ = 'WINDOWSWAITABLETIMER'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsWaitableTimerID = Column(Integer, primary_key=True)
 
@@ -733,7 +687,6 @@ class WINDOWSWAITABLETIMER(Base):
 
 class WINDOWSWAITABLETIMEROBJECT(Base):
     __tablename__ = 'WINDOWSWAITABLETIMEROBJECT'
-    __bind_key__  = 'XWINDOWS'
 
     WindowsWaitableTimerObjectID = Column(Integer, primary_key=True)
     WindowsHandleID = Column(Integer)
@@ -751,7 +704,6 @@ class WINDOWSWAITABLETIMEROBJECT(Base):
 
 class WINWAITABLETIMER(Base):
     __tablename__ = 'WINWAITABLETIMER'
-    __bind_key__  = 'XWINDOWS'
 
     WinWaitableTimerID = Column(Integer, primary_key=True)
 

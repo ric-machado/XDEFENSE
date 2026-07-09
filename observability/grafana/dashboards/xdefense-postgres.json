@@ -1,0 +1,95 @@
+{
+  "__inputs": [],
+  "__requires": [
+    { "type": "grafana", "id": "grafana", "name": "Grafana", "version": "11.0.0" },
+    { "type": "datasource", "id": "prometheus", "name": "Prometheus", "version": "1.0.0" }
+  ],
+  "annotations": { "list": [] },
+  "description": "XDEFENSE PostgreSQL — conexões, queries lentas, tamanho dos schemas",
+  "editable": true,
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Conexões Ativas",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "pg_stat_activity_count{datname=\"xdefense\"}",
+          "legendFormat": "{{state}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 2,
+      "title": "Transações por Segundo",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(pg_stat_database_xact_commit{datname=\"xdefense\"}[1m])",
+          "legendFormat": "commits/s"
+        },
+        {
+          "expr": "rate(pg_stat_database_xact_rollback{datname=\"xdefense\"}[1m])",
+          "legendFormat": "rollbacks/s"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 3,
+      "title": "Cache Hit Rate",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 8, "x": 0, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "pg_stat_database_blks_hit{datname=\"xdefense\"} / (pg_stat_database_blks_hit{datname=\"xdefense\"} + pg_stat_database_blks_read{datname=\"xdefense\"}) * 100",
+          "legendFormat": "Cache Hit %"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "percent", "thresholds": { "steps": [{"color":"red","value":0},{"color":"yellow","value":90},{"color":"green","value":98}] } }
+      }
+    },
+    {
+      "id": 4,
+      "title": "Conexões PgBouncer",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 16, "x": 8, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "pgbouncer_stats_total_query_count{database=\"xdefense\"}",
+          "legendFormat": "Total Queries"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 5,
+      "title": "Tamanho do Banco (bytes)",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 8, "x": 0, "y": 12 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "pg_database_size_bytes{datname=\"xdefense\"}",
+          "legendFormat": "Database Size"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "bytes" } }
+    }
+  ],
+  "refresh": "60s",
+  "schemaVersion": 39,
+  "tags": ["xdefense", "postgresql"],
+  "title": "XDEFENSE — PostgreSQL",
+  "uid": "xdefense-postgres",
+  "version": 1
+}

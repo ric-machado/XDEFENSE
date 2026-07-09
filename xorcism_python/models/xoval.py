@@ -9,7 +9,6 @@ from .base import Base
 class OPERATORENUMERATION(Base):
     __table_args__ = {'extend_existing': True}
     __tablename__ = 'OPERATORENUMERATION'
-    __bind_key__  = 'XOVAL'
 
     OperatorEnumerationID = Column(Integer, primary_key=True)
     OperatorValue = Column(Text, nullable=False)
@@ -26,7 +25,6 @@ class OPERATORENUMERATION(Base):
 
 class OVALBEHAVIOR(Base):
     __tablename__ = 'OVALBEHAVIOR'
-    __bind_key__  = 'XOVAL'
 
     OVALBehaviorID = Column(Integer, primary_key=True)
     BehaviorKey = Column(Text)
@@ -45,7 +43,6 @@ class OVALBEHAVIOR(Base):
 
 class OVALBEHAVIORFOROVALOBJECT(Base):
     __tablename__ = 'OVALBEHAVIORFOROVALOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectBehaviorID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer, nullable=False)
@@ -63,7 +60,6 @@ class OVALBEHAVIORFOROVALOBJECT(Base):
 
 class OVALCLASSDIRECTIVES(Base):
     __tablename__ = 'OVALCLASSDIRECTIVES'
-    __bind_key__  = 'XOVAL'
 
     OVALClassDirectivesID = Column(Integer, primary_key=True)
     OVALClassEnumerationID = Column(Integer, nullable=False)
@@ -73,7 +69,6 @@ class OVALCLASSDIRECTIVES(Base):
 
 class OVALCLASSDIRECTIVESFOROVALDIRECTIVES(Base):
     __tablename__ = 'OVALCLASSDIRECTIVESFOROVALDIRECTIVES'
-    __bind_key__  = 'XOVAL'
 
     OVALDirectivesID = Column(Integer, primary_key=True)
     OVALClassDirectivesID = Column(Integer, nullable=False)
@@ -83,7 +78,6 @@ class OVALCLASSDIRECTIVESFOROVALDIRECTIVES(Base):
 
 class OVALCLASSDIRECTIVESFOROVALRESULTS(Base):
     __tablename__ = 'OVALCLASSDIRECTIVESFOROVALRESULTS'
-    __bind_key__  = 'XOVAL'
 
     OVALResultsID = Column(Integer, primary_key=True)
     OVALClassDirectivesID = Column(Integer, nullable=False)
@@ -93,7 +87,6 @@ class OVALCLASSDIRECTIVESFOROVALRESULTS(Base):
 
 class OVALCLASSENUMERATION(Base):
     __tablename__ = 'OVALCLASSENUMERATION'
-    __bind_key__  = 'XOVAL'
 
     OVALClassEnumerationID = Column(Integer, primary_key=True)
     OVALClassEnumerationGUID = Column(Text)
@@ -111,7 +104,6 @@ class OVALCLASSENUMERATION(Base):
 
 class OVALCOMPONENTGROUP(Base):
     __tablename__ = 'OVALCOMPONENTGROUP'
-    __bind_key__  = 'XOVAL'
 
     OVALComponentGroupID = Column(Integer, primary_key=True)
     OVALVariableID = Column(Integer)
@@ -130,7 +122,6 @@ class OVALCOMPONENTGROUP(Base):
 
 class OVALCRITERIA(Base):
     __tablename__ = 'OVALCRITERIA'
-    __bind_key__  = 'XOVAL'
 
     OVALCriteriaID = Column(Integer, primary_key=True)
     OperatorEnumerationID = Column(Integer)
@@ -149,7 +140,6 @@ class OVALCRITERIA(Base):
 
 class OVALCRITERIACRITERION(Base):
     __tablename__ = 'OVALCRITERIACRITERION'
-    __bind_key__  = 'XOVAL'
 
     OVALCriteriaCriterionID = Column(Integer, primary_key=True)
     OVALCriteriaID = Column(Integer, nullable=False)
@@ -169,7 +159,6 @@ class OVALCRITERIACRITERION(Base):
 
 class OVALCRITERIAEXTENDDEFINITION(Base):
     __tablename__ = 'OVALCRITERIAEXTENDDEFINITION'
-    __bind_key__  = 'XOVAL'
 
     OVALCriteriaExtendDefinitionID = Column(Integer, primary_key=True)
     OVALCriteriaID = Column(Integer, nullable=False)
@@ -189,7 +178,6 @@ class OVALCRITERIAEXTENDDEFINITION(Base):
 
 class OVALCRITERIAFOROVALCRITERIA(Base):
     __tablename__ = 'OVALCRITERIAFOROVALCRITERIA'
-    __bind_key__  = 'XOVAL'
 
     OVALCriteriaRelationshipID = Column(Integer, primary_key=True)
     OVALCriteriaRefID = Column(Integer, nullable=False)
@@ -208,7 +196,6 @@ class OVALCRITERIAFOROVALCRITERIA(Base):
 
 class OVALCRITERIATYPE(Base):
     __tablename__ = 'OVALCRITERIATYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALCriteriaTypeID = Column(Integer, primary_key=True)
     OperatorEnumerationID = Column(Integer, nullable=False)
@@ -222,7 +209,6 @@ class OVALCRITERIATYPE(Base):
 
 class OVALCRITERIATYPEFOROVALDEFINITIONTYPE(Base):
     __tablename__ = 'OVALCRITERIATYPEFOROVALDEFINITIONTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionTypeID = Column(Integer, primary_key=True)
     OVALCriteriaTypeID = Column(Integer, nullable=False)
@@ -232,7 +218,6 @@ class OVALCRITERIATYPEFOROVALDEFINITIONTYPE(Base):
 
 class OVALCRITERION(Base):
     __tablename__ = 'OVALCRITERION'
-    __bind_key__  = 'XOVAL'
 
     OVALCriterionID = Column(Integer, primary_key=True)
     OVALTestIDPattern = Column(Text, nullable=False)
@@ -252,7 +237,6 @@ class OVALCRITERION(Base):
 
 class OVALCRITERIONTYPE(Base):
     __tablename__ = 'OVALCRITERIONTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALCriterionTypeID = Column(Integer, primary_key=True)
     OVALTestID = Column(Integer)
@@ -268,7 +252,6 @@ class OVALCRITERIONTYPE(Base):
 
 class OVALCRITERIONTYPEFOROVALCRITERIATYPE(Base):
     __tablename__ = 'OVALCRITERIONTYPEFOROVALCRITERIATYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALCriteriaTypeID = Column(Integer, primary_key=True)
     OVALCriterionTypeID = Column(Integer, nullable=False)
@@ -278,7 +261,6 @@ class OVALCRITERIONTYPEFOROVALCRITERIATYPE(Base):
 
 class OVALDEFAULTDIRECTIVES(Base):
     __tablename__ = 'OVALDEFAULTDIRECTIVES'
-    __bind_key__  = 'XOVAL'
 
     OVALDefaultDirectivesID = Column(Integer, primary_key=True)
     include_source_definitions = Column(Integer)
@@ -288,7 +270,6 @@ class OVALDEFAULTDIRECTIVES(Base):
 
 class OVALDEFINITION(Base):
     __tablename__ = 'OVALDEFINITION'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionID = Column(Integer, primary_key=True)
     OVALDefinitionIDPattern = Column(Text, nullable=False)
@@ -315,7 +296,6 @@ class OVALDEFINITION(Base):
 
 class OVALDEFINITIONCCE(Base):
     __tablename__ = 'OVALDEFINITIONCCE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionCCEID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer, nullable=False)
@@ -333,7 +313,6 @@ class OVALDEFINITIONCCE(Base):
 
 class OVALDEFINITIONCHANGE(Base):
     __tablename__ = 'OVALDEFINITIONCHANGE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionChangeID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -353,7 +332,6 @@ class OVALDEFINITIONCHANGE(Base):
 
 class OVALDEFINITIONCHANGES(Base):
     __tablename__ = 'OVALDEFINITIONCHANGES'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionChangesID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -373,7 +351,6 @@ class OVALDEFINITIONCHANGES(Base):
 
 class OVALDEFINITIONCPE(Base):
     __tablename__ = 'OVALDEFINITIONCPE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionCPEID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -392,7 +369,6 @@ class OVALDEFINITIONCPE(Base):
 
 class OVALDEFINITIONFAMILY(Base):
     __tablename__ = 'OVALDEFINITIONFAMILY'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionFamilyID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -410,7 +386,6 @@ class OVALDEFINITIONFAMILY(Base):
 
 class OVALDEFINITIONORGANISATION(Base):
     __tablename__ = 'OVALDEFINITIONORGANISATION'
-    __bind_key__  = 'XOVAL'
 
     OrganisationOVALDefinitionID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer, nullable=False)
@@ -427,7 +402,6 @@ class OVALDEFINITIONORGANISATION(Base):
 
 class OVALDEFINITIONPLATFORM(Base):
     __tablename__ = 'OVALDEFINITIONPLATFORM'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionPlatformID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -445,7 +419,6 @@ class OVALDEFINITIONPLATFORM(Base):
 
 class OVALDEFINITIONPRODUCT(Base):
     __tablename__ = 'OVALDEFINITIONPRODUCT'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionProductID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -463,7 +436,6 @@ class OVALDEFINITIONPRODUCT(Base):
 
 class OVALDEFINITIONREFERENCE(Base):
     __tablename__ = 'OVALDEFINITIONREFERENCE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionReferenceID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -481,7 +453,6 @@ class OVALDEFINITIONREFERENCE(Base):
 
 class OVALDEFINITIONS(Base):
     __tablename__ = 'OVALDEFINITIONS'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionsID = Column(Integer, primary_key=True)
     GeneratorTypeID = Column(Integer, nullable=False)
@@ -491,7 +462,6 @@ class OVALDEFINITIONS(Base):
 
 class OVALDEFINITIONSTATUS(Base):
     __tablename__ = 'OVALDEFINITIONSTATUS'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionID = Column(Integer, primary_key=True)
     StatusID = Column(Integer, nullable=False)
@@ -503,7 +473,6 @@ class OVALDEFINITIONSTATUS(Base):
 
 class OVALDEFINITIONTAG(Base):
     __tablename__ = 'OVALDEFINITIONTAG'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionTagID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -520,7 +489,6 @@ class OVALDEFINITIONTAG(Base):
 
 class OVALDEFINITIONTYPE(Base):
     __tablename__ = 'OVALDEFINITIONTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionTypeID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -536,7 +504,6 @@ class OVALDEFINITIONTYPE(Base):
 
 class OVALDEFINITIONTYPEFOROVALSYSTEMTYPE(Base):
     __tablename__ = 'OVALDEFINITIONTYPEFOROVALSYSTEMTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemTypeID = Column(Integer, primary_key=True)
     OVALDefinitionTypeID = Column(Integer, nullable=False)
@@ -546,7 +513,6 @@ class OVALDEFINITIONTYPEFOROVALSYSTEMTYPE(Base):
 
 class OVALDEFINITIONVULNERABILITY(Base):
     __tablename__ = 'OVALDEFINITIONVULNERABILITY'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionVulnerabilityID = Column(Integer, primary_key=True)
     OVALDefinitionID = Column(Integer)
@@ -565,7 +531,6 @@ class OVALDEFINITIONVULNERABILITY(Base):
 
 class OVALDIRECTIVE(Base):
     __tablename__ = 'OVALDIRECTIVE'
-    __bind_key__  = 'XOVAL'
 
     OVALDirectiveID = Column(Integer, primary_key=True)
     reported = Column(Integer, nullable=False)
@@ -576,7 +541,6 @@ class OVALDIRECTIVE(Base):
 
 class OVALDIRECTIVES(Base):
     __tablename__ = 'OVALDIRECTIVES'
-    __bind_key__  = 'XOVAL'
 
     OVALDirectivesID = Column(Integer, primary_key=True)
     GeneratorTypeID = Column(Integer, nullable=False)
@@ -588,7 +552,6 @@ class OVALDIRECTIVES(Base):
 
 class OVALDIRECTIVESTYPE(Base):
     __tablename__ = 'OVALDIRECTIVESTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALDirectivesTypeID = Column(Integer, primary_key=True)
     definition_trueOVALDirectiveID = Column(Integer, nullable=False)
@@ -603,7 +566,6 @@ class OVALDIRECTIVESTYPE(Base):
 
 class OVALENTITYATTRIBUTEGROUP(Base):
     __tablename__ = 'OVALENTITYATTRIBUTEGROUP'
-    __bind_key__  = 'XOVAL'
 
     OVALEntityAttributeGroupID = Column(Integer, primary_key=True)
     SimpleDataTypeID = Column(Integer)
@@ -621,7 +583,6 @@ class OVALENTITYATTRIBUTEGROUP(Base):
 
 class OVALENTITYCOMPLEXBASE(Base):
     __tablename__ = 'OVALENTITYCOMPLEXBASE'
-    __bind_key__  = 'XOVAL'
 
     OVALEntityComplexBaseID = Column(Integer, primary_key=True)
     OVALEntityAttributeGroupID = Column(Integer, nullable=False)
@@ -631,7 +592,6 @@ class OVALENTITYCOMPLEXBASE(Base):
 
 class OVALENTITYSIMPLEBASE(Base):
     __tablename__ = 'OVALENTITYSIMPLEBASE'
-    __bind_key__  = 'XOVAL'
 
     OVALEntitySimpleBaseID = Column(Integer, primary_key=True)
     OVALEntityAttributeGroupID = Column(Integer, nullable=False)
@@ -642,7 +602,6 @@ class OVALENTITYSIMPLEBASE(Base):
 
 class OVALEXTENSIONPOINT(Base):
     __tablename__ = 'OVALEXTENSIONPOINT'
-    __bind_key__  = 'XOVAL'
 
     ExtensionPointID = Column(Integer, primary_key=True)
 
@@ -651,7 +610,6 @@ class OVALEXTENSIONPOINT(Base):
 
 class OVALEXTENSIONPOINTFOROVALGENERATORTYPE(Base):
     __tablename__ = 'OVALEXTENSIONPOINTFOROVALGENERATORTYPE'
-    __bind_key__  = 'XOVAL'
 
     GeneratorTypeID = Column(Integer, primary_key=True)
     ExtensionPointID = Column(Integer, nullable=False)
@@ -661,7 +619,6 @@ class OVALEXTENSIONPOINTFOROVALGENERATORTYPE(Base):
 
 class OVALEXTENSIONPOINTFORSYSTEMINFO(Base):
     __tablename__ = 'OVALEXTENSIONPOINTFORSYSTEMINFO'
-    __bind_key__  = 'XOVAL'
 
     SystemInfoID = Column(Integer, primary_key=True)
     OVALExtensionPointID = Column(Integer, nullable=False)
@@ -671,7 +628,6 @@ class OVALEXTENSIONPOINTFORSYSTEMINFO(Base):
 
 class OVALFILTER(Base):
     __tablename__ = 'OVALFILTER'
-    __bind_key__  = 'XOVAL'
 
     OVALFilterID = Column(Integer, primary_key=True)
     OVALStateID = Column(Integer, nullable=False)
@@ -688,7 +644,6 @@ class OVALFILTER(Base):
 
 class OVALFILTERFOROVALSET(Base):
     __tablename__ = 'OVALFILTERFOROVALSET'
-    __bind_key__  = 'XOVAL'
 
     OVALSetID = Column(Integer, primary_key=True)
     OVALFilterID = Column(Integer, nullable=False)
@@ -698,7 +653,6 @@ class OVALFILTERFOROVALSET(Base):
 
 class OVALGENERATORTYPE(Base):
     __tablename__ = 'OVALGENERATORTYPE'
-    __bind_key__  = 'XOVAL'
 
     GeneratorTypeID = Column(Integer, primary_key=True)
     productname = Column(Text)
@@ -712,7 +666,6 @@ class OVALGENERATORTYPE(Base):
 
 class OVALITEM(Base):
     __tablename__ = 'OVALITEM'
-    __bind_key__  = 'XOVAL'
 
     OVALItemID = Column(Integer, primary_key=True)
     OVALItemIDPattern = Column(Text, nullable=False)
@@ -730,7 +683,6 @@ class OVALITEM(Base):
 
 class OVALITEMATTRIBUTEGROUP(Base):
     __tablename__ = 'OVALITEMATTRIBUTEGROUP'
-    __bind_key__  = 'XOVAL'
 
     OVALItemAttributeGroupID = Column(Integer, primary_key=True)
     DataTypeName = Column(Text)
@@ -743,7 +695,6 @@ class OVALITEMATTRIBUTEGROUP(Base):
 
 class OVALITEMCOMPLEXBASE(Base):
     __tablename__ = 'OVALITEMCOMPLEXBASE'
-    __bind_key__  = 'XOVAL'
 
     OVALItemComplexBaseID = Column(Integer, primary_key=True)
     OVALItemAttributeGroupID = Column(Integer, nullable=False)
@@ -753,7 +704,6 @@ class OVALITEMCOMPLEXBASE(Base):
 
 class OVALITEMFOROVALSYSTEMOBJECT(Base):
     __tablename__ = 'OVALITEMFOROVALSYSTEMOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemObjectID = Column(Integer, primary_key=True)
     OVALItemID = Column(Integer, nullable=False)
@@ -763,7 +713,6 @@ class OVALITEMFOROVALSYSTEMOBJECT(Base):
 
 class OVALITEMSIMPLEBASE(Base):
     __tablename__ = 'OVALITEMSIMPLEBASE'
-    __bind_key__  = 'XOVAL'
 
     OVALItemSimpleBaseID = Column(Integer, primary_key=True)
     OVALItemAttributeGroupID = Column(Integer, nullable=False)
@@ -774,7 +723,6 @@ class OVALITEMSIMPLEBASE(Base):
 
 class OVALLITERALCOMPONENT(Base):
     __tablename__ = 'OVALLITERALCOMPONENT'
-    __bind_key__  = 'XOVAL'
 
     OVALLiteralComponentID = Column(Integer, primary_key=True)
     SimpleDataTypeID = Column(Integer)
@@ -791,7 +739,6 @@ class OVALLITERALCOMPONENT(Base):
 
 class OVALLITERALCOMPONENTFOROVALCOMPONENTGROUP(Base):
     __tablename__ = 'OVALLITERALCOMPONENTFOROVALCOMPONENTGROUP'
-    __bind_key__  = 'XOVAL'
 
     OVALComponentGroupLiteralComponentID = Column(Integer, primary_key=True)
     OVALComponentGroupID = Column(Integer, nullable=False)
@@ -808,7 +755,6 @@ class OVALLITERALCOMPONENTFOROVALCOMPONENTGROUP(Base):
 
 class OVALMESSAGETYPE(Base):
     __tablename__ = 'OVALMESSAGETYPE'
-    __bind_key__  = 'XOVAL'
 
     MessageTypeID = Column(Integer, primary_key=True)
     MessageLevelValue = Column(Text)
@@ -820,7 +766,6 @@ class OVALMESSAGETYPE(Base):
 
 class OVALMESSAGETYPEFOROVALDEFINITIONTYPE(Base):
     __tablename__ = 'OVALMESSAGETYPEFOROVALDEFINITIONTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALDefinitionTypeID = Column(Integer, primary_key=True)
     OVALMessageTypeID = Column(Integer, nullable=False)
@@ -830,7 +775,6 @@ class OVALMESSAGETYPEFOROVALDEFINITIONTYPE(Base):
 
 class OVALMESSAGETYPEFOROVALITEM(Base):
     __tablename__ = 'OVALMESSAGETYPEFOROVALITEM'
-    __bind_key__  = 'XOVAL'
 
     OVALItemID = Column(Integer, primary_key=True)
     MessageTypeID = Column(Integer, nullable=False)
@@ -840,7 +784,6 @@ class OVALMESSAGETYPEFOROVALITEM(Base):
 
 class OVALMESSAGETYPEFOROVALSYSTEMOBJECT(Base):
     __tablename__ = 'OVALMESSAGETYPEFOROVALSYSTEMOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemObjectID = Column(Integer, primary_key=True)
     MessageTypeID = Column(Integer, nullable=False)
@@ -850,7 +793,6 @@ class OVALMESSAGETYPEFOROVALSYSTEMOBJECT(Base):
 
 class OVALMESSAGETYPEFOROVALTESTEDITEM(Base):
     __tablename__ = 'OVALMESSAGETYPEFOROVALTESTEDITEM'
-    __bind_key__  = 'XOVAL'
 
     OVALTestedItemID = Column(Integer, primary_key=True)
     MessageTypeID = Column(Integer, nullable=False)
@@ -860,7 +802,6 @@ class OVALMESSAGETYPEFOROVALTESTEDITEM(Base):
 
 class OVALMESSAGETYPEFOROVALTESTTYPE(Base):
     __tablename__ = 'OVALMESSAGETYPEFOROVALTESTTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALTestTypeID = Column(Integer, primary_key=True)
     OVALMessageTypeID = Column(Integer, nullable=False)
@@ -870,7 +811,6 @@ class OVALMESSAGETYPEFOROVALTESTTYPE(Base):
 
 class OVALNAMESPACE(Base):
     __tablename__ = 'OVALNAMESPACE'
-    __bind_key__  = 'XOVAL'
 
     OVALNamespaceID = Column(Integer, primary_key=True)
     OVALNamespaceName = Column(Text)
@@ -887,7 +827,6 @@ class OVALNAMESPACE(Base):
 
 class OVALOBJECT(Base):
     __tablename__ = 'OVALOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectID = Column(Integer, primary_key=True)
     OVALObjectIDPattern = Column(Text, nullable=False)
@@ -912,7 +851,6 @@ class OVALOBJECT(Base):
 
 class OVALOBJECTCOMPONENT(Base):
     __tablename__ = 'OVALOBJECTCOMPONENT'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectComponentID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer, nullable=False)
@@ -930,7 +868,6 @@ class OVALOBJECTCOMPONENT(Base):
 
 class OVALOBJECTCOMPONENTFOROVALCOMPONENTGROUP(Base):
     __tablename__ = 'OVALOBJECTCOMPONENTFOROVALCOMPONENTGROUP'
-    __bind_key__  = 'XOVAL'
 
     OVALComponentGroupObjectComponentID = Column(Integer, primary_key=True)
     OVALComponentGroupID = Column(Integer, nullable=False)
@@ -947,7 +884,6 @@ class OVALOBJECTCOMPONENTFOROVALCOMPONENTGROUP(Base):
 
 class OVALOBJECTDATATYPE(Base):
     __tablename__ = 'OVALOBJECTDATATYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectDataTypeID = Column(Integer, primary_key=True)
     OVALObjectDataTypeName = Column(Text)
@@ -964,7 +900,6 @@ class OVALOBJECTDATATYPE(Base):
 
 class OVALOBJECTFIELD(Base):
     __tablename__ = 'OVALOBJECTFIELD'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectFieldID = Column(Integer, primary_key=True)
     OVALEntityAttributeGroupID = Column(Integer)
@@ -989,7 +924,6 @@ class OVALOBJECTFIELD(Base):
 
 class OVALOBJECTFIELDFOROVALOBJECTRECORD(Base):
     __tablename__ = 'OVALOBJECTFIELDFOROVALOBJECTRECORD'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectRecordFieldID = Column(Integer, primary_key=True)
     OVALObjectRecordID = Column(Integer, nullable=False)
@@ -1006,7 +940,6 @@ class OVALOBJECTFIELDFOROVALOBJECTRECORD(Base):
 
 class OVALOBJECTFILE(Base):
     __tablename__ = 'OVALOBJECTFILE'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectFileID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer)
@@ -1025,7 +958,6 @@ class OVALOBJECTFILE(Base):
 
 class OVALOBJECTFOROVALSET(Base):
     __tablename__ = 'OVALOBJECTFOROVALSET'
-    __bind_key__  = 'XOVAL'
 
     OVALSetObjectID = Column(Integer, primary_key=True)
     OVALSetID = Column(Integer, nullable=False)
@@ -1042,7 +974,6 @@ class OVALOBJECTFOROVALSET(Base):
 
 class OVALOBJECTFOROVALTEST(Base):
     __tablename__ = 'OVALOBJECTFOROVALTEST'
-    __bind_key__  = 'XOVAL'
 
     OVALTestObjectID = Column(Integer, primary_key=True)
     OVALTestID = Column(Integer, nullable=False)
@@ -1059,7 +990,6 @@ class OVALOBJECTFOROVALTEST(Base):
 
 class OVALOBJECTRECORD(Base):
     __tablename__ = 'OVALOBJECTRECORD'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectRecordID = Column(Integer, primary_key=True)
     OVALObjectDataTypeID = Column(Integer)
@@ -1080,7 +1010,6 @@ class OVALOBJECTRECORD(Base):
 
 class OVALOBJECTRECORDFOROVALOBJECT(Base):
     __tablename__ = 'OVALOBJECTRECORDFOROVALOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectObjectRecordID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer, nullable=False)
@@ -1097,7 +1026,6 @@ class OVALOBJECTRECORDFOROVALOBJECT(Base):
 
 class OVALOBJECTTAG(Base):
     __tablename__ = 'OVALOBJECTTAG'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectTagID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer)
@@ -1114,7 +1042,6 @@ class OVALOBJECTTAG(Base):
 
 class OVALOBJECTWINDOWSREGISTRYKEY(Base):
     __tablename__ = 'OVALOBJECTWINDOWSREGISTRYKEY'
-    __bind_key__  = 'XOVAL'
 
     OVALObjectWindowsRegistryKeyID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer, nullable=False)
@@ -1134,7 +1061,6 @@ class OVALOBJECTWINDOWSREGISTRYKEY(Base):
 
 class OVALRESULTS(Base):
     __tablename__ = 'OVALRESULTS'
-    __bind_key__  = 'XOVAL'
 
     OVALResultsID = Column(Integer, primary_key=True)
     GeneratorTypeID = Column(Integer, nullable=False)
@@ -1148,7 +1074,6 @@ class OVALRESULTS(Base):
 
 class OVALRESULTSTYPE(Base):
     __tablename__ = 'OVALRESULTSTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALResultsTypeId = Column(Integer, primary_key=True)
 
@@ -1157,7 +1082,6 @@ class OVALRESULTSTYPE(Base):
 
 class OVALSET(Base):
     __tablename__ = 'OVALSET'
-    __bind_key__  = 'XOVAL'
 
     OVALSetID = Column(Integer, primary_key=True)
     SetOperatorValue = Column(Text)
@@ -1167,7 +1091,6 @@ class OVALSET(Base):
 
 class OVALSETFOROVALSET(Base):
     __tablename__ = 'OVALSETFOROVALSET'
-    __bind_key__  = 'XOVAL'
 
     OVALSetRefID = Column(Integer, primary_key=True)
     OVALSetSubjectID = Column(Integer, nullable=False)
@@ -1177,7 +1100,6 @@ class OVALSETFOROVALSET(Base):
 
 class OVALSTATE(Base):
     __tablename__ = 'OVALSTATE'
-    __bind_key__  = 'XOVAL'
 
     OVALStateID = Column(Integer, primary_key=True)
     OVALStateIDPattern = Column(Text, nullable=False)
@@ -1205,7 +1127,6 @@ class OVALSTATE(Base):
 
 class OVALSTATECOMPLEXBASE(Base):
     __tablename__ = 'OVALSTATECOMPLEXBASE'
-    __bind_key__  = 'XOVAL'
 
     OVALStateComplexBaseID = Column(Integer, primary_key=True)
     CheckEnumerationID = Column(Integer)
@@ -1217,7 +1138,6 @@ class OVALSTATECOMPLEXBASE(Base):
 
 class OVALSTATEFIELD(Base):
     __tablename__ = 'OVALSTATEFIELD'
-    __bind_key__  = 'XOVAL'
 
     OVALStateFieldID = Column(Integer, primary_key=True)
     OVALEntityAttributeGroupID = Column(Integer)
@@ -1240,7 +1160,6 @@ class OVALSTATEFIELD(Base):
 
 class OVALSTATEFIELDFOROVALSTATERECORD(Base):
     __tablename__ = 'OVALSTATEFIELDFOROVALSTATERECORD'
-    __bind_key__  = 'XOVAL'
 
     OVALStateRecordStateFieldID = Column(Integer, primary_key=True)
     OVALStateRecordID = Column(Integer, nullable=False)
@@ -1257,7 +1176,6 @@ class OVALSTATEFIELDFOROVALSTATERECORD(Base):
 
 class OVALSTATEFOROVALTEST(Base):
     __tablename__ = 'OVALSTATEFOROVALTEST'
-    __bind_key__  = 'XOVAL'
 
     OVALTestStateID = Column(Integer, primary_key=True)
     OVALTestID = Column(Integer, nullable=False)
@@ -1274,7 +1192,6 @@ class OVALSTATEFOROVALTEST(Base):
 
 class OVALSTATERECORD(Base):
     __tablename__ = 'OVALSTATERECORD'
-    __bind_key__  = 'XOVAL'
 
     OVALStateRecordID = Column(Integer, primary_key=True)
     OVALStateComplexBaseID = Column(Integer)
@@ -1298,7 +1215,6 @@ class OVALSTATERECORD(Base):
 
 class OVALSTATERECORDFOROVALSTATE(Base):
     __tablename__ = 'OVALSTATERECORDFOROVALSTATE'
-    __bind_key__  = 'XOVAL'
 
     OVALStateStateRecordID = Column(Integer, primary_key=True)
     OVALStateID = Column(Integer, nullable=False)
@@ -1316,7 +1232,6 @@ class OVALSTATERECORDFOROVALSTATE(Base):
 
 class OVALSTATESIMPLEBASE(Base):
     __tablename__ = 'OVALSTATESIMPLEBASE'
-    __bind_key__  = 'XOVAL'
 
     OVALStateSimpleBaseID = Column(Integer, primary_key=True)
     CheckEnumerationID = Column(Integer)
@@ -1329,7 +1244,6 @@ class OVALSTATESIMPLEBASE(Base):
 
 class OVALSTATETYPE(Base):
     __tablename__ = 'OVALSTATETYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALStateTypeID = Column(Integer, primary_key=True)
     OVALStateTypeName = Column(Text)
@@ -1346,7 +1260,6 @@ class OVALSTATETYPE(Base):
 
 class OVALSYSTEMCHARACTERISTICS(Base):
     __tablename__ = 'OVALSYSTEMCHARACTERISTICS'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemCharacteristicsID = Column(Integer, primary_key=True)
     GeneratorTypeID = Column(Integer, nullable=False)
@@ -1357,7 +1270,6 @@ class OVALSYSTEMCHARACTERISTICS(Base):
 
 class OVALSYSTEMOBJECT(Base):
     __tablename__ = 'OVALSYSTEMOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemObjectID = Column(Integer, primary_key=True)
     OVALObjectID = Column(Integer, nullable=False)
@@ -1378,7 +1290,6 @@ class OVALSYSTEMOBJECT(Base):
 
 class OVALSYSTEMTYPE(Base):
     __tablename__ = 'OVALSYSTEMTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemTypeID = Column(Integer, primary_key=True)
     OVALSystemCharacteristicsID = Column(Integer, nullable=False)
@@ -1388,7 +1299,6 @@ class OVALSYSTEMTYPE(Base):
 
 class OVALSYSTEMTYPEFOROVALRESULTSTYPE(Base):
     __tablename__ = 'OVALSYSTEMTYPEFOROVALRESULTSTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALResultsTypeID = Column(Integer, primary_key=True)
     OVALSystemTypeID = Column(Integer, nullable=False)
@@ -1398,7 +1308,6 @@ class OVALSYSTEMTYPEFOROVALRESULTSTYPE(Base):
 
 class OVALTEST(Base):
     __tablename__ = 'OVALTEST'
-    __bind_key__  = 'XOVAL'
 
     OVALTestID = Column(Integer, primary_key=True)
     OVALTestIDPattern = Column(Text, nullable=False)
@@ -1425,7 +1334,6 @@ class OVALTEST(Base):
 
 class OVALTESTDATATYPE(Base):
     __tablename__ = 'OVALTESTDATATYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALTestDataTypeID = Column(Integer, primary_key=True)
     OVALTestDataTypeName = Column(Text)
@@ -1442,7 +1350,6 @@ class OVALTESTDATATYPE(Base):
 
 class OVALTESTEDITEM(Base):
     __tablename__ = 'OVALTESTEDITEM'
-    __bind_key__  = 'XOVAL'
 
     OVALTestedItemID = Column(Integer, primary_key=True)
     OVALItemID = Column(Integer)
@@ -1454,7 +1361,6 @@ class OVALTESTEDITEM(Base):
 
 class OVALTESTEDITEMFOROVALTESTTYPE(Base):
     __tablename__ = 'OVALTESTEDITEMFOROVALTESTTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALTestTypeID = Column(Integer, primary_key=True)
     OVALTestedItemID = Column(Integer, nullable=False)
@@ -1464,7 +1370,6 @@ class OVALTESTEDITEMFOROVALTESTTYPE(Base):
 
 class OVALTESTEDVARIABLE(Base):
     __tablename__ = 'OVALTESTEDVARIABLE'
-    __bind_key__  = 'XOVAL'
 
     OVALTestedVariableID = Column(Integer, primary_key=True)
     OVALVariableID = Column(Integer)
@@ -1476,7 +1381,6 @@ class OVALTESTEDVARIABLE(Base):
 
 class OVALTESTEDVARIABLEFOROVALTESTTYPE(Base):
     __tablename__ = 'OVALTESTEDVARIABLEFOROVALTESTTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALTestTypeID = Column(Integer, primary_key=True)
     OVALTestedVariableId = Column(Integer, nullable=False)
@@ -1486,7 +1390,6 @@ class OVALTESTEDVARIABLEFOROVALTESTTYPE(Base):
 
 class OVALTESTFOROVALTESTS(Base):
     __tablename__ = 'OVALTESTFOROVALTESTS'
-    __bind_key__  = 'XOVAL'
 
     OVALTestsTestID = Column(Integer, primary_key=True)
     OVALTestsID = Column(Integer, nullable=False)
@@ -1497,7 +1400,6 @@ class OVALTESTFOROVALTESTS(Base):
 
 class OVALTESTS(Base):
     __tablename__ = 'OVALTESTS'
-    __bind_key__  = 'XOVAL'
 
     OVALTestsID = Column(Integer, primary_key=True)
 
@@ -1506,7 +1408,6 @@ class OVALTESTS(Base):
 
 class OVALTESTTAG(Base):
     __tablename__ = 'OVALTESTTAG'
-    __bind_key__  = 'XOVAL'
 
     OVALTestTagID = Column(Integer, primary_key=True)
     OVALTestID = Column(Integer)
@@ -1523,7 +1424,6 @@ class OVALTESTTAG(Base):
 
 class OVALTESTTYPE(Base):
     __tablename__ = 'OVALTESTTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALTestTypeID = Column(Integer, primary_key=True)
     OVALTestID = Column(Integer)
@@ -1543,7 +1443,6 @@ class OVALTESTTYPE(Base):
 
 class OVALTESTTYPEFOROVALSYSTEMTYPE(Base):
     __tablename__ = 'OVALTESTTYPEFOROVALSYSTEMTYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemTypeTestTypeID = Column(Integer, primary_key=True)
     OVALSystemTypeID = Column(Integer, nullable=False)
@@ -1560,7 +1459,6 @@ class OVALTESTTYPEFOROVALSYSTEMTYPE(Base):
 
 class OVALVARIABLE(Base):
     __tablename__ = 'OVALVARIABLE'
-    __bind_key__  = 'XOVAL'
 
     OVALVariableID = Column(Integer, primary_key=True)
     OVALVariableIDPattern = Column(Text, nullable=False)
@@ -1583,7 +1481,6 @@ class OVALVARIABLE(Base):
 
 class OVALVARIABLECOMPONENT(Base):
     __tablename__ = 'OVALVARIABLECOMPONENT'
-    __bind_key__  = 'XOVAL'
 
     OVALVariableComponentID = Column(Integer, primary_key=True)
     OVALVariableID = Column(Integer, nullable=False)
@@ -1602,7 +1499,6 @@ class OVALVARIABLECOMPONENT(Base):
 
 class OVALVARIABLECOMPONENTFOROVALCOMPONENTGROUP(Base):
     __tablename__ = 'OVALVARIABLECOMPONENTFOROVALCOMPONENTGROUP'
-    __bind_key__  = 'XOVAL'
 
     OVALComponentGroupVariableComponentID = Column(Integer, primary_key=True)
     OVALComponentGroupID = Column(Integer, nullable=False)
@@ -1619,7 +1515,6 @@ class OVALVARIABLECOMPONENTFOROVALCOMPONENTGROUP(Base):
 
 class OVALVARIABLEDATATYPE(Base):
     __tablename__ = 'OVALVARIABLEDATATYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALVariableDataTypeID = Column(Integer, primary_key=True)
     OVALVariableDataTypeName = Column(Text)
@@ -1636,7 +1531,6 @@ class OVALVARIABLEDATATYPE(Base):
 
 class OVALVARIABLEFOROVALVARIABLES(Base):
     __tablename__ = 'OVALVARIABLEFOROVALVARIABLES'
-    __bind_key__  = 'XOVAL'
 
     OVALVariablesID = Column(Integer, primary_key=True)
     OVALVariableID = Column(Integer, nullable=False)
@@ -1646,7 +1540,6 @@ class OVALVARIABLEFOROVALVARIABLES(Base):
 
 class OVALVARIABLES(Base):
     __tablename__ = 'OVALVARIABLES'
-    __bind_key__  = 'XOVAL'
 
     OVALVariablesID = Column(Integer, primary_key=True)
     OVALGeneratorTypeID = Column(Integer, nullable=False)
@@ -1657,7 +1550,6 @@ class OVALVARIABLES(Base):
 
 class OVALVARIABLETAG(Base):
     __tablename__ = 'OVALVARIABLETAG'
-    __bind_key__  = 'XOVAL'
 
     OVALVariableTagID = Column(Integer, primary_key=True)
     OVALVariableID = Column(Integer)
@@ -1674,7 +1566,6 @@ class OVALVARIABLETAG(Base):
 
 class OVALVARIABLETYPE(Base):
     __tablename__ = 'OVALVARIABLETYPE'
-    __bind_key__  = 'XOVAL'
 
     OVALVariableTypeID = Column(Integer, primary_key=True)
     OVALVariableTypeName = Column(Text)
@@ -1691,7 +1582,6 @@ class OVALVARIABLETYPE(Base):
 
 class OVALVARIABLEVALUE(Base):
     __tablename__ = 'OVALVARIABLEVALUE'
-    __bind_key__  = 'XOVAL'
 
     OVALVariableValueID = Column(Integer, primary_key=True)
     OVALVariableID = Column(Integer, nullable=False)
@@ -1710,7 +1600,6 @@ class OVALVARIABLEVALUE(Base):
 
 class OVALVARIABLEVALUEFOROVALSYSTEMOBJECT(Base):
     __tablename__ = 'OVALVARIABLEVALUEFOROVALSYSTEMOBJECT'
-    __bind_key__  = 'XOVAL'
 
     OVALSystemObjectVariableValueID = Column(Integer, primary_key=True)
     OVALSystemObjectID = Column(Integer, nullable=False)

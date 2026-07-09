@@ -10,7 +10,7 @@ import fs from "fs";
 
 // Same location as db.ts: OUTSIDE OneDrive (cf. note in db.ts).
 // Overridable via DB_DIR.
-const DB_DIR = process.env.DB_DIR ?? "C:/Users/jerom/XORCISM_databases";
+const DB_DIR = process.env.DB_DIR ?? "/data";
 const XID_PATH = path.join(DB_DIR, "XID.db");
 
 let _db: Database.Database | null = null;

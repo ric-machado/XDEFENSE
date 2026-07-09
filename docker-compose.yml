@@ -1,38 +1,481 @@
-# XORCISM — run with Docker Compose.
-#   docker compose up -d --build
+# XDEFENSE — Plataforma Enterprise de Cibersegurança
+# Modernização do fork XORCISM
 #
-# SQLite databases are persisted in the named volume "xorcism-data" (= DB_DIR=/data)
-# and auto-created on first start. To reuse your existing databases instead, replace
-# the named volume with a bind mount to your host folder, e.g.:
-#   volumes:
-#     - C:/Users/you/XORCISM_databases:/data     # Windows
-#     - ${HOME}/XORCISM_databases:/data          # Linux/macOS
+# Fase 1: Infraestrutura completa. A aplicação ainda usa SQLite nesta fase.
+#         PostgreSQL, Redis e RabbitMQ estão provisionados e prontos para as
+#         fases 2-5 (abstração do banco e migração).
 #
-# Scope: this service is the Node WEB application. Security connectors are Python
-# and run via connectors/runner.py on a worker (local or remote) — not in this
-# container; their manifests are baked in so the Connectors catalog shows in the UI.
+# Uso rápido:
+#   ./setup.sh              # setup completo (gera .env, SSL, sobe tudo)
+#   make up                 # sobe a stack (requer .env já criado)
+#   make logs               # acompanha logs de todos os serviços
+#   make shell-db           # psql interativo no PostgreSQL
+#   docker compose --profile ai up   # inclui Ollama + Open WebUI
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "50m"
+    max-file: "5"
+
+x-restart: &default-restart
+  restart: unless-stopped
+
+x-backend-env: &backend-env
+  env_file: .env
+
+x-security: &default-security
+  security_opt:
+    - no-new-privileges:true
+  cap_drop:
+    - ALL
+
+networks:
+  frontend:
+    name: xdefense-frontend
+  backend:
+    name: xdefense-backend
+
+volumes:
+  postgres-data:
+  redis-data:
+  rabbitmq-data:
+  xdefense-data:        # SQLite legado / Vault / arquivos runtime
+  nginx-ssl:
+  backup-data:
+  prometheus-data:
+  grafana-data:
+  loki-data:
+  tempo-data:
+  ollama-data:
+
 services:
-  xorcism:
+
+  # ── Nginx — Reverse Proxy + SSL ──────────────────────────────────────────────
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: xdefense-nginx
+    <<: *default-restart
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    networks:
+      - frontend
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+  # ── Node.js Backend — XDEFENSE Web Application ───────────────────────────────
+  backend:
     build:
       context: .
       dockerfile: Dockerfile
-    image: xorcism:latest
-    container_name: xorcism
-    restart: unless-stopped
-    init: true                 # proper PID 1 signal handling / zombie reaping
-    ports:
-      - "9292:9292"
+    image: xdefense-backend:latest
+    container_name: xdefense-backend
+    <<: [*default-restart, *backend-env, *default-security]
+    init: true
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     environment:
       DB_DIR: /data
       PORT: "9292"
-      # Optional integrations (uncomment + set as needed):
-      # NVD_API_KEY: ""
-      # TAXII_PROXY_URL: "http://taxii:5000"
-      # OSV_API_URL: "https://api.osv.dev"
-      # CIRCL_API_URL: "https://vulnerability.circl.lu"
-      # XORCISM_ALLOW_REGISTER: "0"   # disable public self-registration
+      NODE_ENV: production
+      OLLAMA_URL: "http://ollama:11434"
     volumes:
-      - xorcism-data:/data
+      - xdefense-data:/data
+    networks:
+      - frontend
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2G
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://127.0.0.1:9292/login',r=>process.exit(r.statusCode<500?0:1)).on('error',()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
 
-volumes:
-  xorcism-data:
+  # ── PostgreSQL 16 — Banco Principal (13 schemas) ─────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: xdefense-postgres
+    <<: [*default-restart, *backend-env]
+    environment:
+      POSTGRES_DB: xdefense
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          cpus: "4"
+          memory: 4G
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d xdefense"]
+      interval: 10s
+      timeout: 5s
+      start_period: 20s
+      retries: 5
+
+  # ── PgBouncer — Connection Pooler ────────────────────────────────────────────
+  pgbouncer:
+    # bitnami/pgbouncer foi removido do Docker Hub; edoburu/pgbouncer é o substituto mantido
+    image: edoburu/pgbouncer:latest
+    container_name: xdefense-pgbouncer
+    <<: [*default-restart, *backend-env]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: "5432"
+      DB_USER: postgres
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      DB_NAME: "*"
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: "500"
+      DEFAULT_POOL_SIZE: "20"
+      AUTH_TYPE: scram-sha-256
+      LISTEN_PORT: "6432"
+    networks:
+      - backend
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h localhost -p 6432 -U postgres 2>/dev/null || exit 1"]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+  # ── Redis — Sessões, Cache, Rate Limit, Locks ─────────────────────────────────
+  redis:
+    image: redis:7.4-alpine
+    container_name: xdefense-redis
+    <<: [*default-restart, *default-security]
+    # setpriv precisa de CAP_SETUID/SETGID para dropar de root → redis user
+    cap_add:
+      - SETUID
+      - SETGID
+    command: >
+      redis-server
+      --requirepass ${REDIS_PASSWORD}
+      --appendonly yes
+      --maxmemory 512mb
+      --maxmemory-policy allkeys-lru
+    volumes:
+      - redis-data:/data
+    networks:
+      - backend
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 5
+
+  # ── RabbitMQ — Fila de Jobs (Connector, Import, Notification, Scheduler) ─────
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    container_name: xdefense-rabbitmq
+    <<: [*default-restart, *default-security]
+    # su-exec precisa de CAP_SETUID/SETGID para dropar de root → rabbitmq user
+    cap_add:
+      - SETUID
+      - SETGID
+    environment:
+      RABBITMQ_DEFAULT_USER: xdefense
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+      RABBITMQ_DEFAULT_VHOST: xdefense
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - backend
+    logging: *default-logging
+    healthcheck:
+      # HTTP check na management API — não requer Erlang cookie (ao contrário de rabbitmq-diagnostics)
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:15672/ || exit 1"]
+      interval: 20s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+
+  # ── TAXII Server — STIX/TAXII 2.1 ────────────────────────────────────────────
+  taxii:
+    build:
+      context: .
+      dockerfile: Dockerfile.taxii
+    image: xdefense-taxii:latest
+    container_name: xdefense-taxii
+    <<: [*default-restart, *backend-env, *default-security]
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      TAXII_HOST: "0.0.0.0"
+      TAXII_PORT: "5000"
+    volumes:
+      - xdefense-data:/data
+    networks:
+      - frontend
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5000/taxii2/"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+
+  # ── Connector Runner — Execução de Ferramentas de Segurança ──────────────────
+  connector-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.connectors
+    image: xdefense-connectors:latest
+    container_name: xdefense-connector-runner
+    <<: [*default-restart, *backend-env, *default-security]
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      DB_DIR: /data
+      WORKER_MODE: connector
+    volumes:
+      - xdefense-data:/data
+      - ./connectors:/app/connectors:ro
+    networks:
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 1G
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import sys; sys.exit(0)"]
+      interval: 60s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+
+  # ── Python Worker — Importers e Processadores ─────────────────────────────────
+  python-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.connectors
+    image: xdefense-connectors:latest
+    container_name: xdefense-python-worker
+    <<: [*default-restart, *backend-env, *default-security]
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      DB_DIR: /data
+      WORKER_MODE: importer
+    volumes:
+      - xdefense-data:/data
+    networks:
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+
+  # ── Scheduler — Loop de tarefas agendadas ────────────────────────────────────
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.scheduler
+    image: xdefense-scheduler:latest
+    container_name: xdefense-scheduler
+    <<: [*default-restart, *backend-env, *default-security]
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
+      - xdefense-data:/data
+    networks:
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256M
+
+  # ── Adminer — UI de Banco de Dados (dev/ops) ─────────────────────────────────
+  adminer:
+    image: adminer:4.8.1
+    container_name: xdefense-adminer
+    <<: *default-restart
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+      ADMINER_DESIGN: pepa-linha
+    networks:
+      - backend
+      - frontend
+    logging: *default-logging
+
+  # ── Backup — pg_dump automático diário ───────────────────────────────────────
+  backup:
+    build:
+      context: .
+      dockerfile: Dockerfile.backup
+    image: xdefense-backup:latest
+    container_name: xdefense-backup
+    <<: *default-restart
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_HOST: postgres
+      BACKUP_SCHEDULE: "0 2 * * *"
+      BACKUP_RETENTION_DAYS: "30"
+    volumes:
+      - backup-data:/backups
+      - xdefense-data:/data:ro
+    networks:
+      - backend
+    logging: *default-logging
+
+  # ── Prometheus — Coleta de Métricas ──────────────────────────────────────────
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: xdefense-prometheus
+    <<: *default-restart
+    volumes:
+      - ./observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=30d"
+      - "--web.enable-lifecycle"
+    networks:
+      - backend
+      - frontend
+    logging: *default-logging
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:9090/-/ready"]
+      interval: 30s
+      timeout: 10s
+      start_period: 15s
+      retries: 3
+
+  # ── Grafana — Dashboards de Observabilidade ───────────────────────────────────
+  grafana:
+    image: grafana/grafana:11.4.0
+    container_name: xdefense-grafana
+    <<: *default-restart
+    depends_on:
+      prometheus:
+        condition: service_healthy
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:-xdefense}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_SERVER_ROOT_URL: "https://localhost/grafana"
+      GF_SERVER_SERVE_FROM_SUB_PATH: "true"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    networks:
+      - backend
+      - frontend
+    logging: *default-logging
+
+  # ── Loki — Agregação de Logs ──────────────────────────────────────────────────
+  loki:
+    image: grafana/loki:3.3.2
+    container_name: xdefense-loki
+    <<: *default-restart
+    volumes:
+      - ./observability/loki/loki-config.yaml:/etc/loki/local-config.yaml:ro
+      - loki-data:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - backend
+    logging: *default-logging
+
+  # ── Tempo — Tracing Distribuído ───────────────────────────────────────────────
+  tempo:
+    image: grafana/tempo:2.7.0
+    container_name: xdefense-tempo
+    <<: *default-restart
+    volumes:
+      - ./observability/tempo/tempo-config.yaml:/etc/tempo/tempo-config.yaml:ro
+      - tempo-data:/tmp/tempo
+    command: -config.file=/etc/tempo/tempo-config.yaml
+    networks:
+      - backend
+    logging: *default-logging
+
+  # ── Ollama — LLM Local [Profile: ai] ─────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: xdefense-ollama
+    profiles: [ai]
+    <<: *default-restart
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - backend
+    logging: *default-logging
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # ── Open WebUI — Interface para Ollama [Profile: ai] ─────────────────────────
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: xdefense-open-webui
+    profiles: [ai]
+    <<: *default-restart
+    depends_on:
+      - ollama
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+    networks:
+      - backend
+      - frontend
+    logging: *default-logging

@@ -1,0 +1,69 @@
+# docker-compose.override.yml — Overrides para ambiente de validação sandbox
+#
+# Usado automaticamente pelo docker compose quando presente no mesmo diretório.
+# NÃO commitado em produção — específico para sandbox CCR onde o proxy TLS
+# impede npm ci/pip install dentro de containers sem --network=host.
+#
+# Substitui:
+#   backend/scheduler → Dockerfiles sem npm ci (assets pré-buildados no host)
+#   taxii/connectors  → build com --network=host para pip via proxy HTTPS
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.sandbox-backend
+      network: host
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.sandbox-scheduler
+      network: host
+
+  taxii:
+    build:
+      context: .
+      dockerfile: Dockerfile.taxii
+      network: host
+    # /taxii2/ requer autenticação (401) — aceitar 2xx e 4xx como saudável
+    healthcheck:
+      test: ["CMD-SHELL", "wget -S -q -O /dev/null http://localhost:5000/taxii2/ 2>&1 | grep -qE 'HTTP/[0-9.]+ [24][0-9][0-9]'"]
+      interval: 30s
+      timeout: 10s
+      start_period: 20s
+      retries: 3
+
+  # XORCISM_DB_DIR aponta para /data (volume compartilhado com backend onde o Node.js cria os .db)
+  connector-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.connectors
+      network: host
+    environment:
+      XORCISM_DB_DIR: /data
+
+  python-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.connectors
+      network: host
+    environment:
+      XORCISM_DB_DIR: /data
+
+  backup:
+    build:
+      context: .
+      dockerfile: Dockerfile.backup
+
+  # Adminer: IPv6 bind falha no sandbox — forçar IPv4
+  adminer:
+    entrypoint: ["php", "-S", "0.0.0.0:8080", "-t", "/var/www/html"]
+
+  # Tempo: volume montado em /tmp/tempo precisa ser escrito como root
+  tempo:
+    user: root
+
+  # Loki: precisa criar /wal na raiz do container — requer root
+  loki:
+    user: root

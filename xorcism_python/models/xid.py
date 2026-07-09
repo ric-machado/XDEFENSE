@@ -9,7 +9,6 @@ from .base import Base
 
 class XUSER(Base):
     __tablename__ = 'XUSER'
-    __bind_key__ = 'XID'
 
     UserID = Column(Integer, primary_key=True, autoincrement=True)
     Email = Column(Text, nullable=False)
@@ -33,7 +32,6 @@ class XUSER(Base):
 
 class XROLE(Base):
     __tablename__ = 'XROLE'
-    __bind_key__ = 'XID'
 
     RoleID = Column(Integer, primary_key=True, autoincrement=True)
     RoleName = Column(Text, nullable=False, unique=True)
@@ -46,7 +44,6 @@ class XROLE(Base):
 
 class XUSERROLE(Base):
     __tablename__ = 'XUSERROLE'
-    __bind_key__ = 'XID'
 
     UserRoleID = Column(Integer, primary_key=True, autoincrement=True)
     UserID = Column(Integer, nullable=False)
@@ -58,7 +55,6 @@ class XUSERROLE(Base):
 
 class XPERMISSION(Base):
     __tablename__ = 'XPERMISSION'
-    __bind_key__ = 'XID'
 
     PermissionID = Column(Integer, primary_key=True, autoincrement=True)
     RoleID = Column(Integer, nullable=False)
@@ -76,7 +72,6 @@ class XPERMISSION(Base):
 
 class XSESSION(Base):
     __tablename__ = 'XSESSION'
-    __bind_key__ = 'XID'
 
     SessionID = Column(Text, primary_key=True)
     UserID = Column(Integer, nullable=False)
@@ -92,7 +87,6 @@ class XSESSION(Base):
 
 class XAUDITLOG(Base):
     __tablename__ = 'XAUDITLOG'
-    __bind_key__ = 'XID'
 
     AuditID = Column(Integer, primary_key=True, autoincrement=True)
     UserID = Column(Integer)

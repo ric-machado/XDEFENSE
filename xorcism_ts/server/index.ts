@@ -4,13 +4,20 @@
 
 import "express-async-errors";
 import express, { Request, Response, NextFunction } from "express";
+import { closeRabbitMQ } from "./queue";
+import { closeRedis } from "./cache";
+import { metricsHandler, httpMetricsMiddleware } from "./metrics";
+import "./database/adapter"; // emite o aviso de boot se XDEFENSE_DB_ENGINE=postgres (ver adapter.ts)
 import compression from "compression";
+import helmet from "helmet";
+import cors from "cors";
 import path from "path";
 import fs from "fs";
 import explorerRouter from "./routes/explorer";
 import biaRouter from "./routes/bia";
 import authRouter from "./routes/auth";
 import oidcRouter from "./routes/oidc";
+import azureRouter from "./routes/azure";
 import adminRouter from "./routes/admin";
 import connectorsRouter, { warmManifestCache } from "./routes/connectors";
 import workerApiRouter from "./routes/worker_api";
@@ -199,6 +206,18 @@ const PORT = Number(process.env.PORT) || 9292;
 const app = express();
 app.disable("x-powered-by");
 
+// ── CORS (configurable per environment) ──────────────────────────────────────
+// CORS_ORIGIN não definida → mesma origem (comportamento padrão do browser)
+const _corsOrigin = process.env.CORS_ORIGIN ?? false;
+if (_corsOrigin) {
+  app.use(cors({
+    origin: _corsOrigin,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-API-Key"],
+  }));
+}
+
 // ── Security headers (OWASP Secure Headers Project) ────────────────────────
 app.use((req: Request, res: Response, next: NextFunction) => {
   const secure = req.secure || req.headers["x-forwarded-proto"] === "https";
@@ -247,6 +266,7 @@ app.use(compression());
 const keepRaw = (req: Request, _res: Response, buf: Buffer): void => { (req as Request & { rawBody?: Buffer }).rawBody = buf; };
 app.use(express.json({ limit: "25mb", verify: keepRaw })); // large JSON imports
 app.use(express.urlencoded({ extended: true, limit: "25mb", verify: keepRaw }));
+app.use(httpMetricsMiddleware); // Prometheus HTTP instrumentation
 app.use(antibot); // anti-bot / anti-scraping (rate + UA + bursts)
 app.use(loadUser); // populates req.user from the session cookie
 
@@ -283,9 +303,13 @@ app.use(
   express.static(path.join(__dirname, "../../node_modules/xlsx/dist/xlsx.full.min.js"))
 );
 
+// Prometheus metrics endpoint (scraped by Prometheus; no auth required — restrict at network level)
+app.get("/api/metrics", metricsHandler);
+
 // Authentication routes (public login; the others check req.user)
 app.use("/api/auth", authRouter);
-app.use("/api/auth", oidcRouter); // OAuth/OIDC (public login + callback)
+app.use("/api/auth", oidcRouter);  // OAuth/OIDC (public login + callback)
+app.use("/api/auth", azureRouter); // Azure AD / Entra ID (public; AZURE_TENANT_ID required)
 
 // Remote workers + XOR agents API: authenticated by TOKEN (no session) → before the gate
 app.use("/api", workerApiRouter);
@@ -990,7 +1014,14 @@ warmManifestCache(); // pre-parse the 1200+ connector manifests so the first /co
 purgeExpiredSessions();
 setInterval(purgeExpiredSessions, 60 * 60 * 1000).unref();
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`\n  XORCISM TypeScript Server (auth XID activée)`);
   console.log(`  http://localhost:${PORT}/login\n`);
+});
+
+process.on("SIGTERM", async () => {
+  console.log("[shutdown] SIGTERM received — graceful shutdown...");
+  server.close();
+  await Promise.all([closeRabbitMQ(), closeRedis()]);
+  process.exit(0);
 });

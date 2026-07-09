@@ -1,0 +1,39 @@
+# Dockerignore para o Dockerfile.sandbox-backend
+# Permite node_modules e dist pré-buildados no host.
+# NÃO exclui xorcism_ts/node_modules nem xorcism_ts/dist.
+
+# Bancos de dados (volumes, não copiados para a imagem)
+**/*.db
+**/*.db-wal
+**/*.db-shm
+**/*.sqlite
+**/*.sqlite3
+
+# Logs e temporários
+logs
+*.log
+*.zip
+
+# Segredos (nunca na imagem)
+.env
+nginx/ssl/
+
+# Python
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/.pytest_cache
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Outras pasta de dist que não são xorcism_ts
+agent/dist
+tools/nodejs
+nvd_cache
+website
+website_backup
+Infomaniak
+deploy_newsletter

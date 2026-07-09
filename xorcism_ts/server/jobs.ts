@@ -1,14 +1,18 @@
 /**
- * jobs.ts — Connector job queue (XJOB.db), shared with the Python runner.
+ * jobs.ts — Connector job queue (XJOB.db / schema xjob), shared with the Python runner.
  * The web server creates jobs (status 'queued'); the Python worker claims them,
  * runs, parses, imports and updates the status/log.
+ *
+ * Phase 7: after writing to the DB, jobs are optionally published to RabbitMQ
+ * (xdefense.connectors exchange) when RABBITMQ_URL is set. Fire-and-forget.
  */
 
 import Database from "better-sqlite3";
 import path from "path";
 import crypto from "crypto";
+import { publishJob } from "./queue";
 
-const DB_DIR = process.env.DB_DIR ?? "C:/Users/jerom/XORCISM_databases";
+const DB_DIR = process.env.DB_DIR ?? "/data";
 
 function sha256(s: string): string {
   return crypto.createHash("sha256").update(s).digest("hex");
@@ -136,7 +140,9 @@ export function createJob(
        VALUES (?,?,?,?,?,'queued',?,?)`
     )
     .run(connector, JSON.stringify(params ?? {}), target, engagementId, worker, userId, nowSql());
-  return Number(info.lastInsertRowid);
+  const jobId = Number(info.lastInsertRowid);
+  publishJob({ jobId, connector, params, target, userId, engagementId, worker });
+  return jobId;
 }
 
 /**

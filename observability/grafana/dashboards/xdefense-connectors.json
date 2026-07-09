@@ -1,0 +1,89 @@
+{
+  "__inputs": [],
+  "__requires": [
+    { "type": "grafana", "id": "grafana", "name": "Grafana", "version": "11.0.0" },
+    { "type": "datasource", "id": "prometheus", "name": "Prometheus", "version": "1.0.0" }
+  ],
+  "annotations": { "list": [] },
+  "description": "XDEFENSE Connectors — jobs pendentes, falhas, tempo médio",
+  "editable": true,
+  "graphTooltip": 1,
+  "panels": [
+    {
+      "id": 1,
+      "title": "Jobs Criados (5m rate)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(xdefense_jobs_total{app=\"xdefense\"}[5m])",
+          "legendFormat": "{{connector}} / {{status}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 2,
+      "title": "Connector Runs (5m rate)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(xdefense_connector_runs_total{app=\"xdefense\"}[5m])",
+          "legendFormat": "{{connector}} / {{result}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 3,
+      "title": "Jobs Totais por Connector",
+      "type": "barchart",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "sum by (connector) (xdefense_jobs_total{app=\"xdefense\"})",
+          "legendFormat": "{{connector}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    },
+    {
+      "id": 4,
+      "title": "Taxa de Falhas de Connectors",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(xdefense_connector_runs_total{app=\"xdefense\",result=\"error\"}[5m])",
+          "legendFormat": "errors: {{connector}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short", "color": { "fixedColor": "red", "mode": "fixed" } } }
+    },
+    {
+      "id": 5,
+      "title": "Import Operations (5m rate)",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 16 },
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "rate(xdefense_import_operations_total{app=\"xdefense\"}[5m])",
+          "legendFormat": "{{source}} / {{result}}"
+        }
+      ],
+      "fieldConfig": { "defaults": { "unit": "short" } }
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": ["xdefense", "connectors"],
+  "title": "XDEFENSE — Connectors & Jobs",
+  "uid": "xdefense-connectors",
+  "version": 1
+}

@@ -8,7 +8,6 @@ from .base import Base
 
 class ACCESSEDDIRECTORYLIST(Base):
     __tablename__ = 'ACCESSEDDIRECTORYLIST'
-    __bind_key__  = 'XORCISM'
 
     AccessedDirectoryListID = Column(Integer, nullable=False, primary_key=True)
     AccessedDirectoryListGUID = Column(Text)
@@ -31,7 +30,6 @@ class ACCESSEDDIRECTORYLIST(Base):
 
 class ACCESSEDFILELIST(Base):
     __tablename__ = 'ACCESSEDFILELIST'
-    __bind_key__  = 'XORCISM'
 
     AccessedFileListID = Column(Integer, nullable=False, primary_key=True)
     AccessedFileListGUID = Column(Text)
@@ -54,7 +52,6 @@ class ACCESSEDFILELIST(Base):
 
 class ACCESSEDFILELISTFILES(Base):
     __tablename__ = 'ACCESSEDFILELISTFILES'
-    __bind_key__  = 'XORCISM'
 
     AccessedFileListFileID = Column(Integer, nullable=False, primary_key=True)
     AccessedFileListFileGUID = Column(Text)
@@ -78,7 +75,6 @@ class ACCESSEDFILELISTFILES(Base):
 
 class ACCESSRECORD(Base):
     __tablename__ = 'ACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     AccessRecordID = Column(Integer, nullable=False, primary_key=True)
     AccessRecordGUID = Column(Text)
@@ -99,7 +95,6 @@ class ACCESSRECORD(Base):
 
 class ACCESSRECORDEVIDENCE(Base):
     __tablename__ = 'ACCESSRECORDEVIDENCE'
-    __bind_key__  = 'XORCISM'
 
     AccessRecordEvidenceID = Column(Integer, nullable=False, primary_key=True)
     AccessRecordID = Column(Integer)
@@ -113,7 +108,6 @@ class ACCESSRECORDEVIDENCE(Base):
 
 class ACCESSRECORDHASH(Base):
     __tablename__ = 'ACCESSRECORDHASH'
-    __bind_key__  = 'XORCISM'
 
     AccessRecordHashID = Column(Integer, nullable=False, primary_key=True)
     AccessRecordHashGUID = Column(Text)
@@ -128,7 +122,6 @@ class ACCESSRECORDHASH(Base):
 
 class ACCOUNT(Base):
     __tablename__ = 'ACCOUNT'
-    __bind_key__  = 'XORCISM'
 
     AccountID = Column(Integer, nullable=False, primary_key=True)
     AccountGUID = Column(Text)
@@ -163,7 +156,6 @@ class ACCOUNT(Base):
 
 class ACCOUNTAUTHENTICATION(Base):
     __tablename__ = 'ACCOUNTAUTHENTICATION'
-    __bind_key__  = 'XORCISM'
 
     AccountAuthenticationID = Column(Integer, nullable=False, primary_key=True)
     AccountAuthenticationGUID = Column(Text)
@@ -191,7 +183,6 @@ class ACCOUNTAUTHENTICATION(Base):
 
 class ACCOUNTAUTHENTICATIONTYPE(Base):
     __tablename__ = 'ACCOUNTAUTHENTICATIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     AccountAuthenticationTypeID = Column(Integer, nullable=False, primary_key=True)
     AccountAuthenticationTypeGUID = Column(Text)
@@ -216,7 +207,6 @@ class ACCOUNTAUTHENTICATIONTYPE(Base):
 
 class ACCOUNTBLACKLIST(Base):
     __tablename__ = 'ACCOUNTBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     AccountBlacklistID = Column(Integer, nullable=False, primary_key=True)
     CreatedDate = Column(Text)
@@ -231,7 +221,6 @@ class ACCOUNTBLACKLIST(Base):
 
 class ACCOUNTCHANGERECORD(Base):
     __tablename__ = 'ACCOUNTCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     AccountChangeRecordID = Column(Integer, nullable=False, primary_key=True)
     AccountChangeRecordGUID = Column(Text)
@@ -249,7 +238,6 @@ class ACCOUNTCHANGERECORD(Base):
 
 class ACCOUNTDESCRIPTION(Base):
     __tablename__ = 'ACCOUNTDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     AccountDescriptionID = Column(Integer, nullable=False, primary_key=True)
 
@@ -258,7 +246,6 @@ class ACCOUNTDESCRIPTION(Base):
 
 class ACCOUNTTYPE(Base):
     __tablename__ = 'ACCOUNTTYPE'
-    __bind_key__  = 'XORCISM'
 
     AccountTypeID = Column(Integer, nullable=False, primary_key=True)
     AccountTypeName = Column(Text)
@@ -270,7 +257,6 @@ class ACCOUNTTYPE(Base):
 
 class ACCOUNTWHITELIST(Base):
     __tablename__ = 'ACCOUNTWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     AccountWhitelistID = Column(Integer, nullable=False, primary_key=True)
     CreatedDate = Column(Text)
@@ -285,7 +271,6 @@ class ACCOUNTWHITELIST(Base):
 
 class ACE(Base):
     __tablename__ = 'ACE'
-    __bind_key__  = 'XORCISM'
 
     ACEID = Column(Integer, nullable=False, primary_key=True)
     ACEGUID = Column(Text)
@@ -295,7 +280,6 @@ class ACE(Base):
 
 class ACL(Base):
     __tablename__ = 'ACL'
-    __bind_key__  = 'XORCISM'
 
     ACLID = Column(Integer, nullable=False, primary_key=True)
     ACLGUID = Column(Text)
@@ -305,7 +289,6 @@ class ACL(Base):
 
 class ACLENTRY(Base):
     __tablename__ = 'ACLENTRY'
-    __bind_key__  = 'XORCISM'
 
     ACLEntryID = Column(Integer, nullable=False, primary_key=True)
     ACLEntryGUID = Column(Text)
@@ -326,7 +309,6 @@ class ACLENTRY(Base):
 
 class ACRONYM(Base):
     __tablename__ = 'ACRONYM'
-    __bind_key__  = 'XORCISM'
 
     AcronymID = Column(Integer, nullable=False, primary_key=True)
     AcronymGUID = Column(Text)
@@ -347,7 +329,6 @@ class ACRONYM(Base):
 
 class ACTION(Base):
     __tablename__ = 'ACTION'
-    __bind_key__  = 'XORCISM'
 
     ActionID = Column(Integer, nullable=False, primary_key=True)
     ActionGUID = Column(Text)
@@ -374,7 +355,6 @@ class ACTION(Base):
 
 class ACTIONACTION(Base):
     __tablename__ = 'ACTIONACTION'
-    __bind_key__  = 'XORCISM'
 
     ActionRelationshipID = Column(Integer, nullable=False, primary_key=True)
     ActionRefID = Column(Integer, nullable=False)
@@ -395,7 +375,6 @@ class ACTIONACTION(Base):
 
 class ACTIONACTIONARGUMENTNAME(Base):
     __tablename__ = 'ACTIONACTIONARGUMENTNAME'
-    __bind_key__  = 'XORCISM'
 
     ActionActionArgumentNameID = Column(Integer, nullable=False, primary_key=True)
     ActionID = Column(Integer, nullable=False)
@@ -414,7 +393,6 @@ class ACTIONACTIONARGUMENTNAME(Base):
 
 class ACTIONACTIONNAME(Base):
     __tablename__ = 'ACTIONACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     ActionActionNameID = Column(Integer, nullable=False, primary_key=True)
     ActionID = Column(Integer, nullable=False)
@@ -433,7 +411,6 @@ class ACTIONACTIONNAME(Base):
 
 class ACTIONACTIONTYPE(Base):
     __tablename__ = 'ACTIONACTIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     ActionActionTypeID = Column(Integer, nullable=False, primary_key=True)
     ActionID = Column(Integer, nullable=False)
@@ -452,7 +429,6 @@ class ACTIONACTIONTYPE(Base):
 
 class ACTIONALIAS(Base):
     __tablename__ = 'ACTIONALIAS'
-    __bind_key__  = 'XORCISM'
 
     ActionAliasID = Column(Integer, nullable=False, primary_key=True)
     ActionID = Column(Integer, nullable=False)
@@ -470,7 +446,6 @@ class ACTIONALIAS(Base):
 
 class ACTIONARGUMENTNAME(Base):
     __tablename__ = 'ACTIONARGUMENTNAME'
-    __bind_key__  = 'XORCISM'
 
     ActionArgumentNameID = Column(Integer, nullable=False, primary_key=True)
     ActionArgumentNameGUID = Column(Text)
@@ -489,7 +464,6 @@ class ACTIONARGUMENTNAME(Base):
 
 class ACTIONASSOCIATION(Base):
     __tablename__ = 'ACTIONASSOCIATION'
-    __bind_key__  = 'XORCISM'
 
     ActionAssociationID = Column(Integer, nullable=False, primary_key=True)
     ActionObjectAssociationType = Column(Text, nullable=False)
@@ -505,7 +479,6 @@ class ACTIONASSOCIATION(Base):
 
 class ACTIONCOLLECTION(Base):
     __tablename__ = 'ACTIONCOLLECTION'
-    __bind_key__  = 'XORCISM'
 
     ActionCollectionID = Column(Integer, nullable=False, primary_key=True)
 
@@ -514,7 +487,6 @@ class ACTIONCOLLECTION(Base):
 
 class ACTIONCONTEXT(Base):
     __tablename__ = 'ACTIONCONTEXT'
-    __bind_key__  = 'XORCISM'
 
     ActionContextID = Column(Integer, primary_key=True)
     ActionContextGUID = Column(Text)
@@ -532,7 +504,6 @@ class ACTIONCONTEXT(Base):
 
 class ACTIONDESCRIPTION(Base):
     __tablename__ = 'ACTIONDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ActionDescriptionID = Column(Integer, nullable=False, primary_key=True)
     ActionID = Column(Integer, nullable=False)
@@ -551,7 +522,6 @@ class ACTIONDESCRIPTION(Base):
 
 class ACTIONDISCOVERYMETHOD(Base):
     __tablename__ = 'ACTIONDISCOVERYMETHOD'
-    __bind_key__  = 'XORCISM'
 
     ActionDiscoveryMethodID = Column(Integer, nullable=False, primary_key=True)
     ActionID = Column(Integer, nullable=False)
@@ -569,7 +539,6 @@ class ACTIONDISCOVERYMETHOD(Base):
 
 class ACTIONIMPLEMENTATION(Base):
     __tablename__ = 'ACTIONIMPLEMENTATION'
-    __bind_key__  = 'XORCISM'
 
     ActionImplementationID = Column(Integer, nullable=False, primary_key=True)
 
@@ -578,7 +547,6 @@ class ACTIONIMPLEMENTATION(Base):
 
 class ACTIONNAME(Base):
     __tablename__ = 'ACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     ActionNameID = Column(Integer, nullable=False, primary_key=True)
     ActionNameName = Column(Text, nullable=False)
@@ -596,7 +564,6 @@ class ACTIONNAME(Base):
 
 class ACTIONOBJECTASSOCIATIONTYPE(Base):
     __tablename__ = 'ACTIONOBJECTASSOCIATIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     ActionObjectAssociationTypeID = Column(Integer, nullable=False, primary_key=True)
     ActionObjectAssociationTypeName = Column(Text, nullable=False)
@@ -615,7 +582,6 @@ class ACTIONOBJECTASSOCIATIONTYPE(Base):
 
 class ACTIONPLAN(Base):
     __tablename__ = 'ACTIONPLAN'
-    __bind_key__  = 'XORCISM'
 
     ActionPlanID = Column(Integer, nullable=False, primary_key=True)
 
@@ -624,7 +590,6 @@ class ACTIONPLAN(Base):
 
 class ACTIONPOOL(Base):
     __tablename__ = 'ACTIONPOOL'
-    __bind_key__  = 'XORCISM'
 
     ActionPoolID = Column(Integer, nullable=False, primary_key=True)
 
@@ -633,7 +598,6 @@ class ACTIONPOOL(Base):
 
 class ACTIONRELATIONSHIPTYPE(Base):
     __tablename__ = 'ACTIONRELATIONSHIPTYPE'
-    __bind_key__  = 'XORCISM'
 
     ActionRelationshipTypeID = Column(Integer, nullable=False, primary_key=True)
     ActionRelationshipTypeName = Column(Text, nullable=False)
@@ -651,7 +615,6 @@ class ACTIONRELATIONSHIPTYPE(Base):
 
 class ACTIONSTATUS(Base):
     __tablename__ = 'ACTIONSTATUS'
-    __bind_key__  = 'XORCISM'
 
     ActionStatusID = Column(Integer, nullable=False, primary_key=True)
     ActionStatusName = Column(Text, nullable=False)
@@ -663,7 +626,6 @@ class ACTIONSTATUS(Base):
 
 class ACTIONTAKEN(Base):
     __tablename__ = 'ACTIONTAKEN'
-    __bind_key__  = 'XORCISM'
 
     ActionTakenID = Column(Integer, nullable=False, primary_key=True)
     ActionTakenGUID = Column(Text)
@@ -678,7 +640,6 @@ class ACTIONTAKEN(Base):
 
 class ACTIONTAKENFORINCIDENT(Base):
     __tablename__ = 'ACTIONTAKENFORINCIDENT'
-    __bind_key__  = 'XORCISM'
 
     ActionTakenForIncidentID = Column(Integer, nullable=False, primary_key=True)
     ActionTakenID = Column(Integer, nullable=False)
@@ -693,7 +654,6 @@ class ACTIONTAKENFORINCIDENT(Base):
 
 class ACTIONTAKENFORTHREATCAMPAIGN(Base):
     __tablename__ = 'ACTIONTAKENFORTHREATCAMPAIGN'
-    __bind_key__  = 'XORCISM'
 
     ActionTakenForThreatCampaignID = Column(Integer, nullable=False, primary_key=True)
     ActionTakenID = Column(Integer, nullable=False)
@@ -713,7 +673,6 @@ class ACTIONTAKENFORTHREATCAMPAIGN(Base):
 
 class ACTIONTYPE(Base):
     __tablename__ = 'ACTIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     ActionTypeID = Column(Integer, nullable=False, primary_key=True)
     ActionTypeGUID = Column(Text)
@@ -732,7 +691,6 @@ class ACTIONTYPE(Base):
 
 class ACTIVATIONFUNCTION(Base):
     __tablename__ = 'ACTIVATIONFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     ActivationFunctionID = Column(Integer, nullable=False, primary_key=True)
     FunctionID = Column(Integer)
@@ -742,7 +700,6 @@ class ACTIVATIONFUNCTION(Base):
 
 class ACTIVATIONZONE(Base):
     __tablename__ = 'ACTIVATIONZONE'
-    __bind_key__  = 'XORCISM'
 
     ActivationZoneID = Column(Integer, nullable=False, primary_key=True)
     ActivationZoneGUID = Column(Text)
@@ -759,7 +716,6 @@ class ACTIVATIONZONE(Base):
 
 class ACTIVATIONZONEFORATTACKPATTERN(Base):
     __tablename__ = 'ACTIVATIONZONEFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternActivationZoneID = Column(Integer, nullable=False, primary_key=True)
     AttackPatternActivationZoneGUID = Column(Text)
@@ -780,7 +736,6 @@ class ACTIVATIONZONEFORATTACKPATTERN(Base):
 
 class ADDRESS(Base):
     __tablename__ = 'ADDRESS'
-    __bind_key__  = 'XORCISM'
 
     AddressID = Column(Integer, nullable=False, primary_key=True)
     AddressGUID = Column(Text)
@@ -810,7 +765,6 @@ class ADDRESS(Base):
 
 class ADDRESSBLACKLIST(Base):
     __tablename__ = 'ADDRESSBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     AddressBlacklistID = Column(Integer, nullable=False, primary_key=True)
     AddressID = Column(Integer)
@@ -834,7 +788,6 @@ class ADDRESSBLACKLIST(Base):
 
 class ADDRESSCATEGORY(Base):
     __tablename__ = 'ADDRESSCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     AddressCategoryID = Column(Integer, nullable=False, primary_key=True)
     AddressCategoryGUID = Column(Text)
@@ -854,7 +807,6 @@ class ADDRESSCATEGORY(Base):
 
 class ADDRESSCOUNTRY(Base):
     __tablename__ = 'ADDRESSCOUNTRY'
-    __bind_key__  = 'XORCISM'
 
     AddressCountryID = Column(Integer, nullable=False, primary_key=True)
     AddressID = Column(Integer)
@@ -875,7 +827,6 @@ class ADDRESSCOUNTRY(Base):
 
 class ADDRESSREPUTATION(Base):
     __tablename__ = 'ADDRESSREPUTATION'
-    __bind_key__  = 'XORCISM'
 
     AddressReputationID = Column(Integer, nullable=False, primary_key=True)
     AddressID = Column(Integer)
@@ -895,7 +846,6 @@ class ADDRESSREPUTATION(Base):
 
 class ADDRESSWHITELIST(Base):
     __tablename__ = 'ADDRESSWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     AddressWhitelistID = Column(Integer, nullable=False, primary_key=True)
     AddressID = Column(Integer)
@@ -919,7 +869,6 @@ class ADDRESSWHITELIST(Base):
 
 class ADVISORY(Base):
     __tablename__ = 'ADVISORY'
-    __bind_key__  = 'XORCISM'
 
     AdvisoryID = Column(Integer, nullable=False, primary_key=True)
 
@@ -928,7 +877,6 @@ class ADVISORY(Base):
 
 class AFFECTEDRESOURCE(Base):
     __tablename__ = 'AFFECTEDRESOURCE'
-    __bind_key__  = 'XORCISM'
 
     AffectedResourceID = Column(Integer, nullable=False, primary_key=True)
     AffectedResourceName = Column(Text, nullable=False)
@@ -944,7 +892,6 @@ class AFFECTEDRESOURCE(Base):
 
 class AGENT(Base):
     __tablename__ = 'AGENT'
-    __bind_key__  = 'XORCISM'
 
     AgentID = Column(Integer, nullable=False, primary_key=True)
     AgentGUID = Column(Text)
@@ -963,7 +910,6 @@ class AGENT(Base):
 
 class ALGEBRAIC(Base):
     __tablename__ = 'ALGEBRAIC'
-    __bind_key__  = 'XORCISM'
 
     AlgebraicID = Column(Integer, nullable=False, primary_key=True)
 
@@ -972,7 +918,6 @@ class ALGEBRAIC(Base):
 
 class ALGORITHM(Base):
     __tablename__ = 'ALGORITHM'
-    __bind_key__  = 'XORCISM'
 
     AlgorithmID = Column(Integer, nullable=False, primary_key=True)
     AlgorithmName = Column(Text)
@@ -992,7 +937,6 @@ class ALGORITHM(Base):
 
 class ALGORITHMDESCRIPTION(Base):
     __tablename__ = 'ALGORITHMDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     AlgorithmDescriptionID = Column(Integer, nullable=False, primary_key=True)
 
@@ -1001,7 +945,6 @@ class ALGORITHMDESCRIPTION(Base):
 
 class ALGORITHMREFERENCE(Base):
     __tablename__ = 'ALGORITHMREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     AlgorithmReferenceID = Column(Integer, nullable=False, primary_key=True)
 
@@ -1010,7 +953,6 @@ class ALGORITHMREFERENCE(Base):
 
 class ALGORITHMTAG(Base):
     __tablename__ = 'ALGORITHMTAG'
-    __bind_key__  = 'XORCISM'
 
     AlgorithmTagID = Column(Integer, nullable=False, primary_key=True)
 
@@ -1019,7 +961,6 @@ class ALGORITHMTAG(Base):
 
 class ANTIBEHAVIORALANALYSISSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'ANTIBEHAVIORALANALYSISSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiBehavioralAnalysisStrategicObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiBehavioralAnalysisStrategicObjectiveName = Column(Text)
@@ -1037,7 +978,6 @@ class ANTIBEHAVIORALANALYSISSTRATEGICOBJECTIVE(Base):
 
 class ANTIBEHAVIORALANALYSISTACTICALOBJECTIVE(Base):
     __tablename__ = 'ANTIBEHAVIORALANALYSISTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiBehavioralAnalysisTacticalObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiBehavioralAnalysisTacticalObjectiveName = Column(Text)
@@ -1055,7 +995,6 @@ class ANTIBEHAVIORALANALYSISTACTICALOBJECTIVE(Base):
 
 class ANTIBEHAVIORANALYSISPROPERTIES(Base):
     __tablename__ = 'ANTIBEHAVIORANALYSISPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     AntiBehavioralAnalysisPropertiesID = Column(Integer, nullable=False, primary_key=True)
     AntiBehavioralAnalysisPropertiesName = Column(Text)
@@ -1073,7 +1012,6 @@ class ANTIBEHAVIORANALYSISPROPERTIES(Base):
 
 class ANTICODEANALYSISSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'ANTICODEANALYSISSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiCodeAnalysisStrategicObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiCodeAnalysisStrategicObjectiveName = Column(Text)
@@ -1091,7 +1029,6 @@ class ANTICODEANALYSISSTRATEGICOBJECTIVE(Base):
 
 class ANTICODEANALYSISTACTICALOBJECTIVE(Base):
     __tablename__ = 'ANTICODEANALYSISTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiCodeAnalysisTacticalObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiCodeAnalysisTacticalObjectiveName = Column(Text)
@@ -1109,7 +1046,6 @@ class ANTICODEANALYSISTACTICALOBJECTIVE(Base):
 
 class ANTIDETECTIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'ANTIDETECTIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiDetectionStrategicObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiDetectionStrategicObjectiveName = Column(Text)
@@ -1127,7 +1063,6 @@ class ANTIDETECTIONSTRATEGICOBJECTIVE(Base):
 
 class ANTIDETECTIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'ANTIDETECTIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiDetectionTacticalObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiDetectionTacticalObjectiveName = Column(Text)
@@ -1145,7 +1080,6 @@ class ANTIDETECTIONTACTICALOBJECTIVE(Base):
 
 class ANTIREMOVALSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'ANTIREMOVALSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiRemovalStrategicObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiRemovalStrategicObjectiveName = Column(Text)
@@ -1163,7 +1097,6 @@ class ANTIREMOVALSTRATEGICOBJECTIVE(Base):
 
 class ANTIREMOVALTACTICALOBJECTIVE(Base):
     __tablename__ = 'ANTIREMOVALTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AntiRemovalTacticalObjectiveID = Column(Integer, nullable=False, primary_key=True)
     AntiRemovalTacticalObjectiveName = Column(Text)
@@ -1181,7 +1114,6 @@ class ANTIREMOVALTACTICALOBJECTIVE(Base):
 
 class API(Base):
     __tablename__ = 'API'
-    __bind_key__  = 'XORCISM'
 
     APIID = Column(Integer, nullable=False, primary_key=True)
     APIGUID = Column(Text)
@@ -1200,7 +1132,6 @@ class API(Base):
 
 class APICALL(Base):
     __tablename__ = 'APICALL'
-    __bind_key__  = 'XORCISM'
 
     APICallID = Column(Integer, nullable=False, primary_key=True)
 
@@ -1209,7 +1140,6 @@ class APICALL(Base):
 
 class APIFUNCTION(Base):
     __tablename__ = 'APIFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     APIFunctionID = Column(Integer, nullable=False, primary_key=True)
     APIFunctionGUID = Column(Text)
@@ -1231,7 +1161,6 @@ class APIFUNCTION(Base):
 
 class APIMEMORYADDRESS(Base):
     __tablename__ = 'APIMEMORYADDRESS'
-    __bind_key__  = 'XORCISM'
 
     APIMemoryAddressID = Column(Integer, nullable=False, primary_key=True)
     APIID = Column(Integer, nullable=False)
@@ -1249,7 +1178,6 @@ class APIMEMORYADDRESS(Base):
 
 class APIPLATFORM(Base):
     __tablename__ = 'APIPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     APIPlatformID = Column(Integer, nullable=False, primary_key=True)
     APIID = Column(Integer, nullable=False)
@@ -1266,7 +1194,6 @@ class APIPLATFORM(Base):
 
 class APPLICATION(Base):
     __tablename__ = 'APPLICATION'
-    __bind_key__  = 'XORCISM'
 
     ApplicationID = Column(Integer, nullable=False, primary_key=True)
     ApplicationGUID = Column(Text)
@@ -1285,7 +1212,6 @@ class APPLICATION(Base):
 
 class APPLICATIONAUTHENTICATIONTYPE(Base):
     __tablename__ = 'APPLICATIONAUTHENTICATIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     ApplicationAuthenticationTypeID = Column(Integer, nullable=False, primary_key=True)
     ApplicationID = Column(Integer)
@@ -1307,7 +1233,6 @@ class APPLICATIONAUTHENTICATIONTYPE(Base):
 
 class APPLICATIONBLACKLIST(Base):
     __tablename__ = 'APPLICATIONBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationBlacklistID = Column(Integer, nullable=False, primary_key=True)
 
@@ -1316,7 +1241,6 @@ class APPLICATIONBLACKLIST(Base):
 
 class APPLICATIONCATEGORIES(Base):
     __tablename__ = 'APPLICATIONCATEGORIES'
-    __bind_key__  = 'XORCISM'
 
     ApplicationCategoriesID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -1337,7 +1261,6 @@ class APPLICATIONCATEGORIES(Base):
 
 class APPLICATIONCATEGORY(Base):
     __tablename__ = 'APPLICATIONCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ApplicationCategoryID = Column(Integer, primary_key=True)
     ApplicationCategoryGUID = Column(Text)
@@ -1356,7 +1279,6 @@ class APPLICATIONCATEGORY(Base):
 
 class APPLICATIONCRITICALITY(Base):
     __tablename__ = 'APPLICATIONCRITICALITY'
-    __bind_key__  = 'XORCISM'
 
     ApplicationCriticalityID = Column(Integer, primary_key=True)
     ApplicationCriticalityDescription = Column(Text)
@@ -1377,7 +1299,6 @@ class APPLICATIONCRITICALITY(Base):
 
 class APPLICATIONCRITICALITYLEVEL(Base):
     __tablename__ = 'APPLICATIONCRITICALITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     ApplicationCriticalityLevelID = Column(Integer, primary_key=True)
 
@@ -1386,7 +1307,6 @@ class APPLICATIONCRITICALITYLEVEL(Base):
 
 class APPLICATIONDEPENDENCY(Base):
     __tablename__ = 'APPLICATIONDEPENDENCY'
-    __bind_key__  = 'XORCISM'
 
     ApplicationDependencyID = Column(Integer, primary_key=True)
     ApplicationParentID = Column(Integer)
@@ -1404,7 +1324,6 @@ class APPLICATIONDEPENDENCY(Base):
 
 class APPLICATIONDOCUMENT(Base):
     __tablename__ = 'APPLICATIONDOCUMENT'
-    __bind_key__  = 'XORCISM'
 
     ApplicationDocumentID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer)
@@ -1423,7 +1342,6 @@ class APPLICATIONDOCUMENT(Base):
 
 class APPLICATIONFILEEXTENSIONBLACKLIST(Base):
     __tablename__ = 'APPLICATIONFILEEXTENSIONBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationFileExtensionBlacklistID = Column(Integer, primary_key=True)
 
@@ -1432,7 +1350,6 @@ class APPLICATIONFILEEXTENSIONBLACKLIST(Base):
 
 class APPLICATIONFILEEXTENSIONWHITELIST(Base):
     __tablename__ = 'APPLICATIONFILEEXTENSIONWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationFileExtensionWhitelistID = Column(Integer, primary_key=True)
 
@@ -1441,7 +1358,6 @@ class APPLICATIONFILEEXTENSIONWHITELIST(Base):
 
 class APPLICATIONFILELIST(Base):
     __tablename__ = 'APPLICATIONFILELIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationFileListID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer)
@@ -1463,7 +1379,6 @@ class APPLICATIONFILELIST(Base):
 
 class APPLICATIONFORASSET(Base):
     __tablename__ = 'APPLICATIONFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetApplicationID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -1483,7 +1398,6 @@ class APPLICATIONFORASSET(Base):
 
 class APPLICATIONFORORGANISATION(Base):
     __tablename__ = 'APPLICATIONFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     OrganisationApplicationID = Column(Integer, primary_key=True)
     OrganisationApplicationGUID = Column(Text)
@@ -1504,7 +1418,6 @@ class APPLICATIONFORORGANISATION(Base):
 
 class APPLICATIONFUNCTION(Base):
     __tablename__ = 'APPLICATIONFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     ApplicationFunctionID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -1524,7 +1437,6 @@ class APPLICATIONFUNCTION(Base):
 
 class APPLICATIONMIMEWHITELIST(Base):
     __tablename__ = 'APPLICATIONMIMEWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationMIMEWhitelistID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -1544,7 +1456,6 @@ class APPLICATIONMIMEWHITELIST(Base):
 
 class APPLICATIONNETWORKZONE(Base):
     __tablename__ = 'APPLICATIONNETWORKZONE'
-    __bind_key__  = 'XORCISM'
 
     NetworkZoneApplicationID = Column(Integer, primary_key=True)
     NetworkZoneID = Column(Integer)
@@ -1564,7 +1475,6 @@ class APPLICATIONNETWORKZONE(Base):
 
 class APPLICATIONPERSON(Base):
     __tablename__ = 'APPLICATIONPERSON'
-    __bind_key__  = 'XORCISM'
 
     ApplicationPersonID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -1586,7 +1496,6 @@ class APPLICATIONPERSON(Base):
 
 class APPLICATIONPORTWHITELIST(Base):
     __tablename__ = 'APPLICATIONPORTWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationPortWhitelistID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer)
@@ -1607,7 +1516,6 @@ class APPLICATIONPORTWHITELIST(Base):
 
 class APPLICATIONSECURITYLABEL(Base):
     __tablename__ = 'APPLICATIONSECURITYLABEL'
-    __bind_key__  = 'XORCISM'
 
     ApplicationSecurityLabelID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -1628,7 +1536,6 @@ class APPLICATIONSECURITYLABEL(Base):
 
 class APPLICATIONURI(Base):
     __tablename__ = 'APPLICATIONURI'
-    __bind_key__  = 'XORCISM'
 
     ApplicationURIID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -1647,7 +1554,6 @@ class APPLICATIONURI(Base):
 
 class APPLICATIONURIWHITELIST(Base):
     __tablename__ = 'APPLICATIONURIWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationURIWhitelistID = Column(Integer, primary_key=True)
     ApplicationURIID = Column(Integer, nullable=False)
@@ -1665,7 +1571,6 @@ class APPLICATIONURIWHITELIST(Base):
 
 class APPLICATIONVERSION(Base):
     __tablename__ = 'APPLICATIONVERSION'
-    __bind_key__  = 'XORCISM'
 
     ApplicationVersionID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer)
@@ -1685,7 +1590,6 @@ class APPLICATIONVERSION(Base):
 
 class APPLICATIONWHITELIST(Base):
     __tablename__ = 'APPLICATIONWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     ApplicationWhitelistID = Column(Integer, primary_key=True)
 
@@ -1694,7 +1598,6 @@ class APPLICATIONWHITELIST(Base):
 
 class APPROBATION(Base):
     __tablename__ = 'APPROBATION'
-    __bind_key__  = 'XORCISM'
 
     ApprobationID = Column(Integer, primary_key=True)
 
@@ -1703,7 +1606,6 @@ class APPROBATION(Base):
 
 class APPROVAL(Base):
     __tablename__ = 'APPROVAL'
-    __bind_key__  = 'XORCISM'
 
     ApprovalID = Column(Integer, primary_key=True)
     ApprobationID = Column(Integer)
@@ -1713,7 +1615,6 @@ class APPROVAL(Base):
 
 class ARCHITECTURALPARADIGM(Base):
     __tablename__ = 'ARCHITECTURALPARADIGM'
-    __bind_key__  = 'XORCISM'
 
     ArchitecturalParadigmID = Column(Integer, primary_key=True)
     ArchitecturalParadigmGUID = Column(Text)
@@ -1730,7 +1631,6 @@ class ARCHITECTURALPARADIGM(Base):
 
 class ARCHITECTURALPARADIGMFORTECHNICALCONTEXT(Base):
     __tablename__ = 'ARCHITECTURALPARADIGMFORTECHNICALCONTEXT'
-    __bind_key__  = 'XORCISM'
 
     TechnicalContextArchitecturalParadigmID = Column(Integer, primary_key=True)
     ArchitecturalParadigmID = Column(Integer, nullable=False)
@@ -1747,7 +1647,6 @@ class ARCHITECTURALPARADIGMFORTECHNICALCONTEXT(Base):
 
 class ARCHIVEFILE(Base):
     __tablename__ = 'ARCHIVEFILE'
-    __bind_key__  = 'XORCISM'
 
     ArchiveFileID = Column(Integer, primary_key=True)
     FileID = Column(Integer)
@@ -1766,7 +1665,6 @@ class ARCHIVEFILE(Base):
 
 class ARFASSET(Base):
     __tablename__ = 'ARFASSET'
-    __bind_key__  = 'XORCISM'
 
     ARFAssetID = Column(Integer, primary_key=True)
     ARFAssetUID = Column(Text, nullable=False)
@@ -1778,7 +1676,6 @@ class ARFASSET(Base):
 
 class ARFASSETFORASSETS(Base):
     __tablename__ = 'ARFASSETFORASSETS'
-    __bind_key__  = 'XORCISM'
 
     AssetsID = Column(Integer, primary_key=True)
     ARFAssetID = Column(Integer, nullable=False)
@@ -1788,7 +1685,6 @@ class ARFASSETFORASSETS(Base):
 
 class ARFEXTENDEDINFO(Base):
     __tablename__ = 'ARFEXTENDEDINFO'
-    __bind_key__  = 'XORCISM'
 
     ARFExtendedInfoID = Column(Integer, primary_key=True)
     ExtendedInfoNCName = Column(Text, nullable=False)
@@ -1798,7 +1694,6 @@ class ARFEXTENDEDINFO(Base):
 
 class ARFEXTENDEDINFOFORARFEXTENDEDINFOS(Base):
     __tablename__ = 'ARFEXTENDEDINFOFORARFEXTENDEDINFOS'
-    __bind_key__  = 'XORCISM'
 
     ARFExtendedInfosID = Column(Integer, primary_key=True)
     ARFExtendedInfoID = Column(Integer, nullable=False)
@@ -1808,7 +1703,6 @@ class ARFEXTENDEDINFOFORARFEXTENDEDINFOS(Base):
 
 class ARFEXTENDEDINFOS(Base):
     __tablename__ = 'ARFEXTENDEDINFOS'
-    __bind_key__  = 'XORCISM'
 
     ARFExtendedInfosID = Column(Integer, primary_key=True)
 
@@ -1817,7 +1711,6 @@ class ARFEXTENDEDINFOS(Base):
 
 class ARFOBJECTREF(Base):
     __tablename__ = 'ARFOBJECTREF'
-    __bind_key__  = 'XORCISM'
 
     ARFObjectRefID = Column(Integer, primary_key=True)
     ARFObjectRefUID = Column(Text, nullable=False)
@@ -1827,7 +1720,6 @@ class ARFOBJECTREF(Base):
 
 class ARFOBJECTREFARFASSET(Base):
     __tablename__ = 'ARFOBJECTREFARFASSET'
-    __bind_key__  = 'XORCISM'
 
     ARFObjectRefID = Column(Integer, primary_key=True)
     ARFAssetID = Column(Integer, nullable=False)
@@ -1837,7 +1729,6 @@ class ARFOBJECTREFARFASSET(Base):
 
 class ARFOBJECTREFREPORT(Base):
     __tablename__ = 'ARFOBJECTREFREPORT'
-    __bind_key__  = 'XORCISM'
 
     ARFObjectRefID = Column(Integer, primary_key=True)
     ReportID = Column(Integer, nullable=False)
@@ -1847,7 +1738,6 @@ class ARFOBJECTREFREPORT(Base):
 
 class ARFOBJECTREFREPORTREQUEST(Base):
     __tablename__ = 'ARFOBJECTREFREPORTREQUEST'
-    __bind_key__  = 'XORCISM'
 
     ARFObjectRefID = Column(Integer, primary_key=True)
     ReportRequestID = Column(Integer, nullable=False)
@@ -1857,7 +1747,6 @@ class ARFOBJECTREFREPORTREQUEST(Base):
 
 class ARFRELATIONSHIP(Base):
     __tablename__ = 'ARFRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     ARFRelationshipID = Column(Integer, primary_key=True)
     RelationshipTypeQName = Column(Text, nullable=False)
@@ -1870,7 +1759,6 @@ class ARFRELATIONSHIP(Base):
 
 class ARFRELATIONSHIPARFASSET(Base):
     __tablename__ = 'ARFRELATIONSHIPARFASSET'
-    __bind_key__  = 'XORCISM'
 
     ARFRelationshipID = Column(Integer, primary_key=True)
     ARFAssetID = Column(Integer, nullable=False)
@@ -1880,7 +1768,6 @@ class ARFRELATIONSHIPARFASSET(Base):
 
 class ARFRELATIONSHIPFORARFRELATIONSHIPS(Base):
     __tablename__ = 'ARFRELATIONSHIPFORARFRELATIONSHIPS'
-    __bind_key__  = 'XORCISM'
 
     ARFRelationshipsID = Column(Integer, primary_key=True)
     ARFRelationshipID = Column(Integer, nullable=False)
@@ -1890,7 +1777,6 @@ class ARFRELATIONSHIPFORARFRELATIONSHIPS(Base):
 
 class ARFRELATIONSHIPREPORT(Base):
     __tablename__ = 'ARFRELATIONSHIPREPORT'
-    __bind_key__  = 'XORCISM'
 
     ARFRelationshipID = Column(Integer, primary_key=True)
     ReportID = Column(Integer, nullable=False)
@@ -1900,7 +1786,6 @@ class ARFRELATIONSHIPREPORT(Base):
 
 class ARFRELATIONSHIPREPORTREQUEST(Base):
     __tablename__ = 'ARFRELATIONSHIPREPORTREQUEST'
-    __bind_key__  = 'XORCISM'
 
     ARFRelationshipID = Column(Integer, primary_key=True)
     ReportRequestID = Column(Integer, nullable=False)
@@ -1910,7 +1795,6 @@ class ARFRELATIONSHIPREPORTREQUEST(Base):
 
 class ARFRELATIONSHIPS(Base):
     __tablename__ = 'ARFRELATIONSHIPS'
-    __bind_key__  = 'XORCISM'
 
     ARFRelationshipsID = Column(Integer, primary_key=True)
 
@@ -1919,7 +1803,6 @@ class ARFRELATIONSHIPS(Base):
 
 class ARITHMETICFUNCTION(Base):
     __tablename__ = 'ARITHMETICFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     ArithmeticFunctionID = Column(Integer, primary_key=True)
     ArithmeticOperationName = Column(Text, nullable=False)
@@ -1935,7 +1818,6 @@ class ARITHMETICFUNCTION(Base):
 
 class ARITHMETICOPERATION(Base):
     __tablename__ = 'ARITHMETICOPERATION'
-    __bind_key__  = 'XORCISM'
 
     ArithmeticOperationID = Column(Integer, primary_key=True)
     ArithmeticOperationName = Column(Text, nullable=False)
@@ -1946,7 +1828,6 @@ class ARITHMETICOPERATION(Base):
 
 class ARPCACHE(Base):
     __tablename__ = 'ARPCACHE'
-    __bind_key__  = 'XORCISM'
 
     ARPCacheID = Column(Integer, primary_key=True)
     ARPCacheGUID = Column(Text)
@@ -1963,7 +1844,6 @@ class ARPCACHE(Base):
 
 class ARPCACHECHANGERECORD(Base):
     __tablename__ = 'ARPCACHECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ARPCacheChangeRecordID = Column(Integer, primary_key=True)
 
@@ -1972,7 +1852,6 @@ class ARPCACHECHANGERECORD(Base):
 
 class ARPCACHEENTRIES(Base):
     __tablename__ = 'ARPCACHEENTRIES'
-    __bind_key__  = 'XORCISM'
 
     ARPCacheEntriesID = Column(Integer, primary_key=True)
     ARPCacheID = Column(Integer, nullable=False)
@@ -1996,7 +1875,6 @@ class ARPCACHEENTRIES(Base):
 
 class ARPCACHEENTRY(Base):
     __tablename__ = 'ARPCACHEENTRY'
-    __bind_key__  = 'XORCISM'
 
     ARPCacheEntryID = Column(Integer, primary_key=True)
     ARPCacheEntryGUID = Column(Text)
@@ -2020,7 +1898,6 @@ class ARPCACHEENTRY(Base):
 
 class ARPCACHEENTRYTYPE(Base):
     __tablename__ = 'ARPCACHEENTRYTYPE'
-    __bind_key__  = 'XORCISM'
 
     ARPCacheEntryTypeID = Column(Integer, primary_key=True)
     ARPCacheEntryTypeName = Column(Text)
@@ -2037,7 +1914,6 @@ class ARPCACHEENTRYTYPE(Base):
 
 class ARTIFACT(Base):
     __tablename__ = 'ARTIFACT'
-    __bind_key__  = 'XORCISM'
 
     ArtifactID = Column(Integer, primary_key=True)
     ArtifactGUID = Column(Text)
@@ -2067,7 +1943,6 @@ class ARTIFACT(Base):
 
 class ARTIFACTCHANGERECORD(Base):
     __tablename__ = 'ARTIFACTCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ArtifactChangeRecordID = Column(Integer, primary_key=True)
 
@@ -2076,7 +1951,6 @@ class ARTIFACTCHANGERECORD(Base):
 
 class ARTIFACTHASHVALUE(Base):
     __tablename__ = 'ARTIFACTHASHVALUE'
-    __bind_key__  = 'XORCISM'
 
     ArtifactHashValueID = Column(Integer, primary_key=True)
     ArtifactID = Column(Integer, nullable=False)
@@ -2095,7 +1969,6 @@ class ARTIFACTHASHVALUE(Base):
 
 class ARTIFACTPACKAGING(Base):
     __tablename__ = 'ARTIFACTPACKAGING'
-    __bind_key__  = 'XORCISM'
 
     ArtifactPackagingID = Column(Integer, primary_key=True)
     ArtifactPackagingGUID = Column(Text)
@@ -2126,7 +1999,6 @@ class ARTIFACTPACKAGING(Base):
 
 class ARTIFACTTYPE(Base):
     __tablename__ = 'ARTIFACTTYPE'
-    __bind_key__  = 'XORCISM'
 
     ArtifactTypeID = Column(Integer, primary_key=True)
     ArtifactTypeGUID = Column(Text)
@@ -2146,7 +2018,6 @@ class ARTIFACTTYPE(Base):
 
 class ASN(Base):
     __tablename__ = 'ASN'
-    __bind_key__  = 'XORCISM'
 
     ASNID = Column(Integer, primary_key=True)
     AddressID = Column(Integer)
@@ -2162,7 +2033,6 @@ class ASN(Base):
 
 class ASOBJECT(Base):
     __tablename__ = 'ASOBJECT'
-    __bind_key__  = 'XORCISM'
 
     ASObjectID = Column(Integer, primary_key=True)
     ASNumber = Column(Integer)
@@ -2182,7 +2052,6 @@ class ASOBJECT(Base):
 
 class ASSET(Base):
     __tablename__ = 'ASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetID = Column(Integer, primary_key=True)
     AssetGUID = Column(Text)
@@ -2251,7 +2120,6 @@ class ASSET(Base):
 
 class ASSETADDRESS(Base):
     __tablename__ = 'ASSETADDRESS'
-    __bind_key__  = 'XORCISM'
 
     AssetAddressID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2270,7 +2138,6 @@ class ASSETADDRESS(Base):
 
 class ASSETARPCACHE(Base):
     __tablename__ = 'ASSETARPCACHE'
-    __bind_key__  = 'XORCISM'
 
     AssetARPCacheID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -2290,7 +2157,6 @@ class ASSETARPCACHE(Base):
 
 class ASSETAUDIT(Base):
     __tablename__ = 'ASSETAUDIT'
-    __bind_key__  = 'XORCISM'
 
     AssetAuditID = Column(Integer, primary_key=True)
     AssetAuditGUID = Column(Text)
@@ -2306,7 +2172,6 @@ class ASSETAUDIT(Base):
 
 class ASSETAUDITFINDING(Base):
     __tablename__ = 'ASSETAUDITFINDING'
-    __bind_key__  = 'XORCISM'
 
     AssetAuditFindingID = Column(Integer, primary_key=True)
     AssetAuditFindingGUID = Column(Text)
@@ -2324,7 +2189,6 @@ class ASSETAUDITFINDING(Base):
 
 class ASSETBLACKLIST(Base):
     __tablename__ = 'ASSETBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     AssetBlacklistID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2346,7 +2210,6 @@ class ASSETBLACKLIST(Base):
 
 class ASSETCERTIFICATE(Base):
     __tablename__ = 'ASSETCERTIFICATE'
-    __bind_key__  = 'XORCISM'
 
     AssetCertificateID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2368,7 +2231,6 @@ class ASSETCERTIFICATE(Base):
 
 class ASSETCERTIFICATEORGANISATION(Base):
     __tablename__ = 'ASSETCERTIFICATEORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     AssetCertificateOrganisationID = Column(Integer, primary_key=True)
     AssetCertificateID = Column(Integer, nullable=False)
@@ -2389,7 +2251,6 @@ class ASSETCERTIFICATEORGANISATION(Base):
 
 class ASSETCHANGERECORD(Base):
     __tablename__ = 'ASSETCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     AssetChangeRecordID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2405,7 +2266,6 @@ class ASSETCHANGERECORD(Base):
 
 class ASSETCREDENTIAL(Base):
     __tablename__ = 'ASSETCREDENTIAL'
-    __bind_key__  = 'XORCISM'
 
     AssetCredentialID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -2435,7 +2295,6 @@ class ASSETCREDENTIAL(Base):
 
 class ASSETCRITICALITYLEVEL(Base):
     __tablename__ = 'ASSETCRITICALITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     AssetCriticalityLevelID = Column(Integer, primary_key=True)
     AssetCriticalityLevelGUID = Column(Text)
@@ -2456,7 +2315,6 @@ class ASSETCRITICALITYLEVEL(Base):
 
 class ASSETCRITICALITYLEVELFORASSET(Base):
     __tablename__ = 'ASSETCRITICALITYLEVELFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetCriticalityID = Column(Integer, primary_key=True)
     AssetCriticalityDescription = Column(Text)
@@ -2477,7 +2335,6 @@ class ASSETCRITICALITYLEVELFORASSET(Base):
 
 class ASSETDEVICE(Base):
     __tablename__ = 'ASSETDEVICE'
-    __bind_key__  = 'XORCISM'
 
     AssetDeviceID = Column(Integer, primary_key=True)
     AssetDeviceGUID = Column(Text)
@@ -2503,7 +2360,6 @@ class ASSETDEVICE(Base):
 
 class ASSETFORASSET(Base):
     __tablename__ = 'ASSETFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetForAssetID = Column(Integer, primary_key=True)
     AssetRefID = Column(Integer, nullable=False)
@@ -2526,7 +2382,6 @@ class ASSETFORASSET(Base):
 
 class ASSETFORORGANISATION(Base):
     __tablename__ = 'ASSETFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     AssetForOrganisationID = Column(Integer, primary_key=True)
     OrganisationAssetGUID = Column(Text)
@@ -2549,7 +2404,6 @@ class ASSETFORORGANISATION(Base):
 
 class ASSETFORTHREATACTORTTP(Base):
     __tablename__ = 'ASSETFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     AssetForThreatActorTTPID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2573,7 +2427,6 @@ class ASSETFORTHREATACTORTTP(Base):
 
 class ASSETFUNCTION(Base):
     __tablename__ = 'ASSETFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     AssetFunctionID = Column(Integer, primary_key=True)
     AssetFunctionName = Column(Text, nullable=False)
@@ -2590,7 +2443,6 @@ class ASSETFUNCTION(Base):
 
 class ASSETFUNCTIONFORASSET(Base):
     __tablename__ = 'ASSETFUNCTIONFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetAssetFunctionID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2607,7 +2459,6 @@ class ASSETFUNCTIONFORASSET(Base):
 
 class ASSETGEOLOCATION(Base):
     __tablename__ = 'ASSETGEOLOCATION'
-    __bind_key__  = 'XORCISM'
 
     AssetGeoLocationID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2626,7 +2477,6 @@ class ASSETGEOLOCATION(Base):
 
 class ASSETGROUP(Base):
     __tablename__ = 'ASSETGROUP'
-    __bind_key__  = 'XORCISM'
 
     AssetGroupID = Column(Integer, primary_key=True)
     AssetGroupGUID = Column(Text)
@@ -2646,7 +2496,6 @@ class ASSETGROUP(Base):
 
 class ASSETINFORMATION(Base):
     __tablename__ = 'ASSETINFORMATION'
-    __bind_key__  = 'XORCISM'
 
     AssetInformationID = Column(Integer, primary_key=True)
     hostname = Column(Text)
@@ -2661,7 +2510,6 @@ class ASSETINFORMATION(Base):
 
 class ASSETLICENSE(Base):
     __tablename__ = 'ASSETLICENSE'
-    __bind_key__  = 'XORCISM'
 
     AssetLicenseID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -2681,7 +2529,6 @@ class ASSETLICENSE(Base):
 
 class ASSETLOCATION(Base):
     __tablename__ = 'ASSETLOCATION'
-    __bind_key__  = 'XORCISM'
 
     AssetLocationID = Column(Integer, primary_key=True)
     AssetLocationType = Column(Text, nullable=False)
@@ -2699,7 +2546,6 @@ class ASSETLOCATION(Base):
 
 class ASSETLOCATIONFORASSET(Base):
     __tablename__ = 'ASSETLOCATIONFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetLocationTimeID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2716,7 +2562,6 @@ class ASSETLOCATIONFORASSET(Base):
 
 class ASSETMANAGEMENT(Base):
     __tablename__ = 'ASSETMANAGEMENT'
-    __bind_key__  = 'XORCISM'
 
     AssetManagementID = Column(Integer, primary_key=True)
     ManagementID = Column(Integer)
@@ -2730,7 +2575,6 @@ class ASSETMANAGEMENT(Base):
 
 class ASSETMANAGEMENTFORASSET(Base):
     __tablename__ = 'ASSETMANAGEMENTFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetManagementTimeID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2747,7 +2591,6 @@ class ASSETMANAGEMENTFORASSET(Base):
 
 class ASSETMEMORYDUMP(Base):
     __tablename__ = 'ASSETMEMORYDUMP'
-    __bind_key__  = 'XORCISM'
 
     AssetMemoryDumpID = Column(Integer, primary_key=True)
 
@@ -2756,7 +2599,6 @@ class ASSETMEMORYDUMP(Base):
 
 class ASSETNETWORKZONE(Base):
     __tablename__ = 'ASSETNETWORKZONE'
-    __bind_key__  = 'XORCISM'
 
     AssetNetworkZoneID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -2783,7 +2625,6 @@ class ASSETNETWORKZONE(Base):
 
 class ASSETNETWORKZONERESTRICTION(Base):
     __tablename__ = 'ASSETNETWORKZONERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     AssetNetworkZoneRestrictionID = Column(Integer, primary_key=True)
     AssetNetworkZoneRestrictionDescription = Column(Text)
@@ -2804,7 +2645,6 @@ class ASSETNETWORKZONERESTRICTION(Base):
 
 class ASSETORGANIZATIONALUNIT(Base):
     __tablename__ = 'ASSETORGANIZATIONALUNIT'
-    __bind_key__  = 'XORCISM'
 
     AssetOrganizationalUnitID = Column(Integer, primary_key=True)
     OrganizationalUnitID = Column(Integer, nullable=False)
@@ -2821,7 +2661,6 @@ class ASSETORGANIZATIONALUNIT(Base):
 
 class ASSETOWNERSHIP(Base):
     __tablename__ = 'ASSETOWNERSHIP'
-    __bind_key__  = 'XORCISM'
 
     AssetOwnershipID = Column(Integer, primary_key=True)
     OwnershipID = Column(Integer)
@@ -2839,7 +2678,6 @@ class ASSETOWNERSHIP(Base):
 
 class ASSETPERIMETER(Base):
     __tablename__ = 'ASSETPERIMETER'
-    __bind_key__  = 'XORCISM'
 
     AssetPerimeterID = Column(Integer, primary_key=True)
     AssetPerimeterGUID = Column(Text)
@@ -2849,7 +2687,6 @@ class ASSETPERIMETER(Base):
 
 class ASSETPERIMETERASSET(Base):
     __tablename__ = 'ASSETPERIMETERASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetPerimeterAssetID = Column(Integer, primary_key=True)
 
@@ -2858,7 +2695,6 @@ class ASSETPERIMETERASSET(Base):
 
 class ASSETPERIMETERNETWORKZONE(Base):
     __tablename__ = 'ASSETPERIMETERNETWORKZONE'
-    __bind_key__  = 'XORCISM'
 
     AssetPerimeterNetworkZoneID = Column(Integer, primary_key=True)
 
@@ -2867,7 +2703,6 @@ class ASSETPERIMETERNETWORKZONE(Base):
 
 class ASSETPERIMETERSECURITYCONTROL(Base):
     __tablename__ = 'ASSETPERIMETERSECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     AssetPerimeterSecurityControlID = Column(Integer, primary_key=True)
 
@@ -2876,7 +2711,6 @@ class ASSETPERIMETERSECURITYCONTROL(Base):
 
 class ASSETPHYSICALLOCATION(Base):
     __tablename__ = 'ASSETPHYSICALLOCATION'
-    __bind_key__  = 'XORCISM'
 
     AssetPhysicalLocationTimeID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2894,7 +2728,6 @@ class ASSETPHYSICALLOCATION(Base):
 
 class ASSETPLATFORM(Base):
     __tablename__ = 'ASSETPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     AssetPlatformID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -2916,7 +2749,6 @@ class ASSETPLATFORM(Base):
 
 class ASSETOVALDEFINITION(Base):
     __tablename__ = 'ASSETOVALDEFINITION'
-    __bind_key__  = 'XORCISM'
 
     AssetOVALDefinitionID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)            # ASSET reference
@@ -2932,7 +2764,6 @@ class ASSETOVALDEFINITION(Base):
 
 class ASSETFINANCIALVALUE(Base):
     __tablename__ = 'ASSETFINANCIALVALUE'
-    __bind_key__  = 'XORCISM'
 
     AssetFinancialValueID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)            # ASSET reference
@@ -2948,7 +2779,6 @@ class ASSETFINANCIALVALUE(Base):
 
 class ASSETPRODUCT(Base):
     __tablename__ = 'ASSETPRODUCT'
-    __bind_key__  = 'XORCISM'
 
     AssetProductID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -2971,7 +2801,6 @@ class ASSETPRODUCT(Base):
 
 class ASSETRELATIONSHIP(Base):
     __tablename__ = 'ASSETRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     AssetRelationshipID = Column(Integer, primary_key=True)
     relationshiptype = Column(Text, nullable=False)
@@ -2988,7 +2817,6 @@ class ASSETRELATIONSHIP(Base):
 
 class ASSETREPORTCOLLECTION(Base):
     __tablename__ = 'ASSETREPORTCOLLECTION'
-    __bind_key__  = 'XORCISM'
 
     AssetReportCollectionID = Column(Integer, primary_key=True)
     ARFReportCollectionID = Column(Text)
@@ -3003,7 +2831,6 @@ class ASSETREPORTCOLLECTION(Base):
 
 class ASSETRISKRATING(Base):
     __tablename__ = 'ASSETRISKRATING'
-    __bind_key__  = 'XORCISM'
 
     AssetRiskRatingID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -3023,7 +2850,6 @@ class ASSETRISKRATING(Base):
 
 class ASSETRISKSCORE(Base):
     __tablename__ = 'ASSETRISKSCORE'
-    __bind_key__  = 'XORCISM'
 
     AssetRiskScoreID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -3037,7 +2863,6 @@ class ASSETRISKSCORE(Base):
 
 class ASSETROLE(Base):
     __tablename__ = 'ASSETROLE'
-    __bind_key__  = 'XORCISM'
 
     AssetRoleID = Column(Integer, primary_key=True)
     AssetRoleGUID = Column(Text)
@@ -3055,7 +2880,6 @@ class ASSETROLE(Base):
 
 class ASSETROLEFORASSET(Base):
     __tablename__ = 'ASSETROLEFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetRoleForAssetID = Column(Integer, primary_key=True)
     AssetAssetRoleGUID = Column(Text)
@@ -3075,7 +2899,6 @@ class ASSETROLEFORASSET(Base):
 
 class ASSETS(Base):
     __tablename__ = 'ASSETS'
-    __bind_key__  = 'XORCISM'
 
     AssetsID = Column(Integer, primary_key=True)
 
@@ -3084,7 +2907,6 @@ class ASSETS(Base):
 
 class ASSETSECURITYCONTROL(Base):
     __tablename__ = 'ASSETSECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     AssetSecurityControlID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -3111,7 +2933,6 @@ class ASSETSECURITYCONTROL(Base):
 
 class ASSETSENSOR(Base):
     __tablename__ = 'ASSETSENSOR'
-    __bind_key__  = 'XORCISM'
 
     AssetSensorID = Column(Integer, primary_key=True)
     AssetSensorGUID = Column(Text)
@@ -3134,7 +2955,6 @@ class ASSETSENSOR(Base):
 
 class ASSETSESSION(Base):
     __tablename__ = 'ASSETSESSION'
-    __bind_key__  = 'XORCISM'
 
     AssetSessionID = Column(Integer, primary_key=True)
     AssetSessionGUID = Column(Text)
@@ -3153,7 +2973,6 @@ class ASSETSESSION(Base):
 
 class ASSETSYNTHETICID(Base):
     __tablename__ = 'ASSETSYNTHETICID'
-    __bind_key__  = 'XORCISM'
 
     AssetSyntheticID = Column(Integer, primary_key=True)
     AssetSyntheticIDGUID = Column(Text)
@@ -3172,7 +2991,6 @@ class ASSETSYNTHETICID(Base):
 
 class ASSETSYNTHETICIDFORASSET(Base):
     __tablename__ = 'ASSETSYNTHETICIDFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetAssetSyntheticID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -3192,7 +3010,6 @@ class ASSETSYNTHETICIDFORASSET(Base):
 
 class ASSETTECHNOLOGY(Base):
     __tablename__ = 'ASSETTECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     AssetTechnologyID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -3212,7 +3029,6 @@ class ASSETTECHNOLOGY(Base):
 
 class ASSETTHREAT(Base):
     __tablename__ = 'ASSETTHREAT'
-    __bind_key__  = 'XORCISM'
 
     AssetThreatID = Column(Integer, primary_key=True)
     AssetThreatGUID = Column(Text)
@@ -3229,7 +3045,6 @@ class ASSETTHREAT(Base):
 
 class ASSETVALUE(Base):
     __tablename__ = 'ASSETVALUE'
-    __bind_key__  = 'XORCISM'
 
     AssetValueID = Column(Integer, primary_key=True)
     AssetValueName = Column(Text, nullable=False)
@@ -3246,7 +3061,6 @@ class ASSETVALUE(Base):
 
 class ASSETVALUEFORASSET(Base):
     __tablename__ = 'ASSETVALUEFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetValueForAssetID = Column(Integer, primary_key=True)
     AssetAssetValueGUID = Column(Text)
@@ -3268,7 +3082,6 @@ class ASSETVALUEFORASSET(Base):
 
 class ASSETVARIETY(Base):
     __tablename__ = 'ASSETVARIETY'
-    __bind_key__  = 'XORCISM'
 
     AssetVarietyID = Column(Integer, primary_key=True)
     AssetVarietyName = Column(Text, nullable=False)
@@ -3286,7 +3099,6 @@ class ASSETVARIETY(Base):
 
 class ASSETVARIETYFORASSET(Base):
     __tablename__ = 'ASSETVARIETYFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetAssetVarietyID = Column(Integer, primary_key=True)
     AssetVarietyID = Column(Integer, nullable=False)
@@ -3306,7 +3118,6 @@ class ASSETVARIETYFORASSET(Base):
 
 class ASSETVULNERABILITY(Base):
     __tablename__ = 'ASSETVULNERABILITY'
-    __bind_key__  = 'XORCISM'
 
     AssetVulnerabilityID = Column(Integer, nullable=False, primary_key=True)
     AssetID = Column(Integer)
@@ -3324,7 +3135,6 @@ class ASSETVULNERABILITY(Base):
 
 class ASSETWHITELIST(Base):
     __tablename__ = 'ASSETWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     AssetWhitelistID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -3340,7 +3150,6 @@ class ASSETWHITELIST(Base):
 
 class ASSETZONE(Base):
     __tablename__ = 'ASSETZONE'
-    __bind_key__  = 'XORCISM'
 
     AssetZoneID = Column(Integer, primary_key=True)
     AssetZoneGUID = Column(Text)
@@ -3357,7 +3166,6 @@ class ASSETZONE(Base):
 
 class ASSOCIATION(Base):
     __tablename__ = 'ASSOCIATION'
-    __bind_key__  = 'XORCISM'
 
     AssociationID = Column(Integer, primary_key=True)
 
@@ -3366,7 +3174,6 @@ class ASSOCIATION(Base):
 
 class ASSOCIATIONRULE(Base):
     __tablename__ = 'ASSOCIATIONRULE'
-    __bind_key__  = 'XORCISM'
 
     AssociationRuleID = Column(Integer, primary_key=True)
     RuleID = Column(Integer)
@@ -3376,7 +3183,6 @@ class ASSOCIATIONRULE(Base):
 
 class ASSURANCE(Base):
     __tablename__ = 'ASSURANCE'
-    __bind_key__  = 'XORCISM'
 
     AssuranceID = Column(Integer, primary_key=True)
 
@@ -3385,7 +3191,6 @@ class ASSURANCE(Base):
 
 class ASSURANCEREQUIREMENT(Base):
     __tablename__ = 'ASSURANCEREQUIREMENT'
-    __bind_key__  = 'XORCISM'
 
     AssuranceRequirementID = Column(Integer, primary_key=True)
     RequirementID = Column(Integer)
@@ -3405,7 +3210,6 @@ class ASSURANCEREQUIREMENT(Base):
 
 class ATTACHMENT(Base):
     __tablename__ = 'ATTACHMENT'
-    __bind_key__  = 'XORCISM'
 
     AttachmentID = Column(Integer, primary_key=True)
     AttachmentGUID = Column(Text)
@@ -3428,7 +3232,6 @@ class ATTACHMENT(Base):
 
 class ATTACHMENTREFERENCE(Base):
     __tablename__ = 'ATTACHMENTREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     AttachmentReferenceID = Column(Integer, primary_key=True)
 
@@ -3437,7 +3240,6 @@ class ATTACHMENTREFERENCE(Base):
 
 class ATTRIBUTE(Base):
     __tablename__ = 'ATTRIBUTE'
-    __bind_key__  = 'XORCISM'
 
     AttributeID = Column(Integer, primary_key=True)
     AttributeName = Column(Text)
@@ -3454,7 +3256,6 @@ class ATTRIBUTE(Base):
 
 class ATTRIBUTEVALUE(Base):
     __tablename__ = 'ATTRIBUTEVALUE'
-    __bind_key__  = 'XORCISM'
 
     AttributeValueID = Column(Integer, primary_key=True)
     AttributeID = Column(Integer, nullable=False)
@@ -3475,7 +3276,6 @@ class ATTRIBUTEVALUE(Base):
 
 class AUDIT(Base):
     __tablename__ = 'AUDIT'
-    __bind_key__  = 'XORCISM'
 
     AuditID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer)
@@ -3485,7 +3285,6 @@ class AUDIT(Base):
 
 class AUDITFINDING(Base):
     __tablename__ = 'AUDITFINDING'
-    __bind_key__  = 'XORCISM'
 
     AuditFindingID = Column(Integer, primary_key=True)
     AuditID = Column(Integer, nullable=False)
@@ -3505,7 +3304,6 @@ class AUDITFINDING(Base):
 
 class AUDITLOGEVENT(Base):
     __tablename__ = 'AUDITLOGEVENT'
-    __bind_key__  = 'XORCISM'
 
     AuditLogEventID = Column(Integer, primary_key=True)
 
@@ -3514,7 +3312,6 @@ class AUDITLOGEVENT(Base):
 
 class AUDITPROCEDURE(Base):
     __tablename__ = 'AUDITPROCEDURE'
-    __bind_key__  = 'XORCISM'
 
     AuditProcedureID = Column(Integer, primary_key=True)
     AuditProcedureName = Column(Text)
@@ -3531,7 +3328,6 @@ class AUDITPROCEDURE(Base):
 
 class AUTHENTICATIONTOKENPROTECTIONMECHANISM(Base):
     __tablename__ = 'AUTHENTICATIONTOKENPROTECTIONMECHANISM'
-    __bind_key__  = 'XORCISM'
 
     AuthenticationTokenProtectionMechanismID = Column(Integer, primary_key=True)
     AuthenticationTokenProtectionMechanismGUID = Column(Text)
@@ -3551,7 +3347,6 @@ class AUTHENTICATIONTOKENPROTECTIONMECHANISM(Base):
 
 class AUTHENTICATIONTOKENPROTECTIONMECHANISMBLACKLIST(Base):
     __tablename__ = 'AUTHENTICATIONTOKENPROTECTIONMECHANISMBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     AuthenticationTokenProtectionMechanismBlacklistID = Column(Integer, primary_key=True)
 
@@ -3560,7 +3355,6 @@ class AUTHENTICATIONTOKENPROTECTIONMECHANISMBLACKLIST(Base):
 
 class AUTHENTICATIONTYPE(Base):
     __tablename__ = 'AUTHENTICATIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     AuthenticationTypeID = Column(Integer, primary_key=True)
     AuthenticationTypeGUID = Column(Text)
@@ -3582,7 +3376,6 @@ class AUTHENTICATIONTYPE(Base):
 
 class AUTHENTICATIONTYPEBLACKLIST(Base):
     __tablename__ = 'AUTHENTICATIONTYPEBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     AuthenticationTypeBlacklistID = Column(Integer, primary_key=True)
 
@@ -3591,7 +3384,6 @@ class AUTHENTICATIONTYPEBLACKLIST(Base):
 
 class AUTHENTICATIONTYPEDESCRIPTION(Base):
     __tablename__ = 'AUTHENTICATIONTYPEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     AuthenticationTypeDescriptionID = Column(Integer, primary_key=True)
 
@@ -3600,7 +3392,6 @@ class AUTHENTICATIONTYPEDESCRIPTION(Base):
 
 class AUTHENTICATIONTYPEREFERENCE(Base):
     __tablename__ = 'AUTHENTICATIONTYPEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     AuthenticationTypeReferenceID = Column(Integer, primary_key=True)
     AuthenticationTypeID = Column(Integer)
@@ -3619,7 +3410,6 @@ class AUTHENTICATIONTYPEREFERENCE(Base):
 
 class AUTHOR(Base):
     __tablename__ = 'AUTHOR'
-    __bind_key__  = 'XORCISM'
 
     AuthorID = Column(Integer, primary_key=True)
     AuthorName = Column(Text, nullable=False)
@@ -3637,7 +3427,6 @@ class AUTHOR(Base):
 
 class AVAILABILITYLOSSTYPE(Base):
     __tablename__ = 'AVAILABILITYLOSSTYPE'
-    __bind_key__  = 'XORCISM'
 
     AvailabilityLossTypeID = Column(Integer, primary_key=True)
     AvailabilityLossTypeName = Column(Text)
@@ -3655,7 +3444,6 @@ class AVAILABILITYLOSSTYPE(Base):
 
 class AVAILABILITYVIOLATIONPROPERTIES(Base):
     __tablename__ = 'AVAILABILITYVIOLATIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     AvailabilityViolationPropertiesID = Column(Integer, primary_key=True)
     AvailabilityViolationPropertiesName = Column(Text)
@@ -3673,7 +3461,6 @@ class AVAILABILITYVIOLATIONPROPERTIES(Base):
 
 class AVAILABILITYVIOLATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'AVAILABILITYVIOLATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AvailabilityViolationStrategicObjectiveID = Column(Integer, primary_key=True)
     AvailabilityViolationStrategicObjectiveName = Column(Text)
@@ -3691,7 +3478,6 @@ class AVAILABILITYVIOLATIONSTRATEGICOBJECTIVE(Base):
 
 class AVAILABILITYVIOLATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'AVAILABILITYVIOLATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     AvailabilityViolationTacticalObjectiveID = Column(Integer, primary_key=True)
     AvailabilityViolationTacticalObjectiveName = Column(Text)
@@ -3709,7 +3495,6 @@ class AVAILABILITYVIOLATIONTACTICALOBJECTIVE(Base):
 
 class BANNER(Base):
     __tablename__ = 'BANNER'
-    __bind_key__  = 'XORCISM'
 
     BannerID = Column(Integer, primary_key=True)
     BannerGUID = Column(Text)
@@ -3727,7 +3512,6 @@ class BANNER(Base):
 
 class BANNERREGEX(Base):
     __tablename__ = 'BANNERREGEX'
-    __bind_key__  = 'XORCISM'
 
     BannerRegexID = Column(Integer, primary_key=True)
     BannerRegexGUID = Column(Text)
@@ -3746,7 +3530,6 @@ class BANNERREGEX(Base):
 
 class BEGINFUNCTION(Base):
     __tablename__ = 'BEGINFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     BeginFunctionID = Column(Integer, primary_key=True)
     StartsWithCharacters = Column(Text, nullable=False)
@@ -3757,7 +3540,6 @@ class BEGINFUNCTION(Base):
 
 class BEHAVIOMETRIC(Base):
     __tablename__ = 'BEHAVIOMETRIC'
-    __bind_key__  = 'XORCISM'
 
     BehaviometricID = Column(Integer, primary_key=True)
 
@@ -3766,7 +3548,6 @@ class BEHAVIOMETRIC(Base):
 
 class BEHAVIOR(Base):
     __tablename__ = 'BEHAVIOR'
-    __bind_key__  = 'XORCISM'
 
     BehaviorID = Column(Integer, primary_key=True)
 
@@ -3775,7 +3556,6 @@ class BEHAVIOR(Base):
 
 class BEHAVIORACTIONCOMPOSITION(Base):
     __tablename__ = 'BEHAVIORACTIONCOMPOSITION'
-    __bind_key__  = 'XORCISM'
 
     BehaviorActionCompositionID = Column(Integer, primary_key=True)
 
@@ -3784,7 +3564,6 @@ class BEHAVIORACTIONCOMPOSITION(Base):
 
 class BEHAVIORALCHARACTERISTIC(Base):
     __tablename__ = 'BEHAVIORALCHARACTERISTIC'
-    __bind_key__  = 'XORCISM'
 
     BehavioralCharacteristicID = Column(Integer, primary_key=True)
 
@@ -3793,7 +3572,6 @@ class BEHAVIORALCHARACTERISTIC(Base):
 
 class BEHAVIORASSOCIATEDCODE(Base):
     __tablename__ = 'BEHAVIORASSOCIATEDCODE'
-    __bind_key__  = 'XORCISM'
 
     BehaviorAssociatedCodeID = Column(Integer, primary_key=True)
 
@@ -3802,7 +3580,6 @@ class BEHAVIORASSOCIATEDCODE(Base):
 
 class BEHAVIORCOLLECTION(Base):
     __tablename__ = 'BEHAVIORCOLLECTION'
-    __bind_key__  = 'XORCISM'
 
     BehaviorCollectionID = Column(Integer, primary_key=True)
 
@@ -3811,7 +3588,6 @@ class BEHAVIORCOLLECTION(Base):
 
 class BEHAVIORDESCRIPTION(Base):
     __tablename__ = 'BEHAVIORDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     BehaviorDescriptionID = Column(Integer, primary_key=True)
 
@@ -3820,7 +3596,6 @@ class BEHAVIORDESCRIPTION(Base):
 
 class BEHAVIORDISCOVERYMETHOD(Base):
     __tablename__ = 'BEHAVIORDISCOVERYMETHOD'
-    __bind_key__  = 'XORCISM'
 
     BehaviorDiscoveryMethodID = Column(Integer, primary_key=True)
     BehaviorID = Column(Integer)
@@ -3831,7 +3606,6 @@ class BEHAVIORDISCOVERYMETHOD(Base):
 
 class BEHAVIORIDMATCHINGPATTERN(Base):
     __tablename__ = 'BEHAVIORIDMATCHINGPATTERN'
-    __bind_key__  = 'XORCISM'
 
     BehaviorIDPatternID = Column(Integer, primary_key=True)
     BehaviorIDPatternGUID = Column(Text)
@@ -3846,7 +3620,6 @@ class BEHAVIORIDMATCHINGPATTERN(Base):
 
 class BEHAVIORIDPATTERN(Base):
     __tablename__ = 'BEHAVIORIDPATTERN'
-    __bind_key__  = 'XORCISM'
 
     BehaviorIDPatternID = Column(Integer, primary_key=True)
 
@@ -3855,7 +3628,6 @@ class BEHAVIORIDPATTERN(Base):
 
 class BEHAVIORPURPOSE(Base):
     __tablename__ = 'BEHAVIORPURPOSE'
-    __bind_key__  = 'XORCISM'
 
     BehaviorPurposeID = Column(Integer, primary_key=True)
 
@@ -3864,7 +3636,6 @@ class BEHAVIORPURPOSE(Base):
 
 class BEHAVIORRELATIONSHIPS(Base):
     __tablename__ = 'BEHAVIORRELATIONSHIPS'
-    __bind_key__  = 'XORCISM'
 
     BehaviorRelationShipsID = Column(Integer, primary_key=True)
 
@@ -3873,7 +3644,6 @@ class BEHAVIORRELATIONSHIPS(Base):
 
 class BIOMETRIC(Base):
     __tablename__ = 'BIOMETRIC'
-    __bind_key__  = 'XORCISM'
 
     BiometricID = Column(Integer, primary_key=True)
 
@@ -3882,7 +3652,6 @@ class BIOMETRIC(Base):
 
 class BREACH(Base):
     __tablename__ = 'BREACH'
-    __bind_key__  = 'XORCISM'
 
     BreachID = Column(Integer, primary_key=True)
 
@@ -3891,7 +3660,6 @@ class BREACH(Base):
 
 class BREACHDESCRIPTION(Base):
     __tablename__ = 'BREACHDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     BreachDescriptionID = Column(Integer, primary_key=True)
 
@@ -3900,7 +3668,6 @@ class BREACHDESCRIPTION(Base):
 
 class BREACHEVIDENCE(Base):
     __tablename__ = 'BREACHEVIDENCE'
-    __bind_key__  = 'XORCISM'
 
     BreachEvidenceID = Column(Integer, primary_key=True)
 
@@ -3909,7 +3676,6 @@ class BREACHEVIDENCE(Base):
 
 class BREACHFINDING(Base):
     __tablename__ = 'BREACHFINDING'
-    __bind_key__  = 'XORCISM'
 
     BreachFindingID = Column(Integer, primary_key=True)
 
@@ -3918,7 +3684,6 @@ class BREACHFINDING(Base):
 
 class BREACHNOTIFICATION(Base):
     __tablename__ = 'BREACHNOTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     BreachNotificationID = Column(Integer, primary_key=True)
 
@@ -3927,7 +3692,6 @@ class BREACHNOTIFICATION(Base):
 
 class BREACHTAG(Base):
     __tablename__ = 'BREACHTAG'
-    __bind_key__  = 'XORCISM'
 
     BreachTagID = Column(Integer, primary_key=True)
 
@@ -3936,7 +3700,6 @@ class BREACHTAG(Base):
 
 class BREAK(Base):
     __tablename__ = 'BREAK'
-    __bind_key__  = 'XORCISM'
 
     BreakID = Column(Integer, primary_key=True)
 
@@ -3945,7 +3708,6 @@ class BREAK(Base):
 
 class BROWSER(Base):
     __tablename__ = 'BROWSER'
-    __bind_key__  = 'XORCISM'
 
     BrowserID = Column(Integer, primary_key=True)
     SoftwareID = Column(Integer)
@@ -3955,7 +3717,6 @@ class BROWSER(Base):
 
 class BROWSERCHARACTERISTIC(Base):
     __tablename__ = 'BROWSERCHARACTERISTIC'
-    __bind_key__  = 'XORCISM'
 
     BrowserCharacteristicID = Column(Integer, primary_key=True)
 
@@ -3964,7 +3725,6 @@ class BROWSERCHARACTERISTIC(Base):
 
 class BULLETIN(Base):
     __tablename__ = 'BULLETIN'
-    __bind_key__  = 'XORCISM'
 
     BulletinID = Column(Integer, primary_key=True)
 
@@ -3973,7 +3733,6 @@ class BULLETIN(Base):
 
 class BUSINESSIMPACT(Base):
     __tablename__ = 'BUSINESSIMPACT'
-    __bind_key__  = 'XORCISM'
 
     BusinessImpactID = Column(Integer, primary_key=True)
     BusinessImpactGUID = Column(Text)
@@ -3990,7 +3749,6 @@ class BUSINESSIMPACT(Base):
 
 class BUSINESSIMPACTFORBUSINESSRISK(Base):
     __tablename__ = 'BUSINESSIMPACTFORBUSINESSRISK'
-    __bind_key__  = 'XORCISM'
 
     BusinessRiskBusinessImpactID = Column(Integer, primary_key=True)
     BusinessImpactID = Column(Integer, nullable=False)
@@ -4009,7 +3767,6 @@ class BUSINESSIMPACTFORBUSINESSRISK(Base):
 
 class BUSINESSIMPACTFORREGULATORYRISK(Base):
     __tablename__ = 'BUSINESSIMPACTFORREGULATORYRISK'
-    __bind_key__  = 'XORCISM'
 
     RegulatoryRiskBusinessImpactID = Column(Integer, primary_key=True)
     BusinessImpactID = Column(Integer, nullable=False)
@@ -4028,7 +3785,6 @@ class BUSINESSIMPACTFORREGULATORYRISK(Base):
 
 class BUSINESSPROCESS(Base):
     __tablename__ = 'BUSINESSPROCESS'
-    __bind_key__  = 'XORCISM'
 
     BusinessProcessID = Column(Integer, primary_key=True)
 
@@ -4037,7 +3793,6 @@ class BUSINESSPROCESS(Base):
 
 class BUSINESSRISK(Base):
     __tablename__ = 'BUSINESSRISK'
-    __bind_key__  = 'XORCISM'
 
     BusinessRiskID = Column(Integer, primary_key=True)
     RiskDescription = Column(Text, nullable=False)
@@ -4053,7 +3808,6 @@ class BUSINESSRISK(Base):
 
 class BYTERUN(Base):
     __tablename__ = 'BYTERUN'
-    __bind_key__  = 'XORCISM'
 
     ByteRunID = Column(Integer, primary_key=True)
     Offset = Column(Integer)
@@ -4074,7 +3828,6 @@ class BYTERUN(Base):
 
 class BYTERUNS(Base):
     __tablename__ = 'BYTERUNS'
-    __bind_key__  = 'XORCISM'
 
     ByteRunsID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -4087,7 +3840,6 @@ class BYTERUNS(Base):
 
 class BYTESRUNSBYTERUN(Base):
     __tablename__ = 'BYTESRUNSBYTERUN'
-    __bind_key__  = 'XORCISM'
 
     ByteRunsButeRunID = Column(Integer, primary_key=True)
     ByteRunsID = Column(Integer, nullable=False)
@@ -4104,7 +3856,6 @@ class BYTESRUNSBYTERUN(Base):
 
 class CAPABILITYOBJECTIVE(Base):
     __tablename__ = 'CAPABILITYOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     CapabilityObjectiveID = Column(Integer, primary_key=True)
     CapabilityObjectiveGUID = Column(Text)
@@ -4119,7 +3870,6 @@ class CAPABILITYOBJECTIVE(Base):
 
 class CAPABILITYOBJECTIVERELATIONSHIP(Base):
     __tablename__ = 'CAPABILITYOBJECTIVERELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     CapabilityObjectiveRelashionshipID = Column(Integer, primary_key=True)
     CapabilityObjectiveRelashionshipName = Column(Text)
@@ -4137,7 +3887,6 @@ class CAPABILITYOBJECTIVERELATIONSHIP(Base):
 
 class CATEGORY(Base):
     __tablename__ = 'CATEGORY'
-    __bind_key__  = 'XORCISM'
 
     CategoryID = Column(Integer, primary_key=True)
     CategoryName = Column(Text, nullable=False)
@@ -4156,7 +3905,6 @@ class CATEGORY(Base):
 
 class CATEGORYDESCRIPTION(Base):
     __tablename__ = 'CATEGORYDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     CategoryDescriptionID = Column(Integer, primary_key=True)
 
@@ -4165,7 +3913,6 @@ class CATEGORYDESCRIPTION(Base):
 
 class CATEGORYREFERENCE(Base):
     __tablename__ = 'CATEGORYREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CategoryReferenceID = Column(Integer, primary_key=True)
 
@@ -4174,7 +3921,6 @@ class CATEGORYREFERENCE(Base):
 
 class CATEGORYTAG(Base):
     __tablename__ = 'CATEGORYTAG'
-    __bind_key__  = 'XORCISM'
 
     CategoryTagID = Column(Integer, primary_key=True)
 
@@ -4183,7 +3929,6 @@ class CATEGORYTAG(Base):
 
 class CCE(Base):
     __tablename__ = 'CCE'
-    __bind_key__  = 'XORCISM'
 
     CCEID = Column(Integer, primary_key=True)
     cce_id = Column(Text, nullable=False)
@@ -4224,7 +3969,6 @@ class CCE(Base):
 
 class CCEFORASSET(Base):
     __tablename__ = 'CCEFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetCCEID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -4241,7 +3985,6 @@ class CCEFORASSET(Base):
 
 class CCEFORCPE(Base):
     __tablename__ = 'CCEFORCPE'
-    __bind_key__  = 'XORCISM'
 
     CPECCEID = Column(Integer, primary_key=True)
     cce_id = Column(Text)
@@ -4259,7 +4002,6 @@ class CCEFORCPE(Base):
 
 class CCEFORTHREATACTORTTP(Base):
     __tablename__ = 'CCEFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     ThreatActorTTPCCEID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -4279,7 +4021,6 @@ class CCEFORTHREATACTORTTP(Base):
 
 class CCEPARAMETER(Base):
     __tablename__ = 'CCEPARAMETER'
-    __bind_key__  = 'XORCISM'
 
     CCEParameterID = Column(Integer, primary_key=True)
     CCEParameterText = Column(Text, nullable=False)
@@ -4296,7 +4037,6 @@ class CCEPARAMETER(Base):
 
 class CCEPARAMETERFORCCE(Base):
     __tablename__ = 'CCEPARAMETERFORCCE'
-    __bind_key__  = 'XORCISM'
 
     CCECCEParameterID = Column(Integer, primary_key=True)
     CCEID = Column(Integer)
@@ -4313,7 +4053,6 @@ class CCEPARAMETERFORCCE(Base):
 
 class CCEPARAMETERTAG(Base):
     __tablename__ = 'CCEPARAMETERTAG'
-    __bind_key__  = 'XORCISM'
 
     CCEParameterTagID = Column(Integer, primary_key=True)
     CCEParameterID = Column(Integer)
@@ -4330,7 +4069,6 @@ class CCEPARAMETERTAG(Base):
 
 class CCEREFERENCE(Base):
     __tablename__ = 'CCEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CCEReferenceID = Column(Integer, primary_key=True)
     resource_id = Column(Text, nullable=False)
@@ -4346,7 +4084,6 @@ class CCEREFERENCE(Base):
 
 class CCEREFERENCEFORCCE(Base):
     __tablename__ = 'CCEREFERENCEFORCCE'
-    __bind_key__  = 'XORCISM'
 
     CCECCEReferenceID = Column(Integer, primary_key=True)
     CCEReferenceID = Column(Integer, nullable=False)
@@ -4364,7 +4101,6 @@ class CCEREFERENCEFORCCE(Base):
 
 class CCERESOURCE(Base):
     __tablename__ = 'CCERESOURCE'
-    __bind_key__  = 'XORCISM'
 
     CCEResourceID = Column(Integer, primary_key=True)
     resource_id = Column(Text, nullable=False)
@@ -4384,7 +4120,6 @@ class CCERESOURCE(Base):
 
 class CCERESOURCEAUTHOR(Base):
     __tablename__ = 'CCERESOURCEAUTHOR'
-    __bind_key__  = 'XORCISM'
 
     CCEResourceAuthorID = Column(Integer, primary_key=True)
     CCEResourceID = Column(Integer, nullable=False)
@@ -4398,7 +4133,6 @@ class CCERESOURCEAUTHOR(Base):
 
 class CCERESOURCEFORCCE(Base):
     __tablename__ = 'CCERESOURCEFORCCE'
-    __bind_key__  = 'XORCISM'
 
     CCECCEResourceID = Column(Integer, primary_key=True)
     CCEResourceID = Column(Integer, nullable=False)
@@ -4416,7 +4150,6 @@ class CCERESOURCEFORCCE(Base):
 
 class CCERESOURCEFORCCEREFERENCE(Base):
     __tablename__ = 'CCERESOURCEFORCCEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CCEReferenceCCEResourceID = Column(Integer, primary_key=True)
     CCEResourceID = Column(Integer, nullable=False)
@@ -4433,7 +4166,6 @@ class CCERESOURCEFORCCEREFERENCE(Base):
 
 class CCETECHNICALMECHANISM(Base):
     __tablename__ = 'CCETECHNICALMECHANISM'
-    __bind_key__  = 'XORCISM'
 
     CCETechnicalMechanismID = Column(Integer, primary_key=True)
     TechnicalMechanismText = Column(Text, nullable=False)
@@ -4449,7 +4181,6 @@ class CCETECHNICALMECHANISM(Base):
 
 class CCETECHNICALMECHANISMFORCCE(Base):
     __tablename__ = 'CCETECHNICALMECHANISMFORCCE'
-    __bind_key__  = 'XORCISM'
 
     CCECCETechnicalMechanismID = Column(Integer, primary_key=True)
     CCEID = Column(Integer)
@@ -4466,7 +4197,6 @@ class CCETECHNICALMECHANISMFORCCE(Base):
 
 class CCETECHNICALMECHANISMTAG(Base):
     __tablename__ = 'CCETECHNICALMECHANISMTAG'
-    __bind_key__  = 'XORCISM'
 
     CCETechnicalMechanismTagID = Column(Integer, primary_key=True)
     CCETechnicalMechanismID = Column(Integer)
@@ -4483,7 +4213,6 @@ class CCETECHNICALMECHANISMTAG(Base):
 
 class CERTIFICATE(Base):
     __tablename__ = 'CERTIFICATE'
-    __bind_key__  = 'XORCISM'
 
     CertificateID = Column(Integer, primary_key=True)
     isEncrypted = Column(Integer)
@@ -4493,7 +4222,6 @@ class CERTIFICATE(Base):
 
 class CERTIFICATION(Base):
     __tablename__ = 'CERTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     CertificationID = Column(Integer, primary_key=True)
     CertificationGUID = Column(Text)
@@ -4517,7 +4245,6 @@ class CERTIFICATION(Base):
 
 class CERTIFICATIONSKILL(Base):
     __tablename__ = 'CERTIFICATIONSKILL'
-    __bind_key__  = 'XORCISM'
 
     CertificationSkillID = Column(Integer, primary_key=True)
     CertificationID = Column(Integer)
@@ -4534,7 +4261,6 @@ class CERTIFICATIONSKILL(Base):
 
 class CHANGECONTROL(Base):
     __tablename__ = 'CHANGECONTROL'
-    __bind_key__  = 'XORCISM'
 
     ChangeControlID = Column(Integer, primary_key=True)
     SecurityControlID = Column(Integer)
@@ -4544,7 +4270,6 @@ class CHANGECONTROL(Base):
 
 class CHANGELOGENTRYTYPEENUM(Base):
     __tablename__ = 'CHANGELOGENTRYTYPEENUM'
-    __bind_key__  = 'XORCISM'
 
     ChangeLogEntryTypeEnumID = Column(Integer, primary_key=True)
     ChangeLogEntryType = Column(Text)
@@ -4558,7 +4283,6 @@ class CHANGELOGENTRYTYPEENUM(Base):
 
 class CHANGERECORD(Base):
     __tablename__ = 'CHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ChangeRecordID = Column(Integer, primary_key=True)
     ChangeRecordGUID = Column(Text)
@@ -4579,7 +4303,6 @@ class CHANGERECORD(Base):
 
 class CHANGEREQUEST(Base):
     __tablename__ = 'CHANGEREQUEST'
-    __bind_key__  = 'XORCISM'
 
     ChangeRequestID = Column(Integer, primary_key=True)
     ChangeRequestGUID = Column(Text)
@@ -4597,7 +4320,6 @@ class CHANGEREQUEST(Base):
 
 class CHANGEREQUESTAPPROVAL(Base):
     __tablename__ = 'CHANGEREQUESTAPPROVAL'
-    __bind_key__  = 'XORCISM'
 
     ChangeRequestApprovalID = Column(Integer, primary_key=True)
 
@@ -4606,7 +4328,6 @@ class CHANGEREQUESTAPPROVAL(Base):
 
 class CHANGEREQUESTCHANGERECORD(Base):
     __tablename__ = 'CHANGEREQUESTCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ChangeRequestChangeRecordID = Column(Integer, primary_key=True)
 
@@ -4615,7 +4336,6 @@ class CHANGEREQUESTCHANGERECORD(Base):
 
 class CHAPTER(Base):
     __tablename__ = 'CHAPTER'
-    __bind_key__  = 'XORCISM'
 
     ChapterID = Column(Integer, primary_key=True)
     SectionID = Column(Integer)
@@ -4625,7 +4345,6 @@ class CHAPTER(Base):
 
 class CHARACTER(Base):
     __tablename__ = 'CHARACTER'
-    __bind_key__  = 'XORCISM'
 
     CharacterID = Column(Integer, primary_key=True)
     CharacterGUID = Column(Text)
@@ -4637,7 +4356,6 @@ class CHARACTER(Base):
 
 class CHARACTERBLACKLIST(Base):
     __tablename__ = 'CHARACTERBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     CharacterBlacklistID = Column(Integer, primary_key=True)
     CharacterID = Column(Integer, nullable=False)
@@ -4647,7 +4365,6 @@ class CHARACTERBLACKLIST(Base):
 
 class CHARACTERENCODING(Base):
     __tablename__ = 'CHARACTERENCODING'
-    __bind_key__  = 'XORCISM'
 
     CharacterEncodingID = Column(Integer, primary_key=True)
     CharacterEncodingName = Column(Text, nullable=False)
@@ -4665,7 +4382,6 @@ class CHARACTERENCODING(Base):
 
 class CHARACTERISTIC(Base):
     __tablename__ = 'CHARACTERISTIC'
-    __bind_key__  = 'XORCISM'
 
     CharacteristicID = Column(Integer, primary_key=True)
 
@@ -4674,7 +4390,6 @@ class CHARACTERISTIC(Base):
 
 class CHARACTERSET(Base):
     __tablename__ = 'CHARACTERSET'
-    __bind_key__  = 'XORCISM'
 
     CharacterSetID = Column(Integer, primary_key=True)
     CharacterSetGUID = Column(Text)
@@ -4692,7 +4407,6 @@ class CHARACTERSET(Base):
 
 class CHARACTERSETBLACKLIST(Base):
     __tablename__ = 'CHARACTERSETBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     CharacterSetBlacklistID = Column(Integer, primary_key=True)
     CharacterSetID = Column(Integer)
@@ -4702,7 +4416,6 @@ class CHARACTERSETBLACKLIST(Base):
 
 class CHARACTERSETWHITELIST(Base):
     __tablename__ = 'CHARACTERSETWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     CharacterSetWhitelistID = Column(Integer, primary_key=True)
     CharacterSetID = Column(Integer)
@@ -4712,7 +4425,6 @@ class CHARACTERSETWHITELIST(Base):
 
 class CHARACTERWHITELIST(Base):
     __tablename__ = 'CHARACTERWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     CharacterWhitelistID = Column(Integer, primary_key=True)
     CharacterID = Column(Integer, nullable=False)
@@ -4722,7 +4434,6 @@ class CHARACTERWHITELIST(Base):
 
 class CHARSET(Base):
     __tablename__ = 'CHARSET'
-    __bind_key__  = 'XORCISM'
 
     CharSetID = Column(Integer, primary_key=True)
     CharacterSetID = Column(Integer)
@@ -4732,7 +4443,6 @@ class CHARSET(Base):
 
 class CHECKENUMERATION(Base):
     __tablename__ = 'CHECKENUMERATION'
-    __bind_key__  = 'XORCISM'
 
     CheckEnumerationID = Column(Integer, primary_key=True)
     EnumerationValue = Column(Text, nullable=False)
@@ -4749,7 +4459,6 @@ class CHECKENUMERATION(Base):
 
 class CHECKLIST(Base):
     __tablename__ = 'CHECKLIST'
-    __bind_key__  = 'XORCISM'
 
     ChecklistID = Column(Integer, primary_key=True)
     Title = Column(Text)
@@ -4768,7 +4477,6 @@ class CHECKLIST(Base):
 
 class CHECKLISTANSWER(Base):
     __tablename__ = 'CHECKLISTANSWER'
-    __bind_key__  = 'XORCISM'
 
     AnswerID = Column(Integer, primary_key=True)
     QuestionID = Column(Integer)
@@ -4788,7 +4496,6 @@ class CHECKLISTANSWER(Base):
 
 class CHECKLISTCATEGORY(Base):
     __tablename__ = 'CHECKLISTCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ChecklistCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -4805,7 +4512,6 @@ class CHECKLISTCATEGORY(Base):
 
 class CHECKLISTCHAPTER(Base):
     __tablename__ = 'CHECKLISTCHAPTER'
-    __bind_key__  = 'XORCISM'
 
     ChapterID = Column(Integer, primary_key=True)
     Title = Column(Text)
@@ -4817,7 +4523,6 @@ class CHECKLISTCHAPTER(Base):
 
 class CHECKLISTQUESTION(Base):
     __tablename__ = 'CHECKLISTQUESTION'
-    __bind_key__  = 'XORCISM'
 
     QuestionID = Column(Integer, primary_key=True)
     QuestionRefID = Column(Text)
@@ -4839,7 +4544,6 @@ class CHECKLISTQUESTION(Base):
 
 class CHECKLISTQUESTIONCATEGORY(Base):
     __tablename__ = 'CHECKLISTQUESTIONCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     QuestionCategoryID = Column(Integer, primary_key=True)
     QuestionID = Column(Integer, nullable=False)
@@ -4855,7 +4559,6 @@ class CHECKLISTQUESTIONCATEGORY(Base):
 
 class CHECKLISTQUESTIONSECURITYCONTROL(Base):
     __tablename__ = 'CHECKLISTQUESTIONSECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     QuestionSecurityControlID = Column(Integer, primary_key=True)
     QuestionID = Column(Integer, nullable=False)
@@ -4871,7 +4574,6 @@ class CHECKLISTQUESTIONSECURITYCONTROL(Base):
 
 class CIAIMPACTFORATTACKPATTERN(Base):
     __tablename__ = 'CIAIMPACTFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternCIAImpactID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -4891,7 +4593,6 @@ class CIAIMPACTFORATTACKPATTERN(Base):
 
 class CLASSIFICATION(Base):
     __tablename__ = 'CLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     ClassificationID = Column(Integer, primary_key=True)
 
@@ -4900,7 +4601,6 @@ class CLASSIFICATION(Base):
 
 class CLASSIFICATIONCATEGORY(Base):
     __tablename__ = 'CLASSIFICATIONCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ClassificationCategoryID = Column(Integer, primary_key=True)
     ClassificationCategoryGUID = Column(Text)
@@ -4918,7 +4618,6 @@ class CLASSIFICATIONCATEGORY(Base):
 
 class CLASSIFICATIONLEVEL(Base):
     __tablename__ = 'CLASSIFICATIONLEVEL'
-    __bind_key__  = 'XORCISM'
 
     ClassificationLevelID = Column(Integer, primary_key=True)
     VocabularyID = Column(Integer)
@@ -4928,7 +4627,6 @@ class CLASSIFICATIONLEVEL(Base):
 
 class CLASSIFICATIONRESTRICTION(Base):
     __tablename__ = 'CLASSIFICATIONRESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     ClassificationRestrictionID = Column(Integer, primary_key=True)
     ClassificationID = Column(Integer, nullable=False)
@@ -4946,7 +4644,6 @@ class CLASSIFICATIONRESTRICTION(Base):
 
 class CLUSTEREDGENODEPAIR(Base):
     __tablename__ = 'CLUSTEREDGENODEPAIR'
-    __bind_key__  = 'XORCISM'
 
     ClusterEdgeNodePairID = Column(Integer, primary_key=True)
 
@@ -4955,7 +4652,6 @@ class CLUSTEREDGENODEPAIR(Base):
 
 class COASTAGE(Base):
     __tablename__ = 'COASTAGE'
-    __bind_key__  = 'XORCISM'
 
     COAStageID = Column(Integer, primary_key=True)
     COAStageGUID = Column(Text)
@@ -4974,7 +4670,6 @@ class COASTAGE(Base):
 
 class CODE(Base):
     __tablename__ = 'CODE'
-    __bind_key__  = 'XORCISM'
 
     CodeID = Column(Integer, primary_key=True)
     CodeGUID = Column(Text)
@@ -5014,7 +4709,6 @@ class CODE(Base):
 
 class CODEFUNCTION(Base):
     __tablename__ = 'CODEFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     CodeFunctionID = Column(Integer, primary_key=True)
     CodeFunctionGUID = Column(Text)
@@ -5038,7 +4732,6 @@ class CODEFUNCTION(Base):
 
 class CODELANGUAGE(Base):
     __tablename__ = 'CODELANGUAGE'
-    __bind_key__  = 'XORCISM'
 
     CodeLanguageID = Column(Integer, primary_key=True)
     LanguageID = Column(Integer)
@@ -5049,7 +4742,6 @@ class CODELANGUAGE(Base):
 
 class CODELANGUAGES(Base):
     __tablename__ = 'CODELANGUAGES'
-    __bind_key__  = 'XORCISM'
 
     CodeLanguagesID = Column(Integer, primary_key=True)
     CodeID = Column(Integer, nullable=False)
@@ -5071,7 +4763,6 @@ class CODELANGUAGES(Base):
 
 class CODELICENSE(Base):
     __tablename__ = 'CODELICENSE'
-    __bind_key__  = 'XORCISM'
 
     CodeLicenseID = Column(Integer, primary_key=True)
 
@@ -5080,7 +4771,6 @@ class CODELICENSE(Base):
 
 class CODELINE(Base):
     __tablename__ = 'CODELINE'
-    __bind_key__  = 'XORCISM'
 
     CodeLineID = Column(Integer, primary_key=True)
     CodeLineGUID = Column(Text)
@@ -5094,7 +4784,6 @@ class CODELINE(Base):
 
 class CODELINEFUNCTION(Base):
     __tablename__ = 'CODELINEFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     CodeLineFunctionID = Column(Integer, primary_key=True)
     CodeLineID = Column(Integer, nullable=False)
@@ -5108,7 +4797,6 @@ class CODELINEFUNCTION(Base):
 
 class CODELINES(Base):
     __tablename__ = 'CODELINES'
-    __bind_key__  = 'XORCISM'
 
     CodeLinesID = Column(Integer, primary_key=True)
     CodeID = Column(Integer, nullable=False)
@@ -5124,7 +4812,6 @@ class CODELINES(Base):
 
 class CODEPROCESSORTYPE(Base):
     __tablename__ = 'CODEPROCESSORTYPE'
-    __bind_key__  = 'XORCISM'
 
     CodeProcessorTypeID = Column(Integer, primary_key=True)
     CodeID = Column(Integer, nullable=False)
@@ -5140,7 +4827,6 @@ class CODEPROCESSORTYPE(Base):
 
 class CODEPURPOSE(Base):
     __tablename__ = 'CODEPURPOSE'
-    __bind_key__  = 'XORCISM'
 
     CodePurposeID = Column(Integer, primary_key=True)
     CodePurposeEnumID = Column(Integer)
@@ -5154,7 +4840,6 @@ class CODEPURPOSE(Base):
 
 class CODEPURPOSEENUM(Base):
     __tablename__ = 'CODEPURPOSEENUM'
-    __bind_key__  = 'XORCISM'
 
     CodePurposeEnumID = Column(Integer, primary_key=True)
     CodePurpose = Column(Text)
@@ -5170,7 +4855,6 @@ class CODEPURPOSEENUM(Base):
 
 class CODESEGMENTXOR(Base):
     __tablename__ = 'CODESEGMENTXOR'
-    __bind_key__  = 'XORCISM'
 
     CodeSegmentXORID = Column(Integer, primary_key=True)
     xor_pattern = Column(Text)
@@ -5182,7 +4866,6 @@ class CODESEGMENTXOR(Base):
 
 class CODETYPE(Base):
     __tablename__ = 'CODETYPE'
-    __bind_key__  = 'XORCISM'
 
     CodeTypeID = Column(Integer, primary_key=True)
     CodeTypeEnumID = Column(Integer)
@@ -5192,7 +4875,6 @@ class CODETYPE(Base):
 
 class CODETYPEENUM(Base):
     __tablename__ = 'CODETYPEENUM'
-    __bind_key__  = 'XORCISM'
 
     CodeTypeEnumID = Column(Integer, primary_key=True)
     CodeType = Column(Text)
@@ -5208,7 +4890,6 @@ class CODETYPEENUM(Base):
 
 class COLLECTIONMETHOD(Base):
     __tablename__ = 'COLLECTIONMETHOD'
-    __bind_key__  = 'XORCISM'
 
     CollectionMethodID = Column(Integer, primary_key=True)
     CollectionMethodName = Column(Text)
@@ -5228,7 +4909,6 @@ class COLLECTIONMETHOD(Base):
 
 class COLLECTIONMETHODDESCRIPTION(Base):
     __tablename__ = 'COLLECTIONMETHODDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     CollectionMethodDescriptionID = Column(Integer, primary_key=True)
 
@@ -5237,7 +4917,6 @@ class COLLECTIONMETHODDESCRIPTION(Base):
 
 class COLLECTIONMETHODREFERENCE(Base):
     __tablename__ = 'COLLECTIONMETHODREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CollectionMethodReferenceID = Column(Integer, primary_key=True)
     CollectionMethodID = Column(Integer, nullable=False)
@@ -5254,7 +4933,6 @@ class COLLECTIONMETHODREFERENCE(Base):
 
 class COLLECTIONMETHODTAG(Base):
     __tablename__ = 'COLLECTIONMETHODTAG'
-    __bind_key__  = 'XORCISM'
 
     CollectionMethodTagID = Column(Integer, primary_key=True)
 
@@ -5263,7 +4941,6 @@ class COLLECTIONMETHODTAG(Base):
 
 class COLSTAGE(Base):
     __tablename__ = 'COLSTAGE'
-    __bind_key__  = 'XORCISM'
 
     COLStageID = Column(Integer, primary_key=True)
 
@@ -5272,7 +4949,6 @@ class COLSTAGE(Base):
 
 class COMMAND(Base):
     __tablename__ = 'COMMAND'
-    __bind_key__  = 'XORCISM'
 
     CommandID = Column(Integer, primary_key=True)
     CommandName = Column(Text, nullable=False)
@@ -5288,7 +4964,6 @@ class COMMAND(Base):
 
 class COMMANDANDCONTROLPROPERTIES(Base):
     __tablename__ = 'COMMANDANDCONTROLPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     CommandandControlPropertiesID = Column(Integer, primary_key=True)
     CommandandControlPropertiesName = Column(Text)
@@ -5306,7 +4981,6 @@ class COMMANDANDCONTROLPROPERTIES(Base):
 
 class COMMANDANDCONTROLSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'COMMANDANDCONTROLSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     CommandandControlStrategicObjectiveID = Column(Integer, primary_key=True)
     CommandandControlStrategicObjectiveName = Column(Text)
@@ -5324,7 +4998,6 @@ class COMMANDANDCONTROLSTRATEGICOBJECTIVE(Base):
 
 class COMMANDANDCONTROLTACTICALOBJECTIVE(Base):
     __tablename__ = 'COMMANDANDCONTROLTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     CommandandControlTacticalObjectiveID = Column(Integer, primary_key=True)
     CommandandControlTacticalObjectiveName = Column(Text)
@@ -5342,7 +5015,6 @@ class COMMANDANDCONTROLTACTICALOBJECTIVE(Base):
 
 class COMMANDS(Base):
     __tablename__ = 'COMMANDS'
-    __bind_key__  = 'XORCISM'
 
     CommandsID = Column(Integer, primary_key=True)
     ScriptName = Column(Text, nullable=False)
@@ -5354,7 +5026,6 @@ class COMMANDS(Base):
 
 class COMMONCAPABILITYPROPERTIES(Base):
     __tablename__ = 'COMMONCAPABILITYPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     CommonCapabilityPropertiesID = Column(Integer, primary_key=True)
     CommonCapabilityPropertiesName = Column(Text)
@@ -5372,7 +5043,6 @@ class COMMONCAPABILITYPROPERTIES(Base):
 
 class COMPLIANCE(Base):
     __tablename__ = 'COMPLIANCE'
-    __bind_key__  = 'XORCISM'
 
     ComplianceID = Column(Integer, primary_key=True)
     ComplianceGUID = Column(Text)
@@ -5394,7 +5064,6 @@ class COMPLIANCE(Base):
 
 class COMPLIANCECATEGORY(Base):
     __tablename__ = 'COMPLIANCECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ComplianceCategoryID = Column(Integer, primary_key=True)
     ComplianceCategoryName = Column(Text)
@@ -5413,7 +5082,6 @@ class COMPLIANCECATEGORY(Base):
 
 class COMPLIANCECERTIFICATION(Base):
     __tablename__ = 'COMPLIANCECERTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     ComplianceCertificationID = Column(Integer, primary_key=True)
 
@@ -5422,7 +5090,6 @@ class COMPLIANCECERTIFICATION(Base):
 
 class COMPLIANCECHANGERECORD(Base):
     __tablename__ = 'COMPLIANCECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ComplianceChangeRecordID = Column(Integer, primary_key=True)
 
@@ -5431,7 +5098,6 @@ class COMPLIANCECHANGERECORD(Base):
 
 class COMPLIANCEDESCRIPTION(Base):
     __tablename__ = 'COMPLIANCEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ComplianceDescriptionID = Column(Integer, primary_key=True)
 
@@ -5440,7 +5106,6 @@ class COMPLIANCEDESCRIPTION(Base):
 
 class COMPLIANCEREFERENCE(Base):
     __tablename__ = 'COMPLIANCEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ComplianceReferenceID = Column(Integer, primary_key=True)
     ComplianceID = Column(Integer, nullable=False)
@@ -5458,7 +5123,6 @@ class COMPLIANCEREFERENCE(Base):
 
 class COMPLIANCETAG(Base):
     __tablename__ = 'COMPLIANCETAG'
-    __bind_key__  = 'XORCISM'
 
     ComplianceTagID = Column(Integer, primary_key=True)
 
@@ -5467,7 +5131,6 @@ class COMPLIANCETAG(Base):
 
 class COMPONENT(Base):
     __tablename__ = 'COMPONENT'
-    __bind_key__  = 'XORCISM'
 
     ComponentID = Column(Integer, primary_key=True)
 
@@ -5476,7 +5139,6 @@ class COMPONENT(Base):
 
 class COMPRESSION(Base):
     __tablename__ = 'COMPRESSION'
-    __bind_key__  = 'XORCISM'
 
     CompressionID = Column(Integer, primary_key=True)
     compression_mechanism = Column(Text)
@@ -5494,7 +5156,6 @@ class COMPRESSION(Base):
 
 class COMPRESSIONMECHANISM(Base):
     __tablename__ = 'COMPRESSIONMECHANISM'
-    __bind_key__  = 'XORCISM'
 
     CompressionMechanismID = Column(Integer, primary_key=True)
     MechanismID = Column(Integer)
@@ -5504,7 +5165,6 @@ class COMPRESSIONMECHANISM(Base):
 
 class COMPRESSIONMECHANISMDESCRIPTION(Base):
     __tablename__ = 'COMPRESSIONMECHANISMDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     CompressionMechanismDescriptionID = Column(Integer, primary_key=True)
 
@@ -5513,7 +5173,6 @@ class COMPRESSIONMECHANISMDESCRIPTION(Base):
 
 class COMPRESSIONMECHANISMTAG(Base):
     __tablename__ = 'COMPRESSIONMECHANISMTAG'
-    __bind_key__  = 'XORCISM'
 
     CompressionMechanismTagID = Column(Integer, primary_key=True)
 
@@ -5522,7 +5181,6 @@ class COMPRESSIONMECHANISMTAG(Base):
 
 class COMPRESSIONREFERENCE(Base):
     __tablename__ = 'COMPRESSIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CompressionReferenceID = Column(Integer, primary_key=True)
     CompressionID = Column(Integer, nullable=False)
@@ -5538,7 +5196,6 @@ class COMPRESSIONREFERENCE(Base):
 
 class CONCATFUNCTION(Base):
     __tablename__ = 'CONCATFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     ConcatFunctionID = Column(Integer, primary_key=True)
 
@@ -5547,7 +5204,6 @@ class CONCATFUNCTION(Base):
 
 class CONDITION(Base):
     __tablename__ = 'CONDITION'
-    __bind_key__  = 'XORCISM'
 
     ConditionID = Column(Integer, primary_key=True)
     ConditionName = Column(Text, nullable=False)
@@ -5559,7 +5215,6 @@ class CONDITION(Base):
 
 class CONDITIONAPPLICATION(Base):
     __tablename__ = 'CONDITIONAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     ConditionApplicationID = Column(Integer, primary_key=True)
     ConditionApplicationName = Column(Text, nullable=False)
@@ -5571,7 +5226,6 @@ class CONDITIONAPPLICATION(Base):
 
 class CONFIDENCELEVEL(Base):
     __tablename__ = 'CONFIDENCELEVEL'
-    __bind_key__  = 'XORCISM'
 
     ConfidenceLevelID = Column(Integer, primary_key=True)
     ConfidenceLevelGUID = Column(Text)
@@ -5589,7 +5243,6 @@ class CONFIDENCELEVEL(Base):
 
 class CONFIDENCEREASON(Base):
     __tablename__ = 'CONFIDENCEREASON'
-    __bind_key__  = 'XORCISM'
 
     ConfidenceReasonID = Column(Integer, primary_key=True)
     ConfidenceReasonName = Column(Text)
@@ -5606,7 +5259,6 @@ class CONFIDENCEREASON(Base):
 
 class CONFIDENTIALITYLEVEL(Base):
     __tablename__ = 'CONFIDENTIALITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     ConfidentialityLevelID = Column(Integer, primary_key=True)
     ClassificationID = Column(Integer)
@@ -5619,7 +5271,6 @@ class CONFIDENTIALITYLEVEL(Base):
 
 class CONNECTION(Base):
     __tablename__ = 'CONNECTION'
-    __bind_key__  = 'XORCISM'
 
     ConnectionID = Column(Integer, primary_key=True)
     ipaddressIPv4 = Column(Text)
@@ -5641,7 +5292,6 @@ class CONNECTION(Base):
 
 class CONNECTIONFORASSET(Base):
     __tablename__ = 'CONNECTIONFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetConnectionID = Column(Integer, primary_key=True)
     AssetConnectionGUID = Column(Text)
@@ -5667,7 +5317,6 @@ class CONNECTIONFORASSET(Base):
 
 class CONTACT(Base):
     __tablename__ = 'CONTACT'
-    __bind_key__  = 'XORCISM'
 
     ContactID = Column(Integer, primary_key=True)
     ContactTypeID = Column(Integer)
@@ -5677,7 +5326,6 @@ class CONTACT(Base):
 
 class CONTACTTYPE(Base):
     __tablename__ = 'CONTACTTYPE'
-    __bind_key__  = 'XORCISM'
 
     ContactTypeID = Column(Integer, primary_key=True)
     ContactTypeGUID = Column(Text)
@@ -5695,7 +5343,6 @@ class CONTACTTYPE(Base):
 
 class CONTENTENUMERATION(Base):
     __tablename__ = 'CONTENTENUMERATION'
-    __bind_key__  = 'XORCISM'
 
     ContentEnumerationID = Column(Integer, primary_key=True)
     ContentEnumerationValue = Column(Text, nullable=False)
@@ -5712,7 +5359,6 @@ class CONTENTENUMERATION(Base):
 
 class CONTEXT(Base):
     __tablename__ = 'CONTEXT'
-    __bind_key__  = 'XORCISM'
 
     ContextID = Column(Integer, primary_key=True)
 
@@ -5721,7 +5367,6 @@ class CONTEXT(Base):
 
 class CONTROL(Base):
     __tablename__ = 'CONTROL'
-    __bind_key__  = 'XORCISM'
 
     ControlID = Column(Integer, primary_key=True)
     ControlGUID = Column(Text)
@@ -5748,7 +5393,6 @@ class CONTROL(Base):
 
 class CONTROLCATEGORY(Base):
     __tablename__ = 'CONTROLCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ControlCategoryID = Column(Integer, primary_key=True)
     ControlCategoryGUID = Column(Text)
@@ -5769,7 +5413,6 @@ class CONTROLCATEGORY(Base):
 
 class CONTROLDESCRIPTION(Base):
     __tablename__ = 'CONTROLDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ControlDescriptionID = Column(Integer, primary_key=True)
     ControlID = Column(Integer)
@@ -5788,7 +5431,6 @@ class CONTROLDESCRIPTION(Base):
 
 class CONTROLREFERENCE(Base):
     __tablename__ = 'CONTROLREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ControlReferenceID = Column(Integer, primary_key=True)
     ControlID = Column(Integer)
@@ -5807,7 +5449,6 @@ class CONTROLREFERENCE(Base):
 
 class CONTROLSTRENGTH(Base):
     __tablename__ = 'CONTROLSTRENGTH'
-    __bind_key__  = 'XORCISM'
 
     ControlStrengthID = Column(Integer, primary_key=True)
     ControlStrengthGUID = Column(Text)
@@ -5825,7 +5466,6 @@ class CONTROLSTRENGTH(Base):
 
 class CONTROLTAG(Base):
     __tablename__ = 'CONTROLTAG'
-    __bind_key__  = 'XORCISM'
 
     ControlTagID = Column(Integer, primary_key=True)
     ControlID = Column(Integer)
@@ -5844,7 +5484,6 @@ class CONTROLTAG(Base):
 
 class COOKIE(Base):
     __tablename__ = 'COOKIE'
-    __bind_key__  = 'XORCISM'
 
     CookieID = Column(Integer, primary_key=True)
     CookieGUID = Column(Text)
@@ -5868,7 +5507,6 @@ class COOKIE(Base):
 
 class COOKIEAPPLICATION(Base):
     __tablename__ = 'COOKIEAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     CookieApplicationID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer)
@@ -5890,7 +5528,6 @@ class COOKIEAPPLICATION(Base):
 
 class COOKIECPE(Base):
     __tablename__ = 'COOKIECPE'
-    __bind_key__  = 'XORCISM'
 
     CookieCPEID = Column(Integer, primary_key=True)
 
@@ -5899,7 +5536,6 @@ class COOKIECPE(Base):
 
 class COOKIEFILE(Base):
     __tablename__ = 'COOKIEFILE'
-    __bind_key__  = 'XORCISM'
 
     CookieFileID = Column(Integer, primary_key=True)
 
@@ -5908,7 +5544,6 @@ class COOKIEFILE(Base):
 
 class COOKIENAME(Base):
     __tablename__ = 'COOKIENAME'
-    __bind_key__  = 'XORCISM'
 
     CookieNameID = Column(Integer, primary_key=True)
     CookieNameGUID = Column(Text)
@@ -5927,7 +5562,6 @@ class COOKIENAME(Base):
 
 class COOKIENAMEAPPLICATION(Base):
     __tablename__ = 'COOKIENAMEAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     CookieNameApplicationID = Column(Integer, primary_key=True)
 
@@ -5936,7 +5570,6 @@ class COOKIENAMEAPPLICATION(Base):
 
 class COOKIENAMEORGANISATION(Base):
     __tablename__ = 'COOKIENAMEORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     CookieNameOrganisationID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer)
@@ -5958,7 +5591,6 @@ class COOKIENAMEORGANISATION(Base):
 
 class COOKIENAMEPRODUCT(Base):
     __tablename__ = 'COOKIENAMEPRODUCT'
-    __bind_key__  = 'XORCISM'
 
     CookieNameProductID = Column(Integer, primary_key=True)
     CookieNameID = Column(Integer)
@@ -5977,7 +5609,6 @@ class COOKIENAMEPRODUCT(Base):
 
 class COOKIEPERSON(Base):
     __tablename__ = 'COOKIEPERSON'
-    __bind_key__  = 'XORCISM'
 
     CookiePersonID = Column(Integer, primary_key=True)
 
@@ -5986,7 +5617,6 @@ class COOKIEPERSON(Base):
 
 class COOKIESECURITYCONTROL(Base):
     __tablename__ = 'COOKIESECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     CookieSecurityControlID = Column(Integer, primary_key=True)
     CookieID = Column(Integer)
@@ -6008,7 +5638,6 @@ class COOKIESECURITYCONTROL(Base):
 
 class COUNTFUNCTION(Base):
     __tablename__ = 'COUNTFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     CountFunctionID = Column(Integer, primary_key=True)
 
@@ -6017,7 +5646,6 @@ class COUNTFUNCTION(Base):
 
 class COUNTRY(Base):
     __tablename__ = 'COUNTRY'
-    __bind_key__  = 'XORCISM'
 
     CountryID = Column(Integer, primary_key=True)
     CountryGUID = Column(Text)
@@ -6035,7 +5663,6 @@ class COUNTRY(Base):
 
 class COUNTRYLAW(Base):
     __tablename__ = 'COUNTRYLAW'
-    __bind_key__  = 'XORCISM'
 
     CountryLawID = Column(Integer, primary_key=True)
     CountryID = Column(Integer, nullable=False)
@@ -6050,7 +5677,6 @@ class COUNTRYLAW(Base):
 
 class COUNTRYLOCALE(Base):
     __tablename__ = 'COUNTRYLOCALE'
-    __bind_key__  = 'XORCISM'
 
     CountryLocaleID = Column(Integer, primary_key=True)
     CountryID = Column(Integer, nullable=False)
@@ -6061,7 +5687,6 @@ class COUNTRYLOCALE(Base):
 
 class COUNTRYTELEPHONE(Base):
     __tablename__ = 'COUNTRYTELEPHONE'
-    __bind_key__  = 'XORCISM'
 
     CountryTelephoneID = Column(Integer, primary_key=True)
 
@@ -6070,7 +5695,6 @@ class COUNTRYTELEPHONE(Base):
 
 class COUNTRYZONE(Base):
     __tablename__ = 'COUNTRYZONE'
-    __bind_key__  = 'XORCISM'
 
     CountryZoneID = Column(Integer, primary_key=True)
 
@@ -6079,7 +5703,6 @@ class COUNTRYZONE(Base):
 
 class COURSEOFACTION(Base):
     __tablename__ = 'COURSEOFACTION'
-    __bind_key__  = 'XORCISM'
 
     CourseOfActionID = Column(Integer, primary_key=True)
 
@@ -6088,7 +5711,6 @@ class COURSEOFACTION(Base):
 
 class COURSEOFACTIONTYPE(Base):
     __tablename__ = 'COURSEOFACTIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     CourseOfActionTypeID = Column(Integer, primary_key=True)
     CourseOfActionTypeGUID = Column(Text)
@@ -6107,7 +5729,6 @@ class COURSEOFACTIONTYPE(Base):
 
 class COURSEOFLAW(Base):
     __tablename__ = 'COURSEOFLAW'
-    __bind_key__  = 'XORCISM'
 
     CourseOfLawID = Column(Integer, primary_key=True)
 
@@ -6116,7 +5737,6 @@ class COURSEOFLAW(Base):
 
 class CPE(Base):
     __tablename__ = 'CPE'
-    __bind_key__  = 'XORCISM'
 
     CPEID = Column(Integer, primary_key=True)
     CPEName = Column(Text, nullable=False)
@@ -6140,7 +5760,6 @@ class CPE(Base):
 
 class CPEBANNER(Base):
     __tablename__ = 'CPEBANNER'
-    __bind_key__  = 'XORCISM'
 
     CPEBannerID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6160,7 +5779,6 @@ class CPEBANNER(Base):
 
 class CPEBLACKLIST(Base):
     __tablename__ = 'CPEBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     CPEBlacklistID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6178,7 +5796,6 @@ class CPEBLACKLIST(Base):
 
 class CPEFILELIST(Base):
     __tablename__ = 'CPEFILELIST'
-    __bind_key__  = 'XORCISM'
 
     CPEFileListID = Column(Integer, primary_key=True)
     CPEID = Column(Integer)
@@ -6200,7 +5817,6 @@ class CPEFILELIST(Base):
 
 class CPEFORAPPLICATION(Base):
     __tablename__ = 'CPEFORAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     ApplicationCPEID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -6221,7 +5837,6 @@ class CPEFORAPPLICATION(Base):
 
 class CPEFORASSET(Base):
     __tablename__ = 'CPEFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetCPEID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -6241,7 +5856,6 @@ class CPEFORASSET(Base):
 
 class CPEFORFIXACTION(Base):
     __tablename__ = 'CPEFORFIXACTION'
-    __bind_key__  = 'XORCISM'
 
     FixActionCPEID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6262,7 +5876,6 @@ class CPEFORFIXACTION(Base):
 
 class CPEFORORGANISATION(Base):
     __tablename__ = 'CPEFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     OrganisationCPEID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -6283,7 +5896,6 @@ class CPEFORORGANISATION(Base):
 
 class CPEFORPLATFORM(Base):
     __tablename__ = 'CPEFORPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     PlatformCPEID = Column(Integer, primary_key=True)
     PlatformID = Column(Integer, nullable=False)
@@ -6302,7 +5914,6 @@ class CPEFORPLATFORM(Base):
 
 class CPEFORPRODUCT(Base):
     __tablename__ = 'CPEFORPRODUCT'
-    __bind_key__  = 'XORCISM'
 
     ProductCPEID = Column(Integer, primary_key=True)
     ProductID = Column(Integer, nullable=False)
@@ -6321,7 +5932,6 @@ class CPEFORPRODUCT(Base):
 
 class CPEFORTOOL(Base):
     __tablename__ = 'CPEFORTOOL'
-    __bind_key__  = 'XORCISM'
 
     ToolCPEID = Column(Integer, primary_key=True)
     ToolID = Column(Integer, nullable=False)
@@ -6340,7 +5950,6 @@ class CPEFORTOOL(Base):
 
 class CPEGOOGLEDORK(Base):
     __tablename__ = 'CPEGOOGLEDORK'
-    __bind_key__  = 'XORCISM'
 
     CPEGoogleDorkID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6358,7 +5967,6 @@ class CPEGOOGLEDORK(Base):
 
 class CPELOGICALTEST(Base):
     __tablename__ = 'CPELOGICALTEST'
-    __bind_key__  = 'XORCISM'
 
     CPELogicalTestID = Column(Integer, primary_key=True)
     negate = Column(Integer)
@@ -6372,7 +5980,6 @@ class CPELOGICALTEST(Base):
 
 class CPEPATCH(Base):
     __tablename__ = 'CPEPATCH'
-    __bind_key__  = 'XORCISM'
 
     CPEPatchID = Column(Integer, primary_key=True)
     CPEID = Column(Integer)
@@ -6391,7 +5998,6 @@ class CPEPATCH(Base):
 
 class CPEPORT(Base):
     __tablename__ = 'CPEPORT'
-    __bind_key__  = 'XORCISM'
 
     CPEPortID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6411,7 +6017,6 @@ class CPEPORT(Base):
 
 class CPEREFERENCE(Base):
     __tablename__ = 'CPEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CPEReferenceID = Column(Integer, primary_key=True)
     CPEID = Column(Integer)
@@ -6428,7 +6033,6 @@ class CPEREFERENCE(Base):
 
 class CPETAG(Base):
     __tablename__ = 'CPETAG'
-    __bind_key__  = 'XORCISM'
 
     CPETagID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6446,7 +6050,6 @@ class CPETAG(Base):
 
 class CPETECHNOLOGY(Base):
     __tablename__ = 'CPETECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     CPETechnologyID = Column(Integer, primary_key=True)
 
@@ -6455,7 +6058,6 @@ class CPETECHNOLOGY(Base):
 
 class CPEURI(Base):
     __tablename__ = 'CPEURI'
-    __bind_key__  = 'XORCISM'
 
     CPEURIID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6472,7 +6074,6 @@ class CPEURI(Base):
 
 class CPEWHITELIST(Base):
     __tablename__ = 'CPEWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     CPEWhitelistID = Column(Integer, primary_key=True)
     CPEID = Column(Integer, nullable=False)
@@ -6493,7 +6094,6 @@ class CPEWHITELIST(Base):
 
 class CREATIONOBJECT(Base):
     __tablename__ = 'CREATIONOBJECT'
-    __bind_key__  = 'XORCISM'
 
     CreationObjectID = Column(Integer, primary_key=True)
     CreationObjectGUID = Column(Text)
@@ -6531,7 +6131,6 @@ class CREATIONOBJECT(Base):
 
 class CREATIONOBJECTHASH(Base):
     __tablename__ = 'CREATIONOBJECTHASH'
-    __bind_key__  = 'XORCISM'
 
     CreationObjectHashID = Column(Integer, primary_key=True)
     CreationObjectID = Column(Integer, nullable=False)
@@ -6545,7 +6144,6 @@ class CREATIONOBJECTHASH(Base):
 
 class CREDENTIAL(Base):
     __tablename__ = 'CREDENTIAL'
-    __bind_key__  = 'XORCISM'
 
     CredentialID = Column(Integer, primary_key=True)
     AuthenticationTypeID = Column(Integer)
@@ -6566,7 +6164,6 @@ class CREDENTIAL(Base):
 
 class CREDENTIALACCESSRECORD(Base):
     __tablename__ = 'CREDENTIALACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     CredentialAccessRecordID = Column(Integer, primary_key=True)
     CredentialID = Column(Integer, nullable=False)
@@ -6580,7 +6177,6 @@ class CREDENTIALACCESSRECORD(Base):
 
 class CREDENTIALREPOSITORY(Base):
     __tablename__ = 'CREDENTIALREPOSITORY'
-    __bind_key__  = 'XORCISM'
 
     CredentialRepositoryID = Column(Integer, primary_key=True)
 
@@ -6589,7 +6185,6 @@ class CREDENTIALREPOSITORY(Base):
 
 class CRITICALITYLEVEL(Base):
     __tablename__ = 'CRITICALITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     CriticalityLevelID = Column(Integer, primary_key=True)
     CriticalityLevelGUID = Column(Text)
@@ -6607,7 +6202,6 @@ class CRITICALITYLEVEL(Base):
 
 class CUSTOMOBJECT(Base):
     __tablename__ = 'CUSTOMOBJECT'
-    __bind_key__  = 'XORCISM'
 
     CustomObjectID = Column(Integer, primary_key=True)
 
@@ -6616,7 +6210,6 @@ class CUSTOMOBJECT(Base):
 
 class CWE(Base):
     __tablename__ = 'CWE'
-    __bind_key__  = 'XORCISM'
 
     CWEID = Column(Text, primary_key=True)
     CWEGUID = Column(Text)
@@ -6653,7 +6246,6 @@ class CWE(Base):
 
 class CWEAFFECTEDFUNCTION(Base):
     __tablename__ = 'CWEAFFECTEDFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     CWEAffectedFunctionID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6672,7 +6264,6 @@ class CWEAFFECTEDFUNCTION(Base):
 
 class CWEAFFECTEDRESOURCE(Base):
     __tablename__ = 'CWEAFFECTEDRESOURCE'
-    __bind_key__  = 'XORCISM'
 
     CWEAffectedResourceID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6690,7 +6281,6 @@ class CWEAFFECTEDRESOURCE(Base):
 
 class CWEALTERNATETERM(Base):
     __tablename__ = 'CWEALTERNATETERM'
-    __bind_key__  = 'XORCISM'
 
     CWEAlternateTermID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6708,7 +6298,6 @@ class CWEALTERNATETERM(Base):
 
 class CWEALTERNATETERMTAG(Base):
     __tablename__ = 'CWEALTERNATETERMTAG'
-    __bind_key__  = 'XORCISM'
 
     CWEAlternateTermTagID = Column(Integer, primary_key=True)
     CWEAlternateTermID = Column(Integer)
@@ -6725,7 +6314,6 @@ class CWEALTERNATETERMTAG(Base):
 
 class CWEARCHITECTURALPARADIGM(Base):
     __tablename__ = 'CWEARCHITECTURALPARADIGM'
-    __bind_key__  = 'XORCISM'
 
     CWEArchitecturalParadigmID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -6742,7 +6330,6 @@ class CWEARCHITECTURALPARADIGM(Base):
 
 class CWEATTACKCONSEQUENCE(Base):
     __tablename__ = 'CWEATTACKCONSEQUENCE'
-    __bind_key__  = 'XORCISM'
 
     CWEAttackConsequenceID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6761,7 +6348,6 @@ class CWEATTACKCONSEQUENCE(Base):
 
 class CWEATTACKCONSEQUENCESCOPE(Base):
     __tablename__ = 'CWEATTACKCONSEQUENCESCOPE'
-    __bind_key__  = 'XORCISM'
 
     CWEAttackConsequenceScopeID = Column(Integer, primary_key=True)
     CWEAttackConsequenceID = Column(Integer)
@@ -6776,7 +6362,6 @@ class CWEATTACKCONSEQUENCESCOPE(Base):
 
 class CWEATTACKCONSEQUENCETAG(Base):
     __tablename__ = 'CWEATTACKCONSEQUENCETAG'
-    __bind_key__  = 'XORCISM'
 
     CWEAttackConsequenceTagID = Column(Integer, primary_key=True)
     CWEAttackConsequenceID = Column(Integer)
@@ -6787,7 +6372,6 @@ class CWEATTACKCONSEQUENCETAG(Base):
 
 class CWEATTACKTECHNICALIMPACT(Base):
     __tablename__ = 'CWEATTACKTECHNICALIMPACT'
-    __bind_key__  = 'XORCISM'
 
     CWEAttackTechnicalImpactID = Column(Integer, primary_key=True)
     CWEAttackConsequenceID = Column(Integer)
@@ -6802,7 +6386,6 @@ class CWEATTACKTECHNICALIMPACT(Base):
 
 class CWEDEMONSTRATIVEEXAMPLE(Base):
     __tablename__ = 'CWEDEMONSTRATIVEEXAMPLE'
-    __bind_key__  = 'XORCISM'
 
     CWEDemonstrativeExampleID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6819,7 +6402,6 @@ class CWEDEMONSTRATIVEEXAMPLE(Base):
 
 class CWEDESCRIPTION(Base):
     __tablename__ = 'CWEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     CWEDescriptionID = Column(Integer, primary_key=True)
 
@@ -6828,7 +6410,6 @@ class CWEDESCRIPTION(Base):
 
 class CWEDETECTIONMETHOD(Base):
     __tablename__ = 'CWEDETECTIONMETHOD'
-    __bind_key__  = 'XORCISM'
 
     CWEDetectionMethodID = Column(Integer, primary_key=True)
     CWEDetectionMethodGUID = Column(Text)
@@ -6853,7 +6434,6 @@ class CWEDETECTIONMETHOD(Base):
 
 class CWEEXPLOITATIONFACTOR(Base):
     __tablename__ = 'CWEEXPLOITATIONFACTOR'
-    __bind_key__  = 'XORCISM'
 
     CWEExploitationFactorID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -6869,7 +6449,6 @@ class CWEEXPLOITATIONFACTOR(Base):
 
 class CWEFOROWASPTOP10(Base):
     __tablename__ = 'CWEFOROWASPTOP10'
-    __bind_key__  = 'XORCISM'
 
     CWEOWASPTOP10ID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6887,7 +6466,6 @@ class CWEFOROWASPTOP10(Base):
 
 class CWEFUNCTIONALAREA(Base):
     __tablename__ = 'CWEFUNCTIONALAREA'
-    __bind_key__  = 'XORCISM'
 
     CWEFunctionalAreaID = Column(Integer, primary_key=True)
     CWEFunctionalAreaGUID = Column(Text)
@@ -6905,7 +6483,6 @@ class CWEFUNCTIONALAREA(Base):
 
 class CWELANGUAGE(Base):
     __tablename__ = 'CWELANGUAGE'
-    __bind_key__  = 'XORCISM'
 
     CWELanguageID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6924,7 +6501,6 @@ class CWELANGUAGE(Base):
 
 class CWELANGUAGECLASS(Base):
     __tablename__ = 'CWELANGUAGECLASS'
-    __bind_key__  = 'XORCISM'
 
     CWELanguageClassID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -6938,7 +6514,6 @@ class CWELANGUAGECLASS(Base):
 
 class CWEMODEOFINTRODUCTION(Base):
     __tablename__ = 'CWEMODEOFINTRODUCTION'
-    __bind_key__  = 'XORCISM'
 
     CWEModeOfIntroductionID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -6955,7 +6530,6 @@ class CWEMODEOFINTRODUCTION(Base):
 
 class CWEMODEOFINTRODUCTIONTAG(Base):
     __tablename__ = 'CWEMODEOFINTRODUCTIONTAG'
-    __bind_key__  = 'XORCISM'
 
     CWEModeOfIntroductionTagID = Column(Integer, primary_key=True)
     CWEModeOfIntroductionID = Column(Integer)
@@ -6966,7 +6540,6 @@ class CWEMODEOFINTRODUCTIONTAG(Base):
 
 class CWEORDINALITY(Base):
     __tablename__ = 'CWEORDINALITY'
-    __bind_key__  = 'XORCISM'
 
     CWEOrdinalityID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -6984,7 +6557,6 @@ class CWEORDINALITY(Base):
 
 class CWEOS(Base):
     __tablename__ = 'CWEOS'
-    __bind_key__  = 'XORCISM'
 
     CWEOSID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -7002,7 +6574,6 @@ class CWEOS(Base):
 
 class CWEOSCLASS(Base):
     __tablename__ = 'CWEOSCLASS'
-    __bind_key__  = 'XORCISM'
 
     CWEOSClassID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -7020,7 +6591,6 @@ class CWEOSCLASS(Base):
 
 class CWEREFERENCE(Base):
     __tablename__ = 'CWEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     CWEReferenceID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -7036,7 +6606,6 @@ class CWEREFERENCE(Base):
 
 class CWERELATIONSHIPCATEGORY(Base):
     __tablename__ = 'CWERELATIONSHIPCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     CWERelationshipCategoryID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -7054,7 +6623,6 @@ class CWERELATIONSHIPCATEGORY(Base):
 
 class CWERELEVANTPROPERTY(Base):
     __tablename__ = 'CWERELEVANTPROPERTY'
-    __bind_key__  = 'XORCISM'
 
     CWERelevantPropertyID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -7068,7 +6636,6 @@ class CWERELEVANTPROPERTY(Base):
 
 class CWEREPOSITORY(Base):
     __tablename__ = 'CWEREPOSITORY'
-    __bind_key__  = 'XORCISM'
 
     CWERepositoryID = Column(Integer, primary_key=True)
 
@@ -7077,7 +6644,6 @@ class CWEREPOSITORY(Base):
 
 class CWERESEARCHGAP(Base):
     __tablename__ = 'CWERESEARCHGAP'
-    __bind_key__  = 'XORCISM'
 
     CWEResearchGapID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -7094,7 +6660,6 @@ class CWERESEARCHGAP(Base):
 
 class CWETAG(Base):
     __tablename__ = 'CWETAG'
-    __bind_key__  = 'XORCISM'
 
     CWETagID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -7112,7 +6677,6 @@ class CWETAG(Base):
 
 class CWETAXONOMYNODE(Base):
     __tablename__ = 'CWETAXONOMYNODE'
-    __bind_key__  = 'XORCISM'
 
     CWETaxonomyNodeID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -7130,7 +6694,6 @@ class CWETAXONOMYNODE(Base):
 
 class CWETECHNOLOGY(Base):
     __tablename__ = 'CWETECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     CWETechnologyID = Column(Integer, primary_key=True)
     CWEID = Column(Text)
@@ -7146,7 +6709,6 @@ class CWETECHNOLOGY(Base):
 
 class CWETHEORETICALNOTE(Base):
     __tablename__ = 'CWETHEORETICALNOTE'
-    __bind_key__  = 'XORCISM'
 
     CWETheoreticalNoteID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -7162,7 +6724,6 @@ class CWETHEORETICALNOTE(Base):
 
 class CWETIMEOFINTRODUCTION(Base):
     __tablename__ = 'CWETIMEOFINTRODUCTION'
-    __bind_key__  = 'XORCISM'
 
     CWETimeOfIntroductionID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -7180,7 +6741,6 @@ class CWETIMEOFINTRODUCTION(Base):
 
 class CWETOP25(Base):
     __tablename__ = 'CWETOP25'
-    __bind_key__  = 'XORCISM'
 
     CWETOP25ID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -7199,7 +6759,6 @@ class CWETOP25(Base):
 
 class DATACLASSIFICATION(Base):
     __tablename__ = 'DATACLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     DataClassificationID = Column(Integer, primary_key=True)
     InformationTypeID = Column(Integer)
@@ -7209,7 +6768,6 @@ class DATACLASSIFICATION(Base):
 
 class DATADICTIONARY(Base):
     __tablename__ = 'DATADICTIONARY'
-    __bind_key__  = 'XORCISM'
 
     DataDictionaryID = Column(Integer, primary_key=True)
     DictionaryID = Column(Integer)
@@ -7219,7 +6777,6 @@ class DATADICTIONARY(Base):
 
 class DATAEXFILTRATIONPROPERTIES(Base):
     __tablename__ = 'DATAEXFILTRATIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     DataExfiltrationPropertiesID = Column(Integer, primary_key=True)
     DataExfiltrationPropertiesName = Column(Text)
@@ -7237,7 +6794,6 @@ class DATAEXFILTRATIONPROPERTIES(Base):
 
 class DATAEXFILTRATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'DATAEXFILTRATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     DataExfiltrationStrategicObjectiveID = Column(Integer, primary_key=True)
     DataExfiltrationStrategicObjectiveName = Column(Text)
@@ -7255,7 +6811,6 @@ class DATAEXFILTRATIONSTRATEGICOBJECTIVE(Base):
 
 class DATAEXFILTRATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'DATAEXFILTRATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     DataExfiltrationTacticalObjectiveID = Column(Integer, primary_key=True)
     DataExfiltrationTacticalObjectiveName = Column(Text)
@@ -7273,7 +6828,6 @@ class DATAEXFILTRATIONTACTICALOBJECTIVE(Base):
 
 class DATAFEED(Base):
     __tablename__ = 'DATAFEED'
-    __bind_key__  = 'XORCISM'
 
     DataFeedID = Column(Integer, primary_key=True)
     FeedID = Column(Integer)
@@ -7283,7 +6837,6 @@ class DATAFEED(Base):
 
 class DATAFORMAT(Base):
     __tablename__ = 'DATAFORMAT'
-    __bind_key__  = 'XORCISM'
 
     DataFormatID = Column(Integer, primary_key=True)
     DataFormatName = Column(Text)
@@ -7295,7 +6848,6 @@ class DATAFORMAT(Base):
 
 class DATAMODEL(Base):
     __tablename__ = 'DATAMODEL'
-    __bind_key__  = 'XORCISM'
 
     DataModelID = Column(Integer, primary_key=True)
     ModelID = Column(Integer)
@@ -7305,7 +6857,6 @@ class DATAMODEL(Base):
 
 class DATASEGMENT(Base):
     __tablename__ = 'DATASEGMENT'
-    __bind_key__  = 'XORCISM'
 
     DataSegmentID = Column(Integer, primary_key=True)
 
@@ -7314,7 +6865,6 @@ class DATASEGMENT(Base):
 
 class DATASIZEUNIT(Base):
     __tablename__ = 'DATASIZEUNIT'
-    __bind_key__  = 'XORCISM'
 
     DataSizeUnitID = Column(Integer, primary_key=True)
     DataSizeName = Column(Text, nullable=False)
@@ -7327,7 +6877,6 @@ class DATASIZEUNIT(Base):
 
 class DATATHEFTPROPERTIES(Base):
     __tablename__ = 'DATATHEFTPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     DataTheftPropertiesID = Column(Integer, primary_key=True)
     DataTheftPropertiesName = Column(Text)
@@ -7345,7 +6894,6 @@ class DATATHEFTPROPERTIES(Base):
 
 class DATATHEFTSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'DATATHEFTSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     DataTheftStrategicObjectiveID = Column(Integer, primary_key=True)
     DataTheftStrategicObjectiveName = Column(Text)
@@ -7363,7 +6911,6 @@ class DATATHEFTSTRATEGICOBJECTIVE(Base):
 
 class DATATHEFTTACTICALOBJECTIVE(Base):
     __tablename__ = 'DATATHEFTTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     DataTheftTacticalObjectiveID = Column(Integer, primary_key=True)
     DataTheftTacticalObjectiveName = Column(Text)
@@ -7381,7 +6928,6 @@ class DATATHEFTTACTICALOBJECTIVE(Base):
 
 class DATATRANSFER(Base):
     __tablename__ = 'DATATRANSFER'
-    __bind_key__  = 'XORCISM'
 
     DataTransferID = Column(Integer, primary_key=True)
 
@@ -7390,7 +6936,6 @@ class DATATRANSFER(Base):
 
 class DATATRANSFORMATION(Base):
     __tablename__ = 'DATATRANSFORMATION'
-    __bind_key__  = 'XORCISM'
 
     DataTransformationID = Column(Integer, primary_key=True)
     TransformationID = Column(Integer)
@@ -7400,7 +6945,6 @@ class DATATRANSFORMATION(Base):
 
 class DATATYPE(Base):
     __tablename__ = 'DATATYPE'
-    __bind_key__  = 'XORCISM'
 
     DataTypeID = Column(Integer, primary_key=True)
     DataTypeName = Column(Text, nullable=False)
@@ -7413,7 +6957,6 @@ class DATATYPE(Base):
 
 class DATETIMEFORMAT(Base):
     __tablename__ = 'DATETIMEFORMAT'
-    __bind_key__  = 'XORCISM'
 
     DateTimeFormatID = Column(Integer, primary_key=True)
     DateTimeFormatValue = Column(Text, nullable=False)
@@ -7426,7 +6969,6 @@ class DATETIMEFORMAT(Base):
 
 class DEBUGGINGACTIONNAME(Base):
     __tablename__ = 'DEBUGGINGACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     DebuggingActionNameID = Column(Integer, primary_key=True)
     DebuggingActionNameName = Column(Text, nullable=False)
@@ -7444,7 +6986,6 @@ class DEBUGGINGACTIONNAME(Base):
 
 class DEFENSETOOL(Base):
     __tablename__ = 'DEFENSETOOL'
-    __bind_key__  = 'XORCISM'
 
     DefenseToolID = Column(Integer, primary_key=True)
     DefenseToolGUID = Column(Text)
@@ -7461,7 +7002,6 @@ class DEFENSETOOL(Base):
 
 class DEFENSETOOLTYPE(Base):
     __tablename__ = 'DEFENSETOOLTYPE'
-    __bind_key__  = 'XORCISM'
 
     DefenseToolTypeID = Column(Integer, primary_key=True)
     DefenseToolTypeName = Column(Text, nullable=False)
@@ -7473,7 +7013,6 @@ class DEFENSETOOLTYPE(Base):
 
 class DEMONSTRATIVEEXAMPLE(Base):
     __tablename__ = 'DEMONSTRATIVEEXAMPLE'
-    __bind_key__  = 'XORCISM'
 
     DemonstrativeExampleID = Column(Integer, primary_key=True)
     DemonstrativeExampleGUID = Column(Text)
@@ -7493,7 +7032,6 @@ class DEMONSTRATIVEEXAMPLE(Base):
 
 class DEMONSTRATIVEEXAMPLECODE(Base):
     __tablename__ = 'DEMONSTRATIVEEXAMPLECODE'
-    __bind_key__  = 'XORCISM'
 
     DemonstrativeExampleCodeID = Column(Integer, primary_key=True)
     DemonstrativeExampleID = Column(Integer, nullable=False)
@@ -7508,7 +7046,6 @@ class DEMONSTRATIVEEXAMPLECODE(Base):
 
 class DEMONSTRATIVEEXAMPLEREFERENCE(Base):
     __tablename__ = 'DEMONSTRATIVEEXAMPLEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     DemonstrativeExampleReferenceID = Column(Integer, primary_key=True)
     DemonstrativeExampleID = Column(Integer)
@@ -7525,7 +7062,6 @@ class DEMONSTRATIVEEXAMPLEREFERENCE(Base):
 
 class DEMONSTRATIVEEXAMPLEVULNERABILITY(Base):
     __tablename__ = 'DEMONSTRATIVEEXAMPLEVULNERABILITY'
-    __bind_key__  = 'XORCISM'
 
     DemonstrativeExampleVulnerabilityID = Column(Integer, primary_key=True)
     DemonstrativeExampleID = Column(Integer)
@@ -7539,7 +7075,6 @@ class DEMONSTRATIVEEXAMPLEVULNERABILITY(Base):
 
 class DESCRIPTION(Base):
     __tablename__ = 'DESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     DescriptionID = Column(Integer, primary_key=True)
     DescriptionGUID = Column(Text)
@@ -7560,7 +7095,6 @@ class DESCRIPTION(Base):
 
 class DESCRIPTIONCHANGERECORD(Base):
     __tablename__ = 'DESCRIPTIONCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     DescriptionChangeRecordID = Column(Integer, primary_key=True)
 
@@ -7569,7 +7103,6 @@ class DESCRIPTIONCHANGERECORD(Base):
 
 class DESCRIPTIONREFERENCE(Base):
     __tablename__ = 'DESCRIPTIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     DescriptionReferenceID = Column(Integer, primary_key=True)
 
@@ -7578,7 +7111,6 @@ class DESCRIPTIONREFERENCE(Base):
 
 class DESCRIPTIONTAG(Base):
     __tablename__ = 'DESCRIPTIONTAG'
-    __bind_key__  = 'XORCISM'
 
     DescriptionTagID = Column(Integer, primary_key=True)
 
@@ -7587,7 +7119,6 @@ class DESCRIPTIONTAG(Base):
 
 class DESTRUCTIONPROPERTIES(Base):
     __tablename__ = 'DESTRUCTIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     DestructionPropertiesID = Column(Integer, primary_key=True)
     DestructionPropertiesName = Column(Text)
@@ -7605,7 +7136,6 @@ class DESTRUCTIONPROPERTIES(Base):
 
 class DESTRUCTIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'DESTRUCTIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     DestructionStrategicObjectiveID = Column(Integer, primary_key=True)
     DestructionStrategicObjectiveName = Column(Text)
@@ -7623,7 +7153,6 @@ class DESTRUCTIONSTRATEGICOBJECTIVE(Base):
 
 class DESTRUCTIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'DESTRUCTIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     DestructionTacticalObjectiveID = Column(Integer, primary_key=True)
     DestructionTacticalObjectiveName = Column(Text)
@@ -7641,7 +7170,6 @@ class DESTRUCTIONTACTICALOBJECTIVE(Base):
 
 class DETECTABILITY(Base):
     __tablename__ = 'DETECTABILITY'
-    __bind_key__  = 'XORCISM'
 
     DetectabilityID = Column(Integer, primary_key=True)
     DetectabilityName = Column(Text, nullable=False)
@@ -7658,7 +7186,6 @@ class DETECTABILITY(Base):
 
 class DETECTIONMETHOD(Base):
     __tablename__ = 'DETECTIONMETHOD'
-    __bind_key__  = 'XORCISM'
 
     DetectionMethodID = Column(Integer, primary_key=True)
     DetectionMethodGUID = Column(Text)
@@ -7680,7 +7207,6 @@ class DETECTIONMETHOD(Base):
 
 class DEVICE(Base):
     __tablename__ = 'DEVICE'
-    __bind_key__  = 'XORCISM'
 
     DeviceID = Column(Integer, primary_key=True)
     DeviceGUID = Column(Text)
@@ -7706,7 +7232,6 @@ class DEVICE(Base):
 
 class DEVICEBLACKLIST(Base):
     __tablename__ = 'DEVICEBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     DeviceBlacklistID = Column(Integer, primary_key=True)
     DeviceID = Column(Integer, nullable=False)
@@ -7723,7 +7248,6 @@ class DEVICEBLACKLIST(Base):
 
 class DEVICECOMPONENT(Base):
     __tablename__ = 'DEVICECOMPONENT'
-    __bind_key__  = 'XORCISM'
 
     DeviceComponentID = Column(Integer, primary_key=True)
     DeviceComponentGUID = Column(Text)
@@ -7733,7 +7257,6 @@ class DEVICECOMPONENT(Base):
 
 class DEVICEDRIVERACTIONNAME(Base):
     __tablename__ = 'DEVICEDRIVERACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     DeviceDriverActionNameID = Column(Integer, primary_key=True)
     DeviceDriverActionNameName = Column(Text, nullable=False)
@@ -7751,7 +7274,6 @@ class DEVICEDRIVERACTIONNAME(Base):
 
 class DEVICETYPE(Base):
     __tablename__ = 'DEVICETYPE'
-    __bind_key__  = 'XORCISM'
 
     DeviceTypeID = Column(Integer, primary_key=True)
     DeviceTypeGUID = Column(Text)
@@ -7769,7 +7291,6 @@ class DEVICETYPE(Base):
 
 class DEVICEWHITELIST(Base):
     __tablename__ = 'DEVICEWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     DeviceWhitelistID = Column(Integer, primary_key=True)
     DeviceID = Column(Integer, nullable=False)
@@ -7786,7 +7307,6 @@ class DEVICEWHITELIST(Base):
 
 class DICTIONARY(Base):
     __tablename__ = 'DICTIONARY'
-    __bind_key__  = 'XORCISM'
 
     DictionaryID = Column(Integer, primary_key=True)
 
@@ -7795,7 +7315,6 @@ class DICTIONARY(Base):
 
 class DIGITALSIGNATUREINFO(Base):
     __tablename__ = 'DIGITALSIGNATUREINFO'
-    __bind_key__  = 'XORCISM'
 
     DigitalSignatureInfoID = Column(Integer, primary_key=True)
 
@@ -7804,7 +7323,6 @@ class DIGITALSIGNATUREINFO(Base):
 
 class DIGITALSIGNATURES(Base):
     __tablename__ = 'DIGITALSIGNATURES'
-    __bind_key__  = 'XORCISM'
 
     DigitalSignaturesID = Column(Integer, primary_key=True)
 
@@ -7813,7 +7331,6 @@ class DIGITALSIGNATURES(Base):
 
 class DIRECTORY(Base):
     __tablename__ = 'DIRECTORY'
-    __bind_key__  = 'XORCISM'
 
     DirectoryID = Column(Integer, primary_key=True)
     DirectoryGUID = Column(Text)
@@ -7831,7 +7348,6 @@ class DIRECTORY(Base):
 
 class DIRECTORYACTIONNAME(Base):
     __tablename__ = 'DIRECTORYACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     DirectoryActionNameID = Column(Integer, primary_key=True)
     DirectoryActionNameName = Column(Text, nullable=False)
@@ -7849,7 +7365,6 @@ class DIRECTORYACTIONNAME(Base):
 
 class DIRECTORYLIST(Base):
     __tablename__ = 'DIRECTORYLIST'
-    __bind_key__  = 'XORCISM'
 
     DirectoryListID = Column(Integer, primary_key=True)
     DirectoryListGUID = Column(Text)
@@ -7859,7 +7374,6 @@ class DIRECTORYLIST(Base):
 
 class DISCOVERYMETHOD(Base):
     __tablename__ = 'DISCOVERYMETHOD'
-    __bind_key__  = 'XORCISM'
 
     DiscoveryMethodID = Column(Integer, primary_key=True)
     DiscoveryMethodGUID = Column(Text)
@@ -7879,7 +7393,6 @@ class DISCOVERYMETHOD(Base):
 
 class DISK(Base):
     __tablename__ = 'DISK'
-    __bind_key__  = 'XORCISM'
 
     DiskID = Column(Integer, primary_key=True)
 
@@ -7888,7 +7401,6 @@ class DISK(Base):
 
 class DISKACTIONNAME(Base):
     __tablename__ = 'DISKACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     DiskActionNameID = Column(Integer, primary_key=True)
     DiskActionNameName = Column(Text)
@@ -7906,7 +7418,6 @@ class DISKACTIONNAME(Base):
 
 class DISKPARTITION(Base):
     __tablename__ = 'DISKPARTITION'
-    __bind_key__  = 'XORCISM'
 
     DiskPartitionID = Column(Integer, primary_key=True)
 
@@ -7915,7 +7426,6 @@ class DISKPARTITION(Base):
 
 class DNSACTIONNAME(Base):
     __tablename__ = 'DNSACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     DNSActionNameID = Column(Integer, primary_key=True)
     DNSActionNameName = Column(Text, nullable=False)
@@ -7933,7 +7443,6 @@ class DNSACTIONNAME(Base):
 
 class DNSCACHE(Base):
     __tablename__ = 'DNSCACHE'
-    __bind_key__  = 'XORCISM'
 
     DNSCacheID = Column(Integer, primary_key=True)
 
@@ -7942,7 +7451,6 @@ class DNSCACHE(Base):
 
 class DNSQUERY(Base):
     __tablename__ = 'DNSQUERY'
-    __bind_key__  = 'XORCISM'
 
     DNSQueryID = Column(Integer, primary_key=True)
     DNDQueryGUID = Column(Text)
@@ -7958,7 +7466,6 @@ class DNSQUERY(Base):
 
 class DNSRECORD(Base):
     __tablename__ = 'DNSRECORD'
-    __bind_key__  = 'XORCISM'
 
     DNSRecordID = Column(Integer, primary_key=True)
 
@@ -7967,7 +7474,6 @@ class DNSRECORD(Base):
 
 class DOCUMENT(Base):
     __tablename__ = 'DOCUMENT'
-    __bind_key__  = 'XORCISM'
 
     DocumentID = Column(Integer, primary_key=True)
     DocumentGUID = Column(Text)
@@ -7982,7 +7488,6 @@ class DOCUMENT(Base):
 
 class DOCUMENTCATEGORY(Base):
     __tablename__ = 'DOCUMENTCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     DocumentCategoryID = Column(Integer, primary_key=True)
     DocumentID = Column(Integer)
@@ -7997,7 +7502,6 @@ class DOCUMENTCATEGORY(Base):
 
 class DOCUMENTCLASSIFICATION(Base):
     __tablename__ = 'DOCUMENTCLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     DocumentClassificationID = Column(Integer, primary_key=True)
     DocumentID = Column(Integer, nullable=False)
@@ -8018,7 +7522,6 @@ class DOCUMENTCLASSIFICATION(Base):
 
 class DOCUMENTTITLE(Base):
     __tablename__ = 'DOCUMENTTITLE'
-    __bind_key__  = 'XORCISM'
 
     DocumentTitleID = Column(Integer, primary_key=True)
     DocumentID = Column(Integer, nullable=False)
@@ -8035,7 +7538,6 @@ class DOCUMENTTITLE(Base):
 
 class DOCUMENTVERSION(Base):
     __tablename__ = 'DOCUMENTVERSION'
-    __bind_key__  = 'XORCISM'
 
     DocumentVersionID = Column(Integer, primary_key=True)
     DocumentID = Column(Integer, nullable=False)
@@ -8052,7 +7554,6 @@ class DOCUMENTVERSION(Base):
 
 class DOCXMLDOCUMENT(Base):
     __tablename__ = 'DOCXMLDOCUMENT'
-    __bind_key__  = 'XORCISM'
 
     DocXMLDocumentID = Column(Integer, primary_key=True)
     DocumentID = Column(Integer)
@@ -8062,7 +7563,6 @@ class DOCXMLDOCUMENT(Base):
 
 class DOMAIN(Base):
     __tablename__ = 'DOMAIN'
-    __bind_key__  = 'XORCISM'
 
     DomainID = Column(Integer, primary_key=True)
     DomainGUID = Column(Text)
@@ -8078,7 +7578,6 @@ class DOMAIN(Base):
 
 class DOMAINBLACKLIST(Base):
     __tablename__ = 'DOMAINBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     DomainBlacklistID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -8091,7 +7590,6 @@ class DOMAINBLACKLIST(Base):
 
 class DOMAINEMAILADDRESS(Base):
     __tablename__ = 'DOMAINEMAILADDRESS'
-    __bind_key__  = 'XORCISM'
 
     DomainEmailAddressID = Column(Integer, primary_key=True)
     DomainID = Column(Integer, nullable=False)
@@ -8103,7 +7601,6 @@ class DOMAINEMAILADDRESS(Base):
 
 class DOMAINNAME(Base):
     __tablename__ = 'DOMAINNAME'
-    __bind_key__  = 'XORCISM'
 
     DomainNameID = Column(Integer, primary_key=True)
     DomainNameValue = Column(Text)
@@ -8123,7 +7620,6 @@ class DOMAINNAME(Base):
 
 class DOMAINNAMEBLACKLIST(Base):
     __tablename__ = 'DOMAINNAMEBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     DomainNameBlacklistID = Column(Integer, primary_key=True)
 
@@ -8132,7 +7628,6 @@ class DOMAINNAMEBLACKLIST(Base):
 
 class DOMAINNAMECHANGERECORD(Base):
     __tablename__ = 'DOMAINNAMECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     DomainNameChangeRecordID = Column(Integer, primary_key=True)
 
@@ -8141,7 +7636,6 @@ class DOMAINNAMECHANGERECORD(Base):
 
 class DOMAINNAMEREPUTATION(Base):
     __tablename__ = 'DOMAINNAMEREPUTATION'
-    __bind_key__  = 'XORCISM'
 
     DomainNameReputationID = Column(Integer, primary_key=True)
     DomainNameID = Column(Integer)
@@ -8159,7 +7653,6 @@ class DOMAINNAMEREPUTATION(Base):
 
 class DOMAINNAMETYPE(Base):
     __tablename__ = 'DOMAINNAMETYPE'
-    __bind_key__  = 'XORCISM'
 
     DomainNameTypeID = Column(Integer, primary_key=True)
     DomainNameTypeValue = Column(Text)
@@ -8178,7 +7671,6 @@ class DOMAINNAMETYPE(Base):
 
 class DOMAINORGANISATION(Base):
     __tablename__ = 'DOMAINORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     DomainOrganisationID = Column(Integer, primary_key=True)
     DomainID = Column(Integer, nullable=False)
@@ -8199,7 +7691,6 @@ class DOMAINORGANISATION(Base):
 
 class DOMAINPERSON(Base):
     __tablename__ = 'DOMAINPERSON'
-    __bind_key__  = 'XORCISM'
 
     DomainPersonID = Column(Integer, primary_key=True)
     DomainID = Column(Integer, nullable=False)
@@ -8210,7 +7701,6 @@ class DOMAINPERSON(Base):
 
 class DOMAINTYPE(Base):
     __tablename__ = 'DOMAINTYPE'
-    __bind_key__  = 'XORCISM'
 
     DomainTypeID = Column(Integer, primary_key=True)
 
@@ -8219,7 +7709,6 @@ class DOMAINTYPE(Base):
 
 class DOMAINTYPEENUM(Base):
     __tablename__ = 'DOMAINTYPEENUM'
-    __bind_key__  = 'XORCISM'
 
     DomainTypeEnumID = Column(Integer, primary_key=True)
     VocabularyID = Column(Integer)
@@ -8229,7 +7718,6 @@ class DOMAINTYPEENUM(Base):
 
 class DOMAINWHITELIST(Base):
     __tablename__ = 'DOMAINWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     DomainWhitelistID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -8242,7 +7730,6 @@ class DOMAINWHITELIST(Base):
 
 class DOWNTIME(Base):
     __tablename__ = 'DOWNTIME'
-    __bind_key__  = 'XORCISM'
 
     DowntimeID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -8259,7 +7746,6 @@ class DOWNTIME(Base):
 
 class DPE(Base):
     __tablename__ = 'DPE'
-    __bind_key__  = 'XORCISM'
 
     DPEID = Column(Integer, primary_key=True)
     CPEID = Column(Text)
@@ -8277,7 +7763,6 @@ class DPE(Base):
 
 class EDGE(Base):
     __tablename__ = 'EDGE'
-    __bind_key__  = 'XORCISM'
 
     EdgeID = Column(Integer, primary_key=True)
 
@@ -8286,7 +7771,6 @@ class EDGE(Base):
 
 class EFFECTIVENESS(Base):
     __tablename__ = 'EFFECTIVENESS'
-    __bind_key__  = 'XORCISM'
 
     EffectivenessID = Column(Integer, primary_key=True)
     EffectivenessGUID = Column(Text)
@@ -8304,7 +7788,6 @@ class EFFECTIVENESS(Base):
 
 class EFFECTTYPE(Base):
     __tablename__ = 'EFFECTTYPE'
-    __bind_key__  = 'XORCISM'
 
     EffectTypeID = Column(Integer, primary_key=True)
     EffectTypeName = Column(Text, nullable=False)
@@ -8316,7 +7799,6 @@ class EFFECTTYPE(Base):
 
 class EMAIL(Base):
     __tablename__ = 'EMAIL'
-    __bind_key__  = 'XORCISM'
 
     EmailID = Column(Integer, primary_key=True)
     emailaddress = Column(Text, nullable=False)
@@ -8327,7 +7809,6 @@ class EMAIL(Base):
 
 class EMAILADDRESS(Base):
     __tablename__ = 'EMAILADDRESS'
-    __bind_key__  = 'XORCISM'
 
     EmailAddressID = Column(Integer, primary_key=True)
     EmailAddressGUID = Column(Text)
@@ -8352,7 +7833,6 @@ class EMAILADDRESS(Base):
 
 class EMAILFORORGANISATION(Base):
     __tablename__ = 'EMAILFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     emailaddress = Column(Text, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -8369,7 +7849,6 @@ class EMAILFORORGANISATION(Base):
 
 class EMAILFORPERSON(Base):
     __tablename__ = 'EMAILFORPERSON'
-    __bind_key__  = 'XORCISM'
 
     emailaddress = Column(Text, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -8383,7 +7862,6 @@ class EMAILFORPERSON(Base):
 
 class EMAILHEADER(Base):
     __tablename__ = 'EMAILHEADER'
-    __bind_key__  = 'XORCISM'
 
     EmailHeaderID = Column(Integer, primary_key=True)
     EmailHeaderGUID = Column(Text)
@@ -8425,7 +7903,6 @@ class EMAILHEADER(Base):
 
 class EMAILHEADERTAG(Base):
     __tablename__ = 'EMAILHEADERTAG'
-    __bind_key__  = 'XORCISM'
 
     EmailHeaderTagID = Column(Integer, primary_key=True)
 
@@ -8434,7 +7911,6 @@ class EMAILHEADERTAG(Base):
 
 class EMAILMESSAGE(Base):
     __tablename__ = 'EMAILMESSAGE'
-    __bind_key__  = 'XORCISM'
 
     EmailMessageID = Column(Integer, primary_key=True)
     EmailMessageGUID = Column(Text)
@@ -8469,7 +7945,6 @@ class EMAILMESSAGE(Base):
 
 class EMAILMESSAGEATTACHMENT(Base):
     __tablename__ = 'EMAILMESSAGEATTACHMENT'
-    __bind_key__  = 'XORCISM'
 
     EmailMessageAttachmentID = Column(Integer, primary_key=True)
     EmailMessageID = Column(Integer, nullable=False)
@@ -8487,7 +7962,6 @@ class EMAILMESSAGEATTACHMENT(Base):
 
 class EMAILMESSAGECLASSIFICATION(Base):
     __tablename__ = 'EMAILMESSAGECLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     EmailMessageClassificationID = Column(Integer, primary_key=True)
 
@@ -8496,7 +7970,6 @@ class EMAILMESSAGECLASSIFICATION(Base):
 
 class EMAILMESSAGELINK(Base):
     __tablename__ = 'EMAILMESSAGELINK'
-    __bind_key__  = 'XORCISM'
 
     EmailMessageLinkID = Column(Integer, primary_key=True)
     EmailMessageID = Column(Integer, nullable=False)
@@ -8518,7 +7991,6 @@ class EMAILMESSAGELINK(Base):
 
 class EMAILMESSAGERESTRICTION(Base):
     __tablename__ = 'EMAILMESSAGERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     EmailMessageRestrictionID = Column(Integer, primary_key=True)
     EmailMessageID = Column(Integer, nullable=False)
@@ -8535,7 +8007,6 @@ class EMAILMESSAGERESTRICTION(Base):
 
 class EMAILMESSAGETAG(Base):
     __tablename__ = 'EMAILMESSAGETAG'
-    __bind_key__  = 'XORCISM'
 
     EmailMessageTagID = Column(Integer, primary_key=True)
     EmailMessageID = Column(Integer, nullable=False)
@@ -8552,7 +8023,6 @@ class EMAILMESSAGETAG(Base):
 
 class EMAILRECEIVEDLINELIST(Base):
     __tablename__ = 'EMAILRECEIVEDLINELIST'
-    __bind_key__  = 'XORCISM'
 
     EmailReceivedLineListID = Column(Integer, primary_key=True)
 
@@ -8561,7 +8031,6 @@ class EMAILRECEIVEDLINELIST(Base):
 
 class EMAILRECIPIENT(Base):
     __tablename__ = 'EMAILRECIPIENT'
-    __bind_key__  = 'XORCISM'
 
     EmailRecipientID = Column(Integer, primary_key=True)
     EmailAddressID = Column(Integer)
@@ -8572,7 +8041,6 @@ class EMAILRECIPIENT(Base):
 
 class EMAILRECIPIENTS(Base):
     __tablename__ = 'EMAILRECIPIENTS'
-    __bind_key__  = 'XORCISM'
 
     EmailRecipientsID = Column(Integer, primary_key=True)
     EmailRecipientsGUID = Column(Text)
@@ -8590,7 +8058,6 @@ class EMAILRECIPIENTS(Base):
 
 class EMAILRECIPIENTSLIST(Base):
     __tablename__ = 'EMAILRECIPIENTSLIST'
-    __bind_key__  = 'XORCISM'
 
     EmailRecipientsListID = Column(Integer, primary_key=True)
     EmailRecipientsID = Column(Integer, nullable=False)
@@ -8612,7 +8079,6 @@ class EMAILRECIPIENTSLIST(Base):
 
 class ENCODING(Base):
     __tablename__ = 'ENCODING'
-    __bind_key__  = 'XORCISM'
 
     EncodingID = Column(Integer, primary_key=True)
     algorithm = Column(Text, nullable=False)
@@ -8630,7 +8096,6 @@ class ENCODING(Base):
 
 class ENCODINGALGORITHM(Base):
     __tablename__ = 'ENCODINGALGORITHM'
-    __bind_key__  = 'XORCISM'
 
     EncodingAlgorithmID = Column(Integer, primary_key=True)
     AlgorithmID = Column(Integer)
@@ -8640,7 +8105,6 @@ class ENCODINGALGORITHM(Base):
 
 class ENCRYPTION(Base):
     __tablename__ = 'ENCRYPTION'
-    __bind_key__  = 'XORCISM'
 
     EncryptionID = Column(Integer, primary_key=True)
     encryption_mechanism = Column(Text, nullable=False)
@@ -8659,7 +8123,6 @@ class ENCRYPTION(Base):
 
 class ENCRYPTIONKEY(Base):
     __tablename__ = 'ENCRYPTIONKEY'
-    __bind_key__  = 'XORCISM'
 
     EncryptionKeyID = Column(Integer, primary_key=True)
     isEncrypted = Column(Integer)
@@ -8669,7 +8132,6 @@ class ENCRYPTIONKEY(Base):
 
 class ENCRYPTIONMECHANISM(Base):
     __tablename__ = 'ENCRYPTIONMECHANISM'
-    __bind_key__  = 'XORCISM'
 
     EncryptionMechanismID = Column(Integer, primary_key=True)
     MechanismID = Column(Integer)
@@ -8687,7 +8149,6 @@ class ENCRYPTIONMECHANISM(Base):
 
 class ENCRYPTIONREFERENCE(Base):
     __tablename__ = 'ENCRYPTIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     EncryptionReferenceID = Column(Integer, primary_key=True)
     EncryptionID = Column(Integer, nullable=False)
@@ -8703,7 +8164,6 @@ class ENCRYPTIONREFERENCE(Base):
 
 class ENDFUNCTION(Base):
     __tablename__ = 'ENDFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     EndFunctionID = Column(Integer, primary_key=True)
     EndsWithCharacters = Column(Text, nullable=False)
@@ -8714,7 +8174,6 @@ class ENDFUNCTION(Base):
 
 class ENDIANNESSTYPE(Base):
     __tablename__ = 'ENDIANNESSTYPE'
-    __bind_key__  = 'XORCISM'
 
     EndiannessTypeID = Column(Integer, primary_key=True)
     VocabularyID = Column(Integer)
@@ -8724,7 +8183,6 @@ class ENDIANNESSTYPE(Base):
 
 class ENDPOINT(Base):
     __tablename__ = 'ENDPOINT'
-    __bind_key__  = 'XORCISM'
 
     EndPointID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -8746,7 +8204,6 @@ class ENDPOINT(Base):
 
 class ENGINE(Base):
     __tablename__ = 'ENGINE'
-    __bind_key__  = 'XORCISM'
 
     EngineID = Column(Integer, primary_key=True)
     EngineName = Column(Text)
@@ -8761,7 +8218,6 @@ class ENGINE(Base):
 
 class ENTITY(Base):
     __tablename__ = 'ENTITY'
-    __bind_key__  = 'XORCISM'
 
     EntityID = Column(Integer, primary_key=True)
 
@@ -8770,7 +8226,6 @@ class ENTITY(Base):
 
 class ENTITYDESCRIPTION(Base):
     __tablename__ = 'ENTITYDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     EntityDescriptionID = Column(Integer, primary_key=True)
     EntityID = Column(Integer, nullable=False)
@@ -8781,7 +8236,6 @@ class ENTITYDESCRIPTION(Base):
 
 class ENTITYNAME(Base):
     __tablename__ = 'ENTITYNAME'
-    __bind_key__  = 'XORCISM'
 
     EntityNameID = Column(Integer, primary_key=True)
     EntityID = Column(Integer, nullable=False)
@@ -8792,7 +8246,6 @@ class ENTITYNAME(Base):
 
 class ENTITYRESTRICTION(Base):
     __tablename__ = 'ENTITYRESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     EntityRestrictionID = Column(Integer, primary_key=True)
 
@@ -8801,7 +8254,6 @@ class ENTITYRESTRICTION(Base):
 
 class ENTITYTYPE(Base):
     __tablename__ = 'ENTITYTYPE'
-    __bind_key__  = 'XORCISM'
 
     EntityTypeID = Column(Integer, primary_key=True)
     EntityID = Column(Integer, nullable=False)
@@ -8812,7 +8264,6 @@ class ENTITYTYPE(Base):
 
 class ENTRYPOINT(Base):
     __tablename__ = 'ENTRYPOINT'
-    __bind_key__  = 'XORCISM'
 
     EntryPointID = Column(Integer, primary_key=True)
 
@@ -8821,7 +8272,6 @@ class ENTRYPOINT(Base):
 
 class ENTRYVARIABLE(Base):
     __tablename__ = 'ENTRYVARIABLE'
-    __bind_key__  = 'XORCISM'
 
     EntryVariableID = Column(Integer, primary_key=True)
     VariableID = Column(Integer)
@@ -8831,7 +8281,6 @@ class ENTRYVARIABLE(Base):
 
 class ENUMERATIONVERSION(Base):
     __tablename__ = 'ENUMERATIONVERSION'
-    __bind_key__  = 'XORCISM'
 
     EnumerationVersionID = Column(Integer, primary_key=True)
     EnumerationName = Column(Text)
@@ -8848,7 +8297,6 @@ class ENUMERATIONVERSION(Base):
 
 class ENVIRONMENT(Base):
     __tablename__ = 'ENVIRONMENT'
-    __bind_key__  = 'XORCISM'
 
     EnvironmentID = Column(Integer, primary_key=True)
     CapecEnvironmentID = Column(Text)
@@ -8863,7 +8311,6 @@ class ENVIRONMENT(Base):
 
 class ESCAPEREGEXFUNCTION(Base):
     __tablename__ = 'ESCAPEREGEXFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     EscapeRegexFunctionID = Column(Integer, primary_key=True)
     OVALComponentGroupID = Column(Integer, nullable=False)
@@ -8873,7 +8320,6 @@ class ESCAPEREGEXFUNCTION(Base):
 
 class EVALUATIONMETHOD(Base):
     __tablename__ = 'EVALUATIONMETHOD'
-    __bind_key__  = 'XORCISM'
 
     EvaluationMethodID = Column(Integer, primary_key=True)
     MethodID = Column(Integer)
@@ -8892,7 +8338,6 @@ class EVALUATIONMETHOD(Base):
 
 class EVENT(Base):
     __tablename__ = 'EVENT'
-    __bind_key__  = 'XORCISM'
 
     EventID = Column(Integer, primary_key=True)
     EventGUID = Column(Text)
@@ -8915,7 +8360,6 @@ class EVENT(Base):
 
 class EVENTCOLLECTIONMETHOD(Base):
     __tablename__ = 'EVENTCOLLECTIONMETHOD'
-    __bind_key__  = 'XORCISM'
 
     EventCollectionMethodID = Column(Integer, primary_key=True)
     EventID = Column(Integer, nullable=False)
@@ -8938,7 +8382,6 @@ class EVENTCOLLECTIONMETHOD(Base):
 
 class EVENTCOMMENT(Base):
     __tablename__ = 'EVENTCOMMENT'
-    __bind_key__  = 'XORCISM'
 
     EventCommentID = Column(Integer, primary_key=True)
     Comment = Column(Text)
@@ -8952,7 +8395,6 @@ class EVENTCOMMENT(Base):
 
 class EVENTCOMMENTFOREVENT(Base):
     __tablename__ = 'EVENTCOMMENTFOREVENT'
-    __bind_key__  = 'XORCISM'
 
     EventEventCommentID = Column(Integer, primary_key=True)
     EventID = Column(Integer, nullable=False)
@@ -8964,7 +8406,6 @@ class EVENTCOMMENTFOREVENT(Base):
 
 class EVENTENDPOINT(Base):
     __tablename__ = 'EVENTENDPOINT'
-    __bind_key__  = 'XORCISM'
 
     EndPointEventID = Column(Integer, primary_key=True)
     EventID = Column(Integer, nullable=False)
@@ -8976,7 +8417,6 @@ class EVENTENDPOINT(Base):
 
 class EVENTFILTER(Base):
     __tablename__ = 'EVENTFILTER'
-    __bind_key__  = 'XORCISM'
 
     EventFilterID = Column(Integer, primary_key=True)
     EventFilterContent = Column(Text)
@@ -8992,7 +8432,6 @@ class EVENTFILTER(Base):
 
 class EVENTFORASSET(Base):
     __tablename__ = 'EVENTFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetEventID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -9014,7 +8453,6 @@ class EVENTFORASSET(Base):
 
 class EVENTFOREVENT(Base):
     __tablename__ = 'EVENTFOREVENT'
-    __bind_key__  = 'XORCISM'
 
     EventForEventID = Column(Integer, primary_key=True)
     EventRefID = Column(Integer, nullable=False)
@@ -9036,7 +8474,6 @@ class EVENTFOREVENT(Base):
 
 class EVENTFORINCIDENT(Base):
     __tablename__ = 'EVENTFORINCIDENT'
-    __bind_key__  = 'XORCISM'
 
     IncidentEventID = Column(Integer, primary_key=True)
     EventID = Column(Integer, nullable=False)
@@ -9049,7 +8486,6 @@ class EVENTFORINCIDENT(Base):
 
 class EVENTPROPERTY(Base):
     __tablename__ = 'EVENTPROPERTY'
-    __bind_key__  = 'XORCISM'
 
     EventPropertyID = Column(Integer, primary_key=True)
     EventPropertyGUID = Column(Text)
@@ -9065,7 +8501,6 @@ class EVENTPROPERTY(Base):
 
 class EVENTPROPERTYADDRESS(Base):
     __tablename__ = 'EVENTPROPERTYADDRESS'
-    __bind_key__  = 'XORCISM'
 
     EventPropertyAddressID = Column(Integer, primary_key=True)
     EventPropertyID = Column(Integer, nullable=False)
@@ -9076,7 +8511,6 @@ class EVENTPROPERTYADDRESS(Base):
 
 class EVENTPROPERTYFOREVENT(Base):
     __tablename__ = 'EVENTPROPERTYFOREVENT'
-    __bind_key__  = 'XORCISM'
 
     EventEventPropertyID = Column(Integer, primary_key=True)
     EventID = Column(Integer, nullable=False)
@@ -9089,7 +8523,6 @@ class EVENTPROPERTYFOREVENT(Base):
 
 class EVENTSIGNATURE(Base):
     __tablename__ = 'EVENTSIGNATURE'
-    __bind_key__  = 'XORCISM'
 
     EventSignatureID = Column(Integer, primary_key=True)
     EventSignatureGUID = Column(Text)
@@ -9112,7 +8545,6 @@ class EVENTSIGNATURE(Base):
 
 class EVENTSUPPRESSION(Base):
     __tablename__ = 'EVENTSUPPRESSION'
-    __bind_key__  = 'XORCISM'
 
     EventSuppressionID = Column(Integer, primary_key=True)
     EventSuppressionContent = Column(Text)
@@ -9128,7 +8560,6 @@ class EVENTSUPPRESSION(Base):
 
 class EVENTTYPE(Base):
     __tablename__ = 'EVENTTYPE'
-    __bind_key__  = 'XORCISM'
 
     EventTypeID = Column(Integer, primary_key=True)
     EventTypeName = Column(Text, nullable=False)
@@ -9146,7 +8577,6 @@ class EVENTTYPE(Base):
 
 class EVIDENCE(Base):
     __tablename__ = 'EVIDENCE'
-    __bind_key__  = 'XORCISM'
 
     EvidenceID = Column(Integer, primary_key=True)
     EvidenceGUID = Column(Text)
@@ -9171,7 +8601,6 @@ class EVIDENCE(Base):
 
 class EVIDENCEACCESSRECORD(Base):
     __tablename__ = 'EVIDENCEACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     EvidenceAccessRecordID = Column(Integer, primary_key=True)
 
@@ -9180,7 +8609,6 @@ class EVIDENCEACCESSRECORD(Base):
 
 class EVIDENCEACL(Base):
     __tablename__ = 'EVIDENCEACL'
-    __bind_key__  = 'XORCISM'
 
     EvidenceACLID = Column(Integer, primary_key=True)
 
@@ -9189,7 +8617,6 @@ class EVIDENCEACL(Base):
 
 class EVIDENCECATEGORY(Base):
     __tablename__ = 'EVIDENCECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     EvidenceCategoryID = Column(Integer, primary_key=True)
     EvidenceCategoryGUID = Column(Text)
@@ -9207,7 +8634,6 @@ class EVIDENCECATEGORY(Base):
 
 class EVIDENCERESTRICTION(Base):
     __tablename__ = 'EVIDENCERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     EvidenceRestrictionID = Column(Integer, primary_key=True)
 
@@ -9216,7 +8642,6 @@ class EVIDENCERESTRICTION(Base):
 
 class EXCELFILE(Base):
     __tablename__ = 'EXCELFILE'
-    __bind_key__  = 'XORCISM'
 
     ExcelFileID = Column(Integer, primary_key=True)
     FileID = Column(Integer)
@@ -9226,7 +8651,6 @@ class EXCELFILE(Base):
 
 class EXIFTAG(Base):
     __tablename__ = 'EXIFTAG'
-    __bind_key__  = 'XORCISM'
 
     EXIFTagID = Column(Integer, primary_key=True)
 
@@ -9235,7 +8659,6 @@ class EXIFTAG(Base):
 
 class EXISTENCEENUMERATION(Base):
     __tablename__ = 'EXISTENCEENUMERATION'
-    __bind_key__  = 'XORCISM'
 
     ExistenceEnumerationID = Column(Integer, primary_key=True)
     ExistenceValue = Column(Text, nullable=False)
@@ -9252,7 +8675,6 @@ class EXISTENCEENUMERATION(Base):
 
 class EXPLOIT(Base):
     __tablename__ = 'EXPLOIT'
-    __bind_key__  = 'XORCISM'
 
     ExploitID = Column(Integer, primary_key=True)
     ExploitGUID = Column(Text)
@@ -9289,7 +8711,6 @@ class EXPLOIT(Base):
 
 class EXPLOITABILITY(Base):
     __tablename__ = 'EXPLOITABILITY'
-    __bind_key__  = 'XORCISM'
 
     ExploitabilityID = Column(Integer, primary_key=True)
     ExploitabilityLevel = Column(Text, nullable=False)
@@ -9303,7 +8724,6 @@ class EXPLOITABILITY(Base):
 
 class EXPLOITACCESSRECORD(Base):
     __tablename__ = 'EXPLOITACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     ExploitAccessRecordID = Column(Integer, primary_key=True)
 
@@ -9312,7 +8732,6 @@ class EXPLOITACCESSRECORD(Base):
 
 class EXPLOITATIONFACTOR(Base):
     __tablename__ = 'EXPLOITATIONFACTOR'
-    __bind_key__  = 'XORCISM'
 
     ExploitationFactorID = Column(Integer, primary_key=True)
     ExploitationFactorGUID = Column(Text)
@@ -9330,7 +8749,6 @@ class EXPLOITATIONFACTOR(Base):
 
 class EXPLOITAUTHOR(Base):
     __tablename__ = 'EXPLOITAUTHOR'
-    __bind_key__  = 'XORCISM'
 
     ExploitAuthorID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer, nullable=False)
@@ -9348,7 +8766,6 @@ class EXPLOITAUTHOR(Base):
 
 class EXPLOITCATEGORY(Base):
     __tablename__ = 'EXPLOITCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ExploitCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -9358,7 +8775,6 @@ class EXPLOITCATEGORY(Base):
 
 class EXPLOITCHANGERECORD(Base):
     __tablename__ = 'EXPLOITCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ExploitChangeRecordID = Column(Integer, primary_key=True)
 
@@ -9367,7 +8783,6 @@ class EXPLOITCHANGERECORD(Base):
 
 class EXPLOITDESCRIPTION(Base):
     __tablename__ = 'EXPLOITDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ExploitDescriptionID = Column(Integer, primary_key=True)
 
@@ -9376,7 +8791,6 @@ class EXPLOITDESCRIPTION(Base):
 
 class EXPLOITFILE(Base):
     __tablename__ = 'EXPLOITFILE'
-    __bind_key__  = 'XORCISM'
 
     ExploitFileID = Column(Integer, primary_key=True)
 
@@ -9385,7 +8799,6 @@ class EXPLOITFILE(Base):
 
 class EXPLOITFORCPE(Base):
     __tablename__ = 'EXPLOITFORCPE'
-    __bind_key__  = 'XORCISM'
 
     CPEExploitID = Column(Integer, primary_key=True)
     CPEExploitGUID = Column(Text)
@@ -9409,7 +8822,6 @@ class EXPLOITFORCPE(Base):
 
 class EXPLOITFORFUNCTION(Base):
     __tablename__ = 'EXPLOITFORFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     ExploitFunctionID = Column(Integer, primary_key=True)
     ExploitFunctionGUID = Column(Text)
@@ -9430,7 +8842,6 @@ class EXPLOITFORFUNCTION(Base):
 
 class EXPLOITFORREFERENCE(Base):
     __tablename__ = 'EXPLOITFORREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ExploitReferenceID = Column(Integer, primary_key=True)
     ExploitReferenceGUID = Column(Text)
@@ -9450,7 +8861,6 @@ class EXPLOITFORREFERENCE(Base):
 
 class EXPLOITFORTECHNOLOGY(Base):
     __tablename__ = 'EXPLOITFORTECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     ExploitTechnologyID = Column(Integer, primary_key=True)
     TechnologyID = Column(Integer)
@@ -9464,7 +8874,6 @@ class EXPLOITFORTECHNOLOGY(Base):
 
 class EXPLOITFORTHREATACTORTTP(Base):
     __tablename__ = 'EXPLOITFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     ThreatActorTTPExploitID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer, nullable=False)
@@ -9477,7 +8886,6 @@ class EXPLOITFORTHREATACTORTTP(Base):
 
 class EXPLOITFORURI(Base):
     __tablename__ = 'EXPLOITFORURI'
-    __bind_key__  = 'XORCISM'
 
     ExploitURIID = Column(Integer, primary_key=True)
     URIObjectID = Column(Integer)
@@ -9496,7 +8904,6 @@ class EXPLOITFORURI(Base):
 
 class EXPLOITFORVULNERABILITY(Base):
     __tablename__ = 'EXPLOITFORVULNERABILITY'
-    __bind_key__  = 'XORCISM'
 
     VulnerabilityExploitID = Column(Integer, primary_key=True)
     VulnerabilityExploitGUID = Column(Text)
@@ -9522,7 +8929,6 @@ class EXPLOITFORVULNERABILITY(Base):
 
 class EXPLOITLANGUAGE(Base):
     __tablename__ = 'EXPLOITLANGUAGE'
-    __bind_key__  = 'XORCISM'
 
     ExploitLanguageID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer)
@@ -9542,7 +8948,6 @@ class EXPLOITLANGUAGE(Base):
 
 class EXPLOITLIKELIHOOD(Base):
     __tablename__ = 'EXPLOITLIKELIHOOD'
-    __bind_key__  = 'XORCISM'
 
     ExploitLikelihoodID = Column(Integer, primary_key=True)
     Likelihood = Column(Text, nullable=False)
@@ -9559,7 +8964,6 @@ class EXPLOITLIKELIHOOD(Base):
 
 class EXPLOITLIKELIHOODFORATTACKPATTERN(Base):
     __tablename__ = 'EXPLOITLIKELIHOODFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternExploitLikelihoodID = Column(Integer, primary_key=True)
     ExploitLikelihoodID = Column(Integer, nullable=False)
@@ -9577,7 +8981,6 @@ class EXPLOITLIKELIHOODFORATTACKPATTERN(Base):
 
 class EXPLOITLIKELIHOODFORCWE(Base):
     __tablename__ = 'EXPLOITLIKELIHOODFORCWE'
-    __bind_key__  = 'XORCISM'
 
     ExploitLikelihoodForCWEID = Column(Integer, primary_key=True)
     CWEID = Column(Text, nullable=False)
@@ -9596,7 +8999,6 @@ class EXPLOITLIKELIHOODFORCWE(Base):
 
 class EXPLOITOSINSTRUCTIONMEMORYADDRESS(Base):
     __tablename__ = 'EXPLOITOSINSTRUCTIONMEMORYADDRESS'
-    __bind_key__  = 'XORCISM'
 
     ExploitOSInstructionMemoryAddressID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer, nullable=False)
@@ -9614,7 +9016,6 @@ class EXPLOITOSINSTRUCTIONMEMORYADDRESS(Base):
 
 class EXPLOITPARAMETER(Base):
     __tablename__ = 'EXPLOITPARAMETER'
-    __bind_key__  = 'XORCISM'
 
     ExploitParameterID = Column(Integer, primary_key=True)
     ExploitParameterName = Column(Text, nullable=False)
@@ -9632,7 +9033,6 @@ class EXPLOITPARAMETER(Base):
 
 class EXPLOITPARAMETERFOREXPLOIT(Base):
     __tablename__ = 'EXPLOITPARAMETERFOREXPLOIT'
-    __bind_key__  = 'XORCISM'
 
     ExploitParametersID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer, nullable=False)
@@ -9651,7 +9051,6 @@ class EXPLOITPARAMETERFOREXPLOIT(Base):
 
 class EXPLOITPLATFORM(Base):
     __tablename__ = 'EXPLOITPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     ExploitPlatformID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer)
@@ -9668,7 +9067,6 @@ class EXPLOITPLATFORM(Base):
 
 class EXPLOITRESTRICTION(Base):
     __tablename__ = 'EXPLOITRESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     ExploitRestrictionID = Column(Integer, primary_key=True)
 
@@ -9677,7 +9075,6 @@ class EXPLOITRESTRICTION(Base):
 
 class EXPLOITTAG(Base):
     __tablename__ = 'EXPLOITTAG'
-    __bind_key__  = 'XORCISM'
 
     ExploitTagID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer)
@@ -9694,7 +9091,6 @@ class EXPLOITTAG(Base):
 
 class EXPOSURELEVEL(Base):
     __tablename__ = 'EXPOSURELEVEL'
-    __bind_key__  = 'XORCISM'
 
     ExposureLevelID = Column(Integer, primary_key=True)
 
@@ -9703,7 +9099,6 @@ class EXPOSURELEVEL(Base):
 
 class EXTRACTEDFEATURES(Base):
     __tablename__ = 'EXTRACTEDFEATURES'
-    __bind_key__  = 'XORCISM'
 
     ExtractedFeaturesID = Column(Integer, primary_key=True)
 
@@ -9712,7 +9107,6 @@ class EXTRACTEDFEATURES(Base):
 
 class FACILITY(Base):
     __tablename__ = 'FACILITY'
-    __bind_key__  = 'XORCISM'
 
     FacilityID = Column(Integer, primary_key=True)
 
@@ -9721,7 +9115,6 @@ class FACILITY(Base):
 
 class FACILITYPHYSICALLOCATION(Base):
     __tablename__ = 'FACILITYPHYSICALLOCATION'
-    __bind_key__  = 'XORCISM'
 
     FacilityPhysicalLocationID = Column(Integer, primary_key=True)
 
@@ -9730,7 +9123,6 @@ class FACILITYPHYSICALLOCATION(Base):
 
 class FACTORY(Base):
     __tablename__ = 'FACTORY'
-    __bind_key__  = 'XORCISM'
 
     FactoryID = Column(Integer, primary_key=True)
     ManufacturID = Column(Integer)
@@ -9740,7 +9132,6 @@ class FACTORY(Base):
 
 class FACTORYASSURANCE(Base):
     __tablename__ = 'FACTORYASSURANCE'
-    __bind_key__  = 'XORCISM'
 
     FactoryAssuranceID = Column(Integer, primary_key=True)
 
@@ -9749,7 +9140,6 @@ class FACTORYASSURANCE(Base):
 
 class FACTORYCOMPLIANCE(Base):
     __tablename__ = 'FACTORYCOMPLIANCE'
-    __bind_key__  = 'XORCISM'
 
     FactoryComplianceID = Column(Integer, primary_key=True)
 
@@ -9758,7 +9148,6 @@ class FACTORYCOMPLIANCE(Base):
 
 class FACTORYPOLICY(Base):
     __tablename__ = 'FACTORYPOLICY'
-    __bind_key__  = 'XORCISM'
 
     FactoryPolicyID = Column(Integer, primary_key=True)
 
@@ -9767,7 +9156,6 @@ class FACTORYPOLICY(Base):
 
 class FAX(Base):
     __tablename__ = 'FAX'
-    __bind_key__  = 'XORCISM'
 
     FaxID = Column(Integer, primary_key=True)
     TelephoneID = Column(Integer)
@@ -9777,7 +9165,6 @@ class FAX(Base):
 
 class FEED(Base):
     __tablename__ = 'FEED'
-    __bind_key__  = 'XORCISM'
 
     FeedID = Column(Integer, primary_key=True)
     RepositoryID = Column(Integer)
@@ -9788,7 +9175,6 @@ class FEED(Base):
 
 class FIELD(Base):
     __tablename__ = 'FIELD'
-    __bind_key__  = 'XORCISM'
 
     FieldID = Column(Integer, primary_key=True)
 
@@ -9797,7 +9183,6 @@ class FIELD(Base):
 
 class FILE(Base):
     __tablename__ = 'FILE'
-    __bind_key__  = 'XORCISM'
 
     FileID = Column(Integer, primary_key=True)
     FileGUID = Column(Text)
@@ -9819,7 +9204,6 @@ class FILE(Base):
 
 class FILEACTIONNAME(Base):
     __tablename__ = 'FILEACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     FileActionNameID = Column(Integer, primary_key=True)
     FileActionNameName = Column(Text, nullable=False)
@@ -9837,7 +9221,6 @@ class FILEACTIONNAME(Base):
 
 class FILECHANGERECORD(Base):
     __tablename__ = 'FILECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     FileChangeRecordID = Column(Integer, primary_key=True)
 
@@ -9846,7 +9229,6 @@ class FILECHANGERECORD(Base):
 
 class FILECLASSIFICATION(Base):
     __tablename__ = 'FILECLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     FileClassificationID = Column(Integer, primary_key=True)
 
@@ -9855,7 +9237,6 @@ class FILECLASSIFICATION(Base):
 
 class FILEDESCRIPTION(Base):
     __tablename__ = 'FILEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     FileDescriptionID = Column(Integer, primary_key=True)
     FileID = Column(Integer, nullable=False)
@@ -9873,7 +9254,6 @@ class FILEDESCRIPTION(Base):
 
 class FILEENCRYPTION(Base):
     __tablename__ = 'FILEENCRYPTION'
-    __bind_key__  = 'XORCISM'
 
     FileEncryptionID = Column(Integer, primary_key=True)
     FileID = Column(Integer, nullable=False)
@@ -9890,7 +9270,6 @@ class FILEENCRYPTION(Base):
 
 class FILEEXTENSION(Base):
     __tablename__ = 'FILEEXTENSION'
-    __bind_key__  = 'XORCISM'
 
     FileExtensionID = Column(Integer, primary_key=True)
     FileExtensionGUID = Column(Text)
@@ -9911,7 +9290,6 @@ class FILEEXTENSION(Base):
 
 class FILEEXTENSIONBLACKLIST(Base):
     __tablename__ = 'FILEEXTENSIONBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     FileExtensionBlacklistID = Column(Integer, primary_key=True)
 
@@ -9920,7 +9298,6 @@ class FILEEXTENSIONBLACKLIST(Base):
 
 class FILEEXTENSIONWHITELIST(Base):
     __tablename__ = 'FILEEXTENSIONWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     FileExtensionWhitelistID = Column(Integer, primary_key=True)
 
@@ -9929,7 +9306,6 @@ class FILEEXTENSIONWHITELIST(Base):
 
 class FILELIST(Base):
     __tablename__ = 'FILELIST'
-    __bind_key__  = 'XORCISM'
 
     FileListID = Column(Integer, primary_key=True)
     FileListGUID = Column(Text)
@@ -9952,7 +9328,6 @@ class FILELIST(Base):
 
 class FILELISTFILES(Base):
     __tablename__ = 'FILELISTFILES'
-    __bind_key__  = 'XORCISM'
 
     FileListFileID = Column(Integer, primary_key=True)
     FileListID = Column(Integer, nullable=False)
@@ -9973,7 +9348,6 @@ class FILELISTFILES(Base):
 
 class FILEREFERENCE(Base):
     __tablename__ = 'FILEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     FileReferenceID = Column(Integer, primary_key=True)
     FileReferenceGUID = Column(Text)
@@ -9994,7 +9368,6 @@ class FILEREFERENCE(Base):
 
 class FILEREPOSITORY(Base):
     __tablename__ = 'FILEREPOSITORY'
-    __bind_key__  = 'XORCISM'
 
     FileRepositoryID = Column(Integer, primary_key=True)
     FileID = Column(Integer, nullable=False)
@@ -10018,7 +9391,6 @@ class FILEREPOSITORY(Base):
 
 class FILERESTRICTION(Base):
     __tablename__ = 'FILERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     FileRestrictionID = Column(Integer, primary_key=True)
     FileID = Column(Integer, nullable=False)
@@ -10034,7 +9406,6 @@ class FILERESTRICTION(Base):
 
 class FILERESTRICTIONCHANGERECORD(Base):
     __tablename__ = 'FILERESTRICTIONCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     FileRestrictionChangeRecordID = Column(Integer, primary_key=True)
 
@@ -10043,7 +9414,6 @@ class FILERESTRICTIONCHANGERECORD(Base):
 
 class FILETAG(Base):
     __tablename__ = 'FILETAG'
-    __bind_key__  = 'XORCISM'
 
     FileTagID = Column(Integer, primary_key=True)
     FileID = Column(Integer, nullable=False)
@@ -10061,7 +9431,6 @@ class FILETAG(Base):
 
 class FILEVERSION(Base):
     __tablename__ = 'FILEVERSION'
-    __bind_key__  = 'XORCISM'
 
     FileVersionID = Column(Integer, primary_key=True)
 
@@ -10070,7 +9439,6 @@ class FILEVERSION(Base):
 
 class FILTER(Base):
     __tablename__ = 'FILTER'
-    __bind_key__  = 'XORCISM'
 
     FilterID = Column(Integer, primary_key=True)
 
@@ -10079,7 +9447,6 @@ class FILTER(Base):
 
 class FILTERACTION(Base):
     __tablename__ = 'FILTERACTION'
-    __bind_key__  = 'XORCISM'
 
     FilterActionID = Column(Integer, primary_key=True)
     FilterActionValue = Column(Text, nullable=False)
@@ -10090,7 +9457,6 @@ class FILTERACTION(Base):
 
 class FINDING(Base):
     __tablename__ = 'FINDING'
-    __bind_key__  = 'XORCISM'
 
     FindingID = Column(Integer, primary_key=True)
     FindingGUID = Column(Text)
@@ -10130,7 +9496,6 @@ class FINDING(Base):
 
 class FINDINGASSET(Base):
     __tablename__ = 'FINDINGASSET'
-    __bind_key__  = 'XORCISM'
 
     FindingAssetID = Column(Integer, primary_key=True)
     FindingAssetGUID = Column(Text)
@@ -10153,7 +9518,6 @@ class FINDINGASSET(Base):
 
 class FINDINGCATEGORY(Base):
     __tablename__ = 'FINDINGCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     FindingCategoryID = Column(Integer, primary_key=True)
     FindingCategoryGUID = Column(Text)
@@ -10175,7 +9539,6 @@ class FINDINGCATEGORY(Base):
 
 class FINDINGCATEGORYRACIMATRIX(Base):
     __tablename__ = 'FINDINGCATEGORYRACIMATRIX'
-    __bind_key__  = 'XORCISM'
 
     FindingCategoryRACIMatrixID = Column(Integer, primary_key=True)
 
@@ -10184,7 +9547,6 @@ class FINDINGCATEGORYRACIMATRIX(Base):
 
 class FINDINGCHANGERECORD(Base):
     __tablename__ = 'FINDINGCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     FindingChangeRecordID = Column(Integer, primary_key=True)
 
@@ -10193,7 +9555,6 @@ class FINDINGCHANGERECORD(Base):
 
 class FINDINGCODE(Base):
     __tablename__ = 'FINDINGCODE'
-    __bind_key__  = 'XORCISM'
 
     FindingCodeID = Column(Integer, primary_key=True)
     FindingID = Column(Integer, nullable=False)
@@ -10216,7 +9577,6 @@ class FINDINGCODE(Base):
 
 class FINDINGDESCRIPTION(Base):
     __tablename__ = 'FINDINGDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     FindingDescriptionID = Column(Integer, primary_key=True)
     FindingDescriptionGUID = Column(Text)
@@ -10237,7 +9597,6 @@ class FINDINGDESCRIPTION(Base):
 
 class FINDINGEVIDENCE(Base):
     __tablename__ = 'FINDINGEVIDENCE'
-    __bind_key__  = 'XORCISM'
 
     FindingEvidenceID = Column(Integer, primary_key=True)
 
@@ -10246,7 +9605,6 @@ class FINDINGEVIDENCE(Base):
 
 class FINDINGHTTPSESSION(Base):
     __tablename__ = 'FINDINGHTTPSESSION'
-    __bind_key__  = 'XORCISM'
 
     FindingHTTPSessionID = Column(Integer, primary_key=True)
 
@@ -10255,7 +9613,6 @@ class FINDINGHTTPSESSION(Base):
 
 class FINDINGIMPACT(Base):
     __tablename__ = 'FINDINGIMPACT'
-    __bind_key__  = 'XORCISM'
 
     FindingImpactID = Column(Integer, primary_key=True)
     FindingID = Column(Integer)
@@ -10274,7 +9631,6 @@ class FINDINGIMPACT(Base):
 
 class FINDINGMATURITY(Base):
     __tablename__ = 'FINDINGMATURITY'
-    __bind_key__  = 'XORCISM'
 
     FindingMaturityID = Column(Integer, primary_key=True)
     FindingID = Column(Integer)
@@ -10294,7 +9650,6 @@ class FINDINGMATURITY(Base):
 
 class FINDINGPERSON(Base):
     __tablename__ = 'FINDINGPERSON'
-    __bind_key__  = 'XORCISM'
 
     FindingPersonID = Column(Integer, primary_key=True)
     FindingPersonGUID = Column(Text)
@@ -10321,7 +9676,6 @@ class FINDINGPERSON(Base):
 
 class FINDINGRACIMATRIX(Base):
     __tablename__ = 'FINDINGRACIMATRIX'
-    __bind_key__  = 'XORCISM'
 
     FindingRACIMatrixID = Column(Integer, primary_key=True)
 
@@ -10330,7 +9684,6 @@ class FINDINGRACIMATRIX(Base):
 
 class FINDINGRECOMMENDATION(Base):
     __tablename__ = 'FINDINGRECOMMENDATION'
-    __bind_key__  = 'XORCISM'
 
     FindingRecommendationID = Column(Integer, primary_key=True)
     FindingID = Column(Integer, nullable=False)
@@ -10347,7 +9700,6 @@ class FINDINGRECOMMENDATION(Base):
 
 class FINDINGREFERENCE(Base):
     __tablename__ = 'FINDINGREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     FindingReferenceID = Column(Integer, primary_key=True)
     FindingID = Column(Integer, nullable=False)
@@ -10374,7 +9726,6 @@ class FINDINGREFERENCE(Base):
 
 class FINDINGSTATUS(Base):
     __tablename__ = 'FINDINGSTATUS'
-    __bind_key__  = 'XORCISM'
 
     FindingStatusID = Column(Integer, primary_key=True)
     FindingStatusDescription = Column(Text)
@@ -10386,7 +9737,6 @@ class FINDINGSTATUS(Base):
 
 class FINDINGTAG(Base):
     __tablename__ = 'FINDINGTAG'
-    __bind_key__  = 'XORCISM'
 
     FindingTagID = Column(Integer, primary_key=True)
     FindingID = Column(Integer, nullable=False)
@@ -10406,7 +9756,6 @@ class FINDINGTAG(Base):
 
 class FINDINGVULNERABILITY(Base):
     __tablename__ = 'FINDINGVULNERABILITY'
-    __bind_key__  = 'XORCISM'
 
     FindingVulnerabilityID = Column(Integer, primary_key=True)
     FindingID = Column(Integer)
@@ -10422,7 +9771,6 @@ class FINDINGVULNERABILITY(Base):
 
 class FIREWALLRULE(Base):
     __tablename__ = 'FIREWALLRULE'
-    __bind_key__  = 'XORCISM'
 
     FirewallRuleID = Column(Integer, primary_key=True)
     FirewallRuleGUID = Column(Text)
@@ -10450,7 +9798,6 @@ class FIREWALLRULE(Base):
 
 class FIREWALLRULEADDRESS(Base):
     __tablename__ = 'FIREWALLRULEADDRESS'
-    __bind_key__  = 'XORCISM'
 
     FirewallRuleAddressID = Column(Integer, primary_key=True)
 
@@ -10459,7 +9806,6 @@ class FIREWALLRULEADDRESS(Base):
 
 class FIREWALLRULECHANGERECORD(Base):
     __tablename__ = 'FIREWALLRULECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     FirewallRuleChangeRecordID = Column(Integer, primary_key=True)
 
@@ -10468,7 +9814,6 @@ class FIREWALLRULECHANGERECORD(Base):
 
 class FIREWALLRULECHANGEREQUEST(Base):
     __tablename__ = 'FIREWALLRULECHANGEREQUEST'
-    __bind_key__  = 'XORCISM'
 
     FirewallRuleChangeRequestID = Column(Integer, primary_key=True)
 
@@ -10477,7 +9822,6 @@ class FIREWALLRULECHANGEREQUEST(Base):
 
 class FIXACTION(Base):
     __tablename__ = 'FIXACTION'
-    __bind_key__  = 'XORCISM'
 
     FixActionID = Column(Integer, primary_key=True)
     FixActionGUID = Column(Text)
@@ -10506,7 +9850,6 @@ class FIXACTION(Base):
 
 class FIXACTIONCOST(Base):
     __tablename__ = 'FIXACTIONCOST'
-    __bind_key__  = 'XORCISM'
 
     FixActionCostID = Column(Integer, primary_key=True)
     cost_corrective_action = Column(Text, nullable=False)
@@ -10516,7 +9859,6 @@ class FIXACTIONCOST(Base):
 
 class FIXACTIONFORFIXACTION(Base):
     __tablename__ = 'FIXACTIONFORFIXACTION'
-    __bind_key__  = 'XORCISM'
 
     FixActionRelationshipID = Column(Integer, primary_key=True)
     FixActionRefID = Column(Integer, nullable=False)
@@ -10533,7 +9875,6 @@ class FIXACTIONFORFIXACTION(Base):
 
 class FIXACTIONFORINCIDENT(Base):
     __tablename__ = 'FIXACTIONFORINCIDENT'
-    __bind_key__  = 'XORCISM'
 
     FixActionForIncidentID = Column(Integer, primary_key=True)
     FixActionID = Column(Integer, nullable=False)
@@ -10548,7 +9889,6 @@ class FIXACTIONFORINCIDENT(Base):
 
 class FIXACTIONFORVULNERABILITY(Base):
     __tablename__ = 'FIXACTIONFORVULNERABILITY'
-    __bind_key__  = 'XORCISM'
 
     VulnerabilityFixActionID = Column(Integer, primary_key=True)
     FixActionID = Column(Integer, nullable=False)
@@ -10568,7 +9908,6 @@ class FIXACTIONFORVULNERABILITY(Base):
 
 class FIXACTIONPATCH(Base):
     __tablename__ = 'FIXACTIONPATCH'
-    __bind_key__  = 'XORCISM'
 
     FixActionPatchID = Column(Integer, primary_key=True)
     FixActionID = Column(Integer)
@@ -10590,7 +9929,6 @@ class FIXACTIONPATCH(Base):
 
 class FIXSYSTEM(Base):
     __tablename__ = 'FIXSYSTEM'
-    __bind_key__  = 'XORCISM'
 
     FixSystemID = Column(Integer, primary_key=True)
     systemURI = Column(Text, nullable=False)
@@ -10601,7 +9939,6 @@ class FIXSYSTEM(Base):
 
 class FLAG(Base):
     __tablename__ = 'FLAG'
-    __bind_key__  = 'XORCISM'
 
     FlagID = Column(Integer, primary_key=True)
     FlagValue = Column(Text, nullable=False)
@@ -10613,7 +9950,6 @@ class FLAG(Base):
 
 class FRAMEWORK(Base):
     __tablename__ = 'FRAMEWORK'
-    __bind_key__  = 'XORCISM'
 
     FrameworkID = Column(Integer, primary_key=True)
     FrameworkName = Column(Text, nullable=False)
@@ -10631,7 +9967,6 @@ class FRAMEWORK(Base):
 
 class FRAMEWORKFORTECHNICALCONTEXT(Base):
     __tablename__ = 'FRAMEWORKFORTECHNICALCONTEXT'
-    __bind_key__  = 'XORCISM'
 
     TechnicalContextFrameworkID = Column(Integer, primary_key=True)
     TechnicalContextFrameworkGUID = Column(Text)
@@ -10649,7 +9984,6 @@ class FRAMEWORKFORTECHNICALCONTEXT(Base):
 
 class FRAMEWORKREFERENCE(Base):
     __tablename__ = 'FRAMEWORKREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     FrameworkReferenceID = Column(Integer, primary_key=True)
     FrameworkReferenceDescription = Column(Text)
@@ -10667,7 +10001,6 @@ class FRAMEWORKREFERENCE(Base):
 
 class FRAUDSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'FRAUDSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     FraudStrategicObjectiveID = Column(Integer, primary_key=True)
     FraudStrategicObjectiveName = Column(Text)
@@ -10685,7 +10018,6 @@ class FRAUDSTRATEGICOBJECTIVE(Base):
 
 class FRAUDTACTICALOBJECTIVE(Base):
     __tablename__ = 'FRAUDTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     FraudTacticalObjectiveID = Column(Integer, primary_key=True)
     FraudTacticalObjectiveName = Column(Text)
@@ -10703,7 +10035,6 @@ class FRAUDTACTICALOBJECTIVE(Base):
 
 class FREQUENCY(Base):
     __tablename__ = 'FREQUENCY'
-    __bind_key__  = 'XORCISM'
 
     FrequencyID = Column(Integer, primary_key=True)
     rate = Column(Text, nullable=False)
@@ -10718,7 +10049,6 @@ class FREQUENCY(Base):
 
 class FTPACTIONNAME(Base):
     __tablename__ = 'FTPACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     FTPActionNameID = Column(Integer, primary_key=True)
     FTPActionNameName = Column(Text, nullable=False)
@@ -10736,7 +10066,6 @@ class FTPACTIONNAME(Base):
 
 class FUNCTION(Base):
     __tablename__ = 'FUNCTION'
-    __bind_key__  = 'XORCISM'
 
     FunctionID = Column(Integer, primary_key=True)
     FunctionName = Column(Text, nullable=False)
@@ -10756,7 +10085,6 @@ class FUNCTION(Base):
 
 class FUNCTIONALAREA(Base):
     __tablename__ = 'FUNCTIONALAREA'
-    __bind_key__  = 'XORCISM'
 
     FunctionalAreaID = Column(Integer, primary_key=True)
     FunctionalAreaGUID = Column(Text)
@@ -10776,7 +10104,6 @@ class FUNCTIONALAREA(Base):
 
 class FUNCTIONARGUMENT(Base):
     __tablename__ = 'FUNCTIONARGUMENT'
-    __bind_key__  = 'XORCISM'
 
     FunctionArgumentID = Column(Integer, primary_key=True)
     FunctionID = Column(Integer)
@@ -10789,7 +10116,6 @@ class FUNCTIONARGUMENT(Base):
 
 class FUNCTIONCHARACTERDELIMITER(Base):
     __tablename__ = 'FUNCTIONCHARACTERDELIMITER'
-    __bind_key__  = 'XORCISM'
 
     FunctionCharacterDelimiterID = Column(Integer, primary_key=True)
     FunctionID = Column(Integer, nullable=False)
@@ -10800,7 +10126,6 @@ class FUNCTIONCHARACTERDELIMITER(Base):
 
 class FUNCTIONDESCRIPTION(Base):
     __tablename__ = 'FUNCTIONDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     FunctionDescriptionID = Column(Integer, primary_key=True)
 
@@ -10809,7 +10134,6 @@ class FUNCTIONDESCRIPTION(Base):
 
 class FUNCTIONREFERENCE(Base):
     __tablename__ = 'FUNCTIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     FunctionReferenceID = Column(Integer, primary_key=True)
     FunctionID = Column(Integer, nullable=False)
@@ -10826,7 +10150,6 @@ class FUNCTIONREFERENCE(Base):
 
 class FUNCTIONRELATIONSHIP(Base):
     __tablename__ = 'FUNCTIONRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     FunctionRelationshipID = Column(Integer, primary_key=True)
     FunctionRelationshipGUID = Column(Text)
@@ -10845,7 +10168,6 @@ class FUNCTIONRELATIONSHIP(Base):
 
 class FUNCTIONRELATIONSHIPREFERENCE(Base):
     __tablename__ = 'FUNCTIONRELATIONSHIPREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     FunctionRelationshipReferenceID = Column(Integer, primary_key=True)
     FunctionRelationshipGUID = Column(Text)
@@ -10863,7 +10185,6 @@ class FUNCTIONRELATIONSHIPREFERENCE(Base):
 
 class FUNCTIONTAG(Base):
     __tablename__ = 'FUNCTIONTAG'
-    __bind_key__  = 'XORCISM'
 
     FunctionTagID = Column(Integer, primary_key=True)
 
@@ -10872,7 +10193,6 @@ class FUNCTIONTAG(Base):
 
 class GEOLOCATION(Base):
     __tablename__ = 'GEOLOCATION'
-    __bind_key__  = 'XORCISM'
 
     GeoLocationID = Column(Integer, primary_key=True)
     GeoLocationGUID = Column(Text)
@@ -10901,7 +10221,6 @@ class GEOLOCATION(Base):
 
 class GOOGLEDORK(Base):
     __tablename__ = 'GOOGLEDORK'
-    __bind_key__  = 'XORCISM'
 
     GoogleDorkID = Column(Integer, primary_key=True)
     DorkValue = Column(Text)
@@ -10920,7 +10239,6 @@ class GOOGLEDORK(Base):
 
 class GOOGLEDORKURI(Base):
     __tablename__ = 'GOOGLEDORKURI'
-    __bind_key__  = 'XORCISM'
 
     GoogleDorkURIID = Column(Integer, primary_key=True)
     GoogleDorkID = Column(Integer, nullable=False)
@@ -10935,7 +10253,6 @@ class GOOGLEDORKURI(Base):
 
 class GROUP(Base):
     __tablename__ = 'GROUP'
-    __bind_key__  = 'XORCISM'
 
     GoogleDorkURIID = Column(Integer, primary_key=True)
     GoogleDorkID = Column(Integer, nullable=False)
@@ -10950,7 +10267,6 @@ class GROUP(Base):
 
 class GROUPINGRELATIONSHIP(Base):
     __tablename__ = 'GROUPINGRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     GroupingRelationshipID = Column(Integer, primary_key=True)
     GroupingRelationshipName = Column(Text, nullable=False)
@@ -10968,7 +10284,6 @@ class GROUPINGRELATIONSHIP(Base):
 
 class GUIACTIONNAME(Base):
     __tablename__ = 'GUIACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     GUIActionNameID = Column(Integer, primary_key=True)
     GUIActionNameName = Column(Text, nullable=False)
@@ -10986,7 +10301,6 @@ class GUIACTIONNAME(Base):
 
 class GUIDELINE(Base):
     __tablename__ = 'GUIDELINE'
-    __bind_key__  = 'XORCISM'
 
     GuidelineID = Column(Integer, primary_key=True)
     GuidelineGUID = Column(Text)
@@ -11004,7 +10318,6 @@ class GUIDELINE(Base):
 
 class GUIDELINEFORATTACKPATTERN(Base):
     __tablename__ = 'GUIDELINEFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternGuidelineID = Column(Integer, primary_key=True)
     GuidelineID = Column(Integer, nullable=False)
@@ -11022,7 +10335,6 @@ class GUIDELINEFORATTACKPATTERN(Base):
 
 class GUIDIALOGBOX(Base):
     __tablename__ = 'GUIDIALOGBOX'
-    __bind_key__  = 'XORCISM'
 
     GUIDialogboxID = Column(Integer, primary_key=True)
 
@@ -11031,7 +10343,6 @@ class GUIDIALOGBOX(Base):
 
 class GUIOBJECT(Base):
     __tablename__ = 'GUIOBJECT'
-    __bind_key__  = 'XORCISM'
 
     GUIObjectID = Column(Integer, primary_key=True)
 
@@ -11040,7 +10351,6 @@ class GUIOBJECT(Base):
 
 class GUIWINDOW(Base):
     __tablename__ = 'GUIWINDOW'
-    __bind_key__  = 'XORCISM'
 
     GUIWindowID = Column(Integer, primary_key=True)
 
@@ -11049,7 +10359,6 @@ class GUIWINDOW(Base):
 
 class HANDLETYPE(Base):
     __tablename__ = 'HANDLETYPE'
-    __bind_key__  = 'XORCISM'
 
     HandleTypeID = Column(Integer, primary_key=True)
     HandleType = Column(Text, nullable=False)
@@ -11065,7 +10374,6 @@ class HANDLETYPE(Base):
 
 class HARDWARE(Base):
     __tablename__ = 'HARDWARE'
-    __bind_key__  = 'XORCISM'
 
     HardwareID = Column(Integer, primary_key=True)
     DeviceID = Column(Integer)
@@ -11075,7 +10383,6 @@ class HARDWARE(Base):
 
 class HASHLIST(Base):
     __tablename__ = 'HASHLIST'
-    __bind_key__  = 'XORCISM'
 
     HashListID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -11092,7 +10399,6 @@ class HASHLIST(Base):
 
 class HASHLISTVALUES(Base):
     __tablename__ = 'HASHLISTVALUES'
-    __bind_key__  = 'XORCISM'
 
     HashListValuesID = Column(Integer, primary_key=True)
     HashListID = Column(Integer, nullable=False)
@@ -11108,7 +10414,6 @@ class HASHLISTVALUES(Base):
 
 class HASHNAME(Base):
     __tablename__ = 'HASHNAME'
-    __bind_key__  = 'XORCISM'
 
     HashNameID = Column(Integer, primary_key=True)
     HashingAlgorithmName = Column(Text, nullable=False)
@@ -11127,7 +10432,6 @@ class HASHNAME(Base):
 
 class HASHVALUE(Base):
     __tablename__ = 'HASHVALUE'
-    __bind_key__  = 'XORCISM'
 
     HashValueID = Column(Integer, primary_key=True)
     HashNameID = Column(Integer)
@@ -11148,7 +10452,6 @@ class HASHVALUE(Base):
 
 class HEADER(Base):
     __tablename__ = 'HEADER'
-    __bind_key__  = 'XORCISM'
 
     HeaderID = Column(Integer, primary_key=True)
     HeaderGUID = Column(Text)
@@ -11167,7 +10470,6 @@ class HEADER(Base):
 
 class HEADERDESCRIPTION(Base):
     __tablename__ = 'HEADERDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     HeaderDescriptionID = Column(Integer, primary_key=True)
     HeaderID = Column(Integer, nullable=False)
@@ -11184,7 +10486,6 @@ class HEADERDESCRIPTION(Base):
 
 class HEADERREFERENCE(Base):
     __tablename__ = 'HEADERREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     HeaderReferenceID = Column(Integer, primary_key=True)
     HeaderID = Column(Integer, nullable=False)
@@ -11200,7 +10501,6 @@ class HEADERREFERENCE(Base):
 
 class HEADERTAG(Base):
     __tablename__ = 'HEADERTAG'
-    __bind_key__  = 'XORCISM'
 
     HeaderTagID = Column(Integer, primary_key=True)
     HeaderID = Column(Integer, nullable=False)
@@ -11214,7 +10514,6 @@ class HEADERTAG(Base):
 
 class HIVELIST(Base):
     __tablename__ = 'HIVELIST'
-    __bind_key__  = 'XORCISM'
 
     HiveListID = Column(Integer, primary_key=True)
 
@@ -11223,7 +10522,6 @@ class HIVELIST(Base):
 
 class HOOKING(Base):
     __tablename__ = 'HOOKING'
-    __bind_key__  = 'XORCISM'
 
     HookingID = Column(Integer, primary_key=True)
 
@@ -11232,7 +10530,6 @@ class HOOKING(Base):
 
 class HOOKINGACTIONNAME(Base):
     __tablename__ = 'HOOKINGACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     HookingActionNameID = Column(Integer, primary_key=True)
     HookingActionNameName = Column(Text, nullable=False)
@@ -11250,7 +10547,6 @@ class HOOKINGACTIONNAME(Base):
 
 class HOST(Base):
     __tablename__ = 'HOST'
-    __bind_key__  = 'XORCISM'
 
     HostID = Column(Integer, primary_key=True)
     ipaddressIPv4 = Column(Text)
@@ -11266,7 +10562,6 @@ class HOST(Base):
 
 class HOSTENDPOINT(Base):
     __tablename__ = 'HOSTENDPOINT'
-    __bind_key__  = 'XORCISM'
 
     HostEndPointID = Column(Integer, primary_key=True)
     HostPort = Column(Integer)
@@ -11281,7 +10576,6 @@ class HOSTENDPOINT(Base):
 
 class HOSTFIELD(Base):
     __tablename__ = 'HOSTFIELD'
-    __bind_key__  = 'XORCISM'
 
     HostFieldID = Column(Integer, primary_key=True)
     Domain_Name = Column(Text)
@@ -11295,7 +10589,6 @@ class HOSTFIELD(Base):
 
 class HOSTNAME(Base):
     __tablename__ = 'HOSTNAME'
-    __bind_key__  = 'XORCISM'
 
     HostNameID = Column(Integer, primary_key=True)
     HostNameGUID = Column(Text)
@@ -11314,7 +10607,6 @@ class HOSTNAME(Base):
 
 class HTTPACTIONNAME(Base):
     __tablename__ = 'HTTPACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     HTTPActionNameID = Column(Integer, primary_key=True)
     HTTPActionNameName = Column(Text, nullable=False)
@@ -11332,7 +10624,6 @@ class HTTPACTIONNAME(Base):
 
 class HTTPCLIENTREQUEST(Base):
     __tablename__ = 'HTTPCLIENTREQUEST'
-    __bind_key__  = 'XORCISM'
 
     HTTPClientRequestID = Column(Integer, primary_key=True)
     HTTPClientRequestGUID = Column(Text)
@@ -11354,7 +10645,6 @@ class HTTPCLIENTREQUEST(Base):
 
 class HTTPHEADER(Base):
     __tablename__ = 'HTTPHEADER'
-    __bind_key__  = 'XORCISM'
 
     HTTPHeaderID = Column(Integer, primary_key=True)
     HTTPHeaderGUID = Column(Text)
@@ -11376,7 +10666,6 @@ class HTTPHEADER(Base):
 
 class HTTPHEADERCPE(Base):
     __tablename__ = 'HTTPHEADERCPE'
-    __bind_key__  = 'XORCISM'
 
     HTTPHeaderCPEID = Column(Integer, primary_key=True)
     CPEID = Column(Integer)
@@ -11400,7 +10689,6 @@ class HTTPHEADERCPE(Base):
 
 class HTTPHEADERDESCRIPTION(Base):
     __tablename__ = 'HTTPHEADERDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     HTTPHeaderDescriptionID = Column(Integer, primary_key=True)
     HTTPHeaderID = Column(Integer, nullable=False)
@@ -11416,7 +10704,6 @@ class HTTPHEADERDESCRIPTION(Base):
 
 class HTTPHEADERPRODUCT(Base):
     __tablename__ = 'HTTPHEADERPRODUCT'
-    __bind_key__  = 'XORCISM'
 
     HTTPHeaderProductID = Column(Integer, primary_key=True)
     HTTPHeaderID = Column(Integer)
@@ -11436,7 +10723,6 @@ class HTTPHEADERPRODUCT(Base):
 
 class HTTPMESSAGE(Base):
     __tablename__ = 'HTTPMESSAGE'
-    __bind_key__  = 'XORCISM'
 
     HTTPMessageID = Column(Integer, primary_key=True)
     MessageID = Column(Integer)
@@ -11458,7 +10744,6 @@ class HTTPMESSAGE(Base):
 
 class HTTPMETHOD(Base):
     __tablename__ = 'HTTPMETHOD'
-    __bind_key__  = 'XORCISM'
 
     HTTPMethodID = Column(Integer, primary_key=True)
     HTTPMethodEnumID = Column(Integer)
@@ -11468,7 +10753,6 @@ class HTTPMETHOD(Base):
 
 class HTTPMETHODENUM(Base):
     __tablename__ = 'HTTPMETHODENUM'
-    __bind_key__  = 'XORCISM'
 
     HTTPMethodEnumID = Column(Integer, primary_key=True)
     HTTPMethodName = Column(Text)
@@ -11486,7 +10770,6 @@ class HTTPMETHODENUM(Base):
 
 class HTTPREQUESTHEADER(Base):
     __tablename__ = 'HTTPREQUESTHEADER'
-    __bind_key__  = 'XORCISM'
 
     HTTPRequestHeaderID = Column(Integer, primary_key=True)
     Raw_Header = Column(Text)
@@ -11506,7 +10789,6 @@ class HTTPREQUESTHEADER(Base):
 
 class HTTPREQUESTHEADERFIELDS(Base):
     __tablename__ = 'HTTPREQUESTHEADERFIELDS'
-    __bind_key__  = 'XORCISM'
 
     HTTPRequestHeaderFieldsID = Column(Integer, primary_key=True)
     Accept = Column(Text)
@@ -11564,7 +10846,6 @@ class HTTPREQUESTHEADERFIELDS(Base):
 
 class HTTPREQUESTLINE(Base):
     __tablename__ = 'HTTPREQUESTLINE'
-    __bind_key__  = 'XORCISM'
 
     HTTPRequestLineID = Column(Integer, primary_key=True)
     HTTP_Method = Column(Integer)
@@ -11578,7 +10859,6 @@ class HTTPREQUESTLINE(Base):
 
 class HTTPREQUESTRESPONSE(Base):
     __tablename__ = 'HTTPREQUESTRESPONSE'
-    __bind_key__  = 'XORCISM'
 
     HTTPRequestResponseID = Column(Integer, primary_key=True)
     HTTPRequestResponseGUID = Column(Text)
@@ -11599,7 +10879,6 @@ class HTTPREQUESTRESPONSE(Base):
 
 class HTTPRESPONSEHEADER(Base):
     __tablename__ = 'HTTPRESPONSEHEADER'
-    __bind_key__  = 'XORCISM'
 
     HTTPResponseHeaderID = Column(Integer, primary_key=True)
     Raw_Header = Column(Text)
@@ -11617,7 +10896,6 @@ class HTTPRESPONSEHEADER(Base):
 
 class HTTPRESPONSEHEADERFIELDS(Base):
     __tablename__ = 'HTTPRESPONSEHEADERFIELDS'
-    __bind_key__  = 'XORCISM'
 
     HTTPResponseHeaderFieldsID = Column(Integer, primary_key=True)
     Access_Control_Allow_Origin = Column(Text)
@@ -11675,7 +10953,6 @@ class HTTPRESPONSEHEADERFIELDS(Base):
 
 class HTTPSERVERRESPONSE(Base):
     __tablename__ = 'HTTPSERVERRESPONSE'
-    __bind_key__  = 'XORCISM'
 
     HTTPServerResponseID = Column(Integer, primary_key=True)
     HTTP_Status_Line = Column(Integer)
@@ -11692,7 +10969,6 @@ class HTTPSERVERRESPONSE(Base):
 
 class HTTPSESSION(Base):
     __tablename__ = 'HTTPSESSION'
-    __bind_key__  = 'XORCISM'
 
     HTTPSessionID = Column(Integer, primary_key=True)
     HTTPSessionGUID = Column(Text)
@@ -11713,7 +10989,6 @@ class HTTPSESSION(Base):
 
 class HTTPSESSIONCOOKIE(Base):
     __tablename__ = 'HTTPSESSIONCOOKIE'
-    __bind_key__  = 'XORCISM'
 
     HTTPSessionCookieID = Column(Integer, primary_key=True)
     HTTPSessionCookieGUID = Column(Text)
@@ -11736,7 +11011,6 @@ class HTTPSESSIONCOOKIE(Base):
 
 class HTTPSTATUSLINE(Base):
     __tablename__ = 'HTTPSTATUSLINE'
-    __bind_key__  = 'XORCISM'
 
     HTTPStatusLineID = Column(Integer, primary_key=True)
     Version = Column(Text)
@@ -11755,7 +11029,6 @@ class HTTPSTATUSLINE(Base):
 
 class HUMANRISK(Base):
     __tablename__ = 'HUMANRISK'
-    __bind_key__  = 'XORCISM'
 
     HumanRiskID = Column(Integer, primary_key=True)
     HumanRiskName = Column(Text, nullable=False)
@@ -11773,7 +11046,6 @@ class HUMANRISK(Base):
 
 class ICOMHANDLERACTION(Base):
     __tablename__ = 'ICOMHANDLERACTION'
-    __bind_key__  = 'XORCISM'
 
     IComHandlerActionID = Column(Integer, primary_key=True)
     COM_Data = Column(Text)
@@ -11784,7 +11056,6 @@ class ICOMHANDLERACTION(Base):
 
 class IDENTIFICATIONSYSTEM(Base):
     __tablename__ = 'IDENTIFICATIONSYSTEM'
-    __bind_key__  = 'XORCISM'
 
     IdentificationSystemID = Column(Integer, primary_key=True)
     SystemURI = Column(Text, nullable=False)
@@ -11801,7 +11072,6 @@ class IDENTIFICATIONSYSTEM(Base):
 
 class IDENTIFIER(Base):
     __tablename__ = 'IDENTIFIER'
-    __bind_key__  = 'XORCISM'
 
     IdentifierID = Column(Integer, primary_key=True)
 
@@ -11810,7 +11080,6 @@ class IDENTIFIER(Base):
 
 class IDTENTRY(Base):
     __tablename__ = 'IDTENTRY'
-    __bind_key__  = 'XORCISM'
 
     IDTEntryID = Column(Integer, primary_key=True)
     Type_Attr = Column(Text)
@@ -11831,7 +11100,6 @@ class IDTENTRY(Base):
 
 class IDTENTRYLIST(Base):
     __tablename__ = 'IDTENTRYLIST'
-    __bind_key__  = 'XORCISM'
 
     IDTEntryListID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -11846,7 +11114,6 @@ class IDTENTRYLIST(Base):
 
 class IDTENTRYLISTENTRIES(Base):
     __tablename__ = 'IDTENTRYLISTENTRIES'
-    __bind_key__  = 'XORCISM'
 
     IDTEntryListEntriesID = Column(Integer, primary_key=True)
     IDTEntryListID = Column(Integer, nullable=False)
@@ -11864,7 +11131,6 @@ class IDTENTRYLISTENTRIES(Base):
 
 class IEXECACTION(Base):
     __tablename__ = 'IEXECACTION'
-    __bind_key__  = 'XORCISM'
 
     IExecActionID = Column(Integer, primary_key=True)
     Exec_Arguments = Column(Text)
@@ -11879,7 +11145,6 @@ class IEXECACTION(Base):
 
 class IMAGEFILE(Base):
     __tablename__ = 'IMAGEFILE'
-    __bind_key__  = 'XORCISM'
 
     ImageFileID = Column(Integer, primary_key=True)
     FileID = Column(Integer)
@@ -11903,7 +11168,6 @@ class IMAGEFILE(Base):
 
 class IMAGEFILEEXIFTAG(Base):
     __tablename__ = 'IMAGEFILEEXIFTAG'
-    __bind_key__  = 'XORCISM'
 
     ImageFileEXIFTagID = Column(Integer, primary_key=True)
 
@@ -11912,7 +11176,6 @@ class IMAGEFILEEXIFTAG(Base):
 
 class IMAGEFILEFORMAT(Base):
     __tablename__ = 'IMAGEFILEFORMAT'
-    __bind_key__  = 'XORCISM'
 
     ImageFileFormatID = Column(Integer, primary_key=True)
     ImageFileFormatName = Column(Text)
@@ -11929,7 +11192,6 @@ class IMAGEFILEFORMAT(Base):
 
 class IMAGEFILETYPE(Base):
     __tablename__ = 'IMAGEFILETYPE'
-    __bind_key__  = 'XORCISM'
 
     ImageFileTypeID = Column(Integer, primary_key=True)
     ImageFileTypeName = Column(Text)
@@ -11946,7 +11208,6 @@ class IMAGEFILETYPE(Base):
 
 class IMPACT(Base):
     __tablename__ = 'IMPACT'
-    __bind_key__  = 'XORCISM'
 
     ImpactID = Column(Integer, primary_key=True)
     TechnicalImpact = Column(Integer)
@@ -11966,7 +11227,6 @@ class IMPACT(Base):
 
 class IMPACTQUALIFICATION(Base):
     __tablename__ = 'IMPACTQUALIFICATION'
-    __bind_key__  = 'XORCISM'
 
     ImpactQualificationID = Column(Integer, primary_key=True)
     ImpactQualificationName = Column(Text)
@@ -11984,7 +11244,6 @@ class IMPACTQUALIFICATION(Base):
 
 class IMPACTRATING(Base):
     __tablename__ = 'IMPACTRATING'
-    __bind_key__  = 'XORCISM'
 
     ImpactRatingID = Column(Integer, primary_key=True)
     ImpactRatingName = Column(Text)
@@ -12002,7 +11261,6 @@ class IMPACTRATING(Base):
 
 class IMPORTANCE(Base):
     __tablename__ = 'IMPORTANCE'
-    __bind_key__  = 'XORCISM'
 
     ImportanceID = Column(Integer, primary_key=True)
     ImportanceGUID = Column(Text)
@@ -12021,7 +11279,6 @@ class IMPORTANCE(Base):
 
 class IMPORTANCETYPE(Base):
     __tablename__ = 'IMPORTANCETYPE'
-    __bind_key__  = 'XORCISM'
 
     ImportanceTypeID = Column(Integer, primary_key=True)
     ImportanceTypeName = Column(Text, nullable=False)
@@ -12039,7 +11296,6 @@ class IMPORTANCETYPE(Base):
 
 class INDICATOR(Base):
     __tablename__ = 'INDICATOR'
-    __bind_key__  = 'XORCISM'
 
     IndicatorID = Column(Integer, primary_key=True)
     IndicatorGUID = Column(Text)
@@ -12065,7 +11321,6 @@ class INDICATOR(Base):
 
 class INDICATORENVIRONMENT(Base):
     __tablename__ = 'INDICATORENVIRONMENT'
-    __bind_key__  = 'XORCISM'
 
     IndicatorEnvironmentID = Column(Integer, primary_key=True)
     IndicatorEnvironmentGUID = Column(Text)
@@ -12082,7 +11337,6 @@ class INDICATORENVIRONMENT(Base):
 
 class INDICATORFORINDICATOR(Base):
     __tablename__ = 'INDICATORFORINDICATOR'
-    __bind_key__  = 'XORCISM'
 
     IndicatorRefID = Column(Integer, primary_key=True)
     IndicatorSubjectID = Column(Integer, nullable=False)
@@ -12092,7 +11346,6 @@ class INDICATORFORINDICATOR(Base):
 
 class INDICATORID(Base):
     __tablename__ = 'INDICATORID'
-    __bind_key__  = 'XORCISM'
 
     IndicatorIDID = Column(Integer, primary_key=True)
     IndicatorAlternativeID = Column(Text, nullable=False)
@@ -12103,7 +11356,6 @@ class INDICATORID(Base):
 
 class INDICATORIDFORINCIDENTIOC(Base):
     __tablename__ = 'INDICATORIDFORINCIDENTIOC'
-    __bind_key__  = 'XORCISM'
 
     IndicatorIDID = Column(Integer, primary_key=True)
     IncidentIOCID = Column(Integer, nullable=False)
@@ -12113,7 +11365,6 @@ class INDICATORIDFORINCIDENTIOC(Base):
 
 class INDICATORIDFORINDICATOR(Base):
     __tablename__ = 'INDICATORIDFORINDICATOR'
-    __bind_key__  = 'XORCISM'
 
     IndicatorIDID = Column(Integer, primary_key=True)
     IndicatorID = Column(Integer, nullable=False)
@@ -12123,7 +11374,6 @@ class INDICATORIDFORINDICATOR(Base):
 
 class INDICATORTESTMECHANISM(Base):
     __tablename__ = 'INDICATORTESTMECHANISM'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTestMechanismID = Column(Integer, primary_key=True)
     IndicatorID = Column(Integer)
@@ -12142,7 +11392,6 @@ class INDICATORTESTMECHANISM(Base):
 
 class INDICATORTESTMECHANISMCPE(Base):
     __tablename__ = 'INDICATORTESTMECHANISMCPE'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTestMechanismCPEID = Column(Integer, primary_key=True)
     IndicatorTestMechanismID = Column(Integer)
@@ -12161,7 +11410,6 @@ class INDICATORTESTMECHANISMCPE(Base):
 
 class INDICATORTESTMECHANISMEVENTFILTER(Base):
     __tablename__ = 'INDICATORTESTMECHANISMEVENTFILTER'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTestMechanismEventFilterID = Column(Integer, primary_key=True)
     IndicatorTestMechanismID = Column(Integer)
@@ -12178,7 +11426,6 @@ class INDICATORTESTMECHANISMEVENTFILTER(Base):
 
 class INDICATORTESTMECHANISMEVENTSUPPRESSION(Base):
     __tablename__ = 'INDICATORTESTMECHANISMEVENTSUPPRESSION'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTestMechanismEventSuppressionID = Column(Integer, primary_key=True)
     IndicatorTestMechanismID = Column(Integer)
@@ -12195,7 +11442,6 @@ class INDICATORTESTMECHANISMEVENTSUPPRESSION(Base):
 
 class INDICATORTESTMECHANISMRATEFILTER(Base):
     __tablename__ = 'INDICATORTESTMECHANISMRATEFILTER'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTestMechanismRateFilterID = Column(Integer, primary_key=True)
     IndicatorTestMechanismID = Column(Integer)
@@ -12212,7 +11458,6 @@ class INDICATORTESTMECHANISMRATEFILTER(Base):
 
 class INDICATORTESTMECHANISMRULE(Base):
     __tablename__ = 'INDICATORTESTMECHANISMRULE'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTestMechanismRuleID = Column(Integer, primary_key=True)
     IndicatorTestMechanismID = Column(Integer)
@@ -12227,7 +11472,6 @@ class INDICATORTESTMECHANISMRULE(Base):
 
 class INDICATORTYPE(Base):
     __tablename__ = 'INDICATORTYPE'
-    __bind_key__  = 'XORCISM'
 
     IndicatorTypeID = Column(Integer, primary_key=True)
     IndicatorTypeGUID = Column(Text)
@@ -12246,7 +11490,6 @@ class INDICATORTYPE(Base):
 
 class INFECTIONPROPAGATIONPROPERTIES(Base):
     __tablename__ = 'INFECTIONPROPAGATIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     InfectionPropagationPropertiesID = Column(Integer, primary_key=True)
     InfectionPropagationPropertiesName = Column(Text)
@@ -12264,7 +11507,6 @@ class INFECTIONPROPAGATIONPROPERTIES(Base):
 
 class INFECTIONPROPAGATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'INFECTIONPROPAGATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     InfectionPropagationStrategicObjectiveID = Column(Integer, primary_key=True)
     InfectionPropagationStrategicObjectiveName = Column(Text)
@@ -12282,7 +11524,6 @@ class INFECTIONPROPAGATIONSTRATEGICOBJECTIVE(Base):
 
 class INFECTIONPROPAGATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'INFECTIONPROPAGATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     InfectionPropagationTacticalObjectiveID = Column(Integer, primary_key=True)
     InfectionPropagationTacticalObjectiveName = Column(Text)
@@ -12300,7 +11541,6 @@ class INFECTIONPROPAGATIONTACTICALOBJECTIVE(Base):
 
 class INFLUENCE(Base):
     __tablename__ = 'INFLUENCE'
-    __bind_key__  = 'XORCISM'
 
     InfluenceID = Column(Integer, primary_key=True)
 
@@ -12309,7 +11549,6 @@ class INFLUENCE(Base):
 
 class INFORMATIONSOURCEROLE(Base):
     __tablename__ = 'INFORMATIONSOURCEROLE'
-    __bind_key__  = 'XORCISM'
 
     InformationSourceRoleID = Column(Integer, primary_key=True)
     InformationSourceRoleGUID = Column(Text)
@@ -12326,7 +11565,6 @@ class INFORMATIONSOURCEROLE(Base):
 
 class INFORMATIONSOURCETYPE(Base):
     __tablename__ = 'INFORMATIONSOURCETYPE'
-    __bind_key__  = 'XORCISM'
 
     InformationSourceTypeID = Column(Integer, primary_key=True)
     InformationSourceTypeGUID = Column(Text)
@@ -12345,7 +11583,6 @@ class INFORMATIONSOURCETYPE(Base):
 
 class INFORMATIONTYPE(Base):
     __tablename__ = 'INFORMATIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     InformationTypeID = Column(Integer, primary_key=True)
     InformationTypeGUID = Column(Text)
@@ -12364,7 +11601,6 @@ class INFORMATIONTYPE(Base):
 
 class INFORMATIONTYPEFORTHREATACTORTTP(Base):
     __tablename__ = 'INFORMATIONTYPEFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     InformationTypeID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -12374,7 +11610,6 @@ class INFORMATIONTYPEFORTHREATACTORTTP(Base):
 
 class INFRASTRUCTURE(Base):
     __tablename__ = 'INFRASTRUCTURE'
-    __bind_key__  = 'XORCISM'
 
     InfrastructureID = Column(Integer, primary_key=True)
     InfrastructureGUID = Column(Text)
@@ -12385,7 +11620,6 @@ class INFRASTRUCTURE(Base):
 
 class INJECTIONVECTOR(Base):
     __tablename__ = 'INJECTIONVECTOR'
-    __bind_key__  = 'XORCISM'
 
     InjectionVectorID = Column(Integer, primary_key=True)
     InjectionVectorGUID = Column(Text)
@@ -12400,7 +11634,6 @@ class INJECTIONVECTOR(Base):
 
 class INJECTIONVECTORFORATTACKPATTERN(Base):
     __tablename__ = 'INJECTIONVECTORFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternInjectionVectorID = Column(Integer, primary_key=True)
     InjectionVectorID = Column(Integer, nullable=False)
@@ -12415,7 +11648,6 @@ class INJECTIONVECTORFORATTACKPATTERN(Base):
 
 class INSTANCE(Base):
     __tablename__ = 'INSTANCE'
-    __bind_key__  = 'XORCISM'
 
     InstanceID = Column(Integer, primary_key=True)
     ProcessID = Column(Integer)
@@ -12425,7 +11657,6 @@ class INSTANCE(Base):
 
 class INSTRUCTION(Base):
     __tablename__ = 'INSTRUCTION'
-    __bind_key__  = 'XORCISM'
 
     InstructionID = Column(Integer, primary_key=True)
     OpcodeID = Column(Integer, nullable=False)
@@ -12440,7 +11671,6 @@ class INSTRUCTION(Base):
 
 class INTEGRITYLEVEL(Base):
     __tablename__ = 'INTEGRITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     IntegrityLevelID = Column(Integer, primary_key=True)
     IntegrityLevel = Column(Text)
@@ -12456,7 +11686,6 @@ class INTEGRITYLEVEL(Base):
 
 class INTEGRITYVIOLATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'INTEGRITYVIOLATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     IntegrityViolationStrategicObjectiveID = Column(Integer, primary_key=True)
     IntegrityViolationStrategicObjectiveName = Column(Text)
@@ -12474,7 +11703,6 @@ class INTEGRITYVIOLATIONSTRATEGICOBJECTIVE(Base):
 
 class INTEGRITYVIOLATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'INTEGRITYVIOLATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     IntegrityViolationTacticalObjectiveID = Column(Integer, primary_key=True)
     IntegrityViolationTacticalObjectiveName = Column(Text)
@@ -12492,7 +11720,6 @@ class INTEGRITYVIOLATIONTACTICALOBJECTIVE(Base):
 
 class INTERACTIONLEVEL(Base):
     __tablename__ = 'INTERACTIONLEVEL'
-    __bind_key__  = 'XORCISM'
 
     InteractionLevelID = Column(Integer, primary_key=True)
     InteractionLevel = Column(Text, nullable=False)
@@ -12503,7 +11730,6 @@ class INTERACTIONLEVEL(Base):
 
 class INTERACTIONPOINTS(Base):
     __tablename__ = 'INTERACTIONPOINTS'
-    __bind_key__  = 'XORCISM'
 
     InteractionPointsID = Column(Integer, primary_key=True)
 
@@ -12512,7 +11738,6 @@ class INTERACTIONPOINTS(Base):
 
 class INTERACTIONPOINTSECURITYCONTROL(Base):
     __tablename__ = 'INTERACTIONPOINTSECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     InteractionPointSecurityControlID = Column(Integer, primary_key=True)
 
@@ -12521,7 +11746,6 @@ class INTERACTIONPOINTSECURITYCONTROL(Base):
 
 class INTERFACE(Base):
     __tablename__ = 'INTERFACE'
-    __bind_key__  = 'XORCISM'
 
     InterfaceID = Column(Integer, primary_key=True)
     InterfaceName = Column(Text, nullable=False)
@@ -12534,7 +11758,6 @@ class INTERFACE(Base):
 
 class INTERFACEFORSYSTEMINFO(Base):
     __tablename__ = 'INTERFACEFORSYSTEMINFO'
-    __bind_key__  = 'XORCISM'
 
     SystemInfoID = Column(Integer, primary_key=True)
     InterfaceID = Column(Integer, nullable=False)
@@ -12544,7 +11767,6 @@ class INTERFACEFORSYSTEMINFO(Base):
 
 class INTRUSION(Base):
     __tablename__ = 'INTRUSION'
-    __bind_key__  = 'XORCISM'
 
     IntrusionID = Column(Integer, primary_key=True)
     BreachID = Column(Integer)
@@ -12554,7 +11776,6 @@ class INTRUSION(Base):
 
 class INVESTIGATION(Base):
     __tablename__ = 'INVESTIGATION'
-    __bind_key__  = 'XORCISM'
 
     InvestigationID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer)
@@ -12564,7 +11785,6 @@ class INVESTIGATION(Base):
 
 class IPCACTIONNAME(Base):
     __tablename__ = 'IPCACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     IPCActionNameID = Column(Integer, primary_key=True)
     IPCActionNameName = Column(Text, nullable=False)
@@ -12582,7 +11802,6 @@ class IPCACTIONNAME(Base):
 
 class IPFIXDATASET(Base):
     __tablename__ = 'IPFIXDATASET'
-    __bind_key__  = 'XORCISM'
 
     IPFIXDataSetID = Column(Integer, primary_key=True)
 
@@ -12591,7 +11810,6 @@ class IPFIXDATASET(Base):
 
 class IPFIXMESSAGE(Base):
     __tablename__ = 'IPFIXMESSAGE'
-    __bind_key__  = 'XORCISM'
 
     IPFIXMessageID = Column(Integer, primary_key=True)
 
@@ -12600,7 +11818,6 @@ class IPFIXMESSAGE(Base):
 
 class IPFIXMESSAGEHEADER(Base):
     __tablename__ = 'IPFIXMESSAGEHEADER'
-    __bind_key__  = 'XORCISM'
 
     IPFIXMessageHeaderID = Column(Integer, primary_key=True)
     VersionNumber = Column(Text)
@@ -12614,7 +11831,6 @@ class IPFIXMESSAGEHEADER(Base):
 
 class IPFIXOPTIONSTEMPLATERECORD(Base):
     __tablename__ = 'IPFIXOPTIONSTEMPLATERECORD'
-    __bind_key__  = 'XORCISM'
 
     IPFIXOptionsTemplateRecordID = Column(Integer, primary_key=True)
 
@@ -12623,7 +11839,6 @@ class IPFIXOPTIONSTEMPLATERECORD(Base):
 
 class IPFIXOPTIONSTEMPLATERECORDFIELDSPECIFIERS(Base):
     __tablename__ = 'IPFIXOPTIONSTEMPLATERECORDFIELDSPECIFIERS'
-    __bind_key__  = 'XORCISM'
 
     IPFIXOptionsTemplateRecordFieldSpecifiersID = Column(Integer, primary_key=True)
 
@@ -12632,7 +11847,6 @@ class IPFIXOPTIONSTEMPLATERECORDFIELDSPECIFIERS(Base):
 
 class IPFIXOPTIONSTEMPLATERECORDHEADER(Base):
     __tablename__ = 'IPFIXOPTIONSTEMPLATERECORDHEADER'
-    __bind_key__  = 'XORCISM'
 
     IPFIXOptionsTemplateRecordHeaderID = Column(Integer, primary_key=True)
     Template_ID = Column(Integer)
@@ -12644,7 +11858,6 @@ class IPFIXOPTIONSTEMPLATERECORDHEADER(Base):
 
 class IPFIXOPTIONSTEMPLATESET(Base):
     __tablename__ = 'IPFIXOPTIONSTEMPLATESET'
-    __bind_key__  = 'XORCISM'
 
     IPFIXOptionsTemplateSetID = Column(Integer, primary_key=True)
     Padding = Column(Text)
@@ -12654,7 +11867,6 @@ class IPFIXOPTIONSTEMPLATESET(Base):
 
 class IPFIXSET(Base):
     __tablename__ = 'IPFIXSET'
-    __bind_key__  = 'XORCISM'
 
     IPFIXSetID = Column(Integer, primary_key=True)
 
@@ -12663,7 +11875,6 @@ class IPFIXSET(Base):
 
 class IPFIXSETHEADER(Base):
     __tablename__ = 'IPFIXSETHEADER'
-    __bind_key__  = 'XORCISM'
 
     IPFIXSetHeaderID = Column(Integer, primary_key=True)
     Set_ID = Column(Integer)
@@ -12674,7 +11885,6 @@ class IPFIXSETHEADER(Base):
 
 class IPFIXTEMPLATERECORD(Base):
     __tablename__ = 'IPFIXTEMPLATERECORD'
-    __bind_key__  = 'XORCISM'
 
     IPFIXTemplateRecordID = Column(Integer, primary_key=True)
 
@@ -12683,7 +11893,6 @@ class IPFIXTEMPLATERECORD(Base):
 
 class IPFIXTEMPLATERECORDFIELDSPECIFIER(Base):
     __tablename__ = 'IPFIXTEMPLATERECORDFIELDSPECIFIER'
-    __bind_key__  = 'XORCISM'
 
     IPFIXTemplateRecordFieldSpecifierID = Column(Integer, primary_key=True)
     Enterprise_Bit = Column(Integer)
@@ -12696,7 +11905,6 @@ class IPFIXTEMPLATERECORDFIELDSPECIFIER(Base):
 
 class IPFIXTEMPLATERECORDHEADER(Base):
     __tablename__ = 'IPFIXTEMPLATERECORDHEADER'
-    __bind_key__  = 'XORCISM'
 
     IPFIXTemplateRecordHeaderID = Column(Integer, primary_key=True)
     Template_ID = Column(Integer)
@@ -12707,7 +11915,6 @@ class IPFIXTEMPLATERECORDHEADER(Base):
 
 class IPFIXTEMPLATESET(Base):
     __tablename__ = 'IPFIXTEMPLATESET'
-    __bind_key__  = 'XORCISM'
 
     IPFIXTemplateSetID = Column(Integer, primary_key=True)
     Padding = Column(Text)
@@ -12717,7 +11924,6 @@ class IPFIXTEMPLATESET(Base):
 
 class IRCACTIONNAME(Base):
     __tablename__ = 'IRCACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     IRCActionNameID = Column(Integer, primary_key=True)
     IRCActionNameName = Column(Text, nullable=False)
@@ -12735,7 +11941,6 @@ class IRCACTIONNAME(Base):
 
 class ISHOWMESSAGEACTION(Base):
     __tablename__ = 'ISHOWMESSAGEACTION'
-    __bind_key__  = 'XORCISM'
 
     IShowMessageActionID = Column(Integer, primary_key=True)
     Show_Message_Body = Column(Text)
@@ -12746,7 +11951,6 @@ class ISHOWMESSAGEACTION(Base):
 
 class ISOCURRENCY(Base):
     __tablename__ = 'ISOCURRENCY'
-    __bind_key__  = 'XORCISM'
 
     iso_currency_code = Column(Text, primary_key=True)
 
@@ -12755,7 +11959,6 @@ class ISOCURRENCY(Base):
 
 class JOB(Base):
     __tablename__ = 'JOB'
-    __bind_key__  = 'XORCISM'
 
     JobID = Column(Integer, primary_key=True)
     JobGUID = Column(Text)
@@ -12778,7 +11981,6 @@ class JOB(Base):
 
 class KERNELHOOK(Base):
     __tablename__ = 'KERNELHOOK'
-    __bind_key__  = 'XORCISM'
 
     KernelHookID = Column(Integer, primary_key=True)
     KernelHookTypeEnumID = Column(Integer)
@@ -12793,7 +11995,6 @@ class KERNELHOOK(Base):
 
 class KERNELHOOKTYPEENUM(Base):
     __tablename__ = 'KERNELHOOKTYPEENUM'
-    __bind_key__  = 'XORCISM'
 
     KernelHookTypeEnumID = Column(Integer, primary_key=True)
     KernelHookType = Column(Text)
@@ -12809,7 +12010,6 @@ class KERNELHOOKTYPEENUM(Base):
 
 class KEYWORD(Base):
     __tablename__ = 'KEYWORD'
-    __bind_key__  = 'XORCISM'
 
     KeywordID = Column(Integer, primary_key=True)
     KeywordValue = Column(Text, nullable=False)
@@ -12820,7 +12020,6 @@ class KEYWORD(Base):
 
 class KILLCHAIN(Base):
     __tablename__ = 'KILLCHAIN'
-    __bind_key__  = 'XORCISM'
 
     KillChainID = Column(Integer, primary_key=True)
     KillChainGID = Column(Text)
@@ -12840,7 +12039,6 @@ class KILLCHAIN(Base):
 
 class KILLCHAINFORTHREATACTORTTP(Base):
     __tablename__ = 'KILLCHAINFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     KillChainID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -12850,7 +12048,6 @@ class KILLCHAINFORTHREATACTORTTP(Base):
 
 class KILLCHAINPHASE(Base):
     __tablename__ = 'KILLCHAINPHASE'
-    __bind_key__  = 'XORCISM'
 
     KillChainPhaseID = Column(Integer, primary_key=True)
     KillChainPhaseGID = Column(Text)
@@ -12865,7 +12062,6 @@ class KILLCHAINPHASE(Base):
 
 class KILLCHAINPHASEFORKILLCHAIN(Base):
     __tablename__ = 'KILLCHAINPHASEFORKILLCHAIN'
-    __bind_key__  = 'XORCISM'
 
     KillChainKillChainPhaseID = Column(Integer, primary_key=True)
     KillChainID = Column(Integer, nullable=False)
@@ -12880,7 +12076,6 @@ class KILLCHAINPHASEFORKILLCHAIN(Base):
 
 class KILLCHAINPHASEFORTHREATACTORTTP(Base):
     __tablename__ = 'KILLCHAINPHASEFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     ThreatActorTTPKillChainPhaseID = Column(Integer, primary_key=True)
     KillChainPhaseID = Column(Integer, nullable=False)
@@ -12895,7 +12090,6 @@ class KILLCHAINPHASEFORTHREATACTORTTP(Base):
 
 class LABEL(Base):
     __tablename__ = 'LABEL'
-    __bind_key__  = 'XORCISM'
 
     LabelID = Column(Integer, primary_key=True)
 
@@ -12904,7 +12098,6 @@ class LABEL(Base):
 
 class LANGUAGE(Base):
     __tablename__ = 'LANGUAGE'
-    __bind_key__  = 'XORCISM'
 
     LanguageID = Column(Integer, primary_key=True)
     LanguageGUID = Column(Text)
@@ -12922,7 +12115,6 @@ class LANGUAGE(Base):
 
 class LANGUAGECHARACTEREOL(Base):
     __tablename__ = 'LANGUAGECHARACTEREOL'
-    __bind_key__  = 'XORCISM'
 
     LanguageCharacterEOLID = Column(Integer, primary_key=True)
     LanguageID = Column(Integer, nullable=False)
@@ -12934,7 +12126,6 @@ class LANGUAGECHARACTEREOL(Base):
 
 class LANGUAGECLASS(Base):
     __tablename__ = 'LANGUAGECLASS'
-    __bind_key__  = 'XORCISM'
 
     LanguageClassID = Column(Integer, primary_key=True)
     LanguageClassDescription = Column(Text, nullable=False)
@@ -12950,7 +12141,6 @@ class LANGUAGECLASS(Base):
 
 class LANGUAGEFORAPPLICATION(Base):
     __tablename__ = 'LANGUAGEFORAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     ApplicationLanguageID = Column(Integer, primary_key=True)
     ApplicationID = Column(Integer, nullable=False)
@@ -12968,7 +12158,6 @@ class LANGUAGEFORAPPLICATION(Base):
 
 class LANGUAGEFORTECHNICALCONTEXT(Base):
     __tablename__ = 'LANGUAGEFORTECHNICALCONTEXT'
-    __bind_key__  = 'XORCISM'
 
     TechnicalContextLanguageID = Column(Integer, primary_key=True)
     LanguageID = Column(Integer, nullable=False)
@@ -12987,7 +12176,6 @@ class LANGUAGEFORTECHNICALCONTEXT(Base):
 
 class LANGUAGEFUNCTION(Base):
     __tablename__ = 'LANGUAGEFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     LanguageFunctionID = Column(Integer, primary_key=True)
     LanguageFunctionGUID = Column(Text)
@@ -13024,7 +12212,6 @@ class LANGUAGEFUNCTION(Base):
 
 class LANGUAGEFUNCTIONREFERENCE(Base):
     __tablename__ = 'LANGUAGEFUNCTIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     LanguageFunctionReferenceID = Column(Integer, primary_key=True)
 
@@ -13033,7 +12220,6 @@ class LANGUAGEFUNCTIONREFERENCE(Base):
 
 class LANGUAGEFUNCTIONTAG(Base):
     __tablename__ = 'LANGUAGEFUNCTIONTAG'
-    __bind_key__  = 'XORCISM'
 
     LanguageFunctionTagID = Column(Integer, primary_key=True)
 
@@ -13042,7 +12228,6 @@ class LANGUAGEFUNCTIONTAG(Base):
 
 class LAW(Base):
     __tablename__ = 'LAW'
-    __bind_key__  = 'XORCISM'
 
     LawID = Column(Integer, primary_key=True)
 
@@ -13051,7 +12236,6 @@ class LAW(Base):
 
 class LIBRARY(Base):
     __tablename__ = 'LIBRARY'
-    __bind_key__  = 'XORCISM'
 
     LibraryID = Column(Integer, primary_key=True)
 
@@ -13060,7 +12244,6 @@ class LIBRARY(Base):
 
 class LIBRARYACTIONNAME(Base):
     __tablename__ = 'LIBRARYACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     LibraryActionNameID = Column(Integer, primary_key=True)
     LibraryActionNameName = Column(Text, nullable=False)
@@ -13078,7 +12261,6 @@ class LIBRARYACTIONNAME(Base):
 
 class LIBRARYDESCRIPTION(Base):
     __tablename__ = 'LIBRARYDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     LibraryDescriptionID = Column(Integer, primary_key=True)
 
@@ -13087,7 +12269,6 @@ class LIBRARYDESCRIPTION(Base):
 
 class LIBRARYREFERENCE(Base):
     __tablename__ = 'LIBRARYREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     LibraryReferenceID = Column(Integer, primary_key=True)
 
@@ -13096,7 +12277,6 @@ class LIBRARYREFERENCE(Base):
 
 class LIBRARYTAG(Base):
     __tablename__ = 'LIBRARYTAG'
-    __bind_key__  = 'XORCISM'
 
     LibraryTagID = Column(Integer, primary_key=True)
 
@@ -13105,7 +12285,6 @@ class LIBRARYTAG(Base):
 
 class LICENSE(Base):
     __tablename__ = 'LICENSE'
-    __bind_key__  = 'XORCISM'
 
     LicenseID = Column(Integer, primary_key=True)
     LicenseName = Column(Text)
@@ -13124,7 +12303,6 @@ class LICENSE(Base):
 
 class LICENSEACCESSRECORD(Base):
     __tablename__ = 'LICENSEACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     LicenseAccessRecordID = Column(Integer, primary_key=True)
 
@@ -13133,7 +12311,6 @@ class LICENSEACCESSRECORD(Base):
 
 class LICENSECHANGERECORD(Base):
     __tablename__ = 'LICENSECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     LicenseChangeRecordID = Column(Integer, primary_key=True)
 
@@ -13142,7 +12319,6 @@ class LICENSECHANGERECORD(Base):
 
 class LICENSERESTRICTION(Base):
     __tablename__ = 'LICENSERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     LicenseRestrictionID = Column(Integer, primary_key=True)
 
@@ -13151,7 +12327,6 @@ class LICENSERESTRICTION(Base):
 
 class LICENSETYPE(Base):
     __tablename__ = 'LICENSETYPE'
-    __bind_key__  = 'XORCISM'
 
     LicenseTypeID = Column(Integer, primary_key=True)
     LicenseTypeName = Column(Text)
@@ -13167,7 +12342,6 @@ class LICENSETYPE(Base):
 
 class LINK(Base):
     __tablename__ = 'LINK'
-    __bind_key__  = 'XORCISM'
 
     LinkID = Column(Integer, primary_key=True)
     LinkGUID = Column(Text)
@@ -13190,7 +12364,6 @@ class LINK(Base):
 
 class LINKTYPE(Base):
     __tablename__ = 'LINKTYPE'
-    __bind_key__  = 'XORCISM'
 
     LinkTypeID = Column(Integer, primary_key=True)
 
@@ -13199,7 +12372,6 @@ class LINKTYPE(Base):
 
 class LINUXPACKAGE(Base):
     __tablename__ = 'LINUXPACKAGE'
-    __bind_key__  = 'XORCISM'
 
     LinuxPackageID = Column(Integer, primary_key=True)
 
@@ -13208,7 +12380,6 @@ class LINUXPACKAGE(Base):
 
 class LOCALE(Base):
     __tablename__ = 'LOCALE'
-    __bind_key__  = 'XORCISM'
 
     LocaleID = Column(Integer, primary_key=True)
     LocaleGUID = Column(Text)
@@ -13229,7 +12400,6 @@ class LOCALE(Base):
 
 class LOCALEDESCRIPTION(Base):
     __tablename__ = 'LOCALEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     LocaleDescriptionID = Column(Integer, primary_key=True)
 
@@ -13238,7 +12408,6 @@ class LOCALEDESCRIPTION(Base):
 
 class LOCALEREFERENCE(Base):
     __tablename__ = 'LOCALEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     LocaleReferenceID = Column(Integer, primary_key=True)
 
@@ -13247,7 +12416,6 @@ class LOCALEREFERENCE(Base):
 
 class LOCATIONPOINT(Base):
     __tablename__ = 'LOCATIONPOINT'
-    __bind_key__  = 'XORCISM'
 
     LocationPointID = Column(Integer, primary_key=True)
     latitude = Column(Integer, nullable=False)
@@ -13263,7 +12431,6 @@ class LOCATIONPOINT(Base):
 
 class LOCATIONPOINTFORASSET(Base):
     __tablename__ = 'LOCATIONPOINTFORASSET'
-    __bind_key__  = 'XORCISM'
 
     LocationPointID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -13278,7 +12445,6 @@ class LOCATIONPOINTFORASSET(Base):
 
 class LOCATIONPOINTFORORGANISATION(Base):
     __tablename__ = 'LOCATIONPOINTFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     LocationPointID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -13293,7 +12459,6 @@ class LOCATIONPOINTFORORGANISATION(Base):
 
 class LOCATIONPOINTFORPERSON(Base):
     __tablename__ = 'LOCATIONPOINTFORPERSON'
-    __bind_key__  = 'XORCISM'
 
     LocationPointID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -13308,7 +12473,6 @@ class LOCATIONPOINTFORPERSON(Base):
 
 class LOCATIONREGION(Base):
     __tablename__ = 'LOCATIONREGION'
-    __bind_key__  = 'XORCISM'
 
     LocationRegionID = Column(Integer, primary_key=True)
     regionname = Column(Text)
@@ -13324,7 +12488,6 @@ class LOCATIONREGION(Base):
 
 class LOCATIONREGIONFORASSET(Base):
     __tablename__ = 'LOCATIONREGIONFORASSET'
-    __bind_key__  = 'XORCISM'
 
     LocationRegionID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -13336,7 +12499,6 @@ class LOCATIONREGIONFORASSET(Base):
 
 class LOGFILE(Base):
     __tablename__ = 'LOGFILE'
-    __bind_key__  = 'XORCISM'
 
     LogFileID = Column(Integer, primary_key=True)
     FileID = Column(Integer)
@@ -13351,7 +12513,6 @@ class LOGFILE(Base):
 
 class LOSSDURATION(Base):
     __tablename__ = 'LOSSDURATION'
-    __bind_key__  = 'XORCISM'
 
     LossDurationID = Column(Integer, primary_key=True)
     LossDurationName = Column(Text)
@@ -13369,7 +12530,6 @@ class LOSSDURATION(Base):
 
 class LOSSFACTOR(Base):
     __tablename__ = 'LOSSFACTOR'
-    __bind_key__  = 'XORCISM'
 
     LossFactorID = Column(Integer, primary_key=True)
 
@@ -13378,7 +12538,6 @@ class LOSSFACTOR(Base):
 
 class LOSSFORM(Base):
     __tablename__ = 'LOSSFORM'
-    __bind_key__  = 'XORCISM'
 
     LossFormID = Column(Integer, primary_key=True)
     LossFormName = Column(Text, nullable=False)
@@ -13393,7 +12552,6 @@ class LOSSFORM(Base):
 
 class LOSSPROPERTY(Base):
     __tablename__ = 'LOSSPROPERTY'
-    __bind_key__  = 'XORCISM'
 
     LossPropertyID = Column(Integer, primary_key=True)
     LossPropertyGUID = Column(Text)
@@ -13412,7 +12570,6 @@ class LOSSPROPERTY(Base):
 
 class LOSSPROPERTYFORINCIDENT(Base):
     __tablename__ = 'LOSSPROPERTYFORINCIDENT'
-    __bind_key__  = 'XORCISM'
 
     IncidentID = Column(Integer, primary_key=True)
     LossPropertyID = Column(Integer, nullable=False)
@@ -13422,7 +12579,6 @@ class LOSSPROPERTYFORINCIDENT(Base):
 
 class MACHINEACCESSCONTROLPROPERTIES(Base):
     __tablename__ = 'MACHINEACCESSCONTROLPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     MachineAccessControlPropertiesID = Column(Integer, primary_key=True)
     MachineAccessControlPropertiesName = Column(Text)
@@ -13440,7 +12596,6 @@ class MACHINEACCESSCONTROLPROPERTIES(Base):
 
 class MACHINEACCESSCONTROLSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'MACHINEACCESSCONTROLSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     MachineAccessControlStrategicObjectiveID = Column(Integer, primary_key=True)
     MachineAccessControlStrategicObjectiveName = Column(Text)
@@ -13458,7 +12613,6 @@ class MACHINEACCESSCONTROLSTRATEGICOBJECTIVE(Base):
 
 class MACHINEACCESSCONTROLTACTICALOBJECTIVE(Base):
     __tablename__ = 'MACHINEACCESSCONTROLTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     MachineAccessControlTacticalObjectiveID = Column(Integer, primary_key=True)
     MachineAccessControlTacticalObjectiveName = Column(Text)
@@ -13476,7 +12630,6 @@ class MACHINEACCESSCONTROLTACTICALOBJECTIVE(Base):
 
 class MAINTENANCENOTE(Base):
     __tablename__ = 'MAINTENANCENOTE'
-    __bind_key__  = 'XORCISM'
 
     MaintenanceNoteID = Column(Integer, primary_key=True)
     MaintenanceNoteText = Column(Text)
@@ -13488,7 +12641,6 @@ class MAINTENANCENOTE(Base):
 
 class MANAGEMENT(Base):
     __tablename__ = 'MANAGEMENT'
-    __bind_key__  = 'XORCISM'
 
     ManagementID = Column(Integer, primary_key=True)
     ManagementName = Column(Text)
@@ -13506,7 +12658,6 @@ class MANAGEMENT(Base):
 
 class MATURITYLEVEL(Base):
     __tablename__ = 'MATURITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     MaturityLevelID = Column(Integer, primary_key=True)
     MaturityLevelGUID = Column(Text)
@@ -13525,7 +12676,6 @@ class MATURITYLEVEL(Base):
 
 class MATURITYRATING(Base):
     __tablename__ = 'MATURITYRATING'
-    __bind_key__  = 'XORCISM'
 
     MaturityRatingID = Column(Integer, primary_key=True)
     ScoringSystemID = Column(Integer)
@@ -13535,7 +12685,6 @@ class MATURITYRATING(Base):
 
 class MEASURESOURCE(Base):
     __tablename__ = 'MEASURESOURCE'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     SourceClassID = Column(Integer)
@@ -13556,7 +12705,6 @@ class MEASURESOURCE(Base):
 
 class MEASURESOURCECONTRIBUTOR(Base):
     __tablename__ = 'MEASURESOURCECONTRIBUTOR'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -13567,7 +12715,6 @@ class MEASURESOURCECONTRIBUTOR(Base):
 
 class MEASURESOURCEINFORMATIONSOURCETYPE(Base):
     __tablename__ = 'MEASURESOURCEINFORMATIONSOURCETYPE'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     InformationSourceTypeID = Column(Integer, nullable=False)
@@ -13577,7 +12724,6 @@ class MEASURESOURCEINFORMATIONSOURCETYPE(Base):
 
 class MEASURESOURCEPLATFORM(Base):
     __tablename__ = 'MEASURESOURCEPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     PlatformID = Column(Integer, nullable=False)
@@ -13587,7 +12733,6 @@ class MEASURESOURCEPLATFORM(Base):
 
 class MEASURESOURCESYSTEM(Base):
     __tablename__ = 'MEASURESOURCESYSTEM'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     SystemID = Column(Integer, nullable=False)
@@ -13597,7 +12742,6 @@ class MEASURESOURCESYSTEM(Base):
 
 class MEASURESOURCETOOL(Base):
     __tablename__ = 'MEASURESOURCETOOL'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     ToolInformationID = Column(Integer, nullable=False)
@@ -13608,7 +12752,6 @@ class MEASURESOURCETOOL(Base):
 
 class MEASURESOURCETOOLTYPE(Base):
     __tablename__ = 'MEASURESOURCETOOLTYPE'
-    __bind_key__  = 'XORCISM'
 
     MeasureSourceID = Column(Integer, primary_key=True)
     ToolTypeID = Column(Integer, nullable=False)
@@ -13618,7 +12761,6 @@ class MEASURESOURCETOOLTYPE(Base):
 
 class MECHANISM(Base):
     __tablename__ = 'MECHANISM'
-    __bind_key__  = 'XORCISM'
 
     MechanismID = Column(Integer, primary_key=True)
     MechanismGUID = Column(Text)
@@ -13638,7 +12780,6 @@ class MECHANISM(Base):
 
 class MECHANISMDESCRIPTION(Base):
     __tablename__ = 'MECHANISMDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     MechanismDescriptionID = Column(Integer, primary_key=True)
 
@@ -13647,7 +12788,6 @@ class MECHANISMDESCRIPTION(Base):
 
 class MECHANISMREFERENCE(Base):
     __tablename__ = 'MECHANISMREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     MechanismReferenceID = Column(Integer, primary_key=True)
     MechanismReferenceGUID = Column(Text)
@@ -13665,7 +12805,6 @@ class MECHANISMREFERENCE(Base):
 
 class MECHANISMRELATIONSHIP(Base):
     __tablename__ = 'MECHANISMRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     MechanismRelationshipID = Column(Integer, primary_key=True)
     MechanismRelationshipGUID = Column(Text)
@@ -13684,7 +12823,6 @@ class MECHANISMRELATIONSHIP(Base):
 
 class MECHANISMTAG(Base):
     __tablename__ = 'MECHANISMTAG'
-    __bind_key__  = 'XORCISM'
 
     MechanismTagID = Column(Integer, primary_key=True)
 
@@ -13693,7 +12831,6 @@ class MECHANISMTAG(Base):
 
 class MEMORYADDRESS(Base):
     __tablename__ = 'MEMORYADDRESS'
-    __bind_key__  = 'XORCISM'
 
     MemoryAddressID = Column(Integer, primary_key=True)
     MemoryAddressGUID = Column(Text)
@@ -13712,7 +12849,6 @@ class MEMORYADDRESS(Base):
 
 class MEMORYADDRESSREFERENCE(Base):
     __tablename__ = 'MEMORYADDRESSREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     MemoryAddressReferenceID = Column(Integer, primary_key=True)
     MemoryAddressID = Column(Integer, nullable=False)
@@ -13727,7 +12863,6 @@ class MEMORYADDRESSREFERENCE(Base):
 
 class MEMORYDUMP(Base):
     __tablename__ = 'MEMORYDUMP'
-    __bind_key__  = 'XORCISM'
 
     MemoryDumpID = Column(Integer, primary_key=True)
 
@@ -13736,7 +12871,6 @@ class MEMORYDUMP(Base):
 
 class MEMORYOBJECT(Base):
     __tablename__ = 'MEMORYOBJECT'
-    __bind_key__  = 'XORCISM'
 
     MemoryObjectID = Column(Integer, primary_key=True)
 
@@ -13745,7 +12879,6 @@ class MEMORYOBJECT(Base):
 
 class MEMORYSECTIONLIST(Base):
     __tablename__ = 'MEMORYSECTIONLIST'
-    __bind_key__  = 'XORCISM'
 
     MemorySectionListID = Column(Integer, primary_key=True)
 
@@ -13754,7 +12887,6 @@ class MEMORYSECTIONLIST(Base):
 
 class MESSAGE(Base):
     __tablename__ = 'MESSAGE'
-    __bind_key__  = 'XORCISM'
 
     MessageID = Column(Integer, primary_key=True)
     MessageGUID = Column(Text)
@@ -13767,7 +12899,6 @@ class MESSAGE(Base):
 
 class MESSAGECONFIDENTIALITYLEVEL(Base):
     __tablename__ = 'MESSAGECONFIDENTIALITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     MessageConfidentialityLevelID = Column(Integer, primary_key=True)
 
@@ -13776,7 +12907,6 @@ class MESSAGECONFIDENTIALITYLEVEL(Base):
 
 class MESSAGELEVEL(Base):
     __tablename__ = 'MESSAGELEVEL'
-    __bind_key__  = 'XORCISM'
 
     MessageLevelID = Column(Integer, primary_key=True)
     MessageLevelValue = Column(Text, nullable=False)
@@ -13788,7 +12918,6 @@ class MESSAGELEVEL(Base):
 
 class MESSAGESMS(Base):
     __tablename__ = 'MESSAGESMS'
-    __bind_key__  = 'XORCISM'
 
     MessageSMSID = Column(Integer, primary_key=True)
 
@@ -13797,7 +12926,6 @@ class MESSAGESMS(Base):
 
 class METADATA(Base):
     __tablename__ = 'METADATA'
-    __bind_key__  = 'XORCISM'
 
     MetadataID = Column(Integer, primary_key=True)
     MetadataContent = Column(Text, nullable=False)
@@ -13808,7 +12936,6 @@ class METADATA(Base):
 
 class METHOD(Base):
     __tablename__ = 'METHOD'
-    __bind_key__  = 'XORCISM'
 
     MethodID = Column(Integer, primary_key=True)
 
@@ -13817,7 +12944,6 @@ class METHOD(Base):
 
 class METHODOLOGY(Base):
     __tablename__ = 'METHODOLOGY'
-    __bind_key__  = 'XORCISM'
 
     MethodologyID = Column(Integer, primary_key=True)
     MethodologyGUID = Column(Text)
@@ -13842,7 +12968,6 @@ class METHODOLOGY(Base):
 
 class METHODOLOGYCHAPTER(Base):
     __tablename__ = 'METHODOLOGYCHAPTER'
-    __bind_key__  = 'XORCISM'
 
     MethodologyChapterID = Column(Integer, primary_key=True)
     ChapterID = Column(Integer)
@@ -13852,7 +12977,6 @@ class METHODOLOGYCHAPTER(Base):
 
 class METHODOLOGYDESCRIPTION(Base):
     __tablename__ = 'METHODOLOGYDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     MethodologyDescriptionID = Column(Integer, primary_key=True)
     MethodologyID = Column(Integer, nullable=False)
@@ -13870,7 +12994,6 @@ class METHODOLOGYDESCRIPTION(Base):
 
 class METHODOLOGYNODE(Base):
     __tablename__ = 'METHODOLOGYNODE'
-    __bind_key__  = 'XORCISM'
 
     MethodologyNodeID = Column(Integer, primary_key=True)
 
@@ -13879,7 +13002,6 @@ class METHODOLOGYNODE(Base):
 
 class METHODOLOGYREFERENCE(Base):
     __tablename__ = 'METHODOLOGYREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     MethodologyReferenceID = Column(Integer, primary_key=True)
     MethodologyID = Column(Integer, nullable=False)
@@ -13896,7 +13018,6 @@ class METHODOLOGYREFERENCE(Base):
 
 class METHODOLOGYTAG(Base):
     __tablename__ = 'METHODOLOGYTAG'
-    __bind_key__  = 'XORCISM'
 
     MethodologyTagID = Column(Integer, primary_key=True)
     MethodologyID = Column(Integer, nullable=False)
@@ -13912,7 +13033,6 @@ class METHODOLOGYTAG(Base):
 
 class METHODOLOGYTECHNIQUE(Base):
     __tablename__ = 'METHODOLOGYTECHNIQUE'
-    __bind_key__  = 'XORCISM'
 
     MethodologyTechniqueID = Column(Integer, primary_key=True)
 
@@ -13921,7 +13041,6 @@ class METHODOLOGYTECHNIQUE(Base):
 
 class METHODOLOGYTEST(Base):
     __tablename__ = 'METHODOLOGYTEST'
-    __bind_key__  = 'XORCISM'
 
     MethodologyTestID = Column(Integer, primary_key=True)
     MethodologyTestGUID = Column(Text)
@@ -13942,7 +13061,6 @@ class METHODOLOGYTEST(Base):
 
 class METRIC(Base):
     __tablename__ = 'METRIC'
-    __bind_key__  = 'XORCISM'
 
     MetricID = Column(Integer, primary_key=True)
     MetricGUID = Column(Text)
@@ -13960,7 +13078,6 @@ class METRIC(Base):
 
 class METRICCATEGORY(Base):
     __tablename__ = 'METRICCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     MetricCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -13970,7 +13087,6 @@ class METRICCATEGORY(Base):
 
 class METRICCHANGERECORD(Base):
     __tablename__ = 'METRICCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     MetricChangeRecordID = Column(Integer, primary_key=True)
 
@@ -13979,7 +13095,6 @@ class METRICCHANGERECORD(Base):
 
 class METRICDESCRIPTION(Base):
     __tablename__ = 'METRICDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     MetricDescriptionID = Column(Integer, primary_key=True)
     MetricID = Column(Integer, nullable=False)
@@ -13996,7 +13111,6 @@ class METRICDESCRIPTION(Base):
 
 class METRICREFERENCE(Base):
     __tablename__ = 'METRICREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     MetricReferenceID = Column(Integer, primary_key=True)
     MetricID = Column(Integer, nullable=False)
@@ -14013,7 +13127,6 @@ class METRICREFERENCE(Base):
 
 class METRICTAG(Base):
     __tablename__ = 'METRICTAG'
-    __bind_key__  = 'XORCISM'
 
     MetricTagID = Column(Integer, primary_key=True)
     MetricID = Column(Integer, nullable=False)
@@ -14028,7 +13141,6 @@ class METRICTAG(Base):
 
 class MIME(Base):
     __tablename__ = 'MIME'
-    __bind_key__  = 'XORCISM'
 
     MIMEID = Column(Integer, primary_key=True)
     MIMEType = Column(Text)
@@ -14044,7 +13156,6 @@ class MIME(Base):
 
 class MIMEVERSION(Base):
     __tablename__ = 'MIMEVERSION'
-    __bind_key__  = 'XORCISM'
 
     MIMEVersionID = Column(Integer, primary_key=True)
 
@@ -14053,7 +13164,6 @@ class MIMEVERSION(Base):
 
 class MIMEWHITELIST(Base):
     __tablename__ = 'MIMEWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     MIMEWhitelistID = Column(Integer, primary_key=True)
     MIMEID = Column(Integer, nullable=False)
@@ -14067,7 +13177,6 @@ class MIMEWHITELIST(Base):
 
 class MININGSCHEMA(Base):
     __tablename__ = 'MININGSCHEMA'
-    __bind_key__  = 'XORCISM'
 
     MiningSchemaID = Column(Integer, primary_key=True)
     SchemaID = Column(Integer)
@@ -14077,7 +13186,6 @@ class MININGSCHEMA(Base):
 
 class MITIGATION(Base):
     __tablename__ = 'MITIGATION'
-    __bind_key__  = 'XORCISM'
 
     MitigationID = Column(Integer, primary_key=True)
     MitigationGUID = Column(Text)
@@ -14101,7 +13209,6 @@ class MITIGATION(Base):
 
 class MITIGATIONCODE(Base):
     __tablename__ = 'MITIGATIONCODE'
-    __bind_key__  = 'XORCISM'
 
     MitigationCodeID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer, nullable=False)
@@ -14116,7 +13223,6 @@ class MITIGATIONCODE(Base):
 
 class MITIGATIONEFFECTIVENESS(Base):
     __tablename__ = 'MITIGATIONEFFECTIVENESS'
-    __bind_key__  = 'XORCISM'
 
     MitigationEffectivenessID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer)
@@ -14130,7 +13236,6 @@ class MITIGATIONEFFECTIVENESS(Base):
 
 class MITIGATIONFORATTACKPATTERN(Base):
     __tablename__ = 'MITIGATIONFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternMitigationID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer, nullable=False)
@@ -14150,7 +13255,6 @@ class MITIGATIONFORATTACKPATTERN(Base):
 
 class MITIGATIONFORCWE(Base):
     __tablename__ = 'MITIGATIONFORCWE'
-    __bind_key__  = 'XORCISM'
 
     CWEMitigationID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer, nullable=False)
@@ -14174,7 +13278,6 @@ class MITIGATIONFORCWE(Base):
 
 class MITIGATIONPHASE(Base):
     __tablename__ = 'MITIGATIONPHASE'
-    __bind_key__  = 'XORCISM'
 
     MitigationPhaseID = Column(Integer, primary_key=True)
     MitigationPhaseGUID = Column(Text)
@@ -14196,7 +13299,6 @@ class MITIGATIONPHASE(Base):
 
 class MITIGATIONPHASEFORMITIGATION(Base):
     __tablename__ = 'MITIGATIONPHASEFORMITIGATION'
-    __bind_key__  = 'XORCISM'
 
     MitigationMitigationPhaseID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer, nullable=False)
@@ -14217,7 +13319,6 @@ class MITIGATIONPHASEFORMITIGATION(Base):
 
 class MITIGATIONPHASETAG(Base):
     __tablename__ = 'MITIGATIONPHASETAG'
-    __bind_key__  = 'XORCISM'
 
     MitigationPhaseTagID = Column(Integer, primary_key=True)
     MitigationPhaseID = Column(Integer)
@@ -14236,7 +13337,6 @@ class MITIGATIONPHASETAG(Base):
 
 class MITIGATIONREFERENCE(Base):
     __tablename__ = 'MITIGATIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     MitigationReferenceID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer, nullable=False)
@@ -14257,7 +13357,6 @@ class MITIGATIONREFERENCE(Base):
 
 class MITIGATIONSTRATEGY(Base):
     __tablename__ = 'MITIGATIONSTRATEGY'
-    __bind_key__  = 'XORCISM'
 
     MitigationStrategyID = Column(Integer, primary_key=True)
     MitigationStrategyGUID = Column(Text)
@@ -14280,7 +13379,6 @@ class MITIGATIONSTRATEGY(Base):
 
 class MITIGATIONSTRATEGYFORMITIGATION(Base):
     __tablename__ = 'MITIGATIONSTRATEGYFORMITIGATION'
-    __bind_key__  = 'XORCISM'
 
     MitigationMitigationStrategyID = Column(Integer, primary_key=True)
     MitigationID = Column(Integer, nullable=False)
@@ -14301,7 +13399,6 @@ class MITIGATIONSTRATEGYFORMITIGATION(Base):
 
 class MITIGATIONSTRATEGYTAG(Base):
     __tablename__ = 'MITIGATIONSTRATEGYTAG'
-    __bind_key__  = 'XORCISM'
 
     MitigationStrategyTagID = Column(Integer, primary_key=True)
     MitigationStrategyID = Column(Integer)
@@ -14320,7 +13417,6 @@ class MITIGATIONSTRATEGYTAG(Base):
 
 class MMSMESSAGE(Base):
     __tablename__ = 'MMSMESSAGE'
-    __bind_key__  = 'XORCISM'
 
     MMSMessageID = Column(Integer, primary_key=True)
     MessageID = Column(Integer)
@@ -14334,7 +13430,6 @@ class MMSMESSAGE(Base):
 
 class MOBILEDEVICE(Base):
     __tablename__ = 'MOBILEDEVICE'
-    __bind_key__  = 'XORCISM'
 
     MobileDeviceID = Column(Integer, primary_key=True)
     DeviceID = Column(Integer)
@@ -14344,7 +13439,6 @@ class MOBILEDEVICE(Base):
 
 class MODEL(Base):
     __tablename__ = 'MODEL'
-    __bind_key__  = 'XORCISM'
 
     ModelID = Column(Integer, primary_key=True)
 
@@ -14353,7 +13447,6 @@ class MODEL(Base):
 
 class MODELCATEGORY(Base):
     __tablename__ = 'MODELCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ModelCategoryID = Column(Integer, primary_key=True)
 
@@ -14362,7 +13455,6 @@ class MODELCATEGORY(Base):
 
 class MODELDESCRIPTION(Base):
     __tablename__ = 'MODELDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ModelDescriptionID = Column(Integer, primary_key=True)
     ModelID = Column(Integer, nullable=False)
@@ -14379,7 +13471,6 @@ class MODELDESCRIPTION(Base):
 
 class MODULE(Base):
     __tablename__ = 'MODULE'
-    __bind_key__  = 'XORCISM'
 
     ModuleID = Column(Integer, primary_key=True)
     ModuleName = Column(Text)
@@ -14398,7 +13489,6 @@ class MODULE(Base):
 
 class MUTEX(Base):
     __tablename__ = 'MUTEX'
-    __bind_key__  = 'XORCISM'
 
     MutexID = Column(Integer, primary_key=True)
     MutexName = Column(Text)
@@ -14414,7 +13504,6 @@ class MUTEX(Base):
 
 class MUTEXNAME(Base):
     __tablename__ = 'MUTEXNAME'
-    __bind_key__  = 'XORCISM'
 
     MutexNameID = Column(Integer, primary_key=True)
     MutexID = Column(Integer)
@@ -14431,7 +13520,6 @@ class MUTEXNAME(Base):
 
 class MUTEXNAMES(Base):
     __tablename__ = 'MUTEXNAMES'
-    __bind_key__  = 'XORCISM'
 
     MutexNamesID = Column(Integer, primary_key=True)
     MutexID = Column(Integer, nullable=False)
@@ -14448,7 +13536,6 @@ class MUTEXNAMES(Base):
 
 class MUTEXTYPE(Base):
     __tablename__ = 'MUTEXTYPE'
-    __bind_key__  = 'XORCISM'
 
     MutexTypeID = Column(Integer, primary_key=True)
     MutexType = Column(Text)
@@ -14464,7 +13551,6 @@ class MUTEXTYPE(Base):
 
 class NAICS(Base):
     __tablename__ = 'NAICS'
-    __bind_key__  = 'XORCISM'
 
     NAICSID = Column(Integer, primary_key=True)
     NAICSSector = Column(Text, nullable=False)
@@ -14475,7 +13561,6 @@ class NAICS(Base):
 
 class NAME(Base):
     __tablename__ = 'NAME'
-    __bind_key__  = 'XORCISM'
 
     NameID = Column(Integer, primary_key=True)
     NameText = Column(Text)
@@ -14493,7 +13578,6 @@ class NAME(Base):
 
 class NETROUTE(Base):
     __tablename__ = 'NETROUTE'
-    __bind_key__  = 'XORCISM'
 
     NetRouteID = Column(Integer, primary_key=True)
 
@@ -14502,7 +13586,6 @@ class NETROUTE(Base):
 
 class NETWORK(Base):
     __tablename__ = 'NETWORK'
-    __bind_key__  = 'XORCISM'
 
     NetworkID = Column(Integer, primary_key=True)
 
@@ -14511,7 +13594,6 @@ class NETWORK(Base):
 
 class NETWORKACTIONNAME(Base):
     __tablename__ = 'NETWORKACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     NetworkActionNameID = Column(Integer, primary_key=True)
     NetworkActionNameName = Column(Text, nullable=False)
@@ -14529,7 +13611,6 @@ class NETWORKACTIONNAME(Base):
 
 class NETWORKCONNECTION(Base):
     __tablename__ = 'NETWORKCONNECTION'
-    __bind_key__  = 'XORCISM'
 
     NetworkConnectionID = Column(Integer, primary_key=True)
     NetworkConnectionGUID = Column(Text)
@@ -14559,7 +13640,6 @@ class NETWORKCONNECTION(Base):
 
 class NETWORKCONNECTIONLAYER7(Base):
     __tablename__ = 'NETWORKCONNECTIONLAYER7'
-    __bind_key__  = 'XORCISM'
 
     NetworkConnectionLayer7ID = Column(Integer, primary_key=True)
     NetworkConnectionID = Column(Integer)
@@ -14580,7 +13660,6 @@ class NETWORKCONNECTIONLAYER7(Base):
 
 class NETWORKFLOW(Base):
     __tablename__ = 'NETWORKFLOW'
-    __bind_key__  = 'XORCISM'
 
     NetworkFlowID = Column(Integer, primary_key=True)
 
@@ -14589,7 +13668,6 @@ class NETWORKFLOW(Base):
 
 class NETWORKFLOWLABEL(Base):
     __tablename__ = 'NETWORKFLOWLABEL'
-    __bind_key__  = 'XORCISM'
 
     NetworkFlowLabelID = Column(Integer, primary_key=True)
     Src_Socket_Address = Column(Integer)
@@ -14610,7 +13688,6 @@ class NETWORKFLOWLABEL(Base):
 
 class NETWORKINTERFACE(Base):
     __tablename__ = 'NETWORKINTERFACE'
-    __bind_key__  = 'XORCISM'
 
     NetworkInterfaceID = Column(Integer, primary_key=True)
 
@@ -14619,7 +13696,6 @@ class NETWORKINTERFACE(Base):
 
 class NETWORKPACKET(Base):
     __tablename__ = 'NETWORKPACKET'
-    __bind_key__  = 'XORCISM'
 
     NetworkPacketID = Column(Integer, primary_key=True)
 
@@ -14628,7 +13704,6 @@ class NETWORKPACKET(Base):
 
 class NETWORKROUTE(Base):
     __tablename__ = 'NETWORKROUTE'
-    __bind_key__  = 'XORCISM'
 
     NetworkRouteID = Column(Integer, primary_key=True)
     NetworkRouteGUID = Column(Text)
@@ -14663,7 +13738,6 @@ class NETWORKROUTE(Base):
 
 class NETWORKROUTEENTRY(Base):
     __tablename__ = 'NETWORKROUTEENTRY'
-    __bind_key__  = 'XORCISM'
 
     NetworkRouteEntryID = Column(Integer, primary_key=True)
 
@@ -14672,7 +13746,6 @@ class NETWORKROUTEENTRY(Base):
 
 class NETWORKROUTETYPE(Base):
     __tablename__ = 'NETWORKROUTETYPE'
-    __bind_key__  = 'XORCISM'
 
     NetworkRouteTypeID = Column(Integer, primary_key=True)
     RouteType = Column(Text)
@@ -14689,7 +13762,6 @@ class NETWORKROUTETYPE(Base):
 
 class NETWORKSHARE(Base):
     __tablename__ = 'NETWORKSHARE'
-    __bind_key__  = 'XORCISM'
 
     NetworkShareID = Column(Integer, primary_key=True)
     NetworkShareGUID = Column(Text)
@@ -14699,7 +13771,6 @@ class NETWORKSHARE(Base):
 
 class NETWORKSHAREACTIONNAME(Base):
     __tablename__ = 'NETWORKSHAREACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     NetworkShareActionNameID = Column(Integer, primary_key=True)
     NetworkShareActionNameName = Column(Text, nullable=False)
@@ -14717,7 +13788,6 @@ class NETWORKSHAREACTIONNAME(Base):
 
 class NETWORKSOCKET(Base):
     __tablename__ = 'NETWORKSOCKET'
-    __bind_key__  = 'XORCISM'
 
     NetworkSocketID = Column(Integer, primary_key=True)
 
@@ -14726,7 +13796,6 @@ class NETWORKSOCKET(Base):
 
 class NETWORKSUBNET(Base):
     __tablename__ = 'NETWORKSUBNET'
-    __bind_key__  = 'XORCISM'
 
     NetworkSubnetID = Column(Integer, primary_key=True)
     NetworkSubnetGUID = Column(Text)
@@ -14745,7 +13814,6 @@ class NETWORKSUBNET(Base):
 
 class NETWORKSUBNETROUTES(Base):
     __tablename__ = 'NETWORKSUBNETROUTES'
-    __bind_key__  = 'XORCISM'
 
     NetworkSubnetRoutesID = Column(Integer, primary_key=True)
     NetworkSubnetID = Column(Integer)
@@ -14764,7 +13832,6 @@ class NETWORKSUBNETROUTES(Base):
 
 class NETWORKZONE(Base):
     __tablename__ = 'NETWORKZONE'
-    __bind_key__  = 'XORCISM'
 
     NetworkZoneID = Column(Integer, primary_key=True)
     NetworkZoneGUID = Column(Text)
@@ -14787,7 +13854,6 @@ class NETWORKZONE(Base):
 
 class NETWORKZONEDESCRIPTION(Base):
     __tablename__ = 'NETWORKZONEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     NetworkZoneDescriptionID = Column(Integer, primary_key=True)
     NetworkZoneID = Column(Integer)
@@ -14806,7 +13872,6 @@ class NETWORKZONEDESCRIPTION(Base):
 
 class NETWORKZONERESTRICTION(Base):
     __tablename__ = 'NETWORKZONERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     NetworkZoneRestrictionID = Column(Integer, primary_key=True)
 
@@ -14815,7 +13880,6 @@ class NETWORKZONERESTRICTION(Base):
 
 class NETWORKZONETAG(Base):
     __tablename__ = 'NETWORKZONETAG'
-    __bind_key__  = 'XORCISM'
 
     NetworkZoneTagID = Column(Integer, primary_key=True)
     ConfidentialityLevelID = Column(Integer)
@@ -14826,7 +13890,6 @@ class NETWORKZONETAG(Base):
 
 class NEURALNETWORK(Base):
     __tablename__ = 'NEURALNETWORK'
-    __bind_key__  = 'XORCISM'
 
     NeuralNetworkID = Column(Integer, primary_key=True)
 
@@ -14835,7 +13898,6 @@ class NEURALNETWORK(Base):
 
 class NOTIFICATION(Base):
     __tablename__ = 'NOTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     NotificationID = Column(Integer, primary_key=True)
     NotificationGUID = Column(Text)
@@ -14854,7 +13916,6 @@ class NOTIFICATION(Base):
 
 class OBFUSCATIONTECHNIQUE(Base):
     __tablename__ = 'OBFUSCATIONTECHNIQUE'
-    __bind_key__  = 'XORCISM'
 
     ObfuscationTechniqueID = Column(Integer, primary_key=True)
     ObfuscationTechniqueGUID = Column(Text)
@@ -14874,7 +13935,6 @@ class OBFUSCATIONTECHNIQUE(Base):
 
 class OBFUSCATIONTECHNIQUETAG(Base):
     __tablename__ = 'OBFUSCATIONTECHNIQUETAG'
-    __bind_key__  = 'XORCISM'
 
     ObfuscationTechniqueTagID = Column(Integer, primary_key=True)
     ObfuscationTechniqueID = Column(Integer)
@@ -14891,7 +13951,6 @@ class OBFUSCATIONTECHNIQUETAG(Base):
 
 class OBJECTIVE(Base):
     __tablename__ = 'OBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     ObjectiveID = Column(Integer, primary_key=True)
     ObjectiveGUID = Column(Text)
@@ -14911,7 +13970,6 @@ class OBJECTIVE(Base):
 
 class OBJECTIVECATEGORY(Base):
     __tablename__ = 'OBJECTIVECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ObjectiveCategoryID = Column(Integer, primary_key=True)
     ObjectiveCategoryGUID = Column(Text)
@@ -14930,7 +13988,6 @@ class OBJECTIVECATEGORY(Base):
 
 class OBJECTIVETAG(Base):
     __tablename__ = 'OBJECTIVETAG'
-    __bind_key__  = 'XORCISM'
 
     ObjectiveTagID = Column(Integer, primary_key=True)
     ObjectiveID = Column(Integer)
@@ -14947,7 +14004,6 @@ class OBJECTIVETAG(Base):
 
 class OBJECTRELATIONSHIP(Base):
     __tablename__ = 'OBJECTRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     ObjectRelationshipID = Column(Integer, primary_key=True)
     ObjectRelationshipName = Column(Text, nullable=False)
@@ -14965,7 +14021,6 @@ class OBJECTRELATIONSHIP(Base):
 
 class OBJECTSTATE(Base):
     __tablename__ = 'OBJECTSTATE'
-    __bind_key__  = 'XORCISM'
 
     ObjectStateID = Column(Integer, primary_key=True)
     ObjectStateName = Column(Text, nullable=False)
@@ -14983,7 +14038,6 @@ class OBJECTSTATE(Base):
 
 class OBJECTTYPE(Base):
     __tablename__ = 'OBJECTTYPE'
-    __bind_key__  = 'XORCISM'
 
     ObjectTypeID = Column(Integer, primary_key=True)
 
@@ -14992,7 +14046,6 @@ class OBJECTTYPE(Base):
 
 class OBSERVATIONMETHOD(Base):
     __tablename__ = 'OBSERVATIONMETHOD'
-    __bind_key__  = 'XORCISM'
 
     ObservationMethodID = Column(Integer, primary_key=True)
     ObservationMethodGUID = Column(Text)
@@ -15011,7 +14064,6 @@ class OBSERVATIONMETHOD(Base):
 
 class OFFSET(Base):
     __tablename__ = 'OFFSET'
-    __bind_key__  = 'XORCISM'
 
     OffsetID = Column(Integer, primary_key=True)
 
@@ -15020,7 +14072,6 @@ class OFFSET(Base):
 
 class ONTOLOGY(Base):
     __tablename__ = 'ONTOLOGY'
-    __bind_key__  = 'XORCISM'
 
     OntologyID = Column(Integer, primary_key=True)
 
@@ -15029,7 +14080,6 @@ class ONTOLOGY(Base):
 
 class OPCODE(Base):
     __tablename__ = 'OPCODE'
-    __bind_key__  = 'XORCISM'
 
     OpcodeID = Column(Integer, primary_key=True)
     OpcodeName = Column(Text, nullable=False)
@@ -15044,7 +14094,6 @@ class OPCODE(Base):
 
 class OPCODEFORCPE(Base):
     __tablename__ = 'OPCODEFORCPE'
-    __bind_key__  = 'XORCISM'
 
     CPEID = Column(Text, primary_key=True)
     OpcodeID = Column(Integer, nullable=False)
@@ -15054,7 +14103,6 @@ class OPCODEFORCPE(Base):
 
 class OPERATIONENUMERATION(Base):
     __tablename__ = 'OPERATIONENUMERATION'
-    __bind_key__  = 'XORCISM'
 
     OperationEnumerationID = Column(Integer, primary_key=True)
     OperationValue = Column(Text, nullable=False)
@@ -15071,7 +14119,6 @@ class OPERATIONENUMERATION(Base):
 
 class OPERATIONENUMERATIONFORSIMPLEDATATYPE(Base):
     __tablename__ = 'OPERATIONENUMERATIONFORSIMPLEDATATYPE'
-    __bind_key__  = 'XORCISM'
 
     SimpleDataTypeID = Column(Integer, primary_key=True)
     OperationEnumerationID = Column(Integer, nullable=False)
@@ -15082,7 +14129,6 @@ class OPERATIONENUMERATIONFORSIMPLEDATATYPE(Base):
 class OPERATORENUMERATION(Base):
     __table_args__ = {'extend_existing': True}
     __tablename__ = 'OPERATORENUMERATION'
-    __bind_key__  = 'XORCISM'
 
     OperatorEnumerationID = Column(Integer, primary_key=True)
     OperatorValue = Column(Text, nullable=False)
@@ -15099,7 +14145,6 @@ class OPERATORENUMERATION(Base):
 
 class ORGANISATION(Base):
     __tablename__ = 'ORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     OrganisationID = Column(Integer, primary_key=True)
     OrganisationGUID = Column(Text)
@@ -15125,7 +14170,6 @@ class ORGANISATION(Base):
 
 class ORGANISATIONACCESSRECORD(Base):
     __tablename__ = 'ORGANISATIONACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     OrganisationAccessRecordID = Column(Integer, primary_key=True)
 
@@ -15134,7 +14178,6 @@ class ORGANISATIONACCESSRECORD(Base):
 
 class ORGANISATIONCHANGERECORD(Base):
     __tablename__ = 'ORGANISATIONCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     OrganisationChangeRecordID = Column(Integer, primary_key=True)
 
@@ -15143,7 +14186,6 @@ class ORGANISATIONCHANGERECORD(Base):
 
 class ORGANISATIONDOMAINNAME(Base):
     __tablename__ = 'ORGANISATIONDOMAINNAME'
-    __bind_key__  = 'XORCISM'
 
     OrganisationDomainNameID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -15164,7 +14206,6 @@ class ORGANISATIONDOMAINNAME(Base):
 
 class ORGANISATIONFORTHREATACTORTTP(Base):
     __tablename__ = 'ORGANISATIONFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     ThreatActorTTPOrganisationID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -15188,7 +14229,6 @@ class ORGANISATIONFORTHREATACTORTTP(Base):
 
 class ORGANISATIONLICENSE(Base):
     __tablename__ = 'ORGANISATIONLICENSE'
-    __bind_key__  = 'XORCISM'
 
     OrganisationLicenseID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -15199,7 +14239,6 @@ class ORGANISATIONLICENSE(Base):
 
 class ORGANISATIONPOLICY(Base):
     __tablename__ = 'ORGANISATIONPOLICY'
-    __bind_key__  = 'XORCISM'
 
     OrganisationPolicyID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -15215,7 +14254,6 @@ class ORGANISATIONPOLICY(Base):
 
 class ORGANISATIONPROJECT(Base):
     __tablename__ = 'ORGANISATIONPROJECT'
-    __bind_key__  = 'XORCISM'
 
     OrganisationProjectID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer)
@@ -15237,7 +14275,6 @@ class ORGANISATIONPROJECT(Base):
 
 class ORGANISATIONSCHEDULE(Base):
     __tablename__ = 'ORGANISATIONSCHEDULE'
-    __bind_key__  = 'XORCISM'
 
     OrganisationScheduleID = Column(Integer, primary_key=True)
 
@@ -15246,7 +14283,6 @@ class ORGANISATIONSCHEDULE(Base):
 
 class ORGANISATIONTAG(Base):
     __tablename__ = 'ORGANISATIONTAG'
-    __bind_key__  = 'XORCISM'
 
     OrganisationTagID = Column(Integer, primary_key=True)
 
@@ -15255,7 +14291,6 @@ class ORGANISATIONTAG(Base):
 
 class ORGANISATIONTECHNOLOGY(Base):
     __tablename__ = 'ORGANISATIONTECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     OrganisationTechnologyID = Column(Integer, primary_key=True)
 
@@ -15264,7 +14299,6 @@ class ORGANISATIONTECHNOLOGY(Base):
 
 class ORGANISATIONWORKINGHOURS(Base):
     __tablename__ = 'ORGANISATIONWORKINGHOURS'
-    __bind_key__  = 'XORCISM'
 
     OrganisationWorkingHoursID = Column(Integer, primary_key=True)
 
@@ -15273,7 +14307,6 @@ class ORGANISATIONWORKINGHOURS(Base):
 
 class ORGANIZATIONALUNIT(Base):
     __tablename__ = 'ORGANIZATIONALUNIT'
-    __bind_key__  = 'XORCISM'
 
     OrganizationalUnitID = Column(Integer, primary_key=True)
     OrganizationalUnitGUID = Column(Text)
@@ -15293,7 +14326,6 @@ class ORGANIZATIONALUNIT(Base):
 
 class ORGANIZATIONALUNITFORORGANISATION(Base):
     __tablename__ = 'ORGANIZATIONALUNITFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     OrganisationUnitsID = Column(Integer, primary_key=True)
     OrganisationID = Column(Integer, nullable=False)
@@ -15315,7 +14347,6 @@ class ORGANIZATIONALUNITFORORGANISATION(Base):
 
 class ORGANIZATIONALUNITPOLICY(Base):
     __tablename__ = 'ORGANIZATIONALUNITPOLICY'
-    __bind_key__  = 'XORCISM'
 
     OrganizationalUnitPolicyID = Column(Integer, primary_key=True)
     OrganizationalUnitID = Column(Integer, nullable=False)
@@ -15337,7 +14368,6 @@ class ORGANIZATIONALUNITPOLICY(Base):
 
 class OS(Base):
     __tablename__ = 'OS'
-    __bind_key__  = 'XORCISM'
 
     OSID = Column(Integer, primary_key=True)
     Operating_System_Name = Column(Text)
@@ -15359,7 +14389,6 @@ class OS(Base):
 
 class OSCLASS(Base):
     __tablename__ = 'OSCLASS'
-    __bind_key__  = 'XORCISM'
 
     OSClassID = Column(Integer, primary_key=True)
     OSClassGUID = Column(Text)
@@ -15374,7 +14403,6 @@ class OSCLASS(Base):
 
 class OSFAMILY(Base):
     __tablename__ = 'OSFAMILY'
-    __bind_key__  = 'XORCISM'
 
     OSFamilyID = Column(Integer, primary_key=True)
     FamilyName = Column(Text)
@@ -15392,7 +14420,6 @@ class OSFAMILY(Base):
 
 class OSFAMILYFOROS(Base):
     __tablename__ = 'OSFAMILYFOROS'
-    __bind_key__  = 'XORCISM'
 
     OSFamilyOSID = Column(Integer, primary_key=True)
     OSID = Column(Integer, nullable=False)
@@ -15406,7 +14433,6 @@ class OSFAMILYFOROS(Base):
 
 class OSFAMILYPLATFORM(Base):
     __tablename__ = 'OSFAMILYPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     OSFamilyPlatformID = Column(Integer, primary_key=True)
     OSFamilyID = Column(Integer)
@@ -15424,7 +14450,6 @@ class OSFAMILYPLATFORM(Base):
 
 class OSILAYER(Base):
     __tablename__ = 'OSILAYER'
-    __bind_key__  = 'XORCISM'
 
     OSILayerID = Column(Integer, primary_key=True)
     OSILayerName = Column(Text, nullable=False)
@@ -15436,7 +14461,6 @@ class OSILAYER(Base):
 
 class OSILAYERFORATTACKSURFACE(Base):
     __tablename__ = 'OSILAYERFORATTACKSURFACE'
-    __bind_key__  = 'XORCISM'
 
     AttackSurfaceOSILayerID = Column(Integer, primary_key=True)
     OSILayerID = Column(Integer, nullable=False)
@@ -15451,7 +14475,6 @@ class OSILAYERFORATTACKSURFACE(Base):
 
 class OSINSTRUCTIONMEMORYADDRESS(Base):
     __tablename__ = 'OSINSTRUCTIONMEMORYADDRESS'
-    __bind_key__  = 'XORCISM'
 
     OSInstructionMemoryAddressID = Column(Integer, primary_key=True)
     OSID = Column(Integer, nullable=False)
@@ -15469,7 +14492,6 @@ class OSINSTRUCTIONMEMORYADDRESS(Base):
 
 class OSPATCH(Base):
     __tablename__ = 'OSPATCH'
-    __bind_key__  = 'XORCISM'
 
     OSPatchID = Column(Integer, primary_key=True)
     OSPatchGUID = Column(Text)
@@ -15494,7 +14516,6 @@ class OSPATCH(Base):
 
 class OSPATCHLEVEL(Base):
     __tablename__ = 'OSPATCHLEVEL'
-    __bind_key__  = 'XORCISM'
 
     OSPatchLevelID = Column(Integer, primary_key=True)
     OSPatchLevelGUID = Column(Text, nullable=False)
@@ -15507,7 +14528,6 @@ class OSPATCHLEVEL(Base):
 
 class OSPATCHLEVELPATCH(Base):
     __tablename__ = 'OSPATCHLEVELPATCH'
-    __bind_key__  = 'XORCISM'
 
     OSPatchesID = Column(Integer, primary_key=True)
     OSPatchLevelID = Column(Integer, nullable=False)
@@ -15525,7 +14545,6 @@ class OSPATCHLEVELPATCH(Base):
 
 class OUTPUTFIELD(Base):
     __tablename__ = 'OUTPUTFIELD'
-    __bind_key__  = 'XORCISM'
 
     OutputFieldID = Column(Integer, primary_key=True)
     FieldID = Column(Integer)
@@ -15535,7 +14554,6 @@ class OUTPUTFIELD(Base):
 
 class OWASPTOP10(Base):
     __tablename__ = 'OWASPTOP10'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     OWASPTOP10GUID = Column(Text)
@@ -15562,7 +14580,6 @@ class OWASPTOP10(Base):
 
 class OWASPTOP10ATTACKVECTOR(Base):
     __tablename__ = 'OWASPTOP10ATTACKVECTOR'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     AttackVectorID = Column(Integer, nullable=False)
@@ -15573,7 +14590,6 @@ class OWASPTOP10ATTACKVECTOR(Base):
 
 class OWASPTOP10DEFENSETOOLTYPE(Base):
     __tablename__ = 'OWASPTOP10DEFENSETOOLTYPE'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     DefenseToolTypeID = Column(Integer, nullable=False)
@@ -15583,7 +14599,6 @@ class OWASPTOP10DEFENSETOOLTYPE(Base):
 
 class OWASPTOP10DETECTABILITY(Base):
     __tablename__ = 'OWASPTOP10DETECTABILITY'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     DetectabilityID = Column(Integer, nullable=False)
@@ -15593,7 +14608,6 @@ class OWASPTOP10DETECTABILITY(Base):
 
 class OWASPTOP10EXPLOITABILITY(Base):
     __tablename__ = 'OWASPTOP10EXPLOITABILITY'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ExploitabilityID = Column(Integer, primary_key=True)
     OWASPTOP10ID = Column(Integer, nullable=False)
@@ -15604,7 +14618,6 @@ class OWASPTOP10EXPLOITABILITY(Base):
 
 class OWASPTOP10IMPACT(Base):
     __tablename__ = 'OWASPTOP10IMPACT'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     ImpactID = Column(Integer, nullable=False)
@@ -15615,7 +14628,6 @@ class OWASPTOP10IMPACT(Base):
 
 class OWASPTOP10MAPPING(Base):
     __tablename__ = 'OWASPTOP10MAPPING'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10MappingID = Column(Integer, primary_key=True)
     OWASPTOP10RefID = Column(Integer, nullable=False)
@@ -15639,7 +14651,6 @@ class OWASPTOP10MAPPING(Base):
 
 class OWASPTOP10PREVALENCE(Base):
     __tablename__ = 'OWASPTOP10PREVALENCE'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     PrevalenceID = Column(Integer, nullable=False)
@@ -15649,7 +14660,6 @@ class OWASPTOP10PREVALENCE(Base):
 
 class OWASPTOP10REFERENCE(Base):
     __tablename__ = 'OWASPTOP10REFERENCE'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -15660,7 +14670,6 @@ class OWASPTOP10REFERENCE(Base):
 
 class OWASPTOP10TOOLINFORMATION(Base):
     __tablename__ = 'OWASPTOP10TOOLINFORMATION'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ID = Column(Integer, primary_key=True)
     ToolInformationID = Column(Integer, nullable=False)
@@ -15671,7 +14680,6 @@ class OWASPTOP10TOOLINFORMATION(Base):
 
 class OWNERSHIP(Base):
     __tablename__ = 'OWNERSHIP'
-    __bind_key__  = 'XORCISM'
 
     OwnershipID = Column(Integer, primary_key=True)
     OwnershipName = Column(Text)
@@ -15689,7 +14697,6 @@ class OWNERSHIP(Base):
 
 class PACKAGEINTENT(Base):
     __tablename__ = 'PACKAGEINTENT'
-    __bind_key__  = 'XORCISM'
 
     PackageIntentID = Column(Integer, primary_key=True)
     PackageIntentGUID = Column(Text)
@@ -15709,7 +14716,6 @@ class PACKAGEINTENT(Base):
 
 class PACKAGING(Base):
     __tablename__ = 'PACKAGING'
-    __bind_key__  = 'XORCISM'
 
     PackagingID = Column(Integer, primary_key=True)
     PackagingGUID = Column(Text)
@@ -15732,7 +14738,6 @@ class PACKAGING(Base):
 
 class PACKAGINGCOMPRESSION(Base):
     __tablename__ = 'PACKAGINGCOMPRESSION'
-    __bind_key__  = 'XORCISM'
 
     PackagingCompressionID = Column(Integer, primary_key=True)
     PackagingCompressionGUID = Column(Text)
@@ -15759,7 +14764,6 @@ class PACKAGINGCOMPRESSION(Base):
 
 class PACKAGINGENCODING(Base):
     __tablename__ = 'PACKAGINGENCODING'
-    __bind_key__  = 'XORCISM'
 
     PackagingEncodingID = Column(Integer, primary_key=True)
     PackagingEncodingGUID = Column(Text)
@@ -15787,7 +14791,6 @@ class PACKAGINGENCODING(Base):
 
 class PACKAGINGENCRYPTION(Base):
     __tablename__ = 'PACKAGINGENCRYPTION'
-    __bind_key__  = 'XORCISM'
 
     PackagingEncryptionID = Column(Integer, primary_key=True)
     PackagingEncryptionGUID = Column(Text)
@@ -15815,7 +14818,6 @@ class PACKAGINGENCRYPTION(Base):
 
 class PARAGRAPH(Base):
     __tablename__ = 'PARAGRAPH'
-    __bind_key__  = 'XORCISM'
 
     ParagraphID = Column(Integer, primary_key=True)
     SectionID = Column(Integer)
@@ -15825,7 +14827,6 @@ class PARAGRAPH(Base):
 
 class PARAMETER(Base):
     __tablename__ = 'PARAMETER'
-    __bind_key__  = 'XORCISM'
 
     ParameterID = Column(Integer, primary_key=True)
 
@@ -15834,7 +14835,6 @@ class PARAMETER(Base):
 
 class PARAMETERDESCRIPTION(Base):
     __tablename__ = 'PARAMETERDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ParameterDescriptionID = Column(Integer, primary_key=True)
     ParameterID = Column(Integer, nullable=False)
@@ -15849,7 +14849,6 @@ class PARAMETERDESCRIPTION(Base):
 
 class PARAMETERSFORPROVIDER(Base):
     __tablename__ = 'PARAMETERSFORPROVIDER'
-    __bind_key__  = 'XORCISM'
 
     ID = Column(Integer, primary_key=True)
     ServiceCategoryID = Column(Integer, nullable=False)
@@ -15863,7 +14862,6 @@ class PARAMETERSFORPROVIDER(Base):
 
 class PARAMETERTAG(Base):
     __tablename__ = 'PARAMETERTAG'
-    __bind_key__  = 'XORCISM'
 
     ParameterTagID = Column(Integer, primary_key=True)
     ParameterID = Column(Integer, nullable=False)
@@ -15878,7 +14876,6 @@ class PARAMETERTAG(Base):
 
 class PASSWORDQUESTION(Base):
     __tablename__ = 'PASSWORDQUESTION'
-    __bind_key__  = 'XORCISM'
 
     PasswordQuestionID = Column(Integer, primary_key=True)
     Label = Column(Text)
@@ -15890,7 +14887,6 @@ class PASSWORDQUESTION(Base):
 
 class PATCH(Base):
     __tablename__ = 'PATCH'
-    __bind_key__  = 'XORCISM'
 
     PatchID = Column(Integer, primary_key=True)
     PatchGUID = Column(Text)
@@ -15912,7 +14908,6 @@ class PATCH(Base):
 
 class PATCHFILE(Base):
     __tablename__ = 'PATCHFILE'
-    __bind_key__  = 'XORCISM'
 
     PatchFileID = Column(Integer, primary_key=True)
 
@@ -15921,7 +14916,6 @@ class PATCHFILE(Base):
 
 class PATCHREFERENCE(Base):
     __tablename__ = 'PATCHREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     PatchReferenceID = Column(Integer, primary_key=True)
     PatchID = Column(Integer, nullable=False)
@@ -15943,7 +14937,6 @@ class PATCHREFERENCE(Base):
 
 class PATCHREPOSITORY(Base):
     __tablename__ = 'PATCHREPOSITORY'
-    __bind_key__  = 'XORCISM'
 
     PatchRepositoryID = Column(Integer, primary_key=True)
 
@@ -15952,7 +14945,6 @@ class PATCHREPOSITORY(Base):
 
 class PATTERNFIELDGROUP(Base):
     __tablename__ = 'PATTERNFIELDGROUP'
-    __bind_key__  = 'XORCISM'
 
     PatternFieldGroupID = Column(Integer, primary_key=True)
     ConditionApplicationID = Column(Integer)
@@ -15971,7 +14963,6 @@ class PATTERNFIELDGROUP(Base):
 
 class PATTERNTYPE(Base):
     __tablename__ = 'PATTERNTYPE'
-    __bind_key__  = 'XORCISM'
 
     PatternTypeID = Column(Integer, primary_key=True)
     PatternTypeName = Column(Text, nullable=False)
@@ -15983,7 +14974,6 @@ class PATTERNTYPE(Base):
 
 class PAYLOAD(Base):
     __tablename__ = 'PAYLOAD'
-    __bind_key__  = 'XORCISM'
 
     PayloadID = Column(Integer, primary_key=True)
     AttackPayloadID = Column(Integer)
@@ -16003,7 +14993,6 @@ class PAYLOAD(Base):
 
 class PCAPFILE(Base):
     __tablename__ = 'PCAPFILE'
-    __bind_key__  = 'XORCISM'
 
     PCAPFileID = Column(Integer, primary_key=True)
     FileID = Column(Integer)
@@ -16013,7 +15002,6 @@ class PCAPFILE(Base):
 
 class PDFFILE(Base):
     __tablename__ = 'PDFFILE'
-    __bind_key__  = 'XORCISM'
 
     PDFFileID = Column(Integer, primary_key=True)
 
@@ -16022,7 +15010,6 @@ class PDFFILE(Base):
 
 class PERFORMANCEREQUIREMENT(Base):
     __tablename__ = 'PERFORMANCEREQUIREMENT'
-    __bind_key__  = 'XORCISM'
 
     PerformanceRequirementID = Column(Integer, primary_key=True)
     RequirementID = Column(Integer)
@@ -16042,7 +15029,6 @@ class PERFORMANCEREQUIREMENT(Base):
 
 class PERIMETER(Base):
     __tablename__ = 'PERIMETER'
-    __bind_key__  = 'XORCISM'
 
     PerimeterID = Column(Integer, primary_key=True)
 
@@ -16051,7 +15037,6 @@ class PERIMETER(Base):
 
 class PERIMETERDESCRIPTION(Base):
     __tablename__ = 'PERIMETERDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     PerimeterDescriptionID = Column(Integer, primary_key=True)
 
@@ -16060,7 +15045,6 @@ class PERIMETERDESCRIPTION(Base):
 
 class PERIMETERZONE(Base):
     __tablename__ = 'PERIMETERZONE'
-    __bind_key__  = 'XORCISM'
 
     PerimeterZoneID = Column(Integer, primary_key=True)
 
@@ -16069,7 +15053,6 @@ class PERIMETERZONE(Base):
 
 class PERMISSION(Base):
     __tablename__ = 'PERMISSION'
-    __bind_key__  = 'XORCISM'
 
     PermissionID = Column(Integer, primary_key=True)
     PermissionName = Column(Text)
@@ -16087,7 +15070,6 @@ class PERMISSION(Base):
 
 class PERMISSIONDESCRIPTION(Base):
     __tablename__ = 'PERMISSIONDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     PermissionDescriptionID = Column(Integer, primary_key=True)
     PermissionID = Column(Integer, nullable=False)
@@ -16098,7 +15080,6 @@ class PERMISSIONDESCRIPTION(Base):
 
 class PERSISTENCEPROPERTIES(Base):
     __tablename__ = 'PERSISTENCEPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     PersistencePropertiesID = Column(Integer, primary_key=True)
     PersistencePropertiesName = Column(Text)
@@ -16116,7 +15097,6 @@ class PERSISTENCEPROPERTIES(Base):
 
 class PERSISTENCESTRATEGICOBJECTIVE(Base):
     __tablename__ = 'PERSISTENCESTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     PersistenceStrategicObjectiveID = Column(Integer, primary_key=True)
     PersistenceStrategicObjectiveName = Column(Text)
@@ -16134,7 +15114,6 @@ class PERSISTENCESTRATEGICOBJECTIVE(Base):
 
 class PERSISTENCETACTICALOBJECTIVE(Base):
     __tablename__ = 'PERSISTENCETACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     PersistenceTacticalObjectiveID = Column(Integer, primary_key=True)
     PersistenceTacticalObjectiveName = Column(Text)
@@ -16152,7 +15131,6 @@ class PERSISTENCETACTICALOBJECTIVE(Base):
 
 class PERSON(Base):
     __tablename__ = 'PERSON'
-    __bind_key__  = 'XORCISM'
 
     PersonID = Column(Integer, primary_key=True)
     PrecedingTitle = Column(Text)
@@ -16184,7 +15162,6 @@ class PERSON(Base):
 
 class PERSONASSURANCE(Base):
     __tablename__ = 'PERSONASSURANCE'
-    __bind_key__  = 'XORCISM'
 
     PersonAssuranceID = Column(Integer, primary_key=True)
 
@@ -16193,7 +15170,6 @@ class PERSONASSURANCE(Base):
 
 class PERSONBLACKLIST(Base):
     __tablename__ = 'PERSONBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     PersonBlacklistID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16210,7 +15186,6 @@ class PERSONBLACKLIST(Base):
 
 class PERSONCERTIFICATION(Base):
     __tablename__ = 'PERSONCERTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     PersonCertificationID = Column(Integer, primary_key=True)
     PersonID = Column(Integer)
@@ -16227,7 +15202,6 @@ class PERSONCERTIFICATION(Base):
 
 class PERSONDEVICE(Base):
     __tablename__ = 'PERSONDEVICE'
-    __bind_key__  = 'XORCISM'
 
     PersonDeviceID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16245,7 +15219,6 @@ class PERSONDEVICE(Base):
 
 class PERSONDOMAINNAME(Base):
     __tablename__ = 'PERSONDOMAINNAME'
-    __bind_key__  = 'XORCISM'
 
     PersonDomainNameID = Column(Integer, primary_key=True)
     PersonID = Column(Integer)
@@ -16266,7 +15239,6 @@ class PERSONDOMAINNAME(Base):
 
 class PERSONFORAPPLICATION(Base):
     __tablename__ = 'PERSONFORAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     ApplicationID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16283,7 +15255,6 @@ class PERSONFORAPPLICATION(Base):
 
 class PERSONFORASSET(Base):
     __tablename__ = 'PERSONFORASSET'
-    __bind_key__  = 'XORCISM'
 
     PersonID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -16300,7 +15271,6 @@ class PERSONFORASSET(Base):
 
 class PERSONFORINCIDENT(Base):
     __tablename__ = 'PERSONFORINCIDENT'
-    __bind_key__  = 'XORCISM'
 
     IncidentPersonID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16318,7 +15288,6 @@ class PERSONFORINCIDENT(Base):
 
 class PERSONFORORGANISATION(Base):
     __tablename__ = 'PERSONFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     PersonOrganisationID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16344,7 +15313,6 @@ class PERSONFORORGANISATION(Base):
 
 class PERSONFORPERSONGROUP(Base):
     __tablename__ = 'PERSONFORPERSONGROUP'
-    __bind_key__  = 'XORCISM'
 
     PersonGroupPersonID = Column(Integer, primary_key=True)
     PersonGroupID = Column(Integer, nullable=False)
@@ -16363,7 +15331,6 @@ class PERSONFORPERSONGROUP(Base):
 
 class PERSONFORPROJECT(Base):
     __tablename__ = 'PERSONFORPROJECT'
-    __bind_key__  = 'XORCISM'
 
     ProjectPersonID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer, nullable=False)
@@ -16386,7 +15353,6 @@ class PERSONFORPROJECT(Base):
 
 class PERSONFORTHREATACTORTTP(Base):
     __tablename__ = 'PERSONFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     ThreatActorTTPPersonID = Column(Integer, primary_key=True)
     ThreatActorTTPPersonGUID = Column(Text)
@@ -16412,7 +15378,6 @@ class PERSONFORTHREATACTORTTP(Base):
 
 class PERSONGEOLOCATION(Base):
     __tablename__ = 'PERSONGEOLOCATION'
-    __bind_key__  = 'XORCISM'
 
     PersonGeoLocationID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16432,7 +15397,6 @@ class PERSONGEOLOCATION(Base):
 
 class PERSONGROUP(Base):
     __tablename__ = 'PERSONGROUP'
-    __bind_key__  = 'XORCISM'
 
     PersonGroupID = Column(Integer, primary_key=True)
     PersonGroupName = Column(Text, nullable=False)
@@ -16451,7 +15415,6 @@ class PERSONGROUP(Base):
 
 class PERSONLICENSE(Base):
     __tablename__ = 'PERSONLICENSE'
-    __bind_key__  = 'XORCISM'
 
     PersonLicenseID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16465,7 +15428,6 @@ class PERSONLICENSE(Base):
 
 class PERSONPERMISSION(Base):
     __tablename__ = 'PERSONPERMISSION'
-    __bind_key__  = 'XORCISM'
 
     PersonPermissionID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16476,7 +15438,6 @@ class PERSONPERMISSION(Base):
 
 class PERSONPHYSICALLOCATION(Base):
     __tablename__ = 'PERSONPHYSICALLOCATION'
-    __bind_key__  = 'XORCISM'
 
     PersonPhysicalLocationID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16496,7 +15457,6 @@ class PERSONPHYSICALLOCATION(Base):
 
 class PERSONSCHEDULE(Base):
     __tablename__ = 'PERSONSCHEDULE'
-    __bind_key__  = 'XORCISM'
 
     PersonScheduleID = Column(Integer, primary_key=True)
 
@@ -16505,7 +15465,6 @@ class PERSONSCHEDULE(Base):
 
 class PERSONSKILL(Base):
     __tablename__ = 'PERSONSKILL'
-    __bind_key__  = 'XORCISM'
 
     PersonSkillID = Column(Integer, primary_key=True)
     PersonID = Column(Integer)
@@ -16524,7 +15483,6 @@ class PERSONSKILL(Base):
 
 class PERSONTAG(Base):
     __tablename__ = 'PERSONTAG'
-    __bind_key__  = 'XORCISM'
 
     PersonTagID = Column(Integer, primary_key=True)
 
@@ -16533,7 +15491,6 @@ class PERSONTAG(Base):
 
 class PERSONWHITELIST(Base):
     __tablename__ = 'PERSONWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     PersonWhitelistID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -16550,7 +15507,6 @@ class PERSONWHITELIST(Base):
 
 class PERSONWORKINGHOURS(Base):
     __tablename__ = 'PERSONWORKINGHOURS'
-    __bind_key__  = 'XORCISM'
 
     PersonWorkingHoursID = Column(Integer, primary_key=True)
 
@@ -16559,7 +15515,6 @@ class PERSONWORKINGHOURS(Base):
 
 class PGPSIGNATURE(Base):
     __tablename__ = 'PGPSIGNATURE'
-    __bind_key__  = 'XORCISM'
 
     PGPSignatureID = Column(Integer, primary_key=True)
     SignatureID = Column(Integer)
@@ -16569,7 +15524,6 @@ class PGPSIGNATURE(Base):
 
 class PHASE(Base):
     __tablename__ = 'PHASE'
-    __bind_key__  = 'XORCISM'
 
     PhaseID = Column(Integer, primary_key=True)
     PhaseGUID = Column(Text)
@@ -16588,7 +15542,6 @@ class PHASE(Base):
 
 class PHASEMAPPING(Base):
     __tablename__ = 'PHASEMAPPING'
-    __bind_key__  = 'XORCISM'
 
     PhaseMappingID = Column(Integer, primary_key=True)
     PhaseRefID = Column(Integer)
@@ -16610,7 +15563,6 @@ class PHASEMAPPING(Base):
 
 class PHASETAG(Base):
     __tablename__ = 'PHASETAG'
-    __bind_key__  = 'XORCISM'
 
     PhaseTagID = Column(Integer, primary_key=True)
     PhaseID = Column(Integer)
@@ -16628,7 +15580,6 @@ class PHASETAG(Base):
 
 class PHONECALL(Base):
     __tablename__ = 'PHONECALL'
-    __bind_key__  = 'XORCISM'
 
     PhoneCallID = Column(Integer, primary_key=True)
     TelephoneCallID = Column(Integer)
@@ -16648,7 +15599,6 @@ class PHONECALL(Base):
 
 class PHONECALLTAG(Base):
     __tablename__ = 'PHONECALLTAG'
-    __bind_key__  = 'XORCISM'
 
     PhoneCallTagID = Column(Integer, primary_key=True)
 
@@ -16657,7 +15607,6 @@ class PHONECALLTAG(Base):
 
 class PHYSICALLOCATION(Base):
     __tablename__ = 'PHYSICALLOCATION'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationID = Column(Integer, primary_key=True)
     PhysicalLocationName = Column(Text, nullable=False)
@@ -16676,7 +15625,6 @@ class PHYSICALLOCATION(Base):
 
 class PHYSICALLOCATIONASSURANCE(Base):
     __tablename__ = 'PHYSICALLOCATIONASSURANCE'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationAssuranceID = Column(Integer, primary_key=True)
 
@@ -16685,7 +15633,6 @@ class PHYSICALLOCATIONASSURANCE(Base):
 
 class PHYSICALLOCATIONCLASSIFICATION(Base):
     __tablename__ = 'PHYSICALLOCATIONCLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationClassificationID = Column(Integer, primary_key=True)
 
@@ -16694,7 +15641,6 @@ class PHYSICALLOCATIONCLASSIFICATION(Base):
 
 class PHYSICALLOCATIONCONTROL(Base):
     __tablename__ = 'PHYSICALLOCATIONCONTROL'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationControlID = Column(Integer, primary_key=True)
 
@@ -16703,7 +15649,6 @@ class PHYSICALLOCATIONCONTROL(Base):
 
 class PHYSICALLOCATIONDESCRIPTION(Base):
     __tablename__ = 'PHYSICALLOCATIONDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationDescriptionID = Column(Integer, primary_key=True)
     PhysicalLocationID = Column(Integer, nullable=False)
@@ -16722,7 +15667,6 @@ class PHYSICALLOCATIONDESCRIPTION(Base):
 
 class PHYSICALLOCATIONRESTRICTION(Base):
     __tablename__ = 'PHYSICALLOCATIONRESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationRestrictionID = Column(Integer, primary_key=True)
 
@@ -16731,7 +15675,6 @@ class PHYSICALLOCATIONRESTRICTION(Base):
 
 class PHYSICALLOCATIONSECURITYCONTROL(Base):
     __tablename__ = 'PHYSICALLOCATIONSECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationSecurityControlID = Column(Integer, primary_key=True)
 
@@ -16740,7 +15683,6 @@ class PHYSICALLOCATIONSECURITYCONTROL(Base):
 
 class PHYSICALLOCATIONTAG(Base):
     __tablename__ = 'PHYSICALLOCATIONTAG'
-    __bind_key__  = 'XORCISM'
 
     PhysicalLocationTagID = Column(Integer, primary_key=True)
     PhysicalLocationID = Column(Integer)
@@ -16761,7 +15703,6 @@ class PHYSICALLOCATIONTAG(Base):
 
 class PHYSIOLOGICALCHARACTERISTIC(Base):
     __tablename__ = 'PHYSIOLOGICALCHARACTERISTIC'
-    __bind_key__  = 'XORCISM'
 
     PhysiologicalCharacteristicID = Column(Integer, primary_key=True)
 
@@ -16770,7 +15711,6 @@ class PHYSIOLOGICALCHARACTERISTIC(Base):
 
 class PIPEOBJECT(Base):
     __tablename__ = 'PIPEOBJECT'
-    __bind_key__  = 'XORCISM'
 
     PipeObjectID = Column(Integer, primary_key=True)
 
@@ -16779,7 +15719,6 @@ class PIPEOBJECT(Base):
 
 class PKI(Base):
     __tablename__ = 'PKI'
-    __bind_key__  = 'XORCISM'
 
     PKIID = Column(Integer, primary_key=True)
 
@@ -16788,7 +15727,6 @@ class PKI(Base):
 
 class PLAN(Base):
     __tablename__ = 'PLAN'
-    __bind_key__  = 'XORCISM'
 
     PlanID = Column(Integer, primary_key=True)
 
@@ -16797,7 +15735,6 @@ class PLAN(Base):
 
 class PLATFORM(Base):
     __tablename__ = 'PLATFORM'
-    __bind_key__  = 'XORCISM'
 
     PlatformID = Column(Integer, primary_key=True)
     PlatformGUID = Column(Text)
@@ -16817,7 +15754,6 @@ class PLATFORM(Base):
 
 class PLATFORMFORCCE(Base):
     __tablename__ = 'PLATFORMFORCCE'
-    __bind_key__  = 'XORCISM'
 
     CCEPlatformID = Column(Integer, primary_key=True)
     CCEID = Column(Integer)
@@ -16836,7 +15772,6 @@ class PLATFORMFORCCE(Base):
 
 class PLATFORMFORTECHNICALCONTEXT(Base):
     __tablename__ = 'PLATFORMFORTECHNICALCONTEXT'
-    __bind_key__  = 'XORCISM'
 
     TechnicalContextPlatformID = Column(Integer, primary_key=True)
     TechnicalContextPlatformGUID = Column(Text)
@@ -16857,7 +15792,6 @@ class PLATFORMFORTECHNICALCONTEXT(Base):
 
 class PLATFORMMAPPING(Base):
     __tablename__ = 'PLATFORMMAPPING'
-    __bind_key__  = 'XORCISM'
 
     PlatformMappingID = Column(Integer, primary_key=True)
     PlaformRefID = Column(Integer)
@@ -16880,7 +15814,6 @@ class PLATFORMMAPPING(Base):
 
 class PLATFORMSPECIFICATION(Base):
     __tablename__ = 'PLATFORMSPECIFICATION'
-    __bind_key__  = 'XORCISM'
 
     PlatformSpecificationID = Column(Integer, primary_key=True)
 
@@ -16889,7 +15822,6 @@ class PLATFORMSPECIFICATION(Base):
 
 class PLATFORMTAG(Base):
     __tablename__ = 'PLATFORMTAG'
-    __bind_key__  = 'XORCISM'
 
     PlatformTagID = Column(Integer, primary_key=True)
     PlatformID = Column(Integer)
@@ -16907,7 +15839,6 @@ class PLATFORMTAG(Base):
 
 class PLUGIN(Base):
     __tablename__ = 'PLUGIN'
-    __bind_key__  = 'XORCISM'
 
     PluginID = Column(Integer, primary_key=True)
     PluginGUID = Column(Text)
@@ -16925,7 +15856,6 @@ class PLUGIN(Base):
 
 class PLUGINPARAMETER(Base):
     __tablename__ = 'PLUGINPARAMETER'
-    __bind_key__  = 'XORCISM'
 
     PluginParameterID = Column(Integer, primary_key=True)
     PluginID = Column(Integer, nullable=False)
@@ -16941,7 +15871,6 @@ class PLUGINPARAMETER(Base):
 
 class PLUGINREFERENCE(Base):
     __tablename__ = 'PLUGINREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     PluginReferenceID = Column(Integer, primary_key=True)
     PluginID = Column(Integer, nullable=False)
@@ -16961,7 +15890,6 @@ class PLUGINREFERENCE(Base):
 
 class PLUGINTAG(Base):
     __tablename__ = 'PLUGINTAG'
-    __bind_key__  = 'XORCISM'
 
     PluginTagID = Column(Integer, primary_key=True)
 
@@ -16970,7 +15898,6 @@ class PLUGINTAG(Base):
 
 class PLUGINVERSION(Base):
     __tablename__ = 'PLUGINVERSION'
-    __bind_key__  = 'XORCISM'
 
     PluginVersionID = Column(Integer, primary_key=True)
     PluginID = Column(Integer, nullable=False)
@@ -16989,7 +15916,6 @@ class PLUGINVERSION(Base):
 
 class POLICY(Base):
     __tablename__ = 'POLICY'
-    __bind_key__  = 'XORCISM'
 
     PolicyID = Column(Integer, primary_key=True)
     PolicyName = Column(Text)
@@ -17007,7 +15933,6 @@ class POLICY(Base):
 
 class POLICYTERM(Base):
     __tablename__ = 'POLICYTERM'
-    __bind_key__  = 'XORCISM'
 
     PolicyTermID = Column(Integer, primary_key=True)
     AcronymID = Column(Integer)
@@ -17020,7 +15945,6 @@ class POLICYTERM(Base):
 
 class POLICYTERMFORPOLICY(Base):
     __tablename__ = 'POLICYTERMFORPOLICY'
-    __bind_key__  = 'XORCISM'
 
     PolicyTermForPolicyID = Column(Integer, primary_key=True)
     PolicyID = Column(Integer, nullable=False)
@@ -17031,7 +15955,6 @@ class POLICYTERMFORPOLICY(Base):
 
 class PORT(Base):
     __tablename__ = 'PORT'
-    __bind_key__  = 'XORCISM'
 
     PortID = Column(Integer, primary_key=True)
     Port_Value = Column(Integer, nullable=False)
@@ -17053,7 +15976,6 @@ class PORT(Base):
 
 class PORTFOREXPLOIT(Base):
     __tablename__ = 'PORTFOREXPLOIT'
-    __bind_key__  = 'XORCISM'
 
     ExploitPortID = Column(Integer, primary_key=True)
     ExploitID = Column(Integer, nullable=False)
@@ -17074,7 +15996,6 @@ class PORTFOREXPLOIT(Base):
 
 class PORTFORVULNERABILITY(Base):
     __tablename__ = 'PORTFORVULNERABILITY'
-    __bind_key__  = 'XORCISM'
 
     VulnerabilityPortID = Column(Integer, primary_key=True)
     VulnerabilityID = Column(Integer, nullable=False)
@@ -17095,7 +16016,6 @@ class PORTFORVULNERABILITY(Base):
 
 class POSSIBLERESTRICTION(Base):
     __tablename__ = 'POSSIBLERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     PossibleRestrictionID = Column(Integer, primary_key=True)
     RestrictionHint = Column(Text, nullable=False)
@@ -17105,7 +16025,6 @@ class POSSIBLERESTRICTION(Base):
 
 class POSTALADDRESS(Base):
     __tablename__ = 'POSTALADDRESS'
-    __bind_key__  = 'XORCISM'
 
     PostalAddressID = Column(Integer, primary_key=True)
 
@@ -17114,7 +16033,6 @@ class POSTALADDRESS(Base):
 
 class PREVALENCE(Base):
     __tablename__ = 'PREVALENCE'
-    __bind_key__  = 'XORCISM'
 
     PrevalenceID = Column(Integer, primary_key=True)
     PrevalenceName = Column(Text, nullable=False)
@@ -17126,7 +16044,6 @@ class PREVALENCE(Base):
 
 class PRIORITYLEVEL(Base):
     __tablename__ = 'PRIORITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     PriorityLevelID = Column(Integer, primary_key=True)
     PriorityLevelName = Column(Text)
@@ -17143,7 +16060,6 @@ class PRIORITYLEVEL(Base):
 
 class PRIVACYNOTIFICATION(Base):
     __tablename__ = 'PRIVACYNOTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     PrivacyNotificationID = Column(Integer, primary_key=True)
 
@@ -17152,7 +16068,6 @@ class PRIVACYNOTIFICATION(Base):
 
 class PRIVACYRULE(Base):
     __tablename__ = 'PRIVACYRULE'
-    __bind_key__  = 'XORCISM'
 
     PrivacyRuleID = Column(Integer, primary_key=True)
 
@@ -17161,7 +16076,6 @@ class PRIVACYRULE(Base):
 
 class PRIVILEGE(Base):
     __tablename__ = 'PRIVILEGE'
-    __bind_key__  = 'XORCISM'
 
     PrivilegeID = Column(Integer, primary_key=True)
 
@@ -17170,7 +16084,6 @@ class PRIVILEGE(Base):
 
 class PRIVILEGEESCALATIONPROPERTIES(Base):
     __tablename__ = 'PRIVILEGEESCALATIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     PrivilegeEscalationPropertiesID = Column(Integer, primary_key=True)
     PrivilegeEscalationPropertiesName = Column(Text)
@@ -17188,7 +16101,6 @@ class PRIVILEGEESCALATIONPROPERTIES(Base):
 
 class PRIVILEGEESCALATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'PRIVILEGEESCALATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     PrivilegeEscalationStrategicObjectiveID = Column(Integer, primary_key=True)
     PrivilegeEscalationStrategicObjectiveName = Column(Text)
@@ -17206,7 +16118,6 @@ class PRIVILEGEESCALATIONSTRATEGICOBJECTIVE(Base):
 
 class PRIVILEGEESCALATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'PRIVILEGEESCALATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     PrivilegeEscalationTacticalObjectiveID = Column(Integer, primary_key=True)
     PrivilegeEscalationTacticalObjectiveName = Column(Text)
@@ -17224,7 +16135,6 @@ class PRIVILEGEESCALATIONTACTICALOBJECTIVE(Base):
 
 class PRIVILEGESFORROLE(Base):
     __tablename__ = 'PRIVILEGESFORROLE'
-    __bind_key__  = 'XORCISM'
 
     ID = Column(Integer, primary_key=True)
     RoleID = Column(Text)
@@ -17238,7 +16148,6 @@ class PRIVILEGESFORROLE(Base):
 
 class PROBINGSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'PROBINGSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     ProbingStrategicObjectiveID = Column(Integer, primary_key=True)
     ProbingStrategicObjectiveName = Column(Text)
@@ -17256,7 +16165,6 @@ class PROBINGSTRATEGICOBJECTIVE(Base):
 
 class PROBINGTACTICALOBJECTIVE(Base):
     __tablename__ = 'PROBINGTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     ProbingTacticalObjectiveID = Column(Integer, primary_key=True)
     ProbingTacticalObjectiveName = Column(Text)
@@ -17274,7 +16182,6 @@ class PROBINGTACTICALOBJECTIVE(Base):
 
 class PROBINGTECHNIQUE(Base):
     __tablename__ = 'PROBINGTECHNIQUE'
-    __bind_key__  = 'XORCISM'
 
     ProbingTechniqueID = Column(Integer, primary_key=True)
     ProbingTechniqueGUID = Column(Text)
@@ -17291,7 +16198,6 @@ class PROBINGTECHNIQUE(Base):
 
 class PROBINGTECHNIQUEFORATTACKPATTERN(Base):
     __tablename__ = 'PROBINGTECHNIQUEFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternProbingTechniqueID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer, nullable=False)
@@ -17309,7 +16215,6 @@ class PROBINGTECHNIQUEFORATTACKPATTERN(Base):
 
 class PROCEDURE(Base):
     __tablename__ = 'PROCEDURE'
-    __bind_key__  = 'XORCISM'
 
     ProcedureID = Column(Integer, primary_key=True)
 
@@ -17318,7 +16223,6 @@ class PROCEDURE(Base):
 
 class PROCESS(Base):
     __tablename__ = 'PROCESS'
-    __bind_key__  = 'XORCISM'
 
     ProcessID = Column(Integer, primary_key=True)
 
@@ -17327,7 +16231,6 @@ class PROCESS(Base):
 
 class PROCESSACTIONNAME(Base):
     __tablename__ = 'PROCESSACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     ProcessActionNameID = Column(Integer, primary_key=True)
     ProcessActionNameName = Column(Text, nullable=False)
@@ -17345,7 +16248,6 @@ class PROCESSACTIONNAME(Base):
 
 class PROCESSMEMORYACTIONNAME(Base):
     __tablename__ = 'PROCESSMEMORYACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     ProcessMemoryActionNameID = Column(Integer, primary_key=True)
     ProcessMemoryActionNameName = Column(Text, nullable=False)
@@ -17363,7 +16265,6 @@ class PROCESSMEMORYACTIONNAME(Base):
 
 class PROCESSORTYPE(Base):
     __tablename__ = 'PROCESSORTYPE'
-    __bind_key__  = 'XORCISM'
 
     ProcessorTypeID = Column(Integer, primary_key=True)
     ProcessorTypeName = Column(Text, nullable=False)
@@ -17375,7 +16276,6 @@ class PROCESSORTYPE(Base):
 
 class PROCESSORTYPEMAPPING(Base):
     __tablename__ = 'PROCESSORTYPEMAPPING'
-    __bind_key__  = 'XORCISM'
 
     ProcessorTypeMappingID = Column(Integer, primary_key=True)
     ProcessorTypeRefID = Column(Integer, nullable=False)
@@ -17392,7 +16292,6 @@ class PROCESSORTYPEMAPPING(Base):
 
 class PROCESSORTYPEREGISTER(Base):
     __tablename__ = 'PROCESSORTYPEREGISTER'
-    __bind_key__  = 'XORCISM'
 
     ProcessorTypeID = Column(Integer, primary_key=True)
     RegisterID = Column(Integer, nullable=False)
@@ -17402,7 +16301,6 @@ class PROCESSORTYPEREGISTER(Base):
 
 class PROCESSTHREADACTIONNAME(Base):
     __tablename__ = 'PROCESSTHREADACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     ProcessThreadActionNameID = Column(Integer, primary_key=True)
     ProcessThreadActionNameName = Column(Text, nullable=False)
@@ -17420,7 +16318,6 @@ class PROCESSTHREADACTIONNAME(Base):
 
 class PRODUCT(Base):
     __tablename__ = 'PRODUCT'
-    __bind_key__  = 'XORCISM'
 
     ProductID = Column(Integer, primary_key=True)
     ProductGUID = Column(Text)
@@ -17449,7 +16346,6 @@ class PRODUCT(Base):
 
 class PRODUCTCATEGORY(Base):
     __tablename__ = 'PRODUCTCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ProductCategoryID = Column(Integer, primary_key=True)
     ProductCategoryGUID = Column(Text)
@@ -17470,7 +16366,6 @@ class PRODUCTCATEGORY(Base):
 
 class PRODUCTCATEGORYFORPRODUCT(Base):
     __tablename__ = 'PRODUCTCATEGORYFORPRODUCT'
-    __bind_key__  = 'XORCISM'
 
     ProductCategoryForProductID = Column(Integer, primary_key=True)
     ProductID = Column(Integer, nullable=False)
@@ -17491,7 +16386,6 @@ class PRODUCTCATEGORYFORPRODUCT(Base):
 
 class PRODUCTEXPLOIT(Base):
     __tablename__ = 'PRODUCTEXPLOIT'
-    __bind_key__  = 'XORCISM'
 
     ProductExploitID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17511,7 +16405,6 @@ class PRODUCTEXPLOIT(Base):
 
 class PRODUCTFILE(Base):
     __tablename__ = 'PRODUCTFILE'
-    __bind_key__  = 'XORCISM'
 
     ProductFileID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17531,7 +16424,6 @@ class PRODUCTFILE(Base):
 
 class PRODUCTFILELIST(Base):
     __tablename__ = 'PRODUCTFILELIST'
-    __bind_key__  = 'XORCISM'
 
     ProductFileListID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17553,7 +16445,6 @@ class PRODUCTFILELIST(Base):
 
 class PRODUCTMAPPING(Base):
     __tablename__ = 'PRODUCTMAPPING'
-    __bind_key__  = 'XORCISM'
 
     ProductMappingID = Column(Integer, primary_key=True)
     ProductRefID = Column(Integer)
@@ -17575,7 +16466,6 @@ class PRODUCTMAPPING(Base):
 
 class PRODUCTPATCH(Base):
     __tablename__ = 'PRODUCTPATCH'
-    __bind_key__  = 'XORCISM'
 
     ProductPatchID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17597,7 +16487,6 @@ class PRODUCTPATCH(Base):
 
 class PRODUCTPLATFORM(Base):
     __tablename__ = 'PRODUCTPLATFORM'
-    __bind_key__  = 'XORCISM'
 
     ProductPlaformID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17620,7 +16509,6 @@ class PRODUCTPLATFORM(Base):
 
 class PRODUCTPORT(Base):
     __tablename__ = 'PRODUCTPORT'
-    __bind_key__  = 'XORCISM'
 
     ProductPortID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17641,7 +16529,6 @@ class PRODUCTPORT(Base):
 
 class PRODUCTTAG(Base):
     __tablename__ = 'PRODUCTTAG'
-    __bind_key__  = 'XORCISM'
 
     ProductTagID = Column(Integer, primary_key=True)
     ProductID = Column(Integer)
@@ -17659,7 +16546,6 @@ class PRODUCTTAG(Base):
 
 class PROJECT(Base):
     __tablename__ = 'PROJECT'
-    __bind_key__  = 'XORCISM'
 
     ProjectID = Column(Integer, primary_key=True)
     ProjectGUID = Column(Text)
@@ -17683,7 +16569,6 @@ class PROJECT(Base):
 
 class PROJECTDESCRIPTION(Base):
     __tablename__ = 'PROJECTDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ProjectDescriptionID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer)
@@ -17703,7 +16588,6 @@ class PROJECTDESCRIPTION(Base):
 
 class PROJECTFINDING(Base):
     __tablename__ = 'PROJECTFINDING'
-    __bind_key__  = 'XORCISM'
 
     ProjectFindingID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer)
@@ -17723,7 +16607,6 @@ class PROJECTFINDING(Base):
 
 class PROJECTFORAPPLICATION(Base):
     __tablename__ = 'PROJECTFORAPPLICATION'
-    __bind_key__  = 'XORCISM'
 
     ProjectApplicationID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer, nullable=False)
@@ -17747,7 +16630,6 @@ class PROJECTFORAPPLICATION(Base):
 
 class PROJECTMAPPING(Base):
     __tablename__ = 'PROJECTMAPPING'
-    __bind_key__  = 'XORCISM'
 
     ProjectMappingID = Column(Integer, primary_key=True)
     ProjectRefID = Column(Integer)
@@ -17769,7 +16651,6 @@ class PROJECTMAPPING(Base):
 
 class PROJECTMETHODOLOGY(Base):
     __tablename__ = 'PROJECTMETHODOLOGY'
-    __bind_key__  = 'XORCISM'
 
     ProjectMethodologyID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer, nullable=False)
@@ -17792,7 +16673,6 @@ class PROJECTMETHODOLOGY(Base):
 
 class PROJECTPERSON(Base):
     __tablename__ = 'PROJECTPERSON'
-    __bind_key__  = 'XORCISM'
 
     ProjectPersonID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer, nullable=False)
@@ -17814,7 +16694,6 @@ class PROJECTPERSON(Base):
 
 class PROJECTTAG(Base):
     __tablename__ = 'PROJECTTAG'
-    __bind_key__  = 'XORCISM'
 
     ProjectTagID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer)
@@ -17834,7 +16713,6 @@ class PROJECTTAG(Base):
 
 class PROJECTTASK(Base):
     __tablename__ = 'PROJECTTASK'
-    __bind_key__  = 'XORCISM'
 
     ProjectTaskID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer, nullable=False)
@@ -17855,7 +16733,6 @@ class PROJECTTASK(Base):
 
 class PROJECTTASKFINDING(Base):
     __tablename__ = 'PROJECTTASKFINDING'
-    __bind_key__  = 'XORCISM'
 
     ProjectTaskFindingID = Column(Integer, primary_key=True)
     ProjectTaskID = Column(Integer)
@@ -17874,7 +16751,6 @@ class PROJECTTASKFINDING(Base):
 
 class PROJECTTASKPERSON(Base):
     __tablename__ = 'PROJECTTASKPERSON'
-    __bind_key__  = 'XORCISM'
 
     ProjectTaskPersonID = Column(Integer, primary_key=True)
     ProjectTaskID = Column(Integer, nullable=False)
@@ -17895,7 +16771,6 @@ class PROJECTTASKPERSON(Base):
 
 class PROJECTTECHNIQUE(Base):
     __tablename__ = 'PROJECTTECHNIQUE'
-    __bind_key__  = 'XORCISM'
 
     ProjectTechniqueID = Column(Integer, primary_key=True)
 
@@ -17904,7 +16779,6 @@ class PROJECTTECHNIQUE(Base):
 
 class PROPERTYTYPE(Base):
     __tablename__ = 'PROPERTYTYPE'
-    __bind_key__  = 'XORCISM'
 
     PropertyTypeID = Column(Integer, primary_key=True)
 
@@ -17913,7 +16787,6 @@ class PROPERTYTYPE(Base):
 
 class PROTOCOL(Base):
     __tablename__ = 'PROTOCOL'
-    __bind_key__  = 'XORCISM'
 
     ProtocolID = Column(Integer, primary_key=True)
     ProtocolAbbreviation = Column(Text)
@@ -17934,7 +16807,6 @@ class PROTOCOL(Base):
 
 class PROTOCOLCOMMAND(Base):
     __tablename__ = 'PROTOCOLCOMMAND'
-    __bind_key__  = 'XORCISM'
 
     ProtocolCommandID = Column(Integer, primary_key=True)
     ProtocolID = Column(Integer)
@@ -17950,7 +16822,6 @@ class PROTOCOLCOMMAND(Base):
 
 class PROTOCOLFORPROTOCOL(Base):
     __tablename__ = 'PROTOCOLFORPROTOCOL'
-    __bind_key__  = 'XORCISM'
 
     ProtocolRelationshipID = Column(Integer, primary_key=True)
     ProtocolRefID = Column(Integer, nullable=False)
@@ -17966,7 +16837,6 @@ class PROTOCOLFORPROTOCOL(Base):
 
 class PROTOCOLHEADER(Base):
     __tablename__ = 'PROTOCOLHEADER'
-    __bind_key__  = 'XORCISM'
 
     ProtocolHeaderID = Column(Integer, primary_key=True)
     ProtocolHeaderGUID = Column(Text)
@@ -17987,7 +16857,6 @@ class PROTOCOLHEADER(Base):
 
 class PROTOCOLREFERENCE(Base):
     __tablename__ = 'PROTOCOLREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ProtocolReferenceID = Column(Integer, primary_key=True)
     ProtocolID = Column(Integer)
@@ -18004,7 +16873,6 @@ class PROTOCOLREFERENCE(Base):
 
 class PROVIDER(Base):
     __tablename__ = 'PROVIDER'
-    __bind_key__  = 'XORCISM'
 
     ProviderID = Column(Integer, primary_key=True)
     ProviderGUID = Column(Text)
@@ -18026,7 +16894,6 @@ class PROVIDER(Base):
 
 class PROVIDERSFORACCOUNT(Base):
     __tablename__ = 'PROVIDERSFORACCOUNT'
-    __bind_key__  = 'XORCISM'
 
     ProviderAccountID = Column(Integer, primary_key=True)
     ProviderID = Column(Integer)
@@ -18038,7 +16905,6 @@ class PROVIDERSFORACCOUNT(Base):
 
 class RACIMATRIX(Base):
     __tablename__ = 'RACIMATRIX'
-    __bind_key__  = 'XORCISM'
 
     RACIMatrixID = Column(Integer, primary_key=True)
     TaskType = Column(Text)
@@ -18053,7 +16919,6 @@ class RACIMATRIX(Base):
 
 class RACITASK(Base):
     __tablename__ = 'RACITASK'
-    __bind_key__  = 'XORCISM'
 
     RACITaskID = Column(Integer, primary_key=True)
     TaskType = Column(Text)
@@ -18067,7 +16932,6 @@ class RACITASK(Base):
 
 class RATEFILTER(Base):
     __tablename__ = 'RATEFILTER'
-    __bind_key__  = 'XORCISM'
 
     RateFilterID = Column(Integer, primary_key=True)
     RateFilterContent = Column(Text)
@@ -18083,7 +16947,6 @@ class RATEFILTER(Base):
 
 class RAWARTIFACT(Base):
     __tablename__ = 'RAWARTIFACT'
-    __bind_key__  = 'XORCISM'
 
     RawArtifactID = Column(Integer, primary_key=True)
     RawArtifactGUID = Column(Text)
@@ -18105,7 +16968,6 @@ class RAWARTIFACT(Base):
 
 class RAWARTIFACTDESCRIPTION(Base):
     __tablename__ = 'RAWARTIFACTDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     RawArtifactDescriptionID = Column(Integer, primary_key=True)
 
@@ -18114,7 +16976,6 @@ class RAWARTIFACTDESCRIPTION(Base):
 
 class RAWARTIFACTTAG(Base):
     __tablename__ = 'RAWARTIFACTTAG'
-    __bind_key__  = 'XORCISM'
 
     RawArtifactTagID = Column(Integer, primary_key=True)
 
@@ -18123,7 +16984,6 @@ class RAWARTIFACTTAG(Base):
 
 class REASON(Base):
     __tablename__ = 'REASON'
-    __bind_key__  = 'XORCISM'
 
     ReasonID = Column(Integer, primary_key=True)
     ReasonGUID = Column(Text)
@@ -18141,7 +17001,6 @@ class REASON(Base):
 
 class RECOMMENDATION(Base):
     __tablename__ = 'RECOMMENDATION'
-    __bind_key__  = 'XORCISM'
 
     RecommendationID = Column(Integer, primary_key=True)
     RecommendationGUID = Column(Text)
@@ -18168,7 +17027,6 @@ class RECOMMENDATION(Base):
 
 class RECOMMENDATIONAUDITPROCEDURE(Base):
     __tablename__ = 'RECOMMENDATIONAUDITPROCEDURE'
-    __bind_key__  = 'XORCISM'
 
     RecommendationAuditProcedureID = Column(Integer, primary_key=True)
     RecommendationID = Column(Integer, nullable=False)
@@ -18186,7 +17044,6 @@ class RECOMMENDATIONAUDITPROCEDURE(Base):
 
 class RECOMMENDATIONCCE(Base):
     __tablename__ = 'RECOMMENDATIONCCE'
-    __bind_key__  = 'XORCISM'
 
     RecommendationCCEID = Column(Integer, primary_key=True)
     RecommendationID = Column(Integer, nullable=False)
@@ -18205,7 +17062,6 @@ class RECOMMENDATIONCCE(Base):
 
 class RECOMMENDATIONTAG(Base):
     __tablename__ = 'RECOMMENDATIONTAG'
-    __bind_key__  = 'XORCISM'
 
     RecommendationTagID = Column(Integer, primary_key=True)
     RecommendationID = Column(Integer, nullable=False)
@@ -18224,7 +17080,6 @@ class RECOMMENDATIONTAG(Base):
 
 class RECOMMENDATIONTIP(Base):
     __tablename__ = 'RECOMMENDATIONTIP'
-    __bind_key__  = 'XORCISM'
 
     RecommendationTipID = Column(Integer, primary_key=True)
     RecommendationTypeGUID = Column(Text)
@@ -18243,7 +17098,6 @@ class RECOMMENDATIONTIP(Base):
 
 class REFERENCE(Base):
     __tablename__ = 'REFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ReferenceID = Column(Integer, primary_key=True)
     ReferenceGUID = Column(Text)
@@ -18286,7 +17140,6 @@ class REFERENCE(Base):
 
 class REFERENCEAUTHOR(Base):
     __tablename__ = 'REFERENCEAUTHOR'
-    __bind_key__  = 'XORCISM'
 
     ReferenceAuthorID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -18302,7 +17155,6 @@ class REFERENCEAUTHOR(Base):
 
 class REFERENCECATEGORY(Base):
     __tablename__ = 'REFERENCECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ReferenceCategoryID = Column(Integer, primary_key=True)
     ReferenceCategoryGUID = Column(Text)
@@ -18324,7 +17176,6 @@ class REFERENCECATEGORY(Base):
 
 class REFERENCECATEGORYTAG(Base):
     __tablename__ = 'REFERENCECATEGORYTAG'
-    __bind_key__  = 'XORCISM'
 
     ReferenceCategoryTagID = Column(Integer, primary_key=True)
 
@@ -18333,7 +17184,6 @@ class REFERENCECATEGORYTAG(Base):
 
 class REFERENCECHANGERECORD(Base):
     __tablename__ = 'REFERENCECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ReferenceChangeRecordID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -18350,7 +17200,6 @@ class REFERENCECHANGERECORD(Base):
 
 class REFERENCEDESCRIPTION(Base):
     __tablename__ = 'REFERENCEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ReferenceDescriptionID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -18367,7 +17216,6 @@ class REFERENCEDESCRIPTION(Base):
 
 class REFERENCEMAPPING(Base):
     __tablename__ = 'REFERENCEMAPPING'
-    __bind_key__  = 'XORCISM'
 
     ReferenceMappingID = Column(Integer, primary_key=True)
     ReferenceRefID = Column(Integer)
@@ -18387,7 +17235,6 @@ class REFERENCEMAPPING(Base):
 
 class REFERENCETAG(Base):
     __tablename__ = 'REFERENCETAG'
-    __bind_key__  = 'XORCISM'
 
     ReferenceTagID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -18406,7 +17253,6 @@ class REFERENCETAG(Base):
 
 class REGEX(Base):
     __tablename__ = 'REGEX'
-    __bind_key__  = 'XORCISM'
 
     RegexID = Column(Integer, primary_key=True)
     RegularExpression = Column(Text)
@@ -18422,7 +17268,6 @@ class REGEX(Base):
 
 class REGEXCAPTUREFUNCTION(Base):
     __tablename__ = 'REGEXCAPTUREFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     RegexCaptureFunctionID = Column(Integer, primary_key=True)
     Regex = Column(Text, nullable=False)
@@ -18433,7 +17278,6 @@ class REGEXCAPTUREFUNCTION(Base):
 
 class REGEXLANGUAGE(Base):
     __tablename__ = 'REGEXLANGUAGE'
-    __bind_key__  = 'XORCISM'
 
     RegexLanguageID = Column(Integer, primary_key=True)
     RegexID = Column(Integer, nullable=False)
@@ -18447,7 +17291,6 @@ class REGEXLANGUAGE(Base):
 
 class REGEXREFERENCE(Base):
     __tablename__ = 'REGEXREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     RegexReferenceID = Column(Integer, primary_key=True)
     RegexID = Column(Integer, nullable=False)
@@ -18462,7 +17305,6 @@ class REGEXREFERENCE(Base):
 
 class REGISTER(Base):
     __tablename__ = 'REGISTER'
-    __bind_key__  = 'XORCISM'
 
     RegisterID = Column(Integer, primary_key=True)
     RegisterName = Column(Text, nullable=False)
@@ -18479,7 +17321,6 @@ class REGISTER(Base):
 
 class REGISTRYACTIONNAME(Base):
     __tablename__ = 'REGISTRYACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     RegistryActionNameID = Column(Integer, primary_key=True)
     RegistryActionNameName = Column(Text, nullable=False)
@@ -18497,7 +17338,6 @@ class REGISTRYACTIONNAME(Base):
 
 class REGISTRYDATATYPE(Base):
     __tablename__ = 'REGISTRYDATATYPE'
-    __bind_key__  = 'XORCISM'
 
     RegistryDatatypeID = Column(Integer, primary_key=True)
 
@@ -18506,7 +17346,6 @@ class REGISTRYDATATYPE(Base):
 
 class REGISTRYDATATYPEREFERENCE(Base):
     __tablename__ = 'REGISTRYDATATYPEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     RegistryDatatypeReferenceID = Column(Integer, primary_key=True)
     RegistryDatatypeID = Column(Integer, nullable=False)
@@ -18524,7 +17363,6 @@ class REGISTRYDATATYPEREFERENCE(Base):
 
 class REGISTRYDATATYPESENUM(Base):
     __tablename__ = 'REGISTRYDATATYPESENUM'
-    __bind_key__  = 'XORCISM'
 
     RegistryDatatypesEnumID = Column(Integer, primary_key=True)
     RegistryDatatypeName = Column(Text, nullable=False)
@@ -18542,7 +17380,6 @@ class REGISTRYDATATYPESENUM(Base):
 
 class REGISTRYHIVEENUM(Base):
     __tablename__ = 'REGISTRYHIVEENUM'
-    __bind_key__  = 'XORCISM'
 
     RegistryHiveEnumID = Column(Integer, primary_key=True)
     RegistryHiveName = Column(Text, nullable=False)
@@ -18561,7 +17398,6 @@ class REGISTRYHIVEENUM(Base):
 
 class REGISTRYSUBKEYS(Base):
     __tablename__ = 'REGISTRYSUBKEYS'
-    __bind_key__  = 'XORCISM'
 
     RegistrySubkeysID = Column(Integer, primary_key=True)
 
@@ -18570,7 +17406,6 @@ class REGISTRYSUBKEYS(Base):
 
 class REGISTRYSUBKEYSKEYS(Base):
     __tablename__ = 'REGISTRYSUBKEYSKEYS'
-    __bind_key__  = 'XORCISM'
 
     RegistrySubkeysKeysID = Column(Integer, primary_key=True)
     RegistrySubkeysID = Column(Integer, nullable=False)
@@ -18589,7 +17424,6 @@ class REGISTRYSUBKEYSKEYS(Base):
 
 class REGISTRYVALUE(Base):
     __tablename__ = 'REGISTRYVALUE'
-    __bind_key__  = 'XORCISM'
 
     RegistryValueID = Column(Integer, primary_key=True)
     Name = Column(Text)
@@ -18610,7 +17444,6 @@ class REGISTRYVALUE(Base):
 
 class REGISTRYVALUES(Base):
     __tablename__ = 'REGISTRYVALUES'
-    __bind_key__  = 'XORCISM'
 
     RegistryValuesID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -18627,7 +17460,6 @@ class REGISTRYVALUES(Base):
 
 class REGISTRYVALUESREGISTRYVALUE(Base):
     __tablename__ = 'REGISTRYVALUESREGISTRYVALUE'
-    __bind_key__  = 'XORCISM'
 
     RegistryValuesRegistryValueID = Column(Integer, primary_key=True)
     RegistryValuesID = Column(Integer, nullable=False)
@@ -18646,7 +17478,6 @@ class REGISTRYVALUESREGISTRYVALUE(Base):
 
 class REGULAREXPRESSION(Base):
     __tablename__ = 'REGULAREXPRESSION'
-    __bind_key__  = 'XORCISM'
 
     RegularExpressionID = Column(Integer, primary_key=True)
     RegexID = Column(Integer)
@@ -18656,7 +17487,6 @@ class REGULAREXPRESSION(Base):
 
 class REGULATORYRISK(Base):
     __tablename__ = 'REGULATORYRISK'
-    __bind_key__  = 'XORCISM'
 
     RegulatoryRiskID = Column(Integer, primary_key=True)
     RegulatoryRiskGUID = Column(Text)
@@ -18673,7 +17503,6 @@ class REGULATORYRISK(Base):
 
 class RELATIONSHIPTYPE(Base):
     __tablename__ = 'RELATIONSHIPTYPE'
-    __bind_key__  = 'XORCISM'
 
     RelationshipTypeID = Column(Integer, primary_key=True)
     RelationshipTypeTerm = Column(Text)
@@ -18692,7 +17521,6 @@ class RELATIONSHIPTYPE(Base):
 
 class RELIABILITY(Base):
     __tablename__ = 'RELIABILITY'
-    __bind_key__  = 'XORCISM'
 
     ReliabilityID = Column(Integer, primary_key=True)
     ReliabilityGUID = Column(Text)
@@ -18708,7 +17536,6 @@ class RELIABILITY(Base):
 
 class RELIABILITYREASON(Base):
     __tablename__ = 'RELIABILITYREASON'
-    __bind_key__  = 'XORCISM'
 
     ReliabilityReasonID = Column(Integer, primary_key=True)
     ReliabilityReasonGUID = Column(Text)
@@ -18726,7 +17553,6 @@ class RELIABILITYREASON(Base):
 
 class REMOTEMACHINEMANIPULATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'REMOTEMACHINEMANIPULATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     RemoteMachineManipulationStrategicObjectiveID = Column(Integer, primary_key=True)
     RemoteMachineManipulationStrategicObjectiveName = Column(Text)
@@ -18744,7 +17570,6 @@ class REMOTEMACHINEMANIPULATIONSTRATEGICOBJECTIVE(Base):
 
 class REMOTEMACHINEMANIPULATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'REMOTEMACHINEMANIPULATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     RemoteMachineManipulationTacticalObjectiveID = Column(Integer, primary_key=True)
     RemoteMachineManipulationTacticalObjectiveName = Column(Text)
@@ -18762,7 +17587,6 @@ class REMOTEMACHINEMANIPULATIONTACTICALOBJECTIVE(Base):
 
 class REPORT(Base):
     __tablename__ = 'REPORT'
-    __bind_key__  = 'XORCISM'
 
     ReportID = Column(Integer, primary_key=True)
     ReportGUID = Column(Text)
@@ -18777,7 +17601,6 @@ class REPORT(Base):
 
 class REPORTFORREPORTS(Base):
     __tablename__ = 'REPORTFORREPORTS'
-    __bind_key__  = 'XORCISM'
 
     ReportsID = Column(Integer, primary_key=True)
     ReportID = Column(Integer, nullable=False)
@@ -18787,7 +17610,6 @@ class REPORTFORREPORTS(Base):
 
 class REPORTREQUEST(Base):
     __tablename__ = 'REPORTREQUEST'
-    __bind_key__  = 'XORCISM'
 
     ReportRequestID = Column(Integer, primary_key=True)
     ARFReportRequestID = Column(Text, nullable=False)
@@ -18799,7 +17621,6 @@ class REPORTREQUEST(Base):
 
 class REPORTREQUESTFORREPORTREQUESTS(Base):
     __tablename__ = 'REPORTREQUESTFORREPORTREQUESTS'
-    __bind_key__  = 'XORCISM'
 
     ReportRequestsID = Column(Integer, primary_key=True)
     ReportRequestID = Column(Integer, nullable=False)
@@ -18809,7 +17630,6 @@ class REPORTREQUESTFORREPORTREQUESTS(Base):
 
 class REPORTREQUESTS(Base):
     __tablename__ = 'REPORTREQUESTS'
-    __bind_key__  = 'XORCISM'
 
     ReportRequestsID = Column(Integer, primary_key=True)
 
@@ -18818,7 +17638,6 @@ class REPORTREQUESTS(Base):
 
 class REPORTS(Base):
     __tablename__ = 'REPORTS'
-    __bind_key__  = 'XORCISM'
 
     ReportsID = Column(Integer, primary_key=True)
 
@@ -18827,7 +17646,6 @@ class REPORTS(Base):
 
 class REPOSITORY(Base):
     __tablename__ = 'REPOSITORY'
-    __bind_key__  = 'XORCISM'
 
     RepositoryID = Column(Integer, primary_key=True)
     RepositoryGUID = Column(Text)
@@ -18852,7 +17670,6 @@ class REPOSITORY(Base):
 
 class REPOSITORYRESTRICTION(Base):
     __tablename__ = 'REPOSITORYRESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     RepositoryRestrictionID = Column(Integer, primary_key=True)
 
@@ -18861,7 +17678,6 @@ class REPOSITORYRESTRICTION(Base):
 
 class REPUTATION(Base):
     __tablename__ = 'REPUTATION'
-    __bind_key__  = 'XORCISM'
 
     ReputationID = Column(Integer, primary_key=True)
     ReputationGUID = Column(Text)
@@ -18880,7 +17696,6 @@ class REPUTATION(Base):
 
 class REQUIREMENT(Base):
     __tablename__ = 'REQUIREMENT'
-    __bind_key__  = 'XORCISM'
 
     RequirementID = Column(Integer, primary_key=True)
     RequirementGUID = Column(Text)
@@ -18898,7 +17713,6 @@ class REQUIREMENT(Base):
 
 class REQUIREMENTCATEGORY(Base):
     __tablename__ = 'REQUIREMENTCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     RequirementCategoryID = Column(Integer, primary_key=True)
     RequirementID = Column(Integer)
@@ -18915,7 +17729,6 @@ class REQUIREMENTCATEGORY(Base):
 
 class REQUIREMENTDESCRIPTION(Base):
     __tablename__ = 'REQUIREMENTDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     RequirementDescriptionID = Column(Integer, primary_key=True)
     RequirementID = Column(Integer)
@@ -18931,7 +17744,6 @@ class REQUIREMENTDESCRIPTION(Base):
 
 class REQUIREMENTMAPPING(Base):
     __tablename__ = 'REQUIREMENTMAPPING'
-    __bind_key__  = 'XORCISM'
 
     RequirementMappingID = Column(Integer, primary_key=True)
     RequirementRefID = Column(Integer)
@@ -18950,7 +17762,6 @@ class REQUIREMENTMAPPING(Base):
 
 class RESTRICTION(Base):
     __tablename__ = 'RESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     RestrictionID = Column(Integer, primary_key=True)
     OperationEnumerationValue = Column(Text, nullable=False)
@@ -18961,7 +17772,6 @@ class RESTRICTION(Base):
 
 class RESULTENUMERATION(Base):
     __tablename__ = 'RESULTENUMERATION'
-    __bind_key__  = 'XORCISM'
 
     ResultEnumerationID = Column(Integer, primary_key=True)
     ResultEnumerationValue = Column(Text, nullable=False)
@@ -18973,7 +17783,6 @@ class RESULTENUMERATION(Base):
 
 class RISKRATING(Base):
     __tablename__ = 'RISKRATING'
-    __bind_key__  = 'XORCISM'
 
     RiskRatingID = Column(Integer, primary_key=True)
     RiskRatingGUID = Column(Text)
@@ -18994,7 +17803,6 @@ class RISKRATING(Base):
 
 class RISKSCORE(Base):
     __tablename__ = 'RISKSCORE'
-    __bind_key__  = 'XORCISM'
 
     RiskScoreID = Column(Integer, primary_key=True)
     RiskScore = Column(Integer)
@@ -19007,7 +17815,6 @@ class RISKSCORE(Base):
 
 class ROLE(Base):
     __tablename__ = 'ROLE'
-    __bind_key__  = 'XORCISM'
 
     RoleID = Column(Integer, primary_key=True)
     RoleGUID = Column(Text)
@@ -19025,7 +17832,6 @@ class ROLE(Base):
 
 class ROPCHAIN(Base):
     __tablename__ = 'ROPCHAIN'
-    __bind_key__  = 'XORCISM'
 
     ROPChainID = Column(Integer, primary_key=True)
     ROPChainName = Column(Text, nullable=False)
@@ -19037,7 +17843,6 @@ class ROPCHAIN(Base):
 
 class ROPCHAININSTRUCTION(Base):
     __tablename__ = 'ROPCHAININSTRUCTION'
-    __bind_key__  = 'XORCISM'
 
     ROPChainID = Column(Integer, primary_key=True)
     InstructionID = Column(Integer, nullable=False)
@@ -19047,7 +17852,6 @@ class ROPCHAININSTRUCTION(Base):
 
 class ROPCHAINREFERENCE(Base):
     __tablename__ = 'ROPCHAINREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ROPChainID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -19058,7 +17862,6 @@ class ROPCHAINREFERENCE(Base):
 
 class ROPGADGET(Base):
     __tablename__ = 'ROPGADGET'
-    __bind_key__  = 'XORCISM'
 
     ROPGadgetID = Column(Integer, primary_key=True)
     ROPGadgetGUID = Column(Text)
@@ -19077,7 +17880,6 @@ class ROPGADGET(Base):
 
 class ROPGADGETFORROPCHAIN(Base):
     __tablename__ = 'ROPGADGETFORROPCHAIN'
-    __bind_key__  = 'XORCISM'
 
     ROPChainID = Column(Integer, primary_key=True)
     ROPGadgetID = Column(Integer, nullable=False)
@@ -19088,7 +17890,6 @@ class ROPGADGETFORROPCHAIN(Base):
 
 class ROPGADGETINSTRUCTION(Base):
     __tablename__ = 'ROPGADGETINSTRUCTION'
-    __bind_key__  = 'XORCISM'
 
     ROGGadgetID = Column(Integer, primary_key=True)
     InstructionID = Column(Integer, nullable=False)
@@ -19099,7 +17900,6 @@ class ROPGADGETINSTRUCTION(Base):
 
 class ROPGADGETTAG(Base):
     __tablename__ = 'ROPGADGETTAG'
-    __bind_key__  = 'XORCISM'
 
     ROPGadgetTagID = Column(Integer, primary_key=True)
 
@@ -19108,7 +17908,6 @@ class ROPGADGETTAG(Base):
 
 class RSAPUBLICKEY(Base):
     __tablename__ = 'RSAPUBLICKEY'
-    __bind_key__  = 'XORCISM'
 
     RSAPublicKeyID = Column(Integer, primary_key=True)
     RSAPublicKeyGUID = Column(Text)
@@ -19126,7 +17925,6 @@ class RSAPUBLICKEY(Base):
 
 class RSAPUBLICKEYACCESSRECORD(Base):
     __tablename__ = 'RSAPUBLICKEYACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     RSAPlublicKeyAccessRecordID = Column(Integer, primary_key=True)
 
@@ -19135,7 +17933,6 @@ class RSAPUBLICKEYACCESSRECORD(Base):
 
 class RULE(Base):
     __tablename__ = 'RULE'
-    __bind_key__  = 'XORCISM'
 
     RuleID = Column(Integer, primary_key=True)
     RuleGUID = Column(Text)
@@ -19156,7 +17953,6 @@ class RULE(Base):
 
 class RULECATEGORIES(Base):
     __tablename__ = 'RULECATEGORIES'
-    __bind_key__  = 'XORCISM'
 
     RuleCategoriesID = Column(Integer, primary_key=True)
     RuleID = Column(Integer)
@@ -19173,7 +17969,6 @@ class RULECATEGORIES(Base):
 
 class RULECATEGORY(Base):
     __tablename__ = 'RULECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     RuleCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -19191,7 +17986,6 @@ class RULECATEGORY(Base):
 
 class RULEPRODUCT(Base):
     __tablename__ = 'RULEPRODUCT'
-    __bind_key__  = 'XORCISM'
 
     RuleProductID = Column(Integer, primary_key=True)
     RuleID = Column(Integer)
@@ -19209,7 +18003,6 @@ class RULEPRODUCT(Base):
 
 class RULEPROTOCOL(Base):
     __tablename__ = 'RULEPROTOCOL'
-    __bind_key__  = 'XORCISM'
 
     RuleProtocolID = Column(Integer, primary_key=True)
     RuleID = Column(Integer)
@@ -19226,7 +18019,6 @@ class RULEPROTOCOL(Base):
 
 class RULEREFERENCE(Base):
     __tablename__ = 'RULEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     RuleReferenceID = Column(Integer, primary_key=True)
     RuleID = Column(Integer)
@@ -19243,7 +18035,6 @@ class RULEREFERENCE(Base):
 
 class SCENARIO(Base):
     __tablename__ = 'SCENARIO'
-    __bind_key__  = 'XORCISM'
 
     ScenarioID = Column(Integer, primary_key=True)
     ScenarioName = Column(Text, nullable=False)
@@ -19259,7 +18050,6 @@ class SCENARIO(Base):
 
 class SCENARIOFOROWASPTOP10(Base):
     __tablename__ = 'SCENARIOFOROWASPTOP10'
-    __bind_key__  = 'XORCISM'
 
     OWASPTOP10ScenarioID = Column(Integer, primary_key=True)
     OWASPTOP10ID = Column(Integer, nullable=False)
@@ -19272,7 +18062,6 @@ class SCENARIOFOROWASPTOP10(Base):
 
 class SCHEDULE(Base):
     __tablename__ = 'SCHEDULE'
-    __bind_key__  = 'XORCISM'
 
     ScheduleID = Column(Integer, primary_key=True)
     ScheduleGUID = Column(Text)
@@ -19282,7 +18071,6 @@ class SCHEDULE(Base):
 
 class SCHEMA(Base):
     __tablename__ = 'SCHEMA'
-    __bind_key__  = 'XORCISM'
 
     SchemaID = Column(Integer, primary_key=True)
 
@@ -19291,7 +18079,6 @@ class SCHEMA(Base):
 
 class SCORINGFORMULA(Base):
     __tablename__ = 'SCORINGFORMULA'
-    __bind_key__  = 'XORCISM'
 
     ScoringFormulaID = Column(Integer, primary_key=True)
     ScoringFormulaName = Column(Text, nullable=False)
@@ -19307,7 +18094,6 @@ class SCORINGFORMULA(Base):
 
 class SCORINGSTATUS(Base):
     __tablename__ = 'SCORINGSTATUS'
-    __bind_key__  = 'XORCISM'
 
     ScoringStatusID = Column(Integer, primary_key=True)
     ScoringStatusName = Column(Text)
@@ -19324,7 +18110,6 @@ class SCORINGSTATUS(Base):
 
 class SCORINGSYSTEM(Base):
     __tablename__ = 'SCORINGSYSTEM'
-    __bind_key__  = 'XORCISM'
 
     ScoringSystemID = Column(Integer, primary_key=True)
     ScoringSystemName = Column(Text, nullable=False)
@@ -19336,7 +18121,6 @@ class SCORINGSYSTEM(Base):
 
 class SCORINGSYSTEMDESCRIPTION(Base):
     __tablename__ = 'SCORINGSYSTEMDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ScoringSystemDescriptionID = Column(Integer, primary_key=True)
 
@@ -19345,7 +18129,6 @@ class SCORINGSYSTEMDESCRIPTION(Base):
 
 class SCORINGSYSTEMFORMULAS(Base):
     __tablename__ = 'SCORINGSYSTEMFORMULAS'
-    __bind_key__  = 'XORCISM'
 
     ScoringSystemID = Column(Integer, primary_key=True)
     ScoringFormulaID = Column(Integer, nullable=False)
@@ -19355,7 +18138,6 @@ class SCORINGSYSTEMFORMULAS(Base):
 
 class SCORINGSYSTEMREFERENCE(Base):
     __tablename__ = 'SCORINGSYSTEMREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ScoringSystemID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -19366,7 +18148,6 @@ class SCORINGSYSTEMREFERENCE(Base):
 
 class SCORINGSYSTEMTAG(Base):
     __tablename__ = 'SCORINGSYSTEMTAG'
-    __bind_key__  = 'XORCISM'
 
     ScoringSystemTagID = Column(Integer, primary_key=True)
 
@@ -19375,7 +18156,6 @@ class SCORINGSYSTEMTAG(Base):
 
 class SCRIPT(Base):
     __tablename__ = 'SCRIPT'
-    __bind_key__  = 'XORCISM'
 
     ScriptID = Column(Integer, primary_key=True)
     CommandsID = Column(Integer, nullable=False)
@@ -19394,7 +18174,6 @@ class SCRIPT(Base):
 
 class SCRIPTDESCRIPTION(Base):
     __tablename__ = 'SCRIPTDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ScriptDescriptionID = Column(Integer, primary_key=True)
     ScriptID = Column(Integer, nullable=False)
@@ -19410,7 +18189,6 @@ class SCRIPTDESCRIPTION(Base):
 
 class SCRIPTTAG(Base):
     __tablename__ = 'SCRIPTTAG'
-    __bind_key__  = 'XORCISM'
 
     ScriptTagID = Column(Integer, primary_key=True)
 
@@ -19419,7 +18197,6 @@ class SCRIPTTAG(Base):
 
 class SCRIPTVERSION(Base):
     __tablename__ = 'SCRIPTVERSION'
-    __bind_key__  = 'XORCISM'
 
     ScriptVersionID = Column(Integer, primary_key=True)
     ScriptID = Column(Integer, nullable=False)
@@ -19434,7 +18211,6 @@ class SCRIPTVERSION(Base):
 
 class SECONDARYOPERATIONPROPERTIES(Base):
     __tablename__ = 'SECONDARYOPERATIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     SecondaryOperationPropertiesID = Column(Integer, primary_key=True)
     SecondaryOperationPropertiesName = Column(Text)
@@ -19452,7 +18228,6 @@ class SECONDARYOPERATIONPROPERTIES(Base):
 
 class SECONDARYOPERATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'SECONDARYOPERATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SecondaryOperationStrategicObjectiveID = Column(Integer, primary_key=True)
     SecondaryOperationStrategicObjectiveName = Column(Text)
@@ -19470,7 +18245,6 @@ class SECONDARYOPERATIONSTRATEGICOBJECTIVE(Base):
 
 class SECONDARYOPERATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'SECONDARYOPERATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SecondaryOperationTacticalObjectiveID = Column(Integer, primary_key=True)
     SecondaryOperationTacticalObjectiveName = Column(Text)
@@ -19488,7 +18262,6 @@ class SECONDARYOPERATIONTACTICALOBJECTIVE(Base):
 
 class SECTION(Base):
     __tablename__ = 'SECTION'
-    __bind_key__  = 'XORCISM'
 
     SectionID = Column(Integer, primary_key=True)
     SectionName = Column(Text)
@@ -19506,7 +18279,6 @@ class SECTION(Base):
 
 class SECTIONDESCRIPTION(Base):
     __tablename__ = 'SECTIONDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     SectionDescriptionID = Column(Integer, primary_key=True)
     SectionID = Column(Integer, nullable=False)
@@ -19523,7 +18295,6 @@ class SECTIONDESCRIPTION(Base):
 
 class SECTIONREFERENCE(Base):
     __tablename__ = 'SECTIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SectionReferenceID = Column(Integer, primary_key=True)
 
@@ -19532,7 +18303,6 @@ class SECTIONREFERENCE(Base):
 
 class SECTIONTAG(Base):
     __tablename__ = 'SECTIONTAG'
-    __bind_key__  = 'XORCISM'
 
     SectionTagID = Column(Integer, primary_key=True)
 
@@ -19541,7 +18311,6 @@ class SECTIONTAG(Base):
 
 class SECURITYATTRIBUTE(Base):
     __tablename__ = 'SECURITYATTRIBUTE'
-    __bind_key__  = 'XORCISM'
 
     SecurityAttributeID = Column(Integer, primary_key=True)
     SecurityAttributeCategoryID = Column(Integer, nullable=False)
@@ -19560,7 +18329,6 @@ class SECURITYATTRIBUTE(Base):
 
 class SECURITYATTRIBUTECATEGORY(Base):
     __tablename__ = 'SECURITYATTRIBUTECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     SecurityAttributeCategoryID = Column(Integer, primary_key=True)
     SecurityAttributeCategoryName = Column(Text, nullable=False)
@@ -19571,7 +18339,6 @@ class SECURITYATTRIBUTECATEGORY(Base):
 
 class SECURITYATTRIBUTESTATE(Base):
     __tablename__ = 'SECURITYATTRIBUTESTATE'
-    __bind_key__  = 'XORCISM'
 
     SecurityAttributeStateID = Column(Integer, primary_key=True)
     SecurityAttributeCategoryID = Column(Integer, nullable=False)
@@ -19583,7 +18350,6 @@ class SECURITYATTRIBUTESTATE(Base):
 
 class SECURITYATTRIBUTEVARIETY(Base):
     __tablename__ = 'SECURITYATTRIBUTEVARIETY'
-    __bind_key__  = 'XORCISM'
 
     SecurityAttributeVarietyID = Column(Integer, primary_key=True)
     SecurityAttributeCategoryID = Column(Integer, nullable=False)
@@ -19595,7 +18361,6 @@ class SECURITYATTRIBUTEVARIETY(Base):
 
 class SECURITYCHANGE(Base):
     __tablename__ = 'SECURITYCHANGE'
-    __bind_key__  = 'XORCISM'
 
     SecurityChangeID = Column(Integer, primary_key=True)
 
@@ -19604,7 +18369,6 @@ class SECURITYCHANGE(Base):
 
 class SECURITYCOMPROMISEENUM(Base):
     __tablename__ = 'SECURITYCOMPROMISEENUM'
-    __bind_key__  = 'XORCISM'
 
     SecurityCompromiseEnumID = Column(Integer, primary_key=True)
     SecurityCompromiseEnumName = Column(Text)
@@ -19622,7 +18386,6 @@ class SECURITYCOMPROMISEENUM(Base):
 
 class SECURITYCONTROL(Base):
     __tablename__ = 'SECURITYCONTROL'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlID = Column(Integer, primary_key=True)
     SecurityControlGUID = Column(Text)
@@ -19653,7 +18416,6 @@ class SECURITYCONTROL(Base):
 
 class SECURITYCONTROLCHANGERECORD(Base):
     __tablename__ = 'SECURITYCONTROLCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlChangeRecordID = Column(Integer, primary_key=True)
 
@@ -19662,7 +18424,6 @@ class SECURITYCONTROLCHANGERECORD(Base):
 
 class SECURITYCONTROLDESCRIPTION(Base):
     __tablename__ = 'SECURITYCONTROLDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlDescriptionID = Column(Integer, primary_key=True)
 
@@ -19671,7 +18432,6 @@ class SECURITYCONTROLDESCRIPTION(Base):
 
 class SECURITYCONTROLENVIRONMENT(Base):
     __tablename__ = 'SECURITYCONTROLENVIRONMENT'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlEnvironmentID = Column(Integer, primary_key=True)
 
@@ -19680,7 +18440,6 @@ class SECURITYCONTROLENVIRONMENT(Base):
 
 class SECURITYCONTROLFAMILY(Base):
     __tablename__ = 'SECURITYCONTROLFAMILY'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlFamilyID = Column(Integer, primary_key=True)
     SecurityControlFamilyName = Column(Text, nullable=False)
@@ -19697,7 +18456,6 @@ class SECURITYCONTROLFAMILY(Base):
 
 class SECURITYCONTROLFAMILYTAG(Base):
     __tablename__ = 'SECURITYCONTROLFAMILYTAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlFamilyTagID = Column(Integer, primary_key=True)
 
@@ -19706,7 +18464,6 @@ class SECURITYCONTROLFAMILYTAG(Base):
 
 class SECURITYCONTROLFORHUMANRISK(Base):
     __tablename__ = 'SECURITYCONTROLFORHUMANRISK'
-    __bind_key__  = 'XORCISM'
 
     HumanRiskSecurityControlID = Column(Integer, primary_key=True)
     HumanRiskID = Column(Integer, nullable=False)
@@ -19720,7 +18477,6 @@ class SECURITYCONTROLFORHUMANRISK(Base):
 
 class SECURITYCONTROLMAPPING(Base):
     __tablename__ = 'SECURITYCONTROLMAPPING'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlMappingID = Column(Integer, primary_key=True)
     SecurityControlRefID = Column(Integer, nullable=False)
@@ -19743,7 +18499,6 @@ class SECURITYCONTROLMAPPING(Base):
 
 class SECURITYCONTROLPRIORITY(Base):
     __tablename__ = 'SECURITYCONTROLPRIORITY'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlPriorityID = Column(Integer, primary_key=True)
     SecurityControlID = Column(Integer)
@@ -19760,7 +18515,6 @@ class SECURITYCONTROLPRIORITY(Base):
 
 class SECURITYCONTROLREFERENCE(Base):
     __tablename__ = 'SECURITYCONTROLREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlReferenceID = Column(Integer, primary_key=True)
     SecurityControlID = Column(Integer)
@@ -19779,7 +18533,6 @@ class SECURITYCONTROLREFERENCE(Base):
 
 class SECURITYCONTROLSTRENGTH(Base):
     __tablename__ = 'SECURITYCONTROLSTRENGTH'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlStrenghtID = Column(Integer, primary_key=True)
     SecurityControlID = Column(Integer, nullable=False)
@@ -19796,7 +18549,6 @@ class SECURITYCONTROLSTRENGTH(Base):
 
 class SECURITYCONTROLTAG(Base):
     __tablename__ = 'SECURITYCONTROLTAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlTagID = Column(Integer, primary_key=True)
     SecurityControlID = Column(Integer)
@@ -19815,7 +18567,6 @@ class SECURITYCONTROLTAG(Base):
 
 class SECURITYCONTROLTEST(Base):
     __tablename__ = 'SECURITYCONTROLTEST'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlTestID = Column(Integer, primary_key=True)
     SecurityControlTestGUID = Column(Text)
@@ -19836,7 +18587,6 @@ class SECURITYCONTROLTEST(Base):
 
 class SECURITYCONTROLTOOL(Base):
     __tablename__ = 'SECURITYCONTROLTOOL'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlToolID = Column(Integer, primary_key=True)
     SecurityControlID = Column(Integer, nullable=False)
@@ -19855,7 +18605,6 @@ class SECURITYCONTROLTOOL(Base):
 
 class SECURITYCONTROLTYPE(Base):
     __tablename__ = 'SECURITYCONTROLTYPE'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlTypeID = Column(Integer, primary_key=True)
     SecurityControlTypeName = Column(Text)
@@ -19872,7 +18621,6 @@ class SECURITYCONTROLTYPE(Base):
 
 class SECURITYCONTROLTYPETAG(Base):
     __tablename__ = 'SECURITYCONTROLTYPETAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityControlTypeTagID = Column(Integer, primary_key=True)
     SecurityControlTypeID = Column(Integer)
@@ -19889,7 +18637,6 @@ class SECURITYCONTROLTYPETAG(Base):
 
 class SECURITYDEGRADATIONPROPERTIES(Base):
     __tablename__ = 'SECURITYDEGRADATIONPROPERTIES'
-    __bind_key__  = 'XORCISM'
 
     SecurityDegradationPropertiesID = Column(Integer, primary_key=True)
     SecurityDegradationPropertiesName = Column(Text)
@@ -19907,7 +18654,6 @@ class SECURITYDEGRADATIONPROPERTIES(Base):
 
 class SECURITYDEGRADATIONSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'SECURITYDEGRADATIONSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SecurityDegradationStrategicObjectiveID = Column(Integer, primary_key=True)
     SecurityDegradationStrategicObjectiveName = Column(Text)
@@ -19925,7 +18671,6 @@ class SECURITYDEGRADATIONSTRATEGICOBJECTIVE(Base):
 
 class SECURITYDEGRADATIONTACTICALOBJECTIVE(Base):
     __tablename__ = 'SECURITYDEGRADATIONTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SecurityDegradationTacticalObjectiveID = Column(Integer, primary_key=True)
     SecurityDegradationTacticalObjectiveName = Column(Text)
@@ -19943,7 +18688,6 @@ class SECURITYDEGRADATIONTACTICALOBJECTIVE(Base):
 
 class SECURITYDOMAIN(Base):
     __tablename__ = 'SECURITYDOMAIN'
-    __bind_key__  = 'XORCISM'
 
     SecurityDomainID = Column(Integer, primary_key=True)
     SecurityDomainGUID = Column(Text)
@@ -19961,7 +18705,6 @@ class SECURITYDOMAIN(Base):
 
 class SECURITYDOMAINMATURITY(Base):
     __tablename__ = 'SECURITYDOMAINMATURITY'
-    __bind_key__  = 'XORCISM'
 
     SecurityDomainMaturityID = Column(Integer, primary_key=True)
     SecurityDomainID = Column(Integer)
@@ -19988,7 +18731,6 @@ class SECURITYDOMAINMATURITY(Base):
 
 class SECURITYDOMAINOBJECTIVE(Base):
     __tablename__ = 'SECURITYDOMAINOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SecurityDomainObjectiveID = Column(Integer, primary_key=True)
     SecurityDomainID = Column(Integer)
@@ -20007,7 +18749,6 @@ class SECURITYDOMAINOBJECTIVE(Base):
 
 class SECURITYDOMAINPROCESS(Base):
     __tablename__ = 'SECURITYDOMAINPROCESS'
-    __bind_key__  = 'XORCISM'
 
     SecurityDomainProcessID = Column(Integer, primary_key=True)
     SecurityDomainID = Column(Integer, nullable=False)
@@ -20027,7 +18768,6 @@ class SECURITYDOMAINPROCESS(Base):
 
 class SECURITYDOMAINTAG(Base):
     __tablename__ = 'SECURITYDOMAINTAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityDomainTagID = Column(Integer, primary_key=True)
     SecurityDomainID = Column(Integer)
@@ -20046,7 +18786,6 @@ class SECURITYDOMAINTAG(Base):
 
 class SECURITYEVALUATION(Base):
     __tablename__ = 'SECURITYEVALUATION'
-    __bind_key__  = 'XORCISM'
 
     SecurityEvaluationID = Column(Integer, primary_key=True)
 
@@ -20055,7 +18794,6 @@ class SECURITYEVALUATION(Base):
 
 class SECURITYLABEL(Base):
     __tablename__ = 'SECURITYLABEL'
-    __bind_key__  = 'XORCISM'
 
     SecurityLabelID = Column(Integer, primary_key=True)
     LabelID = Column(Integer)
@@ -20073,7 +18811,6 @@ class SECURITYLABEL(Base):
 
 class SECURITYLABELREFERENCE(Base):
     __tablename__ = 'SECURITYLABELREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SecurityLabelReferenceID = Column(Integer, primary_key=True)
     SecurityLabelID = Column(Integer, nullable=False)
@@ -20092,7 +18829,6 @@ class SECURITYLABELREFERENCE(Base):
 
 class SECURITYMARKING(Base):
     __tablename__ = 'SECURITYMARKING'
-    __bind_key__  = 'XORCISM'
 
     SecurityMarkingID = Column(Integer, primary_key=True)
 
@@ -20101,7 +18837,6 @@ class SECURITYMARKING(Base):
 
 class SECURITYMETRIC(Base):
     __tablename__ = 'SECURITYMETRIC'
-    __bind_key__  = 'XORCISM'
 
     SecurityMetricID = Column(Integer, primary_key=True)
     SecurityMetricGUID = Column(Text)
@@ -20120,7 +18855,6 @@ class SECURITYMETRIC(Base):
 
 class SECURITYMETRICDESCRIPTION(Base):
     __tablename__ = 'SECURITYMETRICDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     SecurityMetricDescriptionID = Column(Integer, primary_key=True)
     SecurityMetricID = Column(Integer)
@@ -20139,7 +18873,6 @@ class SECURITYMETRICDESCRIPTION(Base):
 
 class SECURITYMETRICREFERENCE(Base):
     __tablename__ = 'SECURITYMETRICREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SecurityMetricReferenceID = Column(Integer, primary_key=True)
     SecurityMetricID = Column(Integer)
@@ -20158,7 +18891,6 @@ class SECURITYMETRICREFERENCE(Base):
 
 class SECURITYMETRICTAG(Base):
     __tablename__ = 'SECURITYMETRICTAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityMetricTagID = Column(Integer, primary_key=True)
     SecurityMetricID = Column(Integer)
@@ -20177,7 +18909,6 @@ class SECURITYMETRICTAG(Base):
 
 class SECURITYNOTIFICATION(Base):
     __tablename__ = 'SECURITYNOTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     SecurityNotificationID = Column(Integer, primary_key=True)
 
@@ -20186,7 +18917,6 @@ class SECURITYNOTIFICATION(Base):
 
 class SECURITYPRINCIPLE(Base):
     __tablename__ = 'SECURITYPRINCIPLE'
-    __bind_key__  = 'XORCISM'
 
     SecurityPrincipleID = Column(Integer, primary_key=True)
     SecurityPrincipleGUID = Column(Text)
@@ -20206,7 +18936,6 @@ class SECURITYPRINCIPLE(Base):
 
 class SECURITYPRINCIPLEDESCRIPTION(Base):
     __tablename__ = 'SECURITYPRINCIPLEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     SecurityPrincipleDescriptionID = Column(Integer, primary_key=True)
     SecurityPrincipleID = Column(Integer)
@@ -20225,7 +18954,6 @@ class SECURITYPRINCIPLEDESCRIPTION(Base):
 
 class SECURITYPRINCIPLEFORATTACKPATTERN(Base):
     __tablename__ = 'SECURITYPRINCIPLEFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternSecurityPrincipleID = Column(Integer, primary_key=True)
     SecurityPrincipleID = Column(Integer, nullable=False)
@@ -20244,7 +18972,6 @@ class SECURITYPRINCIPLEFORATTACKPATTERN(Base):
 
 class SECURITYPRINCIPLEREFERENCE(Base):
     __tablename__ = 'SECURITYPRINCIPLEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SecurityPrincipleReferenceID = Column(Integer, primary_key=True)
     SecurityPrincipleID = Column(Integer)
@@ -20263,7 +18990,6 @@ class SECURITYPRINCIPLEREFERENCE(Base):
 
 class SECURITYPRINCIPLETAG(Base):
     __tablename__ = 'SECURITYPRINCIPLETAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityPrincipleTagID = Column(Integer, primary_key=True)
     SecurityPrincipleTagGUID = Column(Text)
@@ -20284,7 +19010,6 @@ class SECURITYPRINCIPLETAG(Base):
 
 class SECURITYPROCESS(Base):
     __tablename__ = 'SECURITYPROCESS'
-    __bind_key__  = 'XORCISM'
 
     SecurityProcessID = Column(Integer, primary_key=True)
     SecurityProcessGUID = Column(Text)
@@ -20302,7 +19027,6 @@ class SECURITYPROCESS(Base):
 
 class SECURITYPROCESSMATURITYLEVEL(Base):
     __tablename__ = 'SECURITYPROCESSMATURITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     SecurityProcessMaturityLevelID = Column(Integer, primary_key=True)
     SecurityProcessMaturityLevelGUID = Column(Text)
@@ -20320,7 +19044,6 @@ class SECURITYPROCESSMATURITYLEVEL(Base):
 
 class SECURITYPROGRAM(Base):
     __tablename__ = 'SECURITYPROGRAM'
-    __bind_key__  = 'XORCISM'
 
     SecurityProgramID = Column(Integer, primary_key=True)
     SecurityProgramGUID = Column(Text)
@@ -20339,7 +19062,6 @@ class SECURITYPROGRAM(Base):
 
 class SECURITYPROGRAMPROJECT(Base):
     __tablename__ = 'SECURITYPROGRAMPROJECT'
-    __bind_key__  = 'XORCISM'
 
     SecurityProgramProjectID = Column(Integer, primary_key=True)
     SecurityProgramID = Column(Integer)
@@ -20358,7 +19080,6 @@ class SECURITYPROGRAMPROJECT(Base):
 
 class SECURITYPROGRAMTYPE(Base):
     __tablename__ = 'SECURITYPROGRAMTYPE'
-    __bind_key__  = 'XORCISM'
 
     SecurityProgramTypeID = Column(Integer, primary_key=True)
     SecurityProgramTypeName = Column(Text, nullable=False)
@@ -20375,7 +19096,6 @@ class SECURITYPROGRAMTYPE(Base):
 
 class SECURITYREQUIREMENT(Base):
     __tablename__ = 'SECURITYREQUIREMENT'
-    __bind_key__  = 'XORCISM'
 
     SecurityRequirementID = Column(Integer, primary_key=True)
     RequirementID = Column(Integer)
@@ -20396,7 +19116,6 @@ class SECURITYREQUIREMENT(Base):
 
 class SECURITYREQUIREMENTCONTROL(Base):
     __tablename__ = 'SECURITYREQUIREMENTCONTROL'
-    __bind_key__  = 'XORCISM'
 
     SecurityRequirementControlID = Column(Integer, primary_key=True)
     SecurityRequirementID = Column(Integer)
@@ -20417,7 +19136,6 @@ class SECURITYREQUIREMENTCONTROL(Base):
 
 class SECURITYREQUIREMENTFORATTACKPATTERN(Base):
     __tablename__ = 'SECURITYREQUIREMENTFORATTACKPATTERN'
-    __bind_key__  = 'XORCISM'
 
     AttackPatternSecurityRequirementID = Column(Integer, primary_key=True)
     SecurityRequirementID = Column(Integer, nullable=False)
@@ -20438,7 +19156,6 @@ class SECURITYREQUIREMENTFORATTACKPATTERN(Base):
 
 class SECURITYREQUIREMENTMAPPING(Base):
     __tablename__ = 'SECURITYREQUIREMENTMAPPING'
-    __bind_key__  = 'XORCISM'
 
     SecurityRequirementMappingID = Column(Integer, primary_key=True)
     AssuranceRequirementID = Column(Integer)
@@ -20463,7 +19180,6 @@ class SECURITYREQUIREMENTMAPPING(Base):
 
 class SECURITYREQUIREMENTTAG(Base):
     __tablename__ = 'SECURITYREQUIREMENTTAG'
-    __bind_key__  = 'XORCISM'
 
     SecurityRequirementTagID = Column(Integer, primary_key=True)
     SecurityRequirementID = Column(Integer)
@@ -20483,7 +19199,6 @@ class SECURITYREQUIREMENTTAG(Base):
 
 class SECURITYREQUIREMENTTEST(Base):
     __tablename__ = 'SECURITYREQUIREMENTTEST'
-    __bind_key__  = 'XORCISM'
 
     SecurityRequirementTestID = Column(Integer, primary_key=True)
     SecurityRequirementTestGUID = Column(Text)
@@ -20504,7 +19219,6 @@ class SECURITYREQUIREMENTTEST(Base):
 
 class SECURITYRISKANALYSIS(Base):
     __tablename__ = 'SECURITYRISKANALYSIS'
-    __bind_key__  = 'XORCISM'
 
     SecurityRiskAnalysisID = Column(Integer, primary_key=True)
 
@@ -20513,7 +19227,6 @@ class SECURITYRISKANALYSIS(Base):
 
 class SEMAPHORE(Base):
     __tablename__ = 'SEMAPHORE'
-    __bind_key__  = 'XORCISM'
 
     SemaphoreID = Column(Integer, primary_key=True)
 
@@ -20522,7 +19235,6 @@ class SEMAPHORE(Base):
 
 class SENSOR(Base):
     __tablename__ = 'SENSOR'
-    __bind_key__  = 'XORCISM'
 
     SensorID = Column(Integer, primary_key=True)
     SensorGUID = Column(Text)
@@ -20544,7 +19256,6 @@ class SENSOR(Base):
 
 class SENSORTOOL(Base):
     __tablename__ = 'SENSORTOOL'
-    __bind_key__  = 'XORCISM'
 
     SensorToolID = Column(Integer, primary_key=True)
     SensorID = Column(Integer, nullable=False)
@@ -20561,7 +19272,6 @@ class SENSORTOOL(Base):
 
 class SERVICEACTIONNAME(Base):
     __tablename__ = 'SERVICEACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     ServiceActionNameID = Column(Integer, primary_key=True)
     ServiceActionNameName = Column(Text, nullable=False)
@@ -20579,7 +19289,6 @@ class SERVICEACTIONNAME(Base):
 
 class SERVICECATEGORY(Base):
     __tablename__ = 'SERVICECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     ServiceCategoryID = Column(Integer, primary_key=True)
     ServiceCategoryName = Column(Text, nullable=False)
@@ -20597,7 +19306,6 @@ class SERVICECATEGORY(Base):
 
 class SESSION(Base):
     __tablename__ = 'SESSION'
-    __bind_key__  = 'XORCISM'
 
     SessionID = Column(Integer, primary_key=True)
     UserID = Column(Text)
@@ -20623,7 +19331,6 @@ class SESSION(Base):
 
 class SESSIONCOOKIE(Base):
     __tablename__ = 'SESSIONCOOKIE'
-    __bind_key__  = 'XORCISM'
 
     SessionCookieID = Column(Integer, primary_key=True)
     SessionID = Column(Integer, nullable=False)
@@ -20644,7 +19351,6 @@ class SESSIONCOOKIE(Base):
 
 class SESSIONCOOKIEATTRIBUTEVALUE(Base):
     __tablename__ = 'SESSIONCOOKIEATTRIBUTEVALUE'
-    __bind_key__  = 'XORCISM'
 
     SessionCookieAttributeValueID = Column(Integer, primary_key=True)
     SessionCookieID = Column(Integer, nullable=False)
@@ -20665,7 +19371,6 @@ class SESSIONCOOKIEATTRIBUTEVALUE(Base):
 
 class SESSIONCRON(Base):
     __tablename__ = 'SESSIONCRON'
-    __bind_key__  = 'XORCISM'
 
     SessionCronID = Column(Integer, primary_key=True)
     UserID = Column(Text)
@@ -20687,7 +19392,6 @@ class SESSIONCRON(Base):
 
 class SETOPERATOR(Base):
     __tablename__ = 'SETOPERATOR'
-    __bind_key__  = 'XORCISM'
 
     SetOperatorID = Column(Integer, primary_key=True)
     SetOperatorValue = Column(Text, nullable=False)
@@ -20704,7 +19408,6 @@ class SETOPERATOR(Base):
 
 class SEVERITYLEVEL(Base):
     __tablename__ = 'SEVERITYLEVEL'
-    __bind_key__  = 'XORCISM'
 
     SeverityLevelID = Column(Integer, primary_key=True)
     SeverityLevelGUID = Column(Text)
@@ -20722,7 +19425,6 @@ class SEVERITYLEVEL(Base):
 
 class SHELLCODE(Base):
     __tablename__ = 'SHELLCODE'
-    __bind_key__  = 'XORCISM'
 
     ShellCodeID = Column(Integer, primary_key=True)
     CodeID = Column(Integer)
@@ -20741,7 +19443,6 @@ class SHELLCODE(Base):
 
 class SIDTYPE(Base):
     __tablename__ = 'SIDTYPE'
-    __bind_key__  = 'XORCISM'
 
     SIDTypeID = Column(Integer, primary_key=True)
     SIDTypeName = Column(Text, nullable=False)
@@ -20758,7 +19459,6 @@ class SIDTYPE(Base):
 
 class SIGNAL(Base):
     __tablename__ = 'SIGNAL'
-    __bind_key__  = 'XORCISM'
 
     SignalID = Column(Integer, primary_key=True)
 
@@ -20767,7 +19467,6 @@ class SIGNAL(Base):
 
 class SIGNATURE(Base):
     __tablename__ = 'SIGNATURE'
-    __bind_key__  = 'XORCISM'
 
     SignatureID = Column(Integer, primary_key=True)
     SignatureName = Column(Text, nullable=False)
@@ -20788,7 +19487,6 @@ class SIGNATURE(Base):
 
 class SIGNATURECPE(Base):
     __tablename__ = 'SIGNATURECPE'
-    __bind_key__  = 'XORCISM'
 
     CPESignatureID = Column(Integer, primary_key=True)
     SignatureID = Column(Integer, nullable=False)
@@ -20807,7 +19505,6 @@ class SIGNATURECPE(Base):
 
 class SIGNATUREEXPLOIT(Base):
     __tablename__ = 'SIGNATUREEXPLOIT'
-    __bind_key__  = 'XORCISM'
 
     ExploitSignatureID = Column(Integer, primary_key=True)
     SignatureID = Column(Integer, nullable=False)
@@ -20828,7 +19525,6 @@ class SIGNATUREEXPLOIT(Base):
 
 class SIGNATUREMALWAREINSTANCE(Base):
     __tablename__ = 'SIGNATUREMALWAREINSTANCE'
-    __bind_key__  = 'XORCISM'
 
     MalwareInstanceSignatureID = Column(Integer, primary_key=True)
     SignatureID = Column(Integer, nullable=False)
@@ -20847,7 +19543,6 @@ class SIGNATUREMALWAREINSTANCE(Base):
 
 class SIGNATUREPORT(Base):
     __tablename__ = 'SIGNATUREPORT'
-    __bind_key__  = 'XORCISM'
 
     SignatureID = Column(Integer, primary_key=True)
     PortID = Column(Integer, nullable=False)
@@ -20857,7 +19552,6 @@ class SIGNATUREPORT(Base):
 
 class SIGNATUREPROTOCOL(Base):
     __tablename__ = 'SIGNATUREPROTOCOL'
-    __bind_key__  = 'XORCISM'
 
     SignatureID = Column(Integer, primary_key=True)
     ProtocolID = Column(Integer, nullable=False)
@@ -20867,7 +19561,6 @@ class SIGNATUREPROTOCOL(Base):
 
 class SIGNATUREREFERENCE(Base):
     __tablename__ = 'SIGNATUREREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SignatureReferenceID = Column(Integer, primary_key=True)
     SignatureID = Column(Integer, nullable=False)
@@ -20884,7 +19577,6 @@ class SIGNATUREREFERENCE(Base):
 
 class SIGNATURETYPE(Base):
     __tablename__ = 'SIGNATURETYPE'
-    __bind_key__  = 'XORCISM'
 
     SignatureTypeID = Column(Integer, primary_key=True)
     SignatureTypeName = Column(Text, nullable=False)
@@ -20900,7 +19592,6 @@ class SIGNATURETYPE(Base):
 
 class SIGNATURETYPEREFERENCE(Base):
     __tablename__ = 'SIGNATURETYPEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     SitgnatureTypeReferenceID = Column(Integer, primary_key=True)
     SignatureTypeID = Column(Integer, nullable=False)
@@ -20911,7 +19602,6 @@ class SIGNATURETYPEREFERENCE(Base):
 
 class SIMPLEDATATYPE(Base):
     __tablename__ = 'SIMPLEDATATYPE'
-    __bind_key__  = 'XORCISM'
 
     SimpleDataTypeID = Column(Integer, primary_key=True)
     DataTypeName = Column(Text, nullable=False)
@@ -20928,7 +19618,6 @@ class SIMPLEDATATYPE(Base):
 
 class SKILL(Base):
     __tablename__ = 'SKILL'
-    __bind_key__  = 'XORCISM'
 
     SkillID = Column(Integer, primary_key=True)
     SkillGUID = Column(Text)
@@ -20946,7 +19635,6 @@ class SKILL(Base):
 
 class SKILLCATEGORY(Base):
     __tablename__ = 'SKILLCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     SkillCategoryID = Column(Integer, primary_key=True)
     SkillCategoryGUID = Column(Text)
@@ -20965,7 +19653,6 @@ class SKILLCATEGORY(Base):
 
 class SKILLCATEGORYTAG(Base):
     __tablename__ = 'SKILLCATEGORYTAG'
-    __bind_key__  = 'XORCISM'
 
     SkillCategoryTagID = Column(Integer, primary_key=True)
     SkillCategoryID = Column(Integer)
@@ -20982,7 +19669,6 @@ class SKILLCATEGORYTAG(Base):
 
 class SKILLLEVEL(Base):
     __tablename__ = 'SKILLLEVEL'
-    __bind_key__  = 'XORCISM'
 
     SkillLevelID = Column(Integer, primary_key=True)
     SkillLevelValue = Column(Text)
@@ -20999,7 +19685,6 @@ class SKILLLEVEL(Base):
 
 class SKILLTAG(Base):
     __tablename__ = 'SKILLTAG'
-    __bind_key__  = 'XORCISM'
 
     SkillTagID = Column(Integer, primary_key=True)
     SkillID = Column(Integer)
@@ -21016,7 +19701,6 @@ class SKILLTAG(Base):
 
 class SMSMESSAGE(Base):
     __tablename__ = 'SMSMESSAGE'
-    __bind_key__  = 'XORCISM'
 
     SMSMessageID = Column(Integer, primary_key=True)
     MessageID = Column(Integer)
@@ -21026,7 +19710,6 @@ class SMSMESSAGE(Base):
 
 class SOCKETACTIONNAME(Base):
     __tablename__ = 'SOCKETACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     SocketActionNameID = Column(Integer, primary_key=True)
     SocketActionNameName = Column(Text, nullable=False)
@@ -21044,7 +19727,6 @@ class SOCKETACTIONNAME(Base):
 
 class SOCKETADDRESS(Base):
     __tablename__ = 'SOCKETADDRESS'
-    __bind_key__  = 'XORCISM'
 
     SocketAddressID = Column(Integer, primary_key=True)
     AddressID = Column(Integer)
@@ -21062,7 +19744,6 @@ class SOCKETADDRESS(Base):
 
 class SOFTWARE(Base):
     __tablename__ = 'SOFTWARE'
-    __bind_key__  = 'XORCISM'
 
     SoftwareID = Column(Integer, primary_key=True)
     SoftwareGUID = Column(Text)
@@ -21083,7 +19764,6 @@ class SOFTWARE(Base):
 
 class SOFTWARECHARACTERISTIC(Base):
     __tablename__ = 'SOFTWARECHARACTERISTIC'
-    __bind_key__  = 'XORCISM'
 
     SoftwareCharacteristicID = Column(Integer, primary_key=True)
 
@@ -21092,7 +19772,6 @@ class SOFTWARECHARACTERISTIC(Base):
 
 class SOFTWAREFILELIST(Base):
     __tablename__ = 'SOFTWAREFILELIST'
-    __bind_key__  = 'XORCISM'
 
     SoftwareFileListID = Column(Integer, primary_key=True)
 
@@ -21101,7 +19780,6 @@ class SOFTWAREFILELIST(Base):
 
 class SOFTWARELICENSE(Base):
     __tablename__ = 'SOFTWARELICENSE'
-    __bind_key__  = 'XORCISM'
 
     SoftwareLicenseID = Column(Integer, primary_key=True)
     SoftwareID = Column(Integer, nullable=False)
@@ -21123,7 +19801,6 @@ class SOFTWARELICENSE(Base):
 
 class SOURCE(Base):
     __tablename__ = 'SOURCE'
-    __bind_key__  = 'XORCISM'
 
     SourceID = Column(Integer, primary_key=True)
     SourceGUID = Column(Text)
@@ -21134,7 +19811,6 @@ class SOURCE(Base):
 
 class SOURCECLASS(Base):
     __tablename__ = 'SOURCECLASS'
-    __bind_key__  = 'XORCISM'
 
     SourceClassID = Column(Integer, primary_key=True)
     SourceClassName = Column(Text, nullable=False)
@@ -21146,7 +19822,6 @@ class SOURCECLASS(Base):
 
 class SOURCETYPE(Base):
     __tablename__ = 'SOURCETYPE'
-    __bind_key__  = 'XORCISM'
 
     SourceTypeID = Column(Integer, primary_key=True)
     SourceTypeName = Column(Text, nullable=False)
@@ -21158,7 +19833,6 @@ class SOURCETYPE(Base):
 
 class SPLITFUNCTION(Base):
     __tablename__ = 'SPLITFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     SplitFunctionID = Column(Integer, primary_key=True)
     SplitDelimiter = Column(Text, nullable=False)
@@ -21169,7 +19843,6 @@ class SPLITFUNCTION(Base):
 
 class SPYINGSTRATEGICOBJECTIVE(Base):
     __tablename__ = 'SPYINGSTRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SpyingStrategicObjectiveID = Column(Integer, primary_key=True)
     SpyingStrategicObjectiveName = Column(Text)
@@ -21187,7 +19860,6 @@ class SPYINGSTRATEGICOBJECTIVE(Base):
 
 class SPYINGTACTICALOBJECTIVE(Base):
     __tablename__ = 'SPYINGTACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     SpyingTacticalObjectiveID = Column(Integer, primary_key=True)
     SpyingTacticalObjectiveName = Column(Text)
@@ -21205,7 +19877,6 @@ class SPYINGTACTICALOBJECTIVE(Base):
 
 class SSDTENTRY(Base):
     __tablename__ = 'SSDTENTRY'
-    __bind_key__  = 'XORCISM'
 
     SSDTEntryID = Column(Integer, primary_key=True)
     Service_Table_Base = Column(Text)
@@ -21225,7 +19896,6 @@ class SSDTENTRY(Base):
 
 class STAGE(Base):
     __tablename__ = 'STAGE'
-    __bind_key__  = 'XORCISM'
 
     StageID = Column(Integer, primary_key=True)
     StageGUID = Column(Text)
@@ -21246,7 +19916,6 @@ class STAGE(Base):
 
 class STAGECATEGORY(Base):
     __tablename__ = 'STAGECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     StageCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -21257,7 +19926,6 @@ class STAGECATEGORY(Base):
 
 class STAGEDESCRIPTION(Base):
     __tablename__ = 'STAGEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     StageDescriptionID = Column(Integer, primary_key=True)
     StageID = Column(Integer, nullable=False)
@@ -21277,7 +19945,6 @@ class STAGEDESCRIPTION(Base):
 
 class STANDARD(Base):
     __tablename__ = 'STANDARD'
-    __bind_key__  = 'XORCISM'
 
     StandardID = Column(Integer, primary_key=True)
     StandardGUID = Column(Text)
@@ -21296,7 +19963,6 @@ class STANDARD(Base):
 
 class STANDARDCATEGORY(Base):
     __tablename__ = 'STANDARDCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     StandardCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -21312,7 +19978,6 @@ class STANDARDCATEGORY(Base):
 
 class STANDARDOBJECTIVE(Base):
     __tablename__ = 'STANDARDOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     StandardObjectiveID = Column(Integer, primary_key=True)
     StandardObjectiveVocabularyID = Column(Text)
@@ -21328,7 +19993,6 @@ class STANDARDOBJECTIVE(Base):
 
 class STANDARDORGANISATION(Base):
     __tablename__ = 'STANDARDORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     StandardOrganisationID = Column(Integer, primary_key=True)
     StandardID = Column(Integer, nullable=False)
@@ -21345,7 +20009,6 @@ class STANDARDORGANISATION(Base):
 
 class STANDARDREFERENCE(Base):
     __tablename__ = 'STANDARDREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     StandardReferenceID = Column(Integer, primary_key=True)
     StandardID = Column(Integer, nullable=False)
@@ -21364,7 +20027,6 @@ class STANDARDREFERENCE(Base):
 
 class STANDARDRELATIONSHIP(Base):
     __tablename__ = 'STANDARDRELATIONSHIP'
-    __bind_key__  = 'XORCISM'
 
     StandardRelationshipID = Column(Integer, primary_key=True)
     StandardRefID = Column(Integer, nullable=False)
@@ -21381,7 +20043,6 @@ class STANDARDRELATIONSHIP(Base):
 
 class STANDARDSECTION(Base):
     __tablename__ = 'STANDARDSECTION'
-    __bind_key__  = 'XORCISM'
 
     StandardSectionID = Column(Integer, primary_key=True)
     StandardID = Column(Integer)
@@ -21399,7 +20060,6 @@ class STANDARDSECTION(Base):
 
 class STANDARDSECTIONMAPPING(Base):
     __tablename__ = 'STANDARDSECTIONMAPPING'
-    __bind_key__  = 'XORCISM'
 
     StandardSectionMappingID = Column(Integer, primary_key=True)
     StandardSectionRefID = Column(Integer)
@@ -21417,7 +20077,6 @@ class STANDARDSECTIONMAPPING(Base):
 
 class STANDARDSECURITYREQUIREMENT(Base):
     __tablename__ = 'STANDARDSECURITYREQUIREMENT'
-    __bind_key__  = 'XORCISM'
 
     StandardSecurityRequirementID = Column(Integer, primary_key=True)
     StandardID = Column(Integer)
@@ -21432,7 +20091,6 @@ class STANDARDSECURITYREQUIREMENT(Base):
 
 class STANDARDTAG(Base):
     __tablename__ = 'STANDARDTAG'
-    __bind_key__  = 'XORCISM'
 
     StandardTagID = Column(Integer, primary_key=True)
     StandardID = Column(Integer)
@@ -21449,7 +20107,6 @@ class STANDARDTAG(Base):
 
 class STANDARDVOCABULARY(Base):
     __tablename__ = 'STANDARDVOCABULARY'
-    __bind_key__  = 'XORCISM'
 
     StandardVocabularyID = Column(Integer, primary_key=True)
     StandardID = Column(Integer, nullable=False)
@@ -21465,7 +20122,6 @@ class STANDARDVOCABULARY(Base):
 
 class STARTUPINFO(Base):
     __tablename__ = 'STARTUPINFO'
-    __bind_key__  = 'XORCISM'
 
     StartupInfoID = Column(Integer, primary_key=True)
     lpDesktop = Column(Text)
@@ -21485,7 +20141,6 @@ class STARTUPINFO(Base):
 
 class STATUS(Base):
     __tablename__ = 'STATUS'
-    __bind_key__  = 'XORCISM'
 
     StatusID = Column(Integer, primary_key=True)
     StatusName = Column(Text, nullable=False)
@@ -21498,7 +20153,6 @@ class STATUS(Base):
 
 class STRATEGICOBJECTIVE(Base):
     __tablename__ = 'STRATEGICOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     StrategicObjectiveID = Column(Integer, primary_key=True)
     StrategicObjectiveGUID = Column(Text)
@@ -21517,7 +20171,6 @@ class STRATEGICOBJECTIVE(Base):
 
 class STRATEGY(Base):
     __tablename__ = 'STRATEGY'
-    __bind_key__  = 'XORCISM'
 
     StrategyID = Column(Integer, primary_key=True)
 
@@ -21526,7 +20179,6 @@ class STRATEGY(Base):
 
 class STRUCTUREDAUTHENTICATIONMECHANISM(Base):
     __tablename__ = 'STRUCTUREDAUTHENTICATIONMECHANISM'
-    __bind_key__  = 'XORCISM'
 
     StructuredAuthenticationMechanismID = Column(Integer, primary_key=True)
     StructuredAuthenticationMechanismGUID = Column(Text)
@@ -21546,7 +20198,6 @@ class STRUCTUREDAUTHENTICATIONMECHANISM(Base):
 
 class SUBCATEGORY(Base):
     __tablename__ = 'SUBCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     SubCategoryID = Column(Integer, primary_key=True)
     CategoryParentID = Column(Integer, nullable=False)
@@ -21563,7 +20214,6 @@ class SUBCATEGORY(Base):
 
 class SUBJECTPUBLICKEY(Base):
     __tablename__ = 'SUBJECTPUBLICKEY'
-    __bind_key__  = 'XORCISM'
 
     SubjectPublicKeyID = Column(Integer, primary_key=True)
     Public_Key_Algorithm = Column(Text, nullable=False)
@@ -21582,7 +20232,6 @@ class SUBJECTPUBLICKEY(Base):
 
 class SUBSTRINGFUNCTION(Base):
     __tablename__ = 'SUBSTRINGFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     SubstringFunctionID = Column(Integer, primary_key=True)
     SubstringStart = Column(Integer, nullable=False)
@@ -21594,7 +20243,6 @@ class SUBSTRINGFUNCTION(Base):
 
 class SUPPLYCHAIN(Base):
     __tablename__ = 'SUPPLYCHAIN'
-    __bind_key__  = 'XORCISM'
 
     SupplyChainID = Column(Integer, primary_key=True)
 
@@ -21603,7 +20251,6 @@ class SUPPLYCHAIN(Base):
 
 class SUPPLYCHAINASSURANCE(Base):
     __tablename__ = 'SUPPLYCHAINASSURANCE'
-    __bind_key__  = 'XORCISM'
 
     SupplyChainAssuranceID = Column(Integer, primary_key=True)
 
@@ -21612,7 +20259,6 @@ class SUPPLYCHAINASSURANCE(Base):
 
 class SUPPLYCHAINCOMPLIANCE(Base):
     __tablename__ = 'SUPPLYCHAINCOMPLIANCE'
-    __bind_key__  = 'XORCISM'
 
     SupplyChainComplianceID = Column(Integer, primary_key=True)
 
@@ -21621,7 +20267,6 @@ class SUPPLYCHAINCOMPLIANCE(Base):
 
 class SUPPRESSIONTYPE(Base):
     __tablename__ = 'SUPPRESSIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     SuppressionTypeID = Column(Integer, primary_key=True)
     SuppressionTypeName = Column(Text)
@@ -21637,7 +20282,6 @@ class SUPPRESSIONTYPE(Base):
 
 class SUSPECTEDMALICIOUSREASON(Base):
     __tablename__ = 'SUSPECTEDMALICIOUSREASON'
-    __bind_key__  = 'XORCISM'
 
     SuspectedMaliciousReasonID = Column(Integer, primary_key=True)
     SuspectedMaliciousReasonGUID = Column(Text)
@@ -21652,7 +20296,6 @@ class SUSPECTEDMALICIOUSREASON(Base):
 
 class SWENTAG(Base):
     __tablename__ = 'SWENTAG'
-    __bind_key__  = 'XORCISM'
 
     SWENTAGID = Column(Integer, primary_key=True)
 
@@ -21661,7 +20304,6 @@ class SWENTAG(Base):
 
 class SWIDTAG(Base):
     __tablename__ = 'SWIDTAG'
-    __bind_key__  = 'XORCISM'
 
     SWIDTagID = Column(Integer, primary_key=True)
 
@@ -21670,7 +20312,6 @@ class SWIDTAG(Base):
 
 class SWIDTAGCPE(Base):
     __tablename__ = 'SWIDTAGCPE'
-    __bind_key__  = 'XORCISM'
 
     SWIDTagCPEID = Column(Integer, primary_key=True)
 
@@ -21679,7 +20320,6 @@ class SWIDTAGCPE(Base):
 
 class SYNCHRONIZATIONACTIONNAME(Base):
     __tablename__ = 'SYNCHRONIZATIONACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     SynchronizationActionNameID = Column(Integer, primary_key=True)
     SynchronizationActionNameName = Column(Text, nullable=False)
@@ -21697,7 +20337,6 @@ class SYNCHRONIZATIONACTIONNAME(Base):
 
 class SYSTEM(Base):
     __tablename__ = 'SYSTEM'
-    __bind_key__  = 'XORCISM'
 
     SystemID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -21707,7 +20346,6 @@ class SYSTEM(Base):
 
 class SYSTEMACTIONNAME(Base):
     __tablename__ = 'SYSTEMACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     SystemActionNameID = Column(Integer, primary_key=True)
     SystemActionNameName = Column(Text, nullable=False)
@@ -21725,7 +20363,6 @@ class SYSTEMACTIONNAME(Base):
 
 class SYSTEMINFO(Base):
     __tablename__ = 'SYSTEMINFO'
-    __bind_key__  = 'XORCISM'
 
     SystemInfoID = Column(Integer, primary_key=True)
     OSID = Column(Integer, nullable=False)
@@ -21739,7 +20376,6 @@ class SYSTEMINFO(Base):
 
 class SYSTEMINFOFOROVALSYSTEMCHARACTERISTICS(Base):
     __tablename__ = 'SYSTEMINFOFOROVALSYSTEMCHARACTERISTICS'
-    __bind_key__  = 'XORCISM'
 
     OVALSystemCharacteristicsID = Column(Integer, primary_key=True)
     SystemInfo = Column(Integer, nullable=False)
@@ -21749,7 +20385,6 @@ class SYSTEMINFOFOROVALSYSTEMCHARACTERISTICS(Base):
 
 class SYSTEMTYPE(Base):
     __tablename__ = 'SYSTEMTYPE'
-    __bind_key__  = 'XORCISM'
 
     SystemTypeID = Column(Integer, primary_key=True)
     SystemTypeGUID = Column(Text)
@@ -21766,7 +20401,6 @@ class SYSTEMTYPE(Base):
 
 class SYSTEMTYPEFORASSET(Base):
     __tablename__ = 'SYSTEMTYPEFORASSET'
-    __bind_key__  = 'XORCISM'
 
     AssetSystemTypeID = Column(Integer, primary_key=True)
     AssetID = Column(Integer, nullable=False)
@@ -21782,7 +20416,6 @@ class SYSTEMTYPEFORASSET(Base):
 
 class SYSTEMTYPEFORTHREATACTORTTP(Base):
     __tablename__ = 'SYSTEMTYPEFORTHREATACTORTTP'
-    __bind_key__  = 'XORCISM'
 
     SystemTypeID = Column(Integer, primary_key=True)
     ThreatActorTTPID = Column(Integer, nullable=False)
@@ -21792,7 +20425,6 @@ class SYSTEMTYPEFORTHREATACTORTTP(Base):
 
 class TACTIC(Base):
     __tablename__ = 'TACTIC'
-    __bind_key__  = 'XORCISM'
 
     TacticID = Column(Integer, primary_key=True)
 
@@ -21801,7 +20433,6 @@ class TACTIC(Base):
 
 class TACTICALOBJECTIVE(Base):
     __tablename__ = 'TACTICALOBJECTIVE'
-    __bind_key__  = 'XORCISM'
 
     TacticalObjectiveID = Column(Integer, primary_key=True)
     TacticalObjectiveGUID = Column(Text)
@@ -21820,7 +20451,6 @@ class TACTICALOBJECTIVE(Base):
 
 class TACTICCATEGORY(Base):
     __tablename__ = 'TACTICCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     TacticCategoryID = Column(Integer, primary_key=True)
     CategoryID = Column(Integer)
@@ -21830,7 +20460,6 @@ class TACTICCATEGORY(Base):
 
 class TAG(Base):
     __tablename__ = 'TAG'
-    __bind_key__  = 'XORCISM'
 
     TagID = Column(Integer, primary_key=True)
     TagGUID = Column(Text)
@@ -21867,7 +20496,6 @@ class TAG(Base):
 
 class TAGBLACKLIST(Base):
     __tablename__ = 'TAGBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     TagBlacklistID = Column(Integer, primary_key=True)
     isEncrypted = Column(Integer)
@@ -21877,7 +20505,6 @@ class TAGBLACKLIST(Base):
 
 class TAGCLASSIFICATION(Base):
     __tablename__ = 'TAGCLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     TagClassificationID = Column(Integer, primary_key=True)
 
@@ -21886,7 +20513,6 @@ class TAGCLASSIFICATION(Base):
 
 class TAGFORASSET(Base):
     __tablename__ = 'TAGFORASSET'
-    __bind_key__  = 'XORCISM'
 
     TagAssetID = Column(Integer, primary_key=True)
     AssetID = Column(Integer)
@@ -21907,7 +20533,6 @@ class TAGFORASSET(Base):
 
 class TAGRESTRICTION(Base):
     __tablename__ = 'TAGRESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     TagRestrictionID = Column(Integer, primary_key=True)
 
@@ -21916,7 +20541,6 @@ class TAGRESTRICTION(Base):
 
 class TAGTAG(Base):
     __tablename__ = 'TAGTAG'
-    __bind_key__  = 'XORCISM'
 
     TagTagID = Column(Integer, primary_key=True)
     TagTagGUID = Column(Text)
@@ -21940,7 +20564,6 @@ class TAGTAG(Base):
 
 class TARGET(Base):
     __tablename__ = 'TARGET'
-    __bind_key__  = 'XORCISM'
 
     TargetID = Column(Integer, primary_key=True)
 
@@ -21949,7 +20572,6 @@ class TARGET(Base):
 
 class TARGETEDPLATFORMS(Base):
     __tablename__ = 'TARGETEDPLATFORMS'
-    __bind_key__  = 'XORCISM'
 
     TargetedPlatformsID = Column(Integer, primary_key=True)
 
@@ -21958,7 +20580,6 @@ class TARGETEDPLATFORMS(Base):
 
 class TARGETEDPLATFORMSPECIFICATION(Base):
     __tablename__ = 'TARGETEDPLATFORMSPECIFICATION'
-    __bind_key__  = 'XORCISM'
 
     TargetedPlatformsSpecification = Column(Integer, primary_key=True)
     TargetedPlatformsID = Column(Integer, nullable=False)
@@ -21969,7 +20590,6 @@ class TARGETEDPLATFORMSPECIFICATION(Base):
 
 class TARGETS(Base):
     __tablename__ = 'TARGETS'
-    __bind_key__  = 'XORCISM'
 
     TargetsID = Column(Integer, primary_key=True)
 
@@ -21978,7 +20598,6 @@ class TARGETS(Base):
 
 class TASK(Base):
     __tablename__ = 'TASK'
-    __bind_key__  = 'XORCISM'
 
     TaskID = Column(Integer, primary_key=True)
     TaskName = Column(Text)
@@ -22005,7 +20624,6 @@ class TASK(Base):
 
 class TASKACTION(Base):
     __tablename__ = 'TASKACTION'
-    __bind_key__  = 'XORCISM'
 
     TaskActionID = Column(Integer, primary_key=True)
 
@@ -22014,7 +20632,6 @@ class TASKACTION(Base):
 
 class TASKACTIONLIST(Base):
     __tablename__ = 'TASKACTIONLIST'
-    __bind_key__  = 'XORCISM'
 
     TaskActionListID = Column(Integer, primary_key=True)
 
@@ -22023,7 +20640,6 @@ class TASKACTIONLIST(Base):
 
 class TASKACTIONTYPE(Base):
     __tablename__ = 'TASKACTIONTYPE'
-    __bind_key__  = 'XORCISM'
 
     TaskActionTypeID = Column(Integer, primary_key=True)
 
@@ -22032,7 +20648,6 @@ class TASKACTIONTYPE(Base):
 
 class TASKATTACHMENT(Base):
     __tablename__ = 'TASKATTACHMENT'
-    __bind_key__  = 'XORCISM'
 
     TaskAttachmentID = Column(Integer, primary_key=True)
     TaskID = Column(Integer)
@@ -22045,7 +20660,6 @@ class TASKATTACHMENT(Base):
 
 class TASKDESCRIPTION(Base):
     __tablename__ = 'TASKDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     TaskDescriptionID = Column(Integer, primary_key=True)
     TaskID = Column(Integer, nullable=False)
@@ -22062,7 +20676,6 @@ class TASKDESCRIPTION(Base):
 
 class TASKFLAG(Base):
     __tablename__ = 'TASKFLAG'
-    __bind_key__  = 'XORCISM'
 
     TaskFlagID = Column(Integer, primary_key=True)
 
@@ -22071,7 +20684,6 @@ class TASKFLAG(Base):
 
 class TASKFORPROJECT(Base):
     __tablename__ = 'TASKFORPROJECT'
-    __bind_key__  = 'XORCISM'
 
     ProjectTaskID = Column(Integer, primary_key=True)
     ProjectID = Column(Integer, nullable=False)
@@ -22088,7 +20700,6 @@ class TASKFORPROJECT(Base):
 
 class TASKPERSON(Base):
     __tablename__ = 'TASKPERSON'
-    __bind_key__  = 'XORCISM'
 
     TaskID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -22099,7 +20710,6 @@ class TASKPERSON(Base):
 
 class TASKPRIORITY(Base):
     __tablename__ = 'TASKPRIORITY'
-    __bind_key__  = 'XORCISM'
 
     TaskPriorityID = Column(Integer, primary_key=True)
 
@@ -22108,7 +20718,6 @@ class TASKPRIORITY(Base):
 
 class TASKPRIORITYENUM(Base):
     __tablename__ = 'TASKPRIORITYENUM'
-    __bind_key__  = 'XORCISM'
 
     TaskPriorityEnumID = Column(Integer, primary_key=True)
     TaskPriority = Column(Text)
@@ -22124,7 +20733,6 @@ class TASKPRIORITYENUM(Base):
 
 class TASKSTATUS(Base):
     __tablename__ = 'TASKSTATUS'
-    __bind_key__  = 'XORCISM'
 
     TaskStatusID = Column(Integer, primary_key=True)
 
@@ -22133,7 +20741,6 @@ class TASKSTATUS(Base):
 
 class TASKSTATUSENUM(Base):
     __tablename__ = 'TASKSTATUSENUM'
-    __bind_key__  = 'XORCISM'
 
     TaskStatusEnumID = Column(Integer, primary_key=True)
     Status = Column(Text)
@@ -22145,7 +20752,6 @@ class TASKSTATUSENUM(Base):
 
 class TASKTAG(Base):
     __tablename__ = 'TASKTAG'
-    __bind_key__  = 'XORCISM'
 
     TaskTagID = Column(Integer, primary_key=True)
     TaskID = Column(Integer)
@@ -22162,7 +20768,6 @@ class TASKTAG(Base):
 
 class TASKTRIGGER(Base):
     __tablename__ = 'TASKTRIGGER'
-    __bind_key__  = 'XORCISM'
 
     TaskTriggerID = Column(Integer, primary_key=True)
 
@@ -22171,7 +20776,6 @@ class TASKTRIGGER(Base):
 
 class TASKTRIGGERFREQUENCY(Base):
     __tablename__ = 'TASKTRIGGERFREQUENCY'
-    __bind_key__  = 'XORCISM'
 
     TaskTriggerFrequencyID = Column(Integer, primary_key=True)
 
@@ -22180,7 +20784,6 @@ class TASKTRIGGERFREQUENCY(Base):
 
 class TAXONOMY(Base):
     __tablename__ = 'TAXONOMY'
-    __bind_key__  = 'XORCISM'
 
     TaxonomyID = Column(Integer, primary_key=True)
     TaxonomyName = Column(Text, nullable=False)
@@ -22200,7 +20803,6 @@ class TAXONOMY(Base):
 
 class TAXONOMYNODE(Base):
     __tablename__ = 'TAXONOMYNODE'
-    __bind_key__  = 'XORCISM'
 
     TaxonomyNodeID = Column(Integer, primary_key=True)
     TaxonomyID = Column(Integer)
@@ -22219,7 +20821,6 @@ class TAXONOMYNODE(Base):
 
 class TAXONOMYREFERENCE(Base):
     __tablename__ = 'TAXONOMYREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     TaxonomyReferenceID = Column(Integer, primary_key=True)
     TaxonomyID = Column(Integer, nullable=False)
@@ -22239,7 +20840,6 @@ class TAXONOMYREFERENCE(Base):
 
 class TCPSTATE(Base):
     __tablename__ = 'TCPSTATE'
-    __bind_key__  = 'XORCISM'
 
     TCPStateID = Column(Integer, primary_key=True)
     TCPStateValue = Column(Text)
@@ -22256,7 +20856,6 @@ class TCPSTATE(Base):
 
 class TECHNICALCONTEXT(Base):
     __tablename__ = 'TECHNICALCONTEXT'
-    __bind_key__  = 'XORCISM'
 
     TechnicalContextID = Column(Integer, primary_key=True)
     AttackPatternID = Column(Integer)
@@ -22272,7 +20871,6 @@ class TECHNICALCONTEXT(Base):
 
 class TECHNIQUE(Base):
     __tablename__ = 'TECHNIQUE'
-    __bind_key__  = 'XORCISM'
 
     TechniqueID = Column(Integer, primary_key=True)
     TechniqueGUID = Column(Text)
@@ -22295,7 +20893,6 @@ class TECHNIQUE(Base):
 
 class TECHNIQUECATEGORY(Base):
     __tablename__ = 'TECHNIQUECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     TechniqueCategoryID = Column(Integer, primary_key=True)
 
@@ -22304,7 +20901,6 @@ class TECHNIQUECATEGORY(Base):
 
 class TECHNIQUEDESCRIPTION(Base):
     __tablename__ = 'TECHNIQUEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     TechniqueDescriptionID = Column(Integer, primary_key=True)
 
@@ -22313,7 +20909,6 @@ class TECHNIQUEDESCRIPTION(Base):
 
 class TECHNIQUEREFERENCE(Base):
     __tablename__ = 'TECHNIQUEREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     TechniqueReferenceID = Column(Integer, primary_key=True)
     TechniqueID = Column(Integer, nullable=False)
@@ -22339,7 +20934,6 @@ class TECHNIQUEREFERENCE(Base):
 
 class TECHNIQUEREFERENCETAG(Base):
     __tablename__ = 'TECHNIQUEREFERENCETAG'
-    __bind_key__  = 'XORCISM'
 
     TechniqueReferenceTagID = Column(Integer, primary_key=True)
     TechniqueReferenceID = Column(Integer)
@@ -22364,7 +20958,6 @@ class TECHNIQUEREFERENCETAG(Base):
 
 class TECHNIQUERESTRICTION(Base):
     __tablename__ = 'TECHNIQUERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     TechniqueRestrictionID = Column(Integer, primary_key=True)
 
@@ -22373,7 +20966,6 @@ class TECHNIQUERESTRICTION(Base):
 
 class TECHNIQUESTEP(Base):
     __tablename__ = 'TECHNIQUESTEP'
-    __bind_key__  = 'XORCISM'
 
     TechniqueStepID = Column(Integer, primary_key=True)
 
@@ -22382,7 +20974,6 @@ class TECHNIQUESTEP(Base):
 
 class TECHNIQUETAG(Base):
     __tablename__ = 'TECHNIQUETAG'
-    __bind_key__  = 'XORCISM'
 
     TechniqueTagID = Column(Integer, primary_key=True)
     TechniqueID = Column(Integer, nullable=False)
@@ -22399,7 +20990,6 @@ class TECHNIQUETAG(Base):
 
 class TECHNOLOGY(Base):
     __tablename__ = 'TECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     TechnologyID = Column(Integer, primary_key=True)
     TechnologyGUID = Column(Text)
@@ -22417,7 +21007,6 @@ class TECHNOLOGY(Base):
 
 class TECHNOLOGYDESCRIPTION(Base):
     __tablename__ = 'TECHNOLOGYDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     TechnologyDescriptionID = Column(Integer, primary_key=True)
 
@@ -22426,7 +21015,6 @@ class TECHNOLOGYDESCRIPTION(Base):
 
 class TECHNOLOGYTAG(Base):
     __tablename__ = 'TECHNOLOGYTAG'
-    __bind_key__  = 'XORCISM'
 
     TechnologyTagID = Column(Integer, primary_key=True)
     TechnologyID = Column(Integer, nullable=False)
@@ -22444,7 +21032,6 @@ class TECHNOLOGYTAG(Base):
 
 class TECHNOLOGYURI(Base):
     __tablename__ = 'TECHNOLOGYURI'
-    __bind_key__  = 'XORCISM'
 
     TechnologyURIID = Column(Integer, primary_key=True)
     TechnologyID = Column(Integer, nullable=False)
@@ -22464,7 +21051,6 @@ class TECHNOLOGYURI(Base):
 
 class TELEPHONE(Base):
     __tablename__ = 'TELEPHONE'
-    __bind_key__  = 'XORCISM'
 
     TelephoneID = Column(Integer, primary_key=True)
     TelephoneGUID = Column(Text)
@@ -22488,7 +21074,6 @@ class TELEPHONE(Base):
 
 class TELEPHONECALL(Base):
     __tablename__ = 'TELEPHONECALL'
-    __bind_key__  = 'XORCISM'
 
     TelephoneCallID = Column(Integer, primary_key=True)
 
@@ -22497,7 +21082,6 @@ class TELEPHONECALL(Base):
 
 class TELEPHONEFORORGANISATION(Base):
     __tablename__ = 'TELEPHONEFORORGANISATION'
-    __bind_key__  = 'XORCISM'
 
     OrganisationTelephoneID = Column(Integer, primary_key=True)
     TelephoneID = Column(Integer, nullable=False)
@@ -22515,7 +21099,6 @@ class TELEPHONEFORORGANISATION(Base):
 
 class TELEPHONEFORPERSON(Base):
     __tablename__ = 'TELEPHONEFORPERSON'
-    __bind_key__  = 'XORCISM'
 
     PersonTelephoneID = Column(Integer, primary_key=True)
     TelephoneID = Column(Integer, nullable=False)
@@ -22533,7 +21116,6 @@ class TELEPHONEFORPERSON(Base):
 
 class TELEPHONETAG(Base):
     __tablename__ = 'TELEPHONETAG'
-    __bind_key__  = 'XORCISM'
 
     TelephoneTagID = Column(Integer, primary_key=True)
 
@@ -22542,7 +21124,6 @@ class TELEPHONETAG(Base):
 
 class TEST(Base):
     __tablename__ = 'TEST'
-    __bind_key__  = 'XORCISM'
 
     TestID = Column(Integer, primary_key=True)
     TestGUID = Column(Text)
@@ -22560,7 +21141,6 @@ class TEST(Base):
 
 class TESTMECHANISMEFFICACY(Base):
     __tablename__ = 'TESTMECHANISMEFFICACY'
-    __bind_key__  = 'XORCISM'
 
     TestMechanismEfficacyID = Column(Integer, primary_key=True)
     Efficacy = Column(Text, nullable=False)
@@ -22579,7 +21159,6 @@ class TESTMECHANISMEFFICACY(Base):
 
 class TESTMECHANISMID(Base):
     __tablename__ = 'TESTMECHANISMID'
-    __bind_key__  = 'XORCISM'
 
     TestMechanismID = Column(Integer, primary_key=True)
     CyberObservableTestMechanismID = Column(Integer, nullable=False)
@@ -22597,7 +21176,6 @@ class TESTMECHANISMID(Base):
 
 class THEORETICALNOTE(Base):
     __tablename__ = 'THEORETICALNOTE'
-    __bind_key__  = 'XORCISM'
 
     TheoreticalNoteID = Column(Integer, primary_key=True)
     TheoreticalNoteText = Column(Text)
@@ -22614,7 +21192,6 @@ class THEORETICALNOTE(Base):
 
 class THREADRUNNINGSTATUS(Base):
     __tablename__ = 'THREADRUNNINGSTATUS'
-    __bind_key__  = 'XORCISM'
 
     ThreadRunningStatusID = Column(Integer, primary_key=True)
     Running_Status = Column(Text, nullable=False)
@@ -22631,7 +21208,6 @@ class THREADRUNNINGSTATUS(Base):
 
 class TICKET(Base):
     __tablename__ = 'TICKET'
-    __bind_key__  = 'XORCISM'
 
     TicketID = Column(Integer, primary_key=True)
     TicketGUID = Column(Text)
@@ -22648,7 +21224,6 @@ class TICKET(Base):
 
 class TICKETCHANGERECORD(Base):
     __tablename__ = 'TICKETCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     TicketChangeRecordID = Column(Integer, primary_key=True)
 
@@ -22657,7 +21232,6 @@ class TICKETCHANGERECORD(Base):
 
 class TICKETCHANGEREQUEST(Base):
     __tablename__ = 'TICKETCHANGEREQUEST'
-    __bind_key__  = 'XORCISM'
 
     TicketChangeRequestID = Column(Integer, primary_key=True)
 
@@ -22666,7 +21240,6 @@ class TICKETCHANGEREQUEST(Base):
 
 class TICKETNOTIFICATION(Base):
     __tablename__ = 'TICKETNOTIFICATION'
-    __bind_key__  = 'XORCISM'
 
     TicketNotificationID = Column(Integer, primary_key=True)
 
@@ -22675,7 +21248,6 @@ class TICKETNOTIFICATION(Base):
 
 class TICKETRACIMATRIX(Base):
     __tablename__ = 'TICKETRACIMATRIX'
-    __bind_key__  = 'XORCISM'
 
     TicketRACIMatrixID = Column(Integer, primary_key=True)
 
@@ -22684,7 +21256,6 @@ class TICKETRACIMATRIX(Base):
 
 class TIMEDIFFERENCEFUNCTION(Base):
     __tablename__ = 'TIMEDIFFERENCEFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     TimeDifferenceFunctionID = Column(Integer, primary_key=True)
     DateTimeFormat1 = Column(Text, nullable=False)
@@ -22695,7 +21266,6 @@ class TIMEDIFFERENCEFUNCTION(Base):
 
 class TIMELINE(Base):
     __tablename__ = 'TIMELINE'
-    __bind_key__  = 'XORCISM'
 
     TimelineID = Column(Integer, primary_key=True)
 
@@ -22704,7 +21274,6 @@ class TIMELINE(Base):
 
 class TIMESHEET(Base):
     __tablename__ = 'TIMESHEET'
-    __bind_key__  = 'XORCISM'
 
     TimesheetID = Column(Integer, primary_key=True)
     CreatedDate = Column(Text)
@@ -22725,7 +21294,6 @@ class TIMESHEET(Base):
 
 class TIMESHEETPERSON(Base):
     __tablename__ = 'TIMESHEETPERSON'
-    __bind_key__  = 'XORCISM'
 
     TimesheetPersonID = Column(Integer, primary_key=True)
     TimesheetID = Column(Integer, nullable=False)
@@ -22744,7 +21312,6 @@ class TIMESHEETPERSON(Base):
 
 class TIMEUNIT(Base):
     __tablename__ = 'TIMEUNIT'
-    __bind_key__  = 'XORCISM'
 
     TimeUnitID = Column(Integer, primary_key=True)
     TimeUnit = Column(Text, nullable=False)
@@ -22761,7 +21328,6 @@ class TIMEUNIT(Base):
 
 class TIP(Base):
     __tablename__ = 'TIP'
-    __bind_key__  = 'XORCISM'
 
     TipID = Column(Integer, primary_key=True)
     TipGUID = Column(Text)
@@ -22781,7 +21347,6 @@ class TIP(Base):
 
 class TIPCATEGORY(Base):
     __tablename__ = 'TIPCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     TipCategoryID = Column(Integer, primary_key=True)
     TipCategoryGUID = Column(Text)
@@ -22800,7 +21365,6 @@ class TIPCATEGORY(Base):
 
 class TIPREFERENCE(Base):
     __tablename__ = 'TIPREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     TipReferenceID = Column(Integer, primary_key=True)
     TipID = Column(Integer, nullable=False)
@@ -22820,7 +21384,6 @@ class TIPREFERENCE(Base):
 
 class TITLE(Base):
     __tablename__ = 'TITLE'
-    __bind_key__  = 'XORCISM'
 
     TitleID = Column(Integer, primary_key=True)
     TitleText = Column(Text)
@@ -22837,7 +21400,6 @@ class TITLE(Base):
 
 class TOKEN(Base):
     __tablename__ = 'TOKEN'
-    __bind_key__  = 'XORCISM'
 
     TokenID = Column(Integer, primary_key=True)
     TokenParentID = Column(Integer)
@@ -22852,7 +21414,6 @@ class TOKEN(Base):
 
 class TOOL(Base):
     __tablename__ = 'TOOL'
-    __bind_key__  = 'XORCISM'
 
     ToolID = Column(Integer, primary_key=True)
     ToolGUID = Column(Text)
@@ -22876,7 +21437,6 @@ class TOOL(Base):
 
 class TOOLACCESSRECORD(Base):
     __tablename__ = 'TOOLACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     ToolAccessRecordID = Column(Integer, primary_key=True)
 
@@ -22885,7 +21445,6 @@ class TOOLACCESSRECORD(Base):
 
 class TOOLCHANGERECORD(Base):
     __tablename__ = 'TOOLCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     ToolChangeRecordID = Column(Integer, primary_key=True)
 
@@ -22894,7 +21453,6 @@ class TOOLCHANGERECORD(Base):
 
 class TOOLCODE(Base):
     __tablename__ = 'TOOLCODE'
-    __bind_key__  = 'XORCISM'
 
     ToolCodeID = Column(Integer, primary_key=True)
     ToolCodeGUID = Column(Text)
@@ -22924,7 +21482,6 @@ class TOOLCODE(Base):
 
 class TOOLFUNCTION(Base):
     __tablename__ = 'TOOLFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     ToolFunctionID = Column(Integer, primary_key=True)
     ToolFunctionGUID = Column(Text)
@@ -22946,7 +21503,6 @@ class TOOLFUNCTION(Base):
 
 class TOOLINFORMATION(Base):
     __tablename__ = 'TOOLINFORMATION'
-    __bind_key__  = 'XORCISM'
 
     ToolInformationID = Column(Integer, primary_key=True)
     ToolInformationGUID = Column(Text)
@@ -22974,7 +21530,6 @@ class TOOLINFORMATION(Base):
 
 class TOOLINFORMATIONDESCRIPTION(Base):
     __tablename__ = 'TOOLINFORMATIONDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ToolInformationDescriptionID = Column(Integer, primary_key=True)
     ToolInformationID = Column(Integer, nullable=False)
@@ -22991,7 +21546,6 @@ class TOOLINFORMATIONDESCRIPTION(Base):
 
 class TOOLINFORMATIONFORTOOL(Base):
     __tablename__ = 'TOOLINFORMATIONFORTOOL'
-    __bind_key__  = 'XORCISM'
 
     ToolInformationForToolID = Column(Integer, primary_key=True)
     ToolID = Column(Integer, nullable=False)
@@ -23009,7 +21563,6 @@ class TOOLINFORMATIONFORTOOL(Base):
 
 class TOOLINFORMATIONMETADATA(Base):
     __tablename__ = 'TOOLINFORMATIONMETADATA'
-    __bind_key__  = 'XORCISM'
 
     ToolInformationID = Column(Integer, primary_key=True)
     MetadataID = Column(Integer, nullable=False)
@@ -23019,7 +21572,6 @@ class TOOLINFORMATIONMETADATA(Base):
 
 class TOOLINFORMATIONREFERENCE(Base):
     __tablename__ = 'TOOLINFORMATIONREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ToolInformationReferenceID = Column(Integer, primary_key=True)
     ToolInformationID = Column(Integer, nullable=False)
@@ -23044,7 +21596,6 @@ class TOOLINFORMATIONREFERENCE(Base):
 
 class TOOLLICENSE(Base):
     __tablename__ = 'TOOLLICENSE'
-    __bind_key__  = 'XORCISM'
 
     ToolLicenseID = Column(Integer, primary_key=True)
     ToolID = Column(Integer, nullable=False)
@@ -23061,7 +21612,6 @@ class TOOLLICENSE(Base):
 
 class TOOLREFERENCE(Base):
     __tablename__ = 'TOOLREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     ToolReferenceID = Column(Integer, primary_key=True)
     ToolID = Column(Integer, nullable=False)
@@ -23082,7 +21632,6 @@ class TOOLREFERENCE(Base):
 
 class TOOLREFERENCETYPE(Base):
     __tablename__ = 'TOOLREFERENCETYPE'
-    __bind_key__  = 'XORCISM'
 
     ToolReferenceTypeID = Column(Integer, primary_key=True)
     ToolReferenceTypeName = Column(Text, nullable=False)
@@ -23094,7 +21643,6 @@ class TOOLREFERENCETYPE(Base):
 
 class TOOLREPOSITORY(Base):
     __tablename__ = 'TOOLREPOSITORY'
-    __bind_key__  = 'XORCISM'
 
     ToolRepositoryID = Column(Integer, primary_key=True)
 
@@ -23103,7 +21651,6 @@ class TOOLREPOSITORY(Base):
 
 class TOOLTAG(Base):
     __tablename__ = 'TOOLTAG'
-    __bind_key__  = 'XORCISM'
 
     ToolTagID = Column(Integer, primary_key=True)
     ToolTagGUID = Column(Text)
@@ -23122,7 +21669,6 @@ class TOOLTAG(Base):
 
 class TOOLTECHNOLOGY(Base):
     __tablename__ = 'TOOLTECHNOLOGY'
-    __bind_key__  = 'XORCISM'
 
     ToolTechnologyID = Column(Integer, primary_key=True)
 
@@ -23131,7 +21677,6 @@ class TOOLTECHNOLOGY(Base):
 
 class TOOLTYPE(Base):
     __tablename__ = 'TOOLTYPE'
-    __bind_key__  = 'XORCISM'
 
     ToolTypeID = Column(Integer, primary_key=True)
     ToolTypeGUID = Column(Text)
@@ -23150,7 +21695,6 @@ class TOOLTYPE(Base):
 
 class TOOLTYPEFORTOOLINFORMATION(Base):
     __tablename__ = 'TOOLTYPEFORTOOLINFORMATION'
-    __bind_key__  = 'XORCISM'
 
     ToolInformationID = Column(Integer, primary_key=True)
     ToolTypeID = Column(Integer, nullable=False)
@@ -23160,7 +21704,6 @@ class TOOLTYPEFORTOOLINFORMATION(Base):
 
 class TOOLUSERAGENT(Base):
     __tablename__ = 'TOOLUSERAGENT'
-    __bind_key__  = 'XORCISM'
 
     ToolUserAgentID = Column(Integer, primary_key=True)
     ToolID = Column(Integer)
@@ -23171,7 +21714,6 @@ class TOOLUSERAGENT(Base):
 
 class TRAINING(Base):
     __tablename__ = 'TRAINING'
-    __bind_key__  = 'XORCISM'
 
     TrainingID = Column(Integer, primary_key=True)
     TrainingGUID = Column(Text)
@@ -23187,7 +21729,6 @@ class TRAINING(Base):
 
 class TRAININGFORPERSON(Base):
     __tablename__ = 'TRAININGFORPERSON'
-    __bind_key__  = 'XORCISM'
 
     TrainingPersonID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -23205,7 +21746,6 @@ class TRAININGFORPERSON(Base):
 
 class TRANSACTION(Base):
     __tablename__ = 'TRANSACTION'
-    __bind_key__  = 'XORCISM'
 
     TrainingPersonID = Column(Integer, primary_key=True)
     PersonID = Column(Integer, nullable=False)
@@ -23216,7 +21756,6 @@ class TRANSACTION(Base):
 
 class TRANSFORMATION(Base):
     __tablename__ = 'TRANSFORMATION'
-    __bind_key__  = 'XORCISM'
 
     TransformationID = Column(Integer, primary_key=True)
 
@@ -23225,7 +21764,6 @@ class TRANSFORMATION(Base):
 
 class TREND(Base):
     __tablename__ = 'TREND'
-    __bind_key__  = 'XORCISM'
 
     TrendID = Column(Integer, primary_key=True)
     TrendName = Column(Text, nullable=False)
@@ -23237,7 +21775,6 @@ class TREND(Base):
 
 class TRIGGERFREQUENCYENUM(Base):
     __tablename__ = 'TRIGGERFREQUENCYENUM'
-    __bind_key__  = 'XORCISM'
 
     TriggerFrequencyEnumID = Column(Integer, primary_key=True)
     TriggerFrequency = Column(Text)
@@ -23253,7 +21790,6 @@ class TRIGGERFREQUENCYENUM(Base):
 
 class TRIGGERLIST(Base):
     __tablename__ = 'TRIGGERLIST'
-    __bind_key__  = 'XORCISM'
 
     TriggerListID = Column(Integer, primary_key=True)
 
@@ -23262,7 +21798,6 @@ class TRIGGERLIST(Base):
 
 class TRIGGERTYPEENUM(Base):
     __tablename__ = 'TRIGGERTYPEENUM'
-    __bind_key__  = 'XORCISM'
 
     TriggerTypeEnumID = Column(Integer, primary_key=True)
     TriggerType = Column(Text)
@@ -23279,7 +21814,6 @@ class TRIGGERTYPEENUM(Base):
 
 class TRUSTLEVEL(Base):
     __tablename__ = 'TRUSTLEVEL'
-    __bind_key__  = 'XORCISM'
 
     TrustLevelID = Column(Integer, primary_key=True)
     TrustLevelGUID = Column(Text)
@@ -23297,7 +21831,6 @@ class TRUSTLEVEL(Base):
 
 class TRUSTREASON(Base):
     __tablename__ = 'TRUSTREASON'
-    __bind_key__  = 'XORCISM'
 
     TrustReasonID = Column(Integer, primary_key=True)
     TrustReasonGUID = Column(Text)
@@ -23316,7 +21849,6 @@ class TRUSTREASON(Base):
 
 class TYPE(Base):
     __tablename__ = 'TYPE'
-    __bind_key__  = 'XORCISM'
 
     TypeID = Column(Integer, primary_key=True)
 
@@ -23325,7 +21857,6 @@ class TYPE(Base):
 
 class UNIDIRECTIONALFLOWRECORD(Base):
     __tablename__ = 'UNIDIRECTIONALFLOWRECORD'
-    __bind_key__  = 'XORCISM'
 
     UnidirectionalFlowRecordID = Column(Integer, primary_key=True)
 
@@ -23334,7 +21865,6 @@ class UNIDIRECTIONALFLOWRECORD(Base):
 
 class UNIQUEFUNCTION(Base):
     __tablename__ = 'UNIQUEFUNCTION'
-    __bind_key__  = 'XORCISM'
 
     UniqueFunctionID = Column(Integer, primary_key=True)
 
@@ -23343,7 +21873,6 @@ class UNIQUEFUNCTION(Base):
 
 class UNIT(Base):
     __tablename__ = 'UNIT'
-    __bind_key__  = 'XORCISM'
 
     UnitID = Column(Integer, primary_key=True)
 
@@ -23352,7 +21881,6 @@ class UNIT(Base):
 
 class UNIXFILE(Base):
     __tablename__ = 'UNIXFILE'
-    __bind_key__  = 'XORCISM'
 
     UnixFileID = Column(Integer, primary_key=True)
 
@@ -23361,7 +21889,6 @@ class UNIXFILE(Base):
 
 class UNIXNETWORKROUTEENTRY(Base):
     __tablename__ = 'UNIXNETWORKROUTEENTRY'
-    __bind_key__  = 'XORCISM'
 
     UnixNetworkRouteEntryID = Column(Integer, primary_key=True)
 
@@ -23370,7 +21897,6 @@ class UNIXNETWORKROUTEENTRY(Base):
 
 class UNIXPIPEOBJECT(Base):
     __tablename__ = 'UNIXPIPEOBJECT'
-    __bind_key__  = 'XORCISM'
 
     UnixPipeObjectID = Column(Integer, primary_key=True)
 
@@ -23379,7 +21905,6 @@ class UNIXPIPEOBJECT(Base):
 
 class UNIXPROCESS(Base):
     __tablename__ = 'UNIXPROCESS'
-    __bind_key__  = 'XORCISM'
 
     UnixProcessID = Column(Integer, primary_key=True)
 
@@ -23388,7 +21913,6 @@ class UNIXPROCESS(Base):
 
 class UNIXUSERACCOUNT(Base):
     __tablename__ = 'UNIXUSERACCOUNT'
-    __bind_key__  = 'XORCISM'
 
     UnixUserAccountID = Column(Integer, primary_key=True)
     AccountID = Column(Integer)
@@ -23398,7 +21922,6 @@ class UNIXUSERACCOUNT(Base):
 
 class UNIXVOLUME(Base):
     __tablename__ = 'UNIXVOLUME'
-    __bind_key__  = 'XORCISM'
 
     UnixVolumeID = Column(Integer, primary_key=True)
     VolumeObjectID = Column(Integer)
@@ -23408,7 +21931,6 @@ class UNIXVOLUME(Base):
 
 class URGENCY(Base):
     __tablename__ = 'URGENCY'
-    __bind_key__  = 'XORCISM'
 
     UrgencyID = Column(Integer, primary_key=True)
 
@@ -23417,7 +21939,6 @@ class URGENCY(Base):
 
 class URIOBJECT(Base):
     __tablename__ = 'URIOBJECT'
-    __bind_key__  = 'XORCISM'
 
     URIObjectID = Column(Integer, primary_key=True)
     URIValue = Column(Text)
@@ -23435,7 +21956,6 @@ class URIOBJECT(Base):
 
 class URITYPE(Base):
     __tablename__ = 'URITYPE'
-    __bind_key__  = 'XORCISM'
 
     URITypeID = Column(Integer, primary_key=True)
     URITypeName = Column(Text)
@@ -23452,7 +21972,6 @@ class URITYPE(Base):
 
 class URL(Base):
     __tablename__ = 'URL'
-    __bind_key__  = 'XORCISM'
 
     URLID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer)
@@ -23462,7 +21981,6 @@ class URL(Base):
 
 class URLHISTORY(Base):
     __tablename__ = 'URLHISTORY'
-    __bind_key__  = 'XORCISM'
 
     URLHistoryID = Column(Integer, primary_key=True)
     URLHistoryGUID = Column(Text)
@@ -23480,7 +21998,6 @@ class URLHISTORY(Base):
 
 class URLHISTORYENTRIES(Base):
     __tablename__ = 'URLHISTORYENTRIES'
-    __bind_key__  = 'XORCISM'
 
     URLHistoryEntriesID = Column(Integer, primary_key=True)
     URLHistoryID = Column(Integer)
@@ -23499,7 +22016,6 @@ class URLHISTORYENTRIES(Base):
 
 class URLHISTORYENTRY(Base):
     __tablename__ = 'URLHISTORYENTRY'
-    __bind_key__  = 'XORCISM'
 
     URLHistoryEntryID = Column(Integer, primary_key=True)
     URLHistoryEntryGUID = Column(Text)
@@ -23527,7 +22043,6 @@ class URLHISTORYENTRY(Base):
 
 class USAGETYPE(Base):
     __tablename__ = 'USAGETYPE'
-    __bind_key__  = 'XORCISM'
 
     UsageTypeID = Column(Integer, primary_key=True)
     TypeID = Column(Integer, nullable=False)
@@ -23537,7 +22052,6 @@ class USAGETYPE(Base):
 
 class USECASE(Base):
     __tablename__ = 'USECASE'
-    __bind_key__  = 'XORCISM'
 
     UseCaseID = Column(Integer, primary_key=True)
     UseCaseGUID = Column(Text)
@@ -23554,7 +22068,6 @@ class USECASE(Base):
 
 class USECASECATEGORY(Base):
     __tablename__ = 'USECASECATEGORY'
-    __bind_key__  = 'XORCISM'
 
     UseCaseCategoryID = Column(Integer, primary_key=True)
     UseCaseCategoryGUID = Column(Text)
@@ -23573,7 +22086,6 @@ class USECASECATEGORY(Base):
 
 class USECASEFORBUSINESSRISK(Base):
     __tablename__ = 'USECASEFORBUSINESSRISK'
-    __bind_key__  = 'XORCISM'
 
     BusinessRiskUseCaseID = Column(Integer, primary_key=True)
     BusinessRiskUseCaseGUID = Column(Text)
@@ -23593,7 +22105,6 @@ class USECASEFORBUSINESSRISK(Base):
 
 class USECASEFORREGULATORYRISK(Base):
     __tablename__ = 'USECASEFORREGULATORYRISK'
-    __bind_key__  = 'XORCISM'
 
     RegulatoryRiskUseCaseID = Column(Integer, primary_key=True)
     RegulatoryRiskUseCaseGUID = Column(Text)
@@ -23613,7 +22124,6 @@ class USECASEFORREGULATORYRISK(Base):
 
 class USER(Base):
     __tablename__ = 'USER'
-    __bind_key__  = 'XORCISM'
 
     UserID = Column(Integer, primary_key=True)
     UserGUID = Column(Text)
@@ -23629,7 +22139,6 @@ class USER(Base):
 
 class USERACCOUNT(Base):
     __tablename__ = 'USERACCOUNT'
-    __bind_key__  = 'XORCISM'
 
     UserAccountID = Column(Integer, primary_key=True)
     AccountID = Column(Integer)
@@ -23648,7 +22157,6 @@ class USERACCOUNT(Base):
 
 class USERACCOUNTTYPE(Base):
     __tablename__ = 'USERACCOUNTTYPE'
-    __bind_key__  = 'XORCISM'
 
     UserAccountTypeID = Column(Integer, primary_key=True)
     UserAccountTypeGUID = Column(Text)
@@ -23666,7 +22174,6 @@ class USERACCOUNTTYPE(Base):
 
 class USERACTIONNAME(Base):
     __tablename__ = 'USERACTIONNAME'
-    __bind_key__  = 'XORCISM'
 
     UserActionNameID = Column(Integer, primary_key=True)
     UserActionNameName = Column(Text, nullable=False)
@@ -23684,7 +22191,6 @@ class USERACTIONNAME(Base):
 
 class USERAGENT(Base):
     __tablename__ = 'USERAGENT'
-    __bind_key__  = 'XORCISM'
 
     UserAgentID = Column(Integer, primary_key=True)
     UserAgentGUID = Column(Text)
@@ -23694,7 +22200,6 @@ class USERAGENT(Base):
 
 class USERAGENTBLACKLIST(Base):
     __tablename__ = 'USERAGENTBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     UserAgentBlacklistID = Column(Integer, primary_key=True)
     UserAgentBlacklistGUID = Column(Text)
@@ -23712,7 +22217,6 @@ class USERAGENTBLACKLIST(Base):
 
 class USERAGENTCATEGORY(Base):
     __tablename__ = 'USERAGENTCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     UserAgentCategoryID = Column(Integer, primary_key=True)
 
@@ -23721,7 +22225,6 @@ class USERAGENTCATEGORY(Base):
 
 class USERSESSION(Base):
     __tablename__ = 'USERSESSION'
-    __bind_key__  = 'XORCISM'
 
     UserSessionID = Column(Integer, primary_key=True)
 
@@ -23730,7 +22233,6 @@ class USERSESSION(Base):
 
 class VALIDITY(Base):
     __tablename__ = 'VALIDITY'
-    __bind_key__  = 'XORCISM'
 
     ValidityID = Column(Integer, primary_key=True)
     Not_Before = Column(Text)
@@ -23746,7 +22248,6 @@ class VALIDITY(Base):
 
 class VALUE(Base):
     __tablename__ = 'VALUE'
-    __bind_key__  = 'XORCISM'
 
     ValueID = Column(Integer, primary_key=True)
     ValueValue = Column(Text, nullable=False)
@@ -23761,7 +22262,6 @@ class VALUE(Base):
 
 class VALUEBLACKLIST(Base):
     __tablename__ = 'VALUEBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     ValueBlacklistID = Column(Integer, primary_key=True)
     ValueID = Column(Integer)
@@ -23771,7 +22271,6 @@ class VALUEBLACKLIST(Base):
 
 class VALUEGROUP(Base):
     __tablename__ = 'VALUEGROUP'
-    __bind_key__  = 'XORCISM'
 
     ValueGroupID = Column(Integer, primary_key=True)
 
@@ -23780,7 +22279,6 @@ class VALUEGROUP(Base):
 
 class VALUEMAPPING(Base):
     __tablename__ = 'VALUEMAPPING'
-    __bind_key__  = 'XORCISM'
 
     ValueMappingID = Column(Integer, primary_key=True)
 
@@ -23789,7 +22287,6 @@ class VALUEMAPPING(Base):
 
 class VALUEWHITELIST(Base):
     __tablename__ = 'VALUEWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     ValueWhitelistID = Column(Integer, primary_key=True)
     ValueID = Column(Integer)
@@ -23799,7 +22296,6 @@ class VALUEWHITELIST(Base):
 
 class VARIABLE(Base):
     __tablename__ = 'VARIABLE'
-    __bind_key__  = 'XORCISM'
 
     VariableID = Column(Integer, primary_key=True)
 
@@ -23808,7 +22304,6 @@ class VARIABLE(Base):
 
 class VERSION(Base):
     __tablename__ = 'VERSION'
-    __bind_key__  = 'XORCISM'
 
     VersionID = Column(Integer, primary_key=True)
     VersionValue = Column(Text)
@@ -23825,7 +22320,6 @@ class VERSION(Base):
 
 class VIEWPORT(Base):
     __tablename__ = 'VIEWPORT'
-    __bind_key__  = 'XORCISM'
 
     ViewPortID = Column(Integer, primary_key=True)
 
@@ -23834,7 +22328,6 @@ class VIEWPORT(Base):
 
 class VOCABULARY(Base):
     __tablename__ = 'VOCABULARY'
-    __bind_key__  = 'XORCISM'
 
     VocabularyID = Column(Integer, primary_key=True)
     VocabularyGUID = Column(Text)
@@ -23857,7 +22350,6 @@ class VOCABULARY(Base):
 
 class VOCABULARYCATEGORIES(Base):
     __tablename__ = 'VOCABULARYCATEGORIES'
-    __bind_key__  = 'XORCISM'
 
     VocabularyCategoriesID = Column(Integer, primary_key=True)
     VocabularyID = Column(Integer)
@@ -23874,7 +22366,6 @@ class VOCABULARYCATEGORIES(Base):
 
 class VOCABULARYCATEGORY(Base):
     __tablename__ = 'VOCABULARYCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     VocabularyCategoryID = Column(Integer, primary_key=True)
     VocabularyCategoryGUID = Column(Text)
@@ -23892,7 +22383,6 @@ class VOCABULARYCATEGORY(Base):
 
 class VOCABULARYCHANGERECORD(Base):
     __tablename__ = 'VOCABULARYCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     VocabularyChangeRecordID = Column(Integer, primary_key=True)
 
@@ -23901,7 +22391,6 @@ class VOCABULARYCHANGERECORD(Base):
 
 class VOCABULARYDESCRIPTION(Base):
     __tablename__ = 'VOCABULARYDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     VocabularyDescriptionID = Column(Integer, primary_key=True)
     VocabularyDescribedID = Column(Integer, nullable=False)
@@ -23919,7 +22408,6 @@ class VOCABULARYDESCRIPTION(Base):
 
 class VOCABULARYREFERENCE(Base):
     __tablename__ = 'VOCABULARYREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     VocabularyID = Column(Integer, primary_key=True)
     ReferenceID = Column(Integer, nullable=False)
@@ -23935,7 +22423,6 @@ class VOCABULARYREFERENCE(Base):
 
 class VOCABULARYTAG(Base):
     __tablename__ = 'VOCABULARYTAG'
-    __bind_key__  = 'XORCISM'
 
     VocabularyTagID = Column(Integer, primary_key=True)
     VocabularyTaggedID = Column(Integer, nullable=False)
@@ -23955,7 +22442,6 @@ class VOCABULARYTAG(Base):
 
 class VOCABULARYVERSION(Base):
     __tablename__ = 'VOCABULARYVERSION'
-    __bind_key__  = 'XORCISM'
 
     VocabularyVersionID = Column(Integer, primary_key=True)
     VocabularyVersionGUID = Column(Text)
@@ -23975,7 +22461,6 @@ class VOCABULARYVERSION(Base):
 
 class VOLUMEOBJECT(Base):
     __tablename__ = 'VOLUMEOBJECT'
-    __bind_key__  = 'XORCISM'
 
     VolumeObjectID = Column(Integer, primary_key=True)
 
@@ -23984,7 +22469,6 @@ class VOLUMEOBJECT(Base):
 
 class VULNERABLECONFIGURATION(Base):
     __tablename__ = 'VULNERABLECONFIGURATION'
-    __bind_key__  = 'XORCISM'
 
     VulnerableConfigurationID = Column(Integer, primary_key=True)
     VulnerabilityID = Column(Integer)
@@ -24001,7 +22485,6 @@ class VULNERABLECONFIGURATION(Base):
 
 class VULNERABLECONFIGURATIONCPE(Base):
     __tablename__ = 'VULNERABLECONFIGURATIONCPE'
-    __bind_key__  = 'XORCISM'
 
     VulnerableConfigurationCPEID = Column(Integer, primary_key=True)
     VulnerableConfigurationID = Column(Integer)
@@ -24021,7 +22504,6 @@ class VULNERABLECONFIGURATIONCPE(Base):
 
 class WAITABLETIMERTYPE(Base):
     __tablename__ = 'WAITABLETIMERTYPE'
-    __bind_key__  = 'XORCISM'
 
     WaitableTimerTypeID = Column(Integer, primary_key=True)
 
@@ -24030,7 +22512,6 @@ class WAITABLETIMERTYPE(Base):
 
 class WAITABLETIMERTYPEENUM(Base):
     __tablename__ = 'WAITABLETIMERTYPEENUM'
-    __bind_key__  = 'XORCISM'
 
     WaitaibleTimerTypeEnumID = Column(Integer, primary_key=True)
     WaitaibleTimerTypeName = Column(Text, nullable=False)
@@ -24046,7 +22527,6 @@ class WAITABLETIMERTYPEENUM(Base):
 
 class WAIVER(Base):
     __tablename__ = 'WAIVER'
-    __bind_key__  = 'XORCISM'
 
     WaiverID = Column(Integer, primary_key=True)
     WaiverName = Column(Text)
@@ -24065,7 +22545,6 @@ class WAIVER(Base):
 
 class WAIVERREASON(Base):
     __tablename__ = 'WAIVERREASON'
-    __bind_key__  = 'XORCISM'
 
     WaiverReasonID = Column(Integer, primary_key=True)
 
@@ -24074,7 +22553,6 @@ class WAIVERREASON(Base):
 
 class WARNING(Base):
     __tablename__ = 'WARNING'
-    __bind_key__  = 'XORCISM'
 
     WarningID = Column(Integer, primary_key=True)
     WarningText = Column(Text, nullable=False)
@@ -24086,7 +22564,6 @@ class WARNING(Base):
 
 class WARNINGCATEGORY(Base):
     __tablename__ = 'WARNINGCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     WarningCategoryID = Column(Integer, primary_key=True)
     WarningCategoryName = Column(Text, nullable=False)
@@ -24099,7 +22576,6 @@ class WARNINGCATEGORY(Base):
 
 class WASC(Base):
     __tablename__ = 'WASC'
-    __bind_key__  = 'XORCISM'
 
     WASCID = Column(Integer, primary_key=True)
     WASCThreatType = Column(Text, nullable=False)
@@ -24120,7 +22596,6 @@ class WASC(Base):
 
 class WASCCWE(Base):
     __tablename__ = 'WASCCWE'
-    __bind_key__  = 'XORCISM'
 
     WASCCWEID = Column(Integer, primary_key=True)
     WASCID = Column(Integer, nullable=False)
@@ -24141,7 +22616,6 @@ class WASCCWE(Base):
 
 class WASCFORCAPEC(Base):
     __tablename__ = 'WASCFORCAPEC'
-    __bind_key__  = 'XORCISM'
 
     WASCForCAPECID = Column(Integer, primary_key=True)
     WASCID = Column(Integer, nullable=False)
@@ -24162,7 +22636,6 @@ class WASCFORCAPEC(Base):
 
 class WASCREFERENCE(Base):
     __tablename__ = 'WASCREFERENCE'
-    __bind_key__  = 'XORCISM'
 
     WASCReferenceID = Column(Integer, primary_key=True)
     WASCID = Column(Integer, nullable=False)
@@ -24181,7 +22654,6 @@ class WASCREFERENCE(Base):
 
 class WASCTHREATTYPE(Base):
     __tablename__ = 'WASCTHREATTYPE'
-    __bind_key__  = 'XORCISM'
 
     WASCThreatTypeID = Column(Integer, primary_key=True)
     ThreatTypeID = Column(Integer, nullable=False)
@@ -24192,7 +22664,6 @@ class WASCTHREATTYPE(Base):
 
 class WEAKNESS(Base):
     __tablename__ = 'WEAKNESS'
-    __bind_key__  = 'XORCISM'
 
     WeaknessID = Column(Integer, primary_key=True)
     WeaknessGUID = Column(Text)
@@ -24212,7 +22683,6 @@ class WEAKNESS(Base):
 
 class WEAKNESSCWE(Base):
     __tablename__ = 'WEAKNESSCWE'
-    __bind_key__  = 'XORCISM'
 
     WeaknessCWEID = Column(Integer, primary_key=True)
     WeaknessCWEGUID = Column(Text)
@@ -24235,7 +22705,6 @@ class WEAKNESSCWE(Base):
 
 class WHOISCHANGERECORD(Base):
     __tablename__ = 'WHOISCHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     WhoisChangeRecordID = Column(Integer, primary_key=True)
 
@@ -24244,7 +22713,6 @@ class WHOISCHANGERECORD(Base):
 
 class WHOISOBJECT(Base):
     __tablename__ = 'WHOISOBJECT'
-    __bind_key__  = 'XORCISM'
 
     WhoisObjectID = Column(Integer, primary_key=True)
     WhoisObjectGUID = Column(Text)
@@ -24260,7 +22728,6 @@ class WHOISOBJECT(Base):
 
 class WORD(Base):
     __tablename__ = 'WORD'
-    __bind_key__  = 'XORCISM'
 
     WordID = Column(Integer, primary_key=True)
     WordGUID = Column(Text)
@@ -24279,7 +22746,6 @@ class WORD(Base):
 
 class WORDBLACKLIST(Base):
     __tablename__ = 'WORDBLACKLIST'
-    __bind_key__  = 'XORCISM'
 
     WordBlacklistID = Column(Integer, primary_key=True)
     WordListID = Column(Integer)
@@ -24289,7 +22755,6 @@ class WORDBLACKLIST(Base):
 
 class WORDFILE(Base):
     __tablename__ = 'WORDFILE'
-    __bind_key__  = 'XORCISM'
 
     WordFileID = Column(Integer, primary_key=True)
     FileID = Column(Integer)
@@ -24299,7 +22764,6 @@ class WORDFILE(Base):
 
 class WORDLIST(Base):
     __tablename__ = 'WORDLIST'
-    __bind_key__  = 'XORCISM'
 
     WordListID = Column(Integer, primary_key=True)
     WordListGUID = Column(Text)
@@ -24317,7 +22781,6 @@ class WORDLIST(Base):
 
 class WORDLISTCATEGORY(Base):
     __tablename__ = 'WORDLISTCATEGORY'
-    __bind_key__  = 'XORCISM'
 
     WordListCategoryID = Column(Integer, primary_key=True)
 
@@ -24326,7 +22789,6 @@ class WORDLISTCATEGORY(Base):
 
 class WORDLISTWORDS(Base):
     __tablename__ = 'WORDLISTWORDS'
-    __bind_key__  = 'XORCISM'
 
     WordListWordID = Column(Integer, primary_key=True)
     WordListID = Column(Integer, nullable=False)
@@ -24345,7 +22807,6 @@ class WORDLISTWORDS(Base):
 
 class WORDWHITELIST(Base):
     __tablename__ = 'WORDWHITELIST'
-    __bind_key__  = 'XORCISM'
 
     WordWhitelistID = Column(Integer, primary_key=True)
     WordListID = Column(Integer)
@@ -24355,7 +22816,6 @@ class WORDWHITELIST(Base):
 
 class WORKINGHOURS(Base):
     __tablename__ = 'WORKINGHOURS'
-    __bind_key__  = 'XORCISM'
 
     WorkingHoursID = Column(Integer, primary_key=True)
 
@@ -24364,7 +22824,6 @@ class WORKINGHOURS(Base):
 
 class X509CERTIFICATE(Base):
     __tablename__ = 'X509CERTIFICATE'
-    __bind_key__  = 'XORCISM'
 
     X509CertificateID = Column(Integer, primary_key=True)
     X509CertificateGUID = Column(Text)
@@ -24395,7 +22854,6 @@ class X509CERTIFICATE(Base):
 
 class X509CERTIFICATEACCESSRECORD(Base):
     __tablename__ = 'X509CERTIFICATEACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     X509CertificateAccessRecordID = Column(Integer, primary_key=True)
 
@@ -24404,7 +22862,6 @@ class X509CERTIFICATEACCESSRECORD(Base):
 
 class X509CERTIFICATECHANGERECORD(Base):
     __tablename__ = 'X509CERTIFICATECHANGERECORD'
-    __bind_key__  = 'XORCISM'
 
     X509CertificateChangeRecordID = Column(Integer, primary_key=True)
 
@@ -24413,7 +22870,6 @@ class X509CERTIFICATECHANGERECORD(Base):
 
 class X509CERTIFICATENONSTANDARDEXTENSION(Base):
     __tablename__ = 'X509CERTIFICATENONSTANDARDEXTENSION'
-    __bind_key__  = 'XORCISM'
 
     X509CertificateNonStandardExtensionID = Column(Integer, primary_key=True)
     X509CertificateID = Column(Integer, nullable=False)
@@ -24431,7 +22887,6 @@ class X509CERTIFICATENONSTANDARDEXTENSION(Base):
 
 class X509CERTIFICATEOBJECT(Base):
     __tablename__ = 'X509CERTIFICATEOBJECT'
-    __bind_key__  = 'XORCISM'
 
     X509CertificateObjectID = Column(Integer, primary_key=True)
     X509CertificateID = Column(Integer, nullable=False)
@@ -24453,7 +22908,6 @@ class X509CERTIFICATEOBJECT(Base):
 
 class X509CERTIFICATESTANDARDEXTENSION(Base):
     __tablename__ = 'X509CERTIFICATESTANDARDEXTENSION'
-    __bind_key__  = 'XORCISM'
 
     X509CertificateStandardExtensionID = Column(Integer, primary_key=True)
     X509CertificateID = Column(Integer, nullable=False)
@@ -24473,7 +22927,6 @@ class X509CERTIFICATESTANDARDEXTENSION(Base):
 
 class X509NONSTANDARDEXTENSION(Base):
     __tablename__ = 'X509NONSTANDARDEXTENSION'
-    __bind_key__  = 'XORCISM'
 
     X509NonStandardExtensionID = Column(Integer, primary_key=True)
     X509NonStandardExtensionGUID = Column(Text)
@@ -24493,7 +22946,6 @@ class X509NONSTANDARDEXTENSION(Base):
 
 class X509SIGNATURE(Base):
     __tablename__ = 'X509SIGNATURE'
-    __bind_key__  = 'XORCISM'
 
     X509SignatureID = Column(Integer, primary_key=True)
     X509SignatureGUID = Column(Text)
@@ -24516,7 +22968,6 @@ class X509SIGNATURE(Base):
 
 class X509V3EXTENSION(Base):
     __tablename__ = 'X509V3EXTENSION'
-    __bind_key__  = 'XORCISM'
 
     X509V3ExtensionID = Column(Integer, primary_key=True)
     X509V3ExtensionGUID = Column(Text)
@@ -24549,7 +23000,6 @@ class X509V3EXTENSION(Base):
 
 class X509V3EXTENSIONACCESSRECORD(Base):
     __tablename__ = 'X509V3EXTENSIONACCESSRECORD'
-    __bind_key__  = 'XORCISM'
 
     X509V3ExtensionAccessRecordID = Column(Integer, primary_key=True)
 
@@ -24558,7 +23008,6 @@ class X509V3EXTENSIONACCESSRECORD(Base):
 
 class X509V3EXTENSIONPOLICYTERM(Base):
     __tablename__ = 'X509V3EXTENSIONPOLICYTERM'
-    __bind_key__  = 'XORCISM'
 
     X509V3ExtensionPolicyTermID = Column(Integer, primary_key=True)
     X509V3ExtensionID = Column(Integer, nullable=False)
@@ -24574,7 +23023,6 @@ class X509V3EXTENSIONPOLICYTERM(Base):
 
 class ZONE(Base):
     __tablename__ = 'ZONE'
-    __bind_key__  = 'XORCISM'
 
     ZoneID = Column(Integer, primary_key=True)
     ZoneGUID = Column(Text)
@@ -24596,7 +23044,6 @@ class ZONE(Base):
 
 class ZONECLASSIFICATION(Base):
     __tablename__ = 'ZONECLASSIFICATION'
-    __bind_key__  = 'XORCISM'
 
     ZoneClassificationID = Column(Integer, primary_key=True)
     isEncrypted = Column(Integer)
@@ -24606,7 +23053,6 @@ class ZONECLASSIFICATION(Base):
 
 class ZONEDESCRIPTION(Base):
     __tablename__ = 'ZONEDESCRIPTION'
-    __bind_key__  = 'XORCISM'
 
     ZoneDescriptionID = Column(Integer, primary_key=True)
     isEncrypted = Column(Integer)
@@ -24616,7 +23062,6 @@ class ZONEDESCRIPTION(Base):
 
 class ZONERESTRICTION(Base):
     __tablename__ = 'ZONERESTRICTION'
-    __bind_key__  = 'XORCISM'
 
     ZoneRestrictionID = Column(Integer, primary_key=True)
     isEncrypted = Column(Integer)
@@ -24626,7 +23071,6 @@ class ZONERESTRICTION(Base):
 
 class aspnet_Applications(Base):
     __tablename__ = 'aspnet_Applications'
-    __bind_key__  = 'XORCISM'
 
     ApplicationName = Column(Text, primary_key=True)
     LoweredApplicationName = Column(Text, nullable=False)
@@ -24638,7 +23082,6 @@ class aspnet_Applications(Base):
 
 class aspnet_Membership(Base):
     __tablename__ = 'aspnet_Membership'
-    __bind_key__  = 'XORCISM'
 
     ApplicationId = Column(Text, primary_key=True)
     UserId = Column(Text, nullable=False)
@@ -24667,7 +23110,6 @@ class aspnet_Membership(Base):
 
 class aspnet_Paths(Base):
     __tablename__ = 'aspnet_Paths'
-    __bind_key__  = 'XORCISM'
 
     ApplicationId = Column(Text, primary_key=True)
     PathId = Column(Text, nullable=False)
@@ -24679,7 +23121,6 @@ class aspnet_Paths(Base):
 
 class aspnet_PersonalizationAllUsers(Base):
     __tablename__ = 'aspnet_PersonalizationAllUsers'
-    __bind_key__  = 'XORCISM'
 
     PathId = Column(Text, primary_key=True)
     PageSettings = Column(LargeBinary, nullable=False)
@@ -24690,7 +23131,6 @@ class aspnet_PersonalizationAllUsers(Base):
 
 class aspnet_PersonalizationPerUser(Base):
     __tablename__ = 'aspnet_PersonalizationPerUser'
-    __bind_key__  = 'XORCISM'
 
     Id = Column(Text, primary_key=True)
     PathId = Column(Text)
@@ -24703,7 +23143,6 @@ class aspnet_PersonalizationPerUser(Base):
 
 class aspnet_Profile(Base):
     __tablename__ = 'aspnet_Profile'
-    __bind_key__  = 'XORCISM'
 
     UserId = Column(Text, primary_key=True)
     PropertyNames = Column(Text, nullable=False)
@@ -24716,7 +23155,6 @@ class aspnet_Profile(Base):
 
 class aspnet_Roles(Base):
     __tablename__ = 'aspnet_Roles'
-    __bind_key__  = 'XORCISM'
 
     ApplicationId = Column(Text, primary_key=True)
     RoleId = Column(Text, nullable=False)
@@ -24729,7 +23167,6 @@ class aspnet_Roles(Base):
 
 class aspnet_SchemaVersions(Base):
     __tablename__ = 'aspnet_SchemaVersions'
-    __bind_key__  = 'XORCISM'
 
     Feature = Column(Text, primary_key=True)
     CompatibleSchemaVersion = Column(Text, nullable=False)
@@ -24740,7 +23177,6 @@ class aspnet_SchemaVersions(Base):
 
 class aspnet_Users(Base):
     __tablename__ = 'aspnet_Users'
-    __bind_key__  = 'XORCISM'
 
     ApplicationId = Column(Text, primary_key=True)
     UserId = Column(Text, nullable=False)
@@ -24755,7 +23191,6 @@ class aspnet_Users(Base):
 
 class aspnet_UsersInRoles(Base):
     __tablename__ = 'aspnet_UsersInRoles'
-    __bind_key__  = 'XORCISM'
 
     UserId = Column(Text, primary_key=True)
     RoleId = Column(Text, nullable=False)
@@ -24765,7 +23200,6 @@ class aspnet_UsersInRoles(Base):
 
 class aspnet_WebEvent_Events(Base):
     __tablename__ = 'aspnet_WebEvent_Events'
-    __bind_key__  = 'XORCISM'
 
     EventId = Column(Text, primary_key=True)
     EventTimeUtc = Column(Text, nullable=False)
@@ -24790,7 +23224,6 @@ class aspnet_WebEvent_Events(Base):
 # ── Threat models ──────────────────────────────────────────────────────────────
 class THREATMODEL(Base):
     __tablename__ = 'THREATMODEL'
-    __bind_key__ = 'XORCISM'
 
     ThreatModelID = Column(Integer, primary_key=True)
     ThreatModelGUID = Column(Text)
@@ -24811,7 +23244,6 @@ class THREATMODEL(Base):
 
 class THREATMODELASSET(Base):
     __tablename__ = 'THREATMODELASSET'
-    __bind_key__ = 'XORCISM'
 
     ThreatModelAssetID = Column(Integer, primary_key=True)
     ThreatModelID = Column(Integer)
@@ -24825,7 +23257,6 @@ class THREATMODELASSET(Base):
 
 class THREATMODELTHREAT(Base):
     __tablename__ = 'THREATMODELTHREAT'
-    __bind_key__ = 'XORCISM'
 
     ThreatModelThreatID = Column(Integer, primary_key=True)
     ThreatModelID = Column(Integer)
@@ -24847,7 +23278,6 @@ class THREATMODELTHREAT(Base):
 
 class THREATMODELCONTROL(Base):
     __tablename__ = 'THREATMODELCONTROL'
-    __bind_key__ = 'XORCISM'
 
     ThreatModelControlID = Column(Integer, primary_key=True)
     ThreatModelThreatID = Column(Integer)
