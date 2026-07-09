@@ -1,6 +1,6 @@
 FROM postgres:16-alpine
 
-RUN apk add --no-cache dcron
+# busybox crond já está disponível no alpine — nenhum pacote adicional necessário
 
 COPY scripts/backup.sh /usr/local/bin/backup.sh
 RUN chmod +x /usr/local/bin/backup.sh

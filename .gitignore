@@ -31,8 +31,10 @@ XVAULT.json
 xvault*.json
 
 # Keys / certificates / token material
+nginx/ssl/          # SSL certs gerados localmente (self-signed sandbox)
 *.key
 *.pem
+*.crt
 *.pfx
 *.p12
 *.keystore
